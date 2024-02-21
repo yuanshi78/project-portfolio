@@ -25,87 +25,61 @@ const isCardDetailsVisible = ref(false)
       sm="6"
       md="4"
     >
-      <VCard href="https://8-hospital-datavis-demo-yuanshi-public-bbc282b11cf332f4ae1e0fd2.gitlab.io/#/screen1" target="_blank">
-        <VImg
-          :src="project1"
-          cover
-        />
+      <VHover>
+        <template #default="{ isHovering, props }">
+          <VCard v-bind="props" href="https://8-hospital-datavis-demo-yuanshi-public-bbc282b11cf332f4ae1e0fd2.gitlab.io/#/screen1" target="_blank">
+            <VImg
+              :src="project1"
+              cover
+            />
 
-        <VCardItem>
-          <VCardTitle>监控设备大屏</VCardTitle>
-        </VCardItem>
-
-        <VCardText>
-          
-        </VCardText>
-      </VCard>
+            <VCardItem>
+              <VCardTitle>监控设备大屏</VCardTitle>
+            </VCardItem>
+         
+            <VExpandTransition>
+              <div v-show="isHovering">
+                <VDivider />
+                <VCardText>
+                  大屏系统包括三个大屏: 设备运维大屏, 综合态势大屏和智慧安防大屏. 每个大屏展示相关的数据. 大屏中间展示区域地图或监控设备拓扑图 . 地图上展示热力图, 摄像头.可以播放来自摄像头的视频. 拓扑图上展示监控设备结构,设备网络速率和状态. 拓扑图工具用于创建监控设备拓扑图      
+                </VCardText>
+              </div>
+            </VExpandTransition>
+          </VCard>
+        </template>
+      </VHover>
     </VCol>
 
-    <!-- 👉 Robert Meyer -->
+    <!-- 👉 大屏工具 -->
     <VCol
       cols="12"
       sm="6"
       md="4"
     >
-    <VCard href="https://topo-tool-demo-yuanshi-public-5d3fd63e9725a30883c298fcc611f965b.gitlab.io" target="_blank">
-        <VImg
-          :src="project2"
-          cover
-        />
+      <VHover>
+        <template #default="{ isHovering, props }">
+          <VCard v-bind="props" href="https://topo-tool-demo-yuanshi-public-5d3fd63e9725a30883c298fcc611f965b.gitlab.io" target="_blank">
+              <VImg
+                :src="project2"
+                cover
+              />
 
-        <VCardItem>
-          <VCardTitle>拓扑图工具</VCardTitle>
-        </VCardItem>
+              <VCardItem>
+                <VCardTitle>拓扑图工具</VCardTitle>
+              </VCardItem>
 
-        <VCardText>
-          
-        </VCardText>
-      </VCard>
-    </VCol>
-
-    <!-- 👉 Popular Uses Of The Internet -->
-    <!-- <VCol
-      cols="12"
-      md="4"
-      sm="6"
-    >
-      <VCard>
-        <VImg :src="pages3" />
-
-        <VCardItem>
-          <VCardTitle>Popular Uses Of The Internet</VCardTitle>
-        </VCardItem>
-
-        <VCardText>
-          Although cards can support multiple actions, UI controls, and an overflow menu.
-        </VCardText>
-
-        <VCardActions>
-          <VBtn @click="isCardDetailsVisible = !isCardDetailsVisible">
-            Details
-          </VBtn>
-
-          <VSpacer />
-
-          <VBtn
-            icon
-            size="small"
-            @click="isCardDetailsVisible = !isCardDetailsVisible"
-          >
-            <VIcon :icon="isCardDetailsVisible ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'" />
-          </VBtn>
-        </VCardActions>
-
-        <VExpandTransition>
-          <div v-show="isCardDetailsVisible">
-            <VDivider />
-            <VCardText>
-              I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-            </VCardText>
-          </div>
-        </VExpandTransition>
-      </VCard>
-    </VCol> -->
+              <VExpandTransition>
+              <div v-show="isHovering">
+                <VDivider />
+                <VCardText>
+                  创建监控设备拓扑图的应用
+                </VCardText>
+              </div>
+            </VExpandTransition>
+            </VCard>
+        </template>
+      </VHover>
+    </VCol>   
   </VRow>
 </template>
 
