@@ -1,10 +1,10 @@
 <script setup>
-import Footer from '@/layouts/components/Footer.vue';
-import NavItems from '@/layouts/components/NavItems.vue';
-import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue';
-import UserProfile from '@/layouts/components/UserProfile.vue';
-import logo from '@images/logo.svg?raw';
-import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue';
+import Footer from '@/layouts/components/Footer.vue'
+import NavItems from '@/layouts/components/NavItems.vue'
+import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
+import UserProfile from '@/layouts/components/UserProfile.vue'
+import logo from '@images/logo.svg?raw'
+import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 </script>
 
 <template>
@@ -41,8 +41,8 @@ import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue';
         <IconBtn
           class="me-2"
           href="https://gitlab.com/yuanshi78"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
           <VIcon icon="ri-github-fill" />
         </IconBtn>
@@ -59,8 +59,8 @@ import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue';
 
     <template #vertical-nav-header="{ toggleIsOverlayNavActive }">
       <RouterLink
-        to="/"
         class="app-logo app-title-wrapper"
+        to="/"
       >
         <div
           class="d-flex"
@@ -89,7 +89,7 @@ import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue';
 
     <!-- 👉 Footer -->
     <template #footer>
-      <Footer />
+      <!--      <Footer />-->
     </template>
   </VerticalNavLayout>
 </template>

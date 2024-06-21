@@ -1,43 +1,49 @@
+import Default from '@/layouts/default.vue'
+
 export const routes = [
-  { path: '/', redirect: '/rainbow' },
+  { path: '/', redirect: '/person' },
   {
     path: '/',
-    component: () => import('@/layouts/default.vue'),
+    component: Default,
+    redirect: '/person',
     children: [
       {
-        path: 'rainbow',
-        component: () => import('@/pages/rainbow.vue'),
+        path: '/person',
+        component: () => import('@/pages/personal/personal.vue'),
       },
-      // {
-      //   path: 'account-settings',
-      //   component: () => import('@/pages/account-settings.vue'),
-      // },
-      // {
-      //   path: 'typography',
-      //   component: () => import('@/pages/typography.vue'),
-      // },
-      // {
-      //   path: 'icons',
-      //   component: () => import('@/pages/icons.vue'),
-      // },
       {
-        path: 'cards',
-        component: () => import('@/pages/cards.vue'),
+        path: '/rainbow',
+        redirect: '/rainbow/all',
+        children: [
+          {
+            path: '/rainbow/all',
+            component: () => import('@/pages/work/rainbow.vue'),
+          }, {
+            path: '/rainbow/cinema_hall',
+            component: () => import('@/views/pages/projects/cinema-hall.vue'),
+          },
+          {
+            path: '/rainbow/smart_operation',
+            component: () => import('@/views/pages/projects/smart-operation.vue'),
+          },
+          {
+            path: '/rainbow/smart_area',
+            component: () => import('@/views/pages/projects/smart-area.vue'),
+          },
+          {
+            path: '/rainbow/topo_tool',
+            component: () => import('@/views/pages/projects/topo-tool.vue'),
+          },
+        ],
       },
-      // {
-      //   path: 'tables',
-      //   component: () => import('@/pages/tables.vue'),
-      // },
-      // {
-      //   path: 'form-layouts',
-      //   component: () => import('@/pages/form-layouts.vue'),
-      // },
+
+
       {
         path: '/:pathMatch(.*)*',
         component: () => import('@/pages/[...error].vue'),
       },
     ],
-    
+
   },
   // {
   //   path: '/',

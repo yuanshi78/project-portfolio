@@ -1,4 +1,6 @@
 <script setup>
+import { ref, watchEffect } from 'vue'
+
 const props = defineProps({
   item: {
     type: Object,
@@ -6,13 +8,16 @@ const props = defineProps({
   },
 })
 
-const isOpen = ref(false)
+let isOpen = ref(false)
+watchEffect(() => {
+  isOpen.value = props.item.isOpen !== undefined ? props.item.isOpen : false
+})
 </script>
 
 <template>
   <li
-    class="nav-group"
     :class="isOpen && 'open'"
+    class="nav-group"
   >
     <div
       class="nav-group-label"
@@ -24,14 +29,14 @@ const isOpen = ref(false)
       />
       <span class="nav-item-title">{{ item.title }}</span>
       <span
-        class="nav-item-badge"
         :class="item.badgeClass"
+        class="nav-item-badge"
       >
         {{ item.badgeContent }}
       </span>
       <VIcon
-        icon="ri-arrow-right-s-line"
         class="nav-group-arrow"
+        icon="ri-arrow-right-s-line"
       />
     </div>
     <div class="nav-group-children-wrapper">
