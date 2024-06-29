@@ -10,11 +10,23 @@ export default defineComponent({
     const route = useRoute()
     const { mdAndDown } = useDisplay()
 
+    onMounted(() => {
+      console.log('mounted')
+      window.addEventListener('scroll', (e) => {
+        console.log(document.documentElement.scrollTop)
+        if (document.documentElement.scrollTop > 20) {
+          document.querySelector('.layout-wrapper').classList.add('window-scrolled')
+        } else {
+          document.querySelector('.layout-wrapper').classList.remove('window-scrolled')
+        }
+      })
+    })
+
 
     // ℹ️ This is alternative to below two commented watcher
     // We want to show overlay if overlay nav is visible and want to hide overlay if overlay is hidden and vice versa.
     syncRef(isOverlayNavActive, isLayoutOverlayVisible)
-    
+
     return () => {
       // 👉 Vertical nav
       const verticalNav = h(VerticalNav, { isOverlayNavActive: isOverlayNavActive.value, toggleIsOverlayNavActive }, {
@@ -44,7 +56,9 @@ export default defineComponent({
       // 👉 Overlay
       const layoutOverlay = h('div', {
         class: ['layout-overlay', { visible: isLayoutOverlayVisible.value }],
-        onClick: () => { isLayoutOverlayVisible.value = !isLayoutOverlayVisible.value },
+        onClick: () => {
+          isLayoutOverlayVisible.value = !isLayoutOverlayVisible.value
+        },
       })
 
       return h('div', {
@@ -76,6 +90,14 @@ export default defineComponent({
   // TODO(v2): Check why we need height in vertical nav & min-height in horizontal nav
   block-size: 100%;
 
+  &.window-scrolled {
+    .navbar-content-container {
+      padding: 0 1.5rem;
+      background-color: rgb(var(--v-theme-surface), .95);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+    }
+  }
+
   .layout-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -90,6 +112,8 @@ export default defineComponent({
   }
 
   .layout-navbar {
+    position: sticky;
+    inset-block-start: 0;
     z-index: variables.$layout-vertical-nav-layout-navbar-z-index;
 
     .navbar-content-container {

@@ -20,20 +20,62 @@ export const routes = [
             component: () => import('@/pages/work/rainbow.vue'),
           }, {
             path: '/rainbow/cinema_hall',
-            component: () => import('@/views/pages/projects/cinema-hall.vue'),
+            component: () => import('@/views/pages/projects/rainbow/cinema-hall.vue'),
           },
           {
             path: '/rainbow/smart_operation',
-            component: () => import('@/views/pages/projects/smart-operation.vue'),
+            component: () => import('@/views/pages/projects/rainbow/smart-operation.vue'),
+          }, {
+            path: '/rainbow/pharmacy',
+            component: () => import('@/views/pages/projects/rainbow/pharmacy.vue'),
           },
           {
             path: '/rainbow/smart_area',
-            component: () => import('@/views/pages/projects/smart-area.vue'),
+            component: () => import('@/views/pages/projects/rainbow/smart-area.vue'),
           },
           {
             path: '/rainbow/topo_tool',
-            component: () => import('@/views/pages/projects/topo-tool.vue'),
+            component: () => import('@/views/pages/projects/rainbow/topo-tool.vue'),
           },
+        ],
+      },
+
+      {
+        path: '/jinhe',
+        redirect: '/jinhe/all',
+        children: [
+          {
+            path: '/jinhe/all',
+            component: () => import('@/pages/work/jinhe.vue'),
+          },
+          {
+            path: '/jinhe/chemistry_plant',
+            component: () => import('@/views/pages/projects/jinhe/chemistry_plant.vue'),
+          },
+          {
+            path: '/jinhe/ruidebaoer',
+            component: () => import('@/views/pages/projects/jinhe/ruidebaoer.vue'),
+          },
+
+        ],
+      },
+      {
+        path: '/shuzixinxi',
+        redirect: '/shuzixinxi/all',
+        children: [
+          {
+            path: '/shuzixinxi/all',
+            component: () => import('@/pages/work/shuzixinxi.vue'),
+          },
+          {
+            path: '/shuzixinxi/book_reader',
+            component: () => import('@/views/pages/projects/shuzixinxi/book-reader.vue'),
+          },
+          {
+            path: '/shuzixinxi/dinosaur',
+            component: () => import('@/views/pages/projects/shuzixinxi/dinosaur.vue'),
+          },
+
         ],
       },
 

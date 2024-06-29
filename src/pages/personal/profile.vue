@@ -14,7 +14,8 @@
           <v-list-item prepend-icon="ri-global-line">国籍：白俄罗斯 🇧🇾</v-list-item>
           <v-list-item prepend-icon="ri-speak-line">语言：俄语、白俄语、汉语、英语</v-list-item>
           <v-list-item prepend-icon="ri-star-line">角色： web前端工程师</v-list-item>
-          <v-list-item prepend-icon="ri-graduation-cap-line">教育： 白俄罗斯国立信息和无线电电子大学 <br> 1997-2002
+          <v-list-item prepend-icon="ri-graduation-cap-line">教育： 白俄罗斯国立信息和无线电电子大学 <br> 1997-2002 <br>
+            软件工程师
           </v-list-item>
           <v-list-item prepend-icon="ri-user-location-line">家庭地址：西安莲湖区环城西路南段8号</v-list-item>
           <v-list-item prepend-icon="ri-wechat-2-line">微信号：yuanshi78</v-list-item>
@@ -113,9 +114,15 @@
             <v-list>
               <v-list-subheader>想法</v-list-subheader>
               <v-list-item>
-                --
+                1. 以思想为主. 技术是实现思想的工具
               </v-list-item>
-              <v-list-item>--</v-list-item>
+              <v-list-item>
+                2. 尽量使用提高工作效率的工具， 包括AI, 低代码/无代码工具。
+              </v-list-item>
+              <v-list-item>
+                3. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）。
+              </v-list-item>
+              <v-list-item></v-list-item>
 
             </v-list>
           </VCard>

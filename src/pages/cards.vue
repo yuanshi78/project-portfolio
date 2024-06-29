@@ -1,7 +1,7 @@
 <script setup>
-import CardNavigation from '@/views/pages/cards/card-basic/CardNavigation.vue';
-import CardSolid from '@/views/pages/cards/card-basic/CardSolid.vue';
-import Rainbow from '@/views/pages/projects/rainbow.vue';
+import CardNavigation from '@/views/pages/cards/card-basic/CardNavigation.vue'
+import CardSolid from '@/views/pages/cards/card-basic/CardSolid.vue'
+import Rainbow from '@/views/pages/projects/rainbow.vue'
 </script>
 
 <template>

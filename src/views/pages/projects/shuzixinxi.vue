@@ -4,11 +4,7 @@ import avatar2 from '@images/avatars/avatar-2.png'
 import avatar3 from '@images/avatars/avatar-3.png'
 import avatar4 from '@images/avatars/avatar-4.png'
 
-import project1 from '@images/pages/rainbow/project1.png'
-import project2 from '@images/pages/rainbow/project2.png'
-import project3 from '@images/pages/rainbow/project3.png'
-
-import { rainbow } from './projects.js'
+import { shuzixinxi } from './projects.js'
 
 const avatars = [
   avatar1,
@@ -23,7 +19,7 @@ const isCardDetailsVisible = ref(false)
 <template>
   <VRow>
     <VCol
-      v-for="prj in rainbow"
+      v-for="prj in shuzixinxi"
       cols="12"
       md="4"
       sm="6"
