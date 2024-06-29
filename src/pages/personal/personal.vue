@@ -101,7 +101,7 @@ watch(selectedPage, (value) => {
               prepend-icon="ri-user-fill"
               @click="toggle"
             >
-              Profile
+              个人信息
             </v-btn>
           </v-slide-group-item>
           <v-slide-group-item
