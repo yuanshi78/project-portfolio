@@ -70,7 +70,7 @@ export const shuzixinxi = [
   {
     name: '谷堆书城',
     description: '提供在线阅读电子书的服务的平台',
-    to: 'shuzixinxi/book_reader',
+    to: '/shuzixinxi/book_reader',
 
     image: general,
     tags: ['HTML', 'CSS', 'JavaScript'],
