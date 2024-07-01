@@ -1,4 +1,4 @@
-import project1 from '@images/pages/rainbow/project1.png'
+import project1 from '@images/pages/rainbow/smart-area/1.png'
 import project2 from '@images/pages/rainbow/project2.png'
 import project3 from '@images/pages/rainbow/project3.png'
 import project4 from '@images/pages/rainbow/project4.png'
