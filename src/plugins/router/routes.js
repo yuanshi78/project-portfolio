@@ -78,6 +78,22 @@ export const routes = [
 
         ],
       },
+      {
+        path: '/eds',
+        redirect: '/eds/all',
+        children: [
+          {
+            path: '/eds/all',
+            component: () => import('@/pages/work/eds.vue'),
+          },
+          {
+            path: '/eds/runway',
+            component: () => import('@/views/pages/projects/eds/runway.vue'),
+          },
+
+
+        ],
+      },
 
 
       {

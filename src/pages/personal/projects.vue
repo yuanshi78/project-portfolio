@@ -33,7 +33,7 @@
     </VCol>
 
     <VCol class="d-flex" cols="4" md="4" sm="12">
-      <VCard class="flex-1-1" subtitle="2007/12—2009/11， 武汉" title="EDS武汉（惠普公司武汉分公司）">
+      <VCard class="flex-1-1" subtitle="2007/12—2009/11， 武汉" title="EDS武汉（惠普公司武汉分公司）" to="eds">
         <VCardText>CO Runway, OnePass</VCardText>
       </VCard>
     </VCol>

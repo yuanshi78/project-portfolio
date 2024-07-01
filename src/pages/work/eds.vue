@@ -1,5 +1,5 @@
 <script setup>
-import Rainbow from '@/views/pages/projects/rainbow.vue'
+import EDS from '@/views/pages/projects/eds.vue'
 </script>
 
 <template>
@@ -7,6 +7,6 @@ import Rainbow from '@/views/pages/projects/rainbow.vue'
     <p class="text-3xl mb-6">
       西安睿博科技股份有限公司
     </p>
-    <Rainbow />
+    <EDS />
   </div>
 </template>

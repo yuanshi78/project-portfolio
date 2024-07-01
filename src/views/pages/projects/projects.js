@@ -84,3 +84,15 @@ export const shuzixinxi = [
     tags: ['HTML5', 'CSS', 'JavaScript', 'LayaAir'],
   },
 ]
+
+export const eds = [
+  {
+    name: 'CO Runway, OnePass',
+    description: '美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统',
+    to: '/eds/runway',
+
+    image: general,
+    tags: ['IBM z/OS', 'JCL', 'PL/I', 'IMS'],
+  },
+
+]

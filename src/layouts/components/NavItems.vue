@@ -187,4 +187,25 @@ watchEffect(() => {
       }"
     />
   </VerticalNavGroup>
+
+  <VerticalNavGroup
+    :item="{
+        title: 'EDS武汉',
+      isOpen: isEProjectsOpen,
+      }"
+  >
+    <VerticalNavLink
+      :item="{
+        title: '项目综合',
+        to: '/eds/all',
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'CO Runway, OnePass',
+        to: '/eds/runway',
+      }"
+    />
+
+  </VerticalNavGroup>
 </template>
