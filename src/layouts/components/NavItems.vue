@@ -100,7 +100,7 @@ watchEffect(() => {
   >
     <VerticalNavLink
       :item="{
-        title: '所有项目',
+        title: '项目综合',
         to: '/rainbow/all',
       }"
     />
@@ -144,7 +144,7 @@ watchEffect(() => {
   >
     <VerticalNavLink
       :item="{
-        title: '所有项目',
+        title: '项目综合',
         to: '/jinhe/all',
       }"
     />
@@ -170,7 +170,7 @@ watchEffect(() => {
   >
     <VerticalNavLink
       :item="{
-        title: '所有项目',
+        title: '项目综合',
         to: '/shuzixinxi/all',
       }"
     />
