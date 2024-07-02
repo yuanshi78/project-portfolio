@@ -9,75 +9,69 @@ let isProjectsOpen = ref(false)
 let isRProjectsOpen = ref(false)
 let isJProjectsOpen = ref(false)
 let isXProjectsOpen = ref(false)
+let isEProjectsOpen = ref(false)
+let isIProjectsOpen = ref(false)
 watchEffect(() => {
   const path = router.currentRoute.value.path
   switch (path) {
     case '/rainbow/all':
-      isProjectsOpen.value = true
-      isRProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isXProjectsOpen.value = false
-      break
     case '/rainbow/cinema_hall':
-      isProjectsOpen.value = true
-      isRProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isXProjectsOpen.value = false
-      break
     case '/rainbow/smart_operation':
-      isProjectsOpen.value = true
-      isRProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isXProjectsOpen.value = false
-      break
     case '/rainbow/smart_area':
-      isProjectsOpen.value = true
-      isRProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isXProjectsOpen.value = false
-      break
     case '/rainbow/topo_tool':
-      isProjectsOpen.value = true
-      isRProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isXProjectsOpen.value = false
-      break
     case '/rainbow/pharmacy':
       isProjectsOpen.value = true
       isRProjectsOpen.value = true
       isJProjectsOpen.value = false
       isXProjectsOpen.value = false
+      isEProjectsOpen.value = false
+      isIProjectsOpen.value = false
       break
+
     case '/jinhe/all':
-      isProjectsOpen.value = true
-      isJProjectsOpen.value = true
-      isRProjectsOpen.value = false
-      isXProjectsOpen.value = false
-      break
     case '/jinhe/chemical_plant':
       isProjectsOpen.value = true
       isJProjectsOpen.value = true
       isRProjectsOpen.value = false
       isXProjectsOpen.value = false
+      isIProjectsOpen.value = false
+      isEProjectsOpen.value = false
       break
+
     case '/shuzixinxi/all':
-      isProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isRProjectsOpen.value = false
-      isXProjectsOpen.value = true
-      break
     case '/shuzixinxi/book_reader':
-      isProjectsOpen.value = true
-      isJProjectsOpen.value = false
-      isRProjectsOpen.value = false
-      isXProjectsOpen.value = true
-      break
     case '/shuzixinxi/dinosaur':
       isProjectsOpen.value = true
       isJProjectsOpen.value = false
       isRProjectsOpen.value = false
       isXProjectsOpen.value = true
+      isIProjectsOpen.value = false
+      isEProjectsOpen.value = false
       break
+
+    case '/eds/all':
+    case '/eds/runway':
+      isProjectsOpen.value = true
+      isJProjectsOpen.value = false
+      isRProjectsOpen.value = false
+      isXProjectsOpen.value = false
+      isIProjectsOpen.value = false
+      isEProjectsOpen.value = true
+      break
+
+    case '/iba/all':
+    case '/iba/planning_engine':
+    case '/iba/adm':
+    case '/iba/mie':
+    case '/iba/urt':
+      isProjectsOpen.value = true
+      isJProjectsOpen.value = false
+      isRProjectsOpen.value = false
+      isXProjectsOpen.value = false
+      isIProjectsOpen.value = true
+      isEProjectsOpen.value = false
+      break
+
     default:
       isProjectsOpen.value = false
   }
@@ -207,5 +201,43 @@ watchEffect(() => {
       }"
     />
 
+  </VerticalNavGroup>
+
+  <VerticalNavGroup
+    :item="{
+        title: 'IBA白俄罗斯',
+      isOpen: isIProjectsOpen,
+      }"
+  >
+    <VerticalNavLink
+      :item="{
+        title: '项目综合',
+        to: '/iba/all',
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'Central Planning Engine',
+        to: '/iba/planning_engine',
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'ADM France BA',
+        to: '/iba/adm',
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'MIE France',
+        to: '/iba/mie',
+      }"
+    />
+    <VerticalNavLink
+      :item="{
+        title: 'URT Extractors ISD',
+        to: '/iba/urt',
+      }"
+    />
   </VerticalNavGroup>
 </template>

@@ -10,7 +10,7 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
 <template>
   <v-row>
     <v-col cols="12">
-      <div class="text-h3">魔幻恐龙</div>
+      <div class="text-h3">CO Runway, OnePass</div>
     </v-col>
   </v-row>
   <v-row>
@@ -40,7 +40,7 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
 
           <div class="text-h5">成就</div>
           <v-list>
-            <v-list-item>1. 学会和中国同事合作
+            <v-list-item>1. 学会了和中国同事合作
             </v-list-item>
             <v-list-item>2. 在实践中获得关于层次数据库IMS的知识</v-list-item>
             <v-list-item>3.完成了许多JCL（Job Control

@@ -38,8 +38,10 @@
       </VCard>
     </VCol>
     <VCol class="d-flex" cols="4" md="4" sm="12">
-      <VCard class="flex-1-1" subtitle="2002/12—2012/03, 白俄罗斯" title="IBA （International Business Alliance)">
-        <VCardText>IBM美国微电子部Central Planning Engine系统、IBM法国ADM France BA、IBM法国MIE France
+      <VCard class="flex-1-1" subtitle="2002/12—2012/03, 白俄罗斯" title="IBA （International Business Alliance)"
+             to="iba">
+        <VCardText>IBM美国微电子部Central Planning Engine系统、IBM法国ADM France BA、IBM法国MIE France, IBM法国URT
+          Extractors ISD
         </VCardText>
       </VCard>
     </VCol>

@@ -90,8 +90,32 @@ export const routes = [
             path: '/eds/runway',
             component: () => import('@/views/pages/projects/eds/runway.vue'),
           },
-
-
+        ],
+      },
+      {
+        path: '/iba',
+        redirect: '/iba/all',
+        children: [
+          {
+            path: '/iba/all',
+            component: () => import('@/pages/work/iba.vue'),
+          },
+          {
+            path: '/iba/planning_engine',
+            component: () => import('@/views/pages/projects/iba/planning-engine.vue'),
+          },
+          {
+            path: '/iba/adm',
+            component: () => import('@/views/pages/projects/iba/adm.vue'),
+          },
+          {
+            path: '/iba/mie',
+            component: () => import('@/views/pages/projects/iba/mie.vue'),
+          },
+          {
+            path: '/iba/urt',
+            component: () => import('@/views/pages/projects/iba/urt.vue'),
+          },
         ],
       },
 

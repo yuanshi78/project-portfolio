@@ -5,7 +5,7 @@ import EDS from '@/views/pages/projects/eds.vue'
 <template>
   <div>
     <p class="text-3xl mb-6">
-      西安睿博科技股份有限公司
+      EDS武汉
     </p>
     <EDS />
   </div>

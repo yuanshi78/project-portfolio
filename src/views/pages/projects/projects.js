@@ -92,7 +92,37 @@ export const eds = [
     to: '/eds/runway',
 
     image: general,
-    tags: ['IBM z/OS', 'JCL', 'PL/I', 'IMS'],
+    tags: ['IBM zSeries', 'IBM z/OS', 'JCL', 'PL/I', 'IMS'],
   },
+]
 
+export const iba = [
+  {
+    name: 'Central Planning Engine系统',
+    description: 'IBM美国微电子部Central Planning Engine系统',
+    to: '/iba/planning_engine',
+    image: general,
+    tags: ['IBM zSeries', 'IBM z/OS', 'JCL', 'C/C++', 'DB2', 'SQL'],
+  },
+  {
+    name: 'ADM France BA',
+    description: 'IBM法国ADM France BA',
+    to: '/iba/adm',
+    image: general,
+    tags: ['IBM zSeries', 'IBM z/OS', 'JCL', 'C/C++', 'DB2', 'SQL', 'CICS'],
+  },
+  {
+    name: 'MIE France',
+    description: 'IBM法国MIE France',
+    to: '/iba/mie',
+    image: general,
+    tags: ['TDI', 'JavaScript', 'DB2', 'SQL'],
+  },
+  {
+    name: 'URT Extractors ISD',
+    description: 'IBM法国URT Extractors ISD',
+    to: '/iba/urt',
+    image: general,
+    tags: ['Perl', 'korn-shell', 'DB2', 'SQL'],
+  },
 ]

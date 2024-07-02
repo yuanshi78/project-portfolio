@@ -1,12 +1,12 @@
 <script setup>
-import Rainbow from '@/views/pages/projects/rainbow.vue'
+import IBA from '@/views/pages/projects/iba.vue'
 </script>
 
 <template>
   <div>
     <p class="text-3xl mb-6">
-      西安睿博科技股份有限公司
+      IBA （国际商业联盟），白俄罗斯
     </p>
-    <Rainbow />
+    <IBA />
   </div>
 </template>
