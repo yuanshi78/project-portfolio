@@ -38,13 +38,14 @@ const isCardDetailsVisible = ref(false)
             />
 
             <VCardItem>
-              <div class="d-flex justify-lg-space-between">
+              <div class="d-flex justify-lg-space-between justify-center flex-wrap">
                 <VCardTitle>{{ prj.name }}</VCardTitle>
-                <div class="tags">
+                <div class="tags v-col-12 v-col-lg-6 ml-lg-3 d-flex justify-center justify-lg-start flex-wrap">
                   <VBadge
                     v-for="(tag, i) in prj.tags"
                     :key="i"
                     :content="tag"
+                    class="mb-2"
                     color="primary"
                     inline
                     rounded="pill"
@@ -76,7 +77,7 @@ const isCardDetailsVisible = ref(false)
 }
 
 .tags {
-  margin-left: 3rem;
+  margin-top: -.3rem;
 }
 
 .avatar-center {
