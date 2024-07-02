@@ -4,7 +4,7 @@
 
 <template>
   <VRow>
-    <VCol cols="4" md="4" sm="12">
+    <VCol cols="12" lg="4" md="4">
       <VCard class="mx-auto">
         <!--        <div class="text-body-2 mb-4 text-disabled">自我介绍</div>-->
         <v-list>
@@ -37,48 +37,48 @@
         </v-list>
       </VCard>
     </VCol>
-    <VCol cols="8" md="8" sm="12">
+    <VCol cols="12" lg="8" md="8">
       <VRow>
         <VCol cols="12" md="12" sm="12">
           <VCard>
             <div class="text-default pa-4">专业技能</div>
             <VRow>
-              <VCol cols="6" md="6" sm="12">
+              <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-vuejs-line">
                     前端：HTML5、CSS3、JavaScript （ES5, ES2015, ES2015以上）、Vue 2/3
                   </v-list-item>
                 </v-list>
               </VCol>
-              <VCol cols="6" md="6" sm="12">
+              <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-code-s-slash-line">
                     语言：JavaScript （ES5, ES2015, ES2015以上）、C/C++、Lisp、SQL、JCL
                   </v-list-item>
                 </v-list>
               </VCol>
-              <VCol cols="6" md="6" sm="12">
+              <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-code-box-line">
                     低代码框架：diboot、amis
                   </v-list-item>
                 </v-list>
               </VCol>
-              <VCol cols="6" md="6" sm="12">
+              <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-earth-line">
                     GIS工具：高德地图API、AntV L7、Cesium js
                   </v-list-item>
                 </v-list>
               </VCol>
-              <VCol cols="6" md="6" sm="12">
+              <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-ubuntu-line">
                     OS：Linux (Manjaro & Mint)、Windows、IBM z/OS
                   </v-list-item>
                 </v-list>
               </VCol>
-              <VCol cols="6" md="6" sm="12">
+              <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-computer-line">
                     硬件环境：PC、IBM zSeries (Z Mainframes)
@@ -89,7 +89,7 @@
           </VCard>
         </VCol>
 
-        <VCol cols="6" md="6" sm="12">
+        <VCol cols="12" lg="6" md="6">
           <VCard class="mx-auto">
             <v-list>
               <v-list-subheader>自我评价</v-list-subheader>
@@ -109,7 +109,7 @@
           </VCard>
         </VCol>
 
-        <VCol cols="6" md="6" sm="12">
+        <VCol cols="12" lg="6" md="6">
           <VCard class="mx-auto">
             <v-list>
               <v-list-subheader>想法</v-list-subheader>
@@ -117,12 +117,23 @@
                 1. 以思想为主. 技术是实现思想的工具
               </v-list-item>
               <v-list-item>
-                2. 尽量使用提高工作效率的工具， 包括AI, 低代码/无代码工具。
+                2.充分利用抽象的力量
               </v-list-item>
               <v-list-item>
-                3. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）。
+                4. 尽量利用模块化架构。
               </v-list-item>
-              <v-list-item></v-list-item>
+              <v-list-item>
+                5. 尽量减少重复代码
+              </v-list-item>
+              <v-list-item>
+                6. 尽量利用提高工作效率的工具， 包括AI, 低代码/无代码工具
+              </v-list-item>
+              <v-list-item>
+                7. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）
+              </v-list-item>
+              <v-list-item>
+                8. 我的梦想是对人工神经网络技术的发展有贡献
+              </v-list-item>
 
             </v-list>
           </VCard>

@@ -21,15 +21,15 @@ watch(selectedPage, (value) => {
         sm="12"
       >
         <VCard>
-          <VImg :src="abs" cover style="max-height: 250px; min-height: 125px;" />
+          <VImg :src="abs" aspect-ratio="3" cover max-height="250" min-height="125" />
 
           <VCardText class="d-flex align-bottom flex-sm-row flex-column justify-left gap-x-6">
             <div class="d-flex h-0">
               <!-- User Avatar -->
               <VAvatar
                 :image="me"
-                class="avatar-center"
-                size="150px"
+                class="avatar-center mx-auto"
+                size="130px"
               />
             </div>
 
@@ -40,7 +40,7 @@ watch(selectedPage, (value) => {
                 <VCardTitle class="text-h4 pa-0">
                   Aliaksandr Kuzmiankou 元实
                 </VCardTitle>
-                <v-list class="d-flex flex-wrap" density="compact">
+                <v-list class="d-flex justify-center flex-wrap gap-6 justify-sm-start" density="compact">
                   <v-list-item
                     color="primary"
                     style="padding-left: 0"
@@ -86,6 +86,7 @@ watch(selectedPage, (value) => {
 
     <VRow>
       <VCol
+        class="mt-6"
         cols="12"
         md="12"
         sm="12"
