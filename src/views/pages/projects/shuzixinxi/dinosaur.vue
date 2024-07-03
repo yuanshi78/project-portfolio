@@ -34,7 +34,13 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <!--            <v-list-item>2. 运营管理</v-list-item>-->
           <!--            <v-list-item>3. 资产管理</v-list-item>-->
           <!--          </v-list>-->
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 此小游戏用于推荐公司研发的AR产品</v-list-item>
+          </v-list>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>HTML5, CSS, JavaScript, LayaAir</p>
         </v-card-text>
       </v-card>

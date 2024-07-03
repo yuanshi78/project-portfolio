@@ -27,7 +27,8 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <div class="text-h5">简介</div>
           <p>
             项目的目标是为陕西瑞德宝尔投资有限公司提供安全、数字化生产、数字化运营、数字化资产管理平台。</p>
-          <div class="text-h5">功能</div>
+
+          <div class="text-h5 mt-6">功能</div>
           <p>主要功能是：</p>
           <v-list>
             <v-list-item>1. 基础安全、人员安全、环境安全、设备安全、生产安全管理</v-list-item>

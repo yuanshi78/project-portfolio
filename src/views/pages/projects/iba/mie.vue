@@ -36,10 +36,15 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <!--            <v-list-item>2. 运营管理</v-list-item>-->
           <!--            <v-list-item>3. 资产管理</v-list-item>-->
           <!--          </v-list>-->
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>JavaScript，TDI，DB2, SQL</p>
 
-          <div class="text-h5">成就</div>
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 自动化IMS、CICS、DB2等系统上的用户资料的处理</v-list-item>
+          </v-list>
+          <div class="text-h5 mt-6">成就</div>
           <v-list>
             <v-list-item>1. 学会了TDI、JavaScript</v-list-item>
             <v-list-item>2. 一个人设计了项目的TDI部分</v-list-item>

@@ -35,10 +35,16 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <!--            <v-list-item>2. 运营管理</v-list-item>-->
           <!--            <v-list-item>3. 资产管理</v-list-item>-->
           <!--          </v-list>-->
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 通过数字化的方式，实现主机构件价格计算</v-list-item>
+          </v-list>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>IBM zSeries, IBM z/OS, JCL, C/C++, DB2, SQL, SCLM, CICS</p>
 
-          <div class="text-h5">成就</div>
+          <div class="text-h5 mt-6">成就</div>
           <v-list>
             <v-list-item>1. 用C/C++研制这个项目的大部分程序，优化同事做的程序</v-list-item>
           </v-list>

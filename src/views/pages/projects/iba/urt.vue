@@ -37,10 +37,18 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <!--            <v-list-item>2. 运营管理</v-list-item>-->
           <!--            <v-list-item>3. 资产管理</v-list-item>-->
           <!--          </v-list>-->
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1.自动化Unix、AIX、
+              Solaris、 Linux、 HP-UX操作系统上运行不同的分系统提取用户资料的处理
+            </v-list-item>
+          </v-list>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>Perl, korn-shell, DB2, SQL</p>
 
-          <div class="text-h5">成就</div>
+          <div class="text-h5 mt-6">成就</div>
           <v-list>
             <v-list-item>1. 学会了Perl、基于Unix系统的korn-shell</v-list-item>
             <v-list-item>2. 用Perl和korn-shell研发了获取DB2、Oracle、SAP等用户资料的程序</v-list-item>

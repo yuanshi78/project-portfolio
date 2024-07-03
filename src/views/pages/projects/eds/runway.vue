@@ -35,17 +35,20 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <!--            <v-list-item>2. 运营管理</v-list-item>-->
           <!--            <v-list-item>3. 资产管理</v-list-item>-->
           <!--          </v-list>-->
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 通过数字化提高Frequent Flyer运营效率</v-list-item>
+          </v-list>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>IBM z/OS, JCL, PL/I, IMS, CA-7, Endevor, CA-View</p>
 
-          <div class="text-h5">成就</div>
+          <div class="text-h5 mt-6">成就</div>
           <v-list>
-            <v-list-item>1. 学会了和中国同事合作
-            </v-list-item>
-            <v-list-item>2. 在实践中获得关于层次数据库IMS的知识</v-list-item>
-            <v-list-item>3.完成了许多JCL（Job Control
-              Language）脚本和PL/I程序，优化同事做的程序
-            </v-list-item>
+            <v-list-item>1. 学会了和中国同事合作</v-list-item>
+            <v-list-item>2. 在实践中获得了关于层次数据库IMS的知识</v-list-item>
+            <v-list-item>3. 完成了许多JCL（Job Control Language）脚本和PL/I程序，优化同事做的程序</v-list-item>
           </v-list>
         </v-card-text>
       </v-card>

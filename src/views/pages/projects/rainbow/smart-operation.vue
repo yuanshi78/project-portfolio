@@ -80,18 +80,26 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
       <v-card>
         <v-card-text>
           <div class="text-h5">简介</div>
-          <p>该系统的主要目标是优化电，水，气的使用, 并且保证电，水，气系统设备正常运行。</p>
-          <div class="text-h5">功能</div>
+          <p>区域电，水，气系统可视化运维系统。</p>
+
+          <div class="text-h5 mt-6">功能</div>
           <p>主要功能是：</p>
           <v-list>
             <v-list-item>1. 用数据可视化分析电水气的使用情况</v-list-item>
             <v-list-item>2. 电，水，气系统设备的巡检（线上和线下），保养和维修</v-list-item>
           </v-list>
-          <div class="text-h5">技术</div>
-          <p>Vue 2, diboot, ant-design-vue, echarts,DataEase, Fuxa</p>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 通过电，水，气系统管理数字化优化电，水，气的使用</v-list-item>
+            <v-list-item>2. 保证电，水，气系统设备正常运行</v-list-item>
+          </v-list>
+
+          <div class="text-h5  mt-6">技术</div>
+          <p>Vue 2, diboot, ant-design-vue, echarts, DataEase，Fuxa</p>
           <div class="text-h5">成就</div>
           <v-list>
-            <v-list-item>1. 开发了diboot无法生产的页面</v-list-item>
+            <v-list-item>1. 开发了diboot无法生产的功能</v-list-item>
             <v-list-item>2. 开发了能流图</v-list-item>
           </v-list>
         </v-card-text>

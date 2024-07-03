@@ -25,13 +25,20 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
         <v-card-text>
           <div class="text-h5">简介</div>
           <p>
-            项目的目的是研制谷堆书城网站。谷堆书城网站用于收费/免费看电子书(像《多看》一样)。谷堆书城网站和《谷堆看书》软件(也是陕西数字信息技术有限公司制作的)构成一个系统。</p>
-          <div class="text-h5">功能</div>
+            谷堆书城网站用于收费/免费看电子书(像《多看》一样)。谷堆书城网站和《谷堆看书》软件(也是陕西数字信息技术有限公司制作的)构成一个系统。</p>
+
+          <div class="text-h5 mt-6">功能</div>
           <p>主要功能是：</p>
           <v-list>
             <v-list-item>1. 阅读电子书</v-list-item>
           </v-list>
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 公司的主业务是制造电子书。 谷堆书城网站用于方便阅读公司制造的电子书。</v-list-item>
+          </v-list>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>HTML, CSS, JavaScript</p>
           <!--          <div class="text-h5">成就</div>-->
           <!--          <v-list>-->

@@ -35,10 +35,16 @@ import picture6 from '@images/pages/rainbow/smart-oper/7.png'
           <!--            <v-list-item>2. 运营管理</v-list-item>-->
           <!--            <v-list-item>3. 资产管理</v-list-item>-->
           <!--          </v-list>-->
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>---</v-list-item>
+          </v-list>
+
+          <div class="text-h5 mt-6">技术</div>
           <p>IBM zSeries, IBM z/OS, JCL, C/C++, PL/I, DB2, SQL, SCLM</p>
 
-          <div class="text-h5">成就</div>
+          <div class="text-h5 mt-6">成就</div>
           <v-list>
             <v-list-item>1. 获得关于IBM大型主机zSeries的知识</v-list-item>
             <v-list-item>2. 了解IBM大型主机的zOS操作系</v-list-item>

@@ -57,7 +57,8 @@ import picture3 from '@images/pages/rainbow/topo-tool/2.png'
         <v-card-text>
           <div class="text-h5">简介</div>
           <p>拓扑图工具用于创建监控设备拓扑图。</p>
-          <div class="text-h5">项目demo链接</div>
+
+          <div class="text-h5 mt-6">项目demo链接</div>
           <v-list>
             <v-list-item>
               <a
@@ -67,14 +68,24 @@ import picture3 from '@images/pages/rainbow/topo-tool/2.png'
               </a>
             </v-list-item>
           </v-list>
-          <div class="text-h5">功能</div>
+
+          <div class="text-h5 mt-6">功能</div>
           <p>主要功能是：</p>
           <v-list>
             <v-list-item>1. 创建监控设备拓扑图</v-list-item>
           </v-list>
-          <div class="text-h5">技术</div>
+
+          <div class="text-h5 mt-6">项目目标</div>
+          <v-list>
+            <v-list-item>1. 简化监控拓扑图的创建</v-list-item>
+            <v-list-item>2. 其他人能轻松地创建拓扑图</v-list-item>
+          </v-list>
+
+
+          <div class="text-h5 mt-6">技术</div>
           <p>Vue 2, JavaScript, twave js</p>
-          <div class="text-h5">成就</div>
+
+          <div class="text-h5 mt-6">成就</div>
           <v-list>
             <v-list-item>1. 最初，我为了给每个客户在大屏上展示监控设备拓扑图必须每一次手动创建包含 JSON 格式的监控设备结构的文件.
               因为区域里的摄像头一般很多, 创建非常耗时, 而且只有我才能创建它. 所以我推荐了开发创建拓扑图的工具, 并开发了它.
