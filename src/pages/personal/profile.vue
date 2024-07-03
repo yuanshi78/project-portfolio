@@ -13,6 +13,7 @@
           <v-list-item prepend-icon="ri-calendar-line">年龄：46岁</v-list-item>
           <v-list-item prepend-icon="ri-global-line">国籍：白俄罗斯 🇧🇾</v-list-item>
           <v-list-item prepend-icon="ri-speak-line">语言：俄语、白俄语、汉语、英语</v-list-item>
+          <v-list-item prepend-icon="ri-parent-line">婚姻状况：已婚，有孩子</v-list-item>
           <v-list-item prepend-icon="ri-star-line">角色： web前端工程师</v-list-item>
           <v-list-item prepend-icon="ri-graduation-cap-line">教育： 白俄罗斯国立信息和无线电电子大学 <br> 1997-2002 <br>
             软件工程师
@@ -117,10 +118,10 @@
                 1. 以思想为主. 技术是实现思想的工具
               </v-list-item>
               <v-list-item>
-                2.充分利用抽象的力量
+                2. 充分利用抽象的力量
               </v-list-item>
               <v-list-item>
-                4. 尽量利用模块化架构。
+                4. 尽量利用模块化架构
               </v-list-item>
               <v-list-item>
                 5. 尽量减少重复代码
