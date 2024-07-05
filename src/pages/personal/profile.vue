@@ -130,12 +130,17 @@
                 6. 尽量利用提高工作效率的工具， 包括AI, 低代码/无代码工具
               </v-list-item>
               <v-list-item>
-                7. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）
+                7. 团队合作很重要
               </v-list-item>
               <v-list-item>
-                8. 我的梦想是对人工神经网络技术的发展有贡献
+                8. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）
               </v-list-item>
-
+              <v-list-item>
+                9. 想做出自己的产品
+              </v-list-item>
+              <v-list-item>
+                10. 我的梦想是对人工神经网络技术的发展有贡献
+              </v-list-item>
             </v-list>
           </VCard>
         </VCol>
