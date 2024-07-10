@@ -106,6 +106,7 @@
               <v-list-item prepend-icon="ri-group-3-line">有团队合作精神</v-list-item>
               <v-list-item prepend-icon="ri-task-line">本人适应性强，责任心强，有优秀的中文口头表达能力
               </v-list-item>
+              <v-list-item prepend-icon="ri-globe-line">会努力吸引白俄罗斯项目</v-list-item>
             </v-list>
           </VCard>
         </VCol>
