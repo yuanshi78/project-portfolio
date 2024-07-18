@@ -74,6 +74,13 @@
               </VCol>
               <VCol cols="12" lg="6" md="6">
                 <v-list>
+                  <v-list-item prepend-icon="ri-earth-line">
+                    可视化：echarts, Grafana
+                  </v-list-item>
+                </v-list>
+              </VCol>
+              <VCol cols="12" lg="6" md="6">
+                <v-list>
                   <v-list-item prepend-icon="ri-ubuntu-line">
                     OS：Linux (Manjaro & Mint)、Windows、IBM z/OS
                   </v-list-item>
