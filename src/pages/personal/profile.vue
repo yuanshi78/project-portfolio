@@ -74,7 +74,7 @@
               </VCol>
               <VCol cols="12" lg="6" md="6">
                 <v-list>
-                  <v-list-item prepend-icon="ri-earth-line">
+                  <v-list-item prepend-icon="ri-pie-chart-line">
                     可视化：echarts, Grafana
                   </v-list-item>
                 </v-list>
@@ -147,7 +147,10 @@
                 9. 想做出自己的产品
               </v-list-item>
               <v-list-item>
-                10. 我的梦想是对人工神经网络技术的发展有贡献
+                10. 打算把我以前做的拓扑工具优化，作为在IoT平台上使用的模块
+              </v-list-item>
+              <v-list-item>
+                11. 我的梦想是对人工神经网络技术的发展有贡献
               </v-list-item>
             </v-list>
           </VCard>
