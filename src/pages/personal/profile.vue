@@ -74,8 +74,8 @@
               </VCol>
               <VCol cols="12" lg="6" md="6">
                 <v-list>
-                  <v-list-item prepend-icon="ri-pie-chart-line">
-                    可视化：echarts, Grafana
+                  <v-list-item prepend-icon="ri-pie-chart-line" class="important">
+                   可视化：echarts, Grafana
                   </v-list-item>
                 </v-list>
               </VCol>
@@ -105,10 +105,11 @@
                 俄语🇷🇺、白俄语🇧🇾、汉语🇨🇳、英语🇬🇧。有一定的汉语基础，在听、说、读、写方面都有长处，可以用中文与人顺利的交流
               </v-list-item>
               <v-list-item prepend-icon="ri-code-s-slash-line">拥有十九年的软件创作和应用经验</v-list-item>
-              <v-list-item prepend-icon="ri-lightbulb-flash-line">产生新想法的能力较强</v-list-item>
-              <v-list-item prepend-icon="ri-parentheses-fill">研发(研究+开发)能力较强</v-list-item>
+              <v-list-item prepend-icon="ri-lightbulb-flash-line" class="important">产生新想法的能力较强</v-list-item>
+              <v-list-item prepend-icon="ri-parentheses-fill" class="important">研发(研究+开发)能力较强</v-list-item>
               <v-list-item prepend-icon="ri-apps-line">复合软件研制和了解项目业务流程能力较强</v-list-item>
-              <v-list-item prepend-icon="ri-dashboard-2-line">研发大数据可视化系统能力较强</v-list-item>
+              <v-list-item prepend-icon="ri-dashboard-2-line" class="important">研发大数据可视化系统能力较强</v-list-item>
+              <v-list-item prepend-icon="ri-stackshare-line" class="important">有研发IoT平台前端的经验</v-list-item>
               <v-list-item prepend-icon="ri-stack-line">了解敏捷开发 Scrum 的基础</v-list-item>
               <v-list-item prepend-icon="ri-group-3-line">有团队合作精神</v-list-item>
               <v-list-item prepend-icon="ri-task-line">本人适应性强，责任心强，有优秀的中文口头表达能力
@@ -122,7 +123,7 @@
           <VCard class="mx-auto">
             <v-list>
               <v-list-subheader>想法</v-list-subheader>
-              <v-list-item>
+              <v-list-item class="important">
                 1. 以思想为主. 技术是实现思想的工具
               </v-list-item>
               <v-list-item>
@@ -137,17 +138,17 @@
               <v-list-item>
                 6. 尽量利用提高工作效率的工具， 包括AI, 低代码/无代码工具
               </v-list-item>
-              <v-list-item>
+              <v-list-item class="important">
                 7. 团队合作很重要
               </v-list-item>
               <v-list-item>
-                8. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）
+                8. 我不是coder monkey, 而是<span class="important">软件工程师</span>， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）
               </v-list-item>
               <v-list-item>
                 9. 想做出自己的产品
               </v-list-item>
-              <v-list-item>
-                10. 打算把我以前做的拓扑工具优化，作为在IoT平台上使用的模块
+              <v-list-item class="important">
+                10. 利用以前研发的拓扑工具为基础，研发完整的IoT拓扑图工具， 作为在IoT平台上使用的模块
               </v-list-item>
               <v-list-item>
                 11. 我的梦想是对人工神经网络技术的发展有贡献
@@ -161,5 +162,8 @@
 </template>
 
 <style lang="scss" scoped>
-
+.important {
+  font-weight: bold;
+  color: gold;
+}
 </style>
