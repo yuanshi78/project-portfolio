@@ -1,5 +1,11 @@
 <script setup>
-
+/**
+ * 算居住年数
+ * @returns {number}
+ */
+function getYears() {
+  return new Date().getFullYear() - 2014;
+}
 </script>
 
 <template>
@@ -13,6 +19,7 @@
           <v-list-item prepend-icon="ri-calendar-line">年龄：46岁</v-list-item>
           <v-list-item prepend-icon="ri-global-line">国籍：白俄罗斯 🇧🇾</v-list-item>
           <v-list-item prepend-icon="ri-speak-line">语言：俄语、白俄语、汉语、英语</v-list-item>
+          <v-list-item prepend-icon="ri-speak-line">居住：在西安{{getYears()}}年了</v-list-item>
           <v-list-item prepend-icon="ri-parent-line">婚姻状况：已婚，有孩子</v-list-item>
           <v-list-item prepend-icon="ri-star-line">角色： web前端工程师</v-list-item>
           <v-list-item prepend-icon="ri-graduation-cap-line">教育： 白俄罗斯国立信息和无线电电子大学 <br> 1997-2002 <br>
