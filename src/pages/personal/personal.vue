@@ -75,6 +75,17 @@ watch(selectedPage, (value) => {
 
                     <v-list-item-title>白俄罗斯</v-list-item-title>
                   </v-list-item>
+
+                  <v-list-item
+                    color="primary"
+                    value="1"
+                  >
+                    <template v-slot:prepend>
+                      <v-icon icon="ri-building-2-line"></v-icon>
+                    </template>
+
+                    <v-list-item-title>西安艾迪韦克网络科技有限公司</v-list-item-title>
+                  </v-list-item>
                 </v-list>
               </div>
             </div>
