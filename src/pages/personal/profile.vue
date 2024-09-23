@@ -88,6 +88,13 @@ function getYears() {
               </VCol>
               <VCol cols="12" lg="6" md="6">
                 <v-list>
+                  <v-list-item prepend-icon="ri-tools-line">
+                    IDE：Webstorm, Cursor AI, VS Code
+                  </v-list-item>
+                </v-list>
+              </VCol>
+              <VCol cols="12" lg="6" md="6">
+                <v-list>
                   <v-list-item prepend-icon="ri-ubuntu-line">
                     OS：Linux (Manjaro & Mint)、Windows、IBM z/OS
                   </v-list-item>
