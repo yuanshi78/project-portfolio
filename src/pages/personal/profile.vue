@@ -61,7 +61,7 @@ function getYears() {
               <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-code-s-slash-line">
-                    语言：JavaScript （ES5, ES2015, ES2015以上）、C/C++、Lisp、SQL、JCL
+                    语言：JavaScript （ES5, ES2015, ES2015以上）、C/C++、Lisp Scheme、SQL、JCL
                   </v-list-item>
                 </v-list>
               </VCol>
