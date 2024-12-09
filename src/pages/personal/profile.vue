@@ -54,7 +54,7 @@ function getYears() {
               <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-vuejs-line">
-                    前端：HTML5、CSS3、JavaScript （ES5, ES2015, ES2015以上）、Vue 2/3
+                    前端：HTML5、CSS3、JavaScript （ES5, ES2015, ES2015以上）、Typescript、Vue 2/3
                   </v-list-item>
                 </v-list>
               </VCol>
