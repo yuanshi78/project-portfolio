@@ -67,7 +67,7 @@ function getYears() {
               </VCol>
               <VCol cols="12" lg="6" md="6">
                 <v-list>
-                  <v-list-item prepend-icon="ri-code-box-line">
+                  <v-list-item prepend-icon="ri-code-box-line" class="important">
                     低代码框架：Nocobase, AMIS
                   </v-list-item>
                 </v-list>
