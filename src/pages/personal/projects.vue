@@ -6,7 +6,7 @@
   <VRow>
     <VCol class="d-flex" cols="12" lg="4" md="4">
       <VCard class="flex-1-1" subtitle="2020/04 - 现在， 西安" title="西安睿博智能科技有限公司" to="rainbow">
-        <VCardText>“智慧运维系统”、“票务管理系统”、“生产管理系统”、“智能区域平台”、“产云销一体化平台”、“电力配电设备监控系统”、“国新LNG平台”
+        <VCardText>Nocobase插件、“智慧运维系统”、“票务管理系统”、“生产管理系统”、“智能区域平台”、“产云销一体化平台”、“电力配电设备监控系统”、“国新LNG平台”
         </VCardText>
       </VCard>
     </VCol>

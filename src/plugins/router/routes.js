@@ -25,7 +25,8 @@ export const routes = [
           {
             path: '/rainbow/smart_operation',
             component: () => import('@/views/pages/projects/rainbow/smart-operation.vue'),
-          }, {
+          },
+          {
             path: '/rainbow/pharmacy',
             component: () => import('@/views/pages/projects/rainbow/pharmacy.vue'),
           },
@@ -36,6 +37,10 @@ export const routes = [
           {
             path: '/rainbow/topo_tool',
             component: () => import('@/views/pages/projects/rainbow/topo-tool.vue'),
+          },
+          {
+            path: '/rainbow/nocobase-plugins',
+            component: () => import('@/views/pages/projects/rainbow/nocobase-plugins.vue'),
           },
         ],
       },
@@ -123,7 +128,7 @@ export const routes = [
       {
         path: '/:pathMatch(.*)*',
         component: () => import('@/pages/[...error].vue'),
-      },
+      }
     ],
 
   },

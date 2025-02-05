@@ -82,7 +82,7 @@ function getYears() {
               <VCol cols="12" lg="6" md="6">
                 <v-list>
                   <v-list-item prepend-icon="ri-pie-chart-line" class="important">
-                   可视化：echarts, Grafana
+                   可视化：echarts
                   </v-list-item>
                 </v-list>
               </VCol>

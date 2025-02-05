@@ -3,9 +3,18 @@ import project2 from '@images/pages/rainbow/project2.png'
 import project3 from '@images/pages/rainbow/project3.png'
 import project4 from '@images/pages/rainbow/project4.png'
 import project5 from '@images/pages/rainbow/pharmacy/1.png'
+import project6 from '@images/pages/rainbow/nocobase/echars-plugin.png'
 import general from '@images/pages/it_general.jpg'
 
 export const rainbow = [
+  {
+    name: 'Nocobase插件',
+    description: 'Nocobase是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件',
+    to: '/rainbow/nocobase-plugins',
+
+    image: project6,
+    tags: ['react', 'TypeScript', 'ant-design'],
+  },
   {
     name: '可视化运维系统',
     description: '区域电，水，气系统运维管理平台',
@@ -13,7 +22,8 @@ export const rainbow = [
 
     image: project4,
     tags: ['vue', 'JavaScript', 'DataEase', 'echarts', 'diboot', 'ant-design-vue'],
-  }, {
+  },
+  {
     name: '票务管理系统',
     description: '该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等',
     to: '/rainbow/cinema_hall',
