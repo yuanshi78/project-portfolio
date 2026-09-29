@@ -33,6 +33,7 @@ defineProps({
               <VImg
                 :src="prj.image"
                 class="projects_image"
+                aspect-ratio="1.7778"
                 cover
               />
               <div
