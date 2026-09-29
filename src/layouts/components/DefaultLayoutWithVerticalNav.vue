@@ -1,10 +1,15 @@
 <script setup>
+import { computed } from 'vue'
 import Footer from '@/layouts/components/Footer.vue'
 import NavItems from '@/layouts/components/NavItems.vue'
-import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
 import logo from '@images/logo.svg?raw'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
+import personal from '@/data/personal.json'
+import { visibleItems } from '@/utils/visibility'
+
+// 顶部代码仓库入口由 personal.json 的 repos 配置驱动（可加可减，也支持 visibility: hidden）
+const repos = computed(() => visibleItems(personal.repos ?? []))
 </script>
 
 <template>
@@ -22,16 +27,24 @@ import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 
         <VSpacer />
 
+        <!-- 👉 代码仓库入口（来自 personal.json 的 repos） -->
         <IconBtn
+          v-for="repo in repos"
+          :key="repo.url"
           class="me-2"
-          href="https://gitlab.com/yuanshi78"
+          :href="repo.url"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <VIcon icon="ri-gitlab-fill" />
+          <VIcon :icon="repo.icon" />
+          <VTooltip
+            activator="parent"
+            open-delay="500"
+            scroll-strategy="close"
+          >
+            {{ repo.name }}
+          </VTooltip>
         </IconBtn>
-
-        <NavbarThemeSwitcher class="me-2" />
 
         <UserProfile />
       </div>

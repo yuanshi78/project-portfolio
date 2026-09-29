@@ -16,6 +16,18 @@
       "text": "白俄罗斯"
     }
   ],
+  "repos": [
+    {
+      "name": "GitHub",
+      "icon": "ri-github-fill",
+      "url": "https://github.com/yuanshi78"
+    },
+    {
+      "name": "Gitee",
+      "icon": "ri-gitee-fill",
+      "url": "https://gitee.com/yuanshi78"
+    }
+  ],
   "tabs": [
     {
       "key": 0,
