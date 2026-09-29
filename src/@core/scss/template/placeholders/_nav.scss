@@ -1,12 +1,12 @@
 @use "@core/scss/base/mixins";
 
 %nav-link-active {
-  background: linear-gradient(-72.47deg, rgb(var(--v-theme-primary)) 22.16%,
-  rgba(var(--v-theme-primary), 0.7) 76.47%) !important;
+  // 👉 新拟态：选中项呈「内凹按下」质感，文字与图标用 primary 标识选中态
+  background: var(--neo-surface, rgb(var(--v-theme-background))) !important;
+  color: rgb(var(--v-theme-primary)) !important;
+  box-shadow: var(--neo-shadow-inset) !important;
 
-  i { color: rgb(var(--v-theme-on-primary)) !important; }
-
-  @include mixins.elevation(4);
+  i { color: rgb(var(--v-theme-primary)) !important; }
 }
 
 // ℹ️ This is common style that needs to be applied to both navs

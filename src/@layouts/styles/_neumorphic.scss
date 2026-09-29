@@ -1,0 +1,83 @@
+/*
+  👉 Neumorphic（新拟态）风格
+
+  核心原理：元素底色与页面底色一致，靠「左上亮 / 右下暗」的柔和双阴影营造
+  从背景中浮起的质感；选中/按下态则用 inset 内阴影呈现凹陷。
+
+  变量统一定义在主题根节点上，供卡片、轮播、按钮、胶囊、头像、标签页与导航共用，
+  因此各处效果在亮/暗主题下都能自动保持一致。
+
+  小元素（按钮 / 胶囊 / 头像 / 标签）用 -sm 变体：偏移与模糊更小，避免阴影显脏。
+*/
+
+:root,
+.v-theme--light {
+  --neo-surface: rgb(var(--v-theme-background));
+  --neo-shadow-raised: 10px 10px 20px rgba(46, 38, 61, 0.12), -10px -10px 20px rgba(255, 255, 255, 0.95);
+  --neo-shadow-inset: inset 5px 5px 10px rgba(46, 38, 61, 0.16), inset -5px -5px 10px rgba(255, 255, 255, 0.9);
+  --neo-shadow-raised-sm: 4px 4px 10px rgba(46, 38, 61, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.9);
+  --neo-shadow-inset-sm: inset 3px 3px 6px rgba(46, 38, 61, 0.14), inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+}
+
+.v-theme--dark {
+  --neo-surface: rgb(var(--v-theme-background));
+  --neo-shadow-raised: 10px 10px 20px rgba(19, 17, 32, 0.6), -10px -10px 20px rgba(255, 255, 255, 0.04);
+  --neo-shadow-inset: inset 5px 5px 10px rgba(19, 17, 32, 0.7), inset -5px -5px 10px rgba(255, 255, 255, 0.05);
+  --neo-shadow-raised-sm: 4px 4px 10px rgba(19, 17, 32, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.03);
+  --neo-shadow-inset-sm: inset 3px 3px 6px rgba(19, 17, 32, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.04);
+}
+
+// 👉 卡片：与页面同色 + 柔和浮起 + 去掉描边
+.v-card {
+  background: var(--neo-surface, rgb(var(--v-theme-background))) !important;
+  border-color: transparent !important;
+  box-shadow: var(--neo-shadow-raised, 0 2px 8px rgba(0, 0, 0, 0.1)) !important;
+}
+
+// 👉 P0：详情页轮播容器
+// 它是 div 而非 VCard，拿不到上面的卡片规则；原先的描边+重阴影会与卡片风格割裂，
+// 这里补齐为同样的柔和浮起效果（覆盖 ProjectDetail 内的 scoped 阴影）。
+.detail-carousel {
+  border-color: transparent !important;
+  box-shadow: var(--neo-shadow-raised) !important;
+}
+
+// 👉 P1：标签页 —— 选中标签呈「内凹按下」，与导航选中态一致
+.v-tabs {
+  background: transparent !important;
+}
+
+.v-tab--selected {
+  box-shadow: var(--neo-shadow-inset-sm) !important;
+}
+
+// 👉 P2：按钮 —— 默认浮起，悬停加深，按下凹陷
+// 排除 text / plain 变体：它们背景透明，加浮起阴影会出现「无底色的悬浮阴影」。
+.v-btn:not(.v-btn--variant-text, .v-btn--variant-plain) {
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+}
+
+.v-btn:not(.v-btn--variant-text, .v-btn--variant-plain):hover {
+  box-shadow: var(--neo-shadow-raised) !important;
+}
+
+.v-btn:not(.v-btn--variant-text, .v-btn--variant-plain):active {
+  box-shadow: var(--neo-shadow-inset-sm) !important;
+}
+
+// 👉 P3：头像
+.v-avatar {
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+}
+
+// 👉 P4：胶囊（标签 / 计数）
+.v-chip {
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+}
+
+// 👉 P5：导航分组标题（展开 / 激活）—— 与选中菜单项一致的内凹质感
+.nav-group.active > :first-child,
+.nav-group.open > :first-child {
+  background: var(--neo-surface) !important;
+  box-shadow: var(--neo-shadow-inset) !important;
+}
