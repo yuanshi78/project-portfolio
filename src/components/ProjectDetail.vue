@@ -6,6 +6,7 @@ import { useRoute } from 'vue-router'
 import details from '@/data/details.json'
 import { getCompany } from '@/data/companies'
 import { parseEmphasis } from '@/utils/emphasis'
+import { visibleItems } from '@/utils/visibility'
 import { useDisplay } from 'vuetify'
 
 const route = useRoute()
@@ -24,6 +25,9 @@ const tags = computed(() => project.value?.tags ?? [])
 
 // 图片放在 public/images/pages/ 下，JSON 中只存相对路径
 const resolveImage = img => `/images/pages/${img}`
+
+// 章节可在 details.json 中标记 visibility: "hidden" 隐藏（完全不渲染）
+const visibleSections = computed(() => visibleItems(detail.value?.sections ?? []))
 
 // 点击轮播图片放大预览（灯箱）
 const { smAndDown } = useDisplay()
@@ -134,7 +138,7 @@ const openZoom = img => {
 
     <!-- 👉 章节（每节独立成卡） -->
     <section
-      v-for="(sec, i) in detail.sections"
+      v-for="(sec, i) in visibleSections"
       :key="i"
       class="section-block mb-6"
     >

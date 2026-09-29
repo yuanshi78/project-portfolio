@@ -34,6 +34,13 @@
   box-shadow: var(--neo-shadow-raised, 0 2px 8px rgba(0, 0, 0, 0.1)) !important;
 }
 
+// 👉 列表背景与卡片一致
+// Vuetify 默认给 .v-list 设了 surface 底色（亮色 #fff），而拟态卡片用的是页面底色（#f4f5fa），
+// 列表会在卡片里露出一块白色面板，这里统一为卡片底色（.v-list-subheader 为 background:inherit，会跟随）。
+.v-list {
+  background: var(--neo-surface, rgb(var(--v-theme-background))) !important;
+}
+
 // 👉 P0：详情页轮播容器
 // 它是 div 而非 VCard，拿不到上面的卡片规则；原先的描边+重阴影会与卡片风格割裂，
 // 这里补齐为同样的柔和浮起效果（覆盖 ProjectDetail 内的 scoped 阴影）。

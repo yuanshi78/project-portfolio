@@ -6,12 +6,15 @@
 //   - 新增项目：在对应企业的 projects 里加一条（slug / name / image / description / tags）
 // 详情正文仍在 src/data/details.json（按 slug 关联），不要在这里配置。
 import companiesData from '@/data/companies.json'
+import { visibleItems } from '@/utils/visibility'
 
 const resolveImage = img => (typeof img === 'string' ? `/images/pages/${img}` : img)
 
+// 项目可在 JSON 中标记 visibility: "hidden" 临时下线：
+// 过滤后侧边导航与「项目综合」列表都不会再出现该项目（完全不渲染，不留空白）。
 export const companies = companiesData.map(c => ({
   ...c,
-  projects: c.projects.map(p => ({
+  projects: visibleItems(c.projects).map(p => ({
     ...p,
     to: `/project/${c.category}/${p.slug}`,
     image: resolveImage(p.image),

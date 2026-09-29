@@ -1,4 +1,6 @@
 <script setup>
+import { visibleItems } from '@/utils/visibility'
+
 const props = defineProps({
   data: {
     type: Object,
@@ -14,7 +16,7 @@ const props = defineProps({
     </div>
     <VRow>
       <VCol
-        v-for="(job, i) in data.items"
+        v-for="(job, i) in visibleItems(data.items)"
         :key="i"
         class="d-flex"
         cols="12"

@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { parseEmphasis } from '@/utils/emphasis'
+import { visibleItems } from '@/utils/visibility'
 
 const props = defineProps({
   data: {
@@ -103,7 +104,7 @@ const currentSections = computed(() => {
         </div>
         <VRow>
           <VCol
-            v-for="(it, idx) in data.skills.items"
+            v-for="(it, idx) in visibleItems(data.skills.items)"
             :key="idx"
             cols="12"
             md="6"
@@ -147,7 +148,7 @@ const currentSections = computed(() => {
           </div>
           <v-list>
             <v-list-item
-              v-for="(it, idx) in sec.items"
+              v-for="(it, idx) in visibleItems(sec.items)"
               :key="idx"
               :prepend-icon="it.icon"
               :class="{ important: it.important }"

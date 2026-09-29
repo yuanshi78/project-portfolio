@@ -148,7 +148,7 @@
   {
     "category": "eds",
     "company": "EDS武汉",
-    "icon": "ri-flight-line",
+    "icon": "ri-plane-line",
     "projects": [
       {
         "slug": "runway",

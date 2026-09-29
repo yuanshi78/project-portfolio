@@ -39,7 +39,8 @@
           },
           {
             "icon": "ri-calendar-line",
-            "text": "年龄：{age}岁"
+            "text": "年龄：{age}岁",
+            "visibility": "hidden"
           },
           {
             "icon": "ri-global-line",
