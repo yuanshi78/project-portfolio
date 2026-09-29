@@ -2,6 +2,11 @@
   "name": "Aliaksandr Kuzmiankou 元实",
   "cover": "/images/pages/abstract.jpg",
   "birthday": "1978-03-16",
+  "site": {
+    "name": "Portfolio",
+    "title": "Alexander Kuzmenkov - Portfolio",
+    "logo": "/images/logo.svg"
+  },
   "meta": [
     {
       "icon": "ri-computer-line",

@@ -3,13 +3,18 @@ import { computed } from 'vue'
 import Footer from '@/layouts/components/Footer.vue'
 import NavItems from '@/layouts/components/NavItems.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
-import logo from '@images/logo.svg?raw'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import personal from '@/data/personal.json'
 import { visibleItems } from '@/utils/visibility'
 
 // 顶部代码仓库入口由 personal.json 的 repos 配置驱动（可加可减，也支持 visibility: hidden）
 const repos = computed(() => visibleItems(personal.repos ?? []))
+
+// 侧边栏品牌名由 personal.json 的 site.name 配置
+const siteName = computed(() => personal.site?.name ?? '')
+
+// 站点 logo 由 personal.json 的 site.logo 配置（路径指向 public/ 下的文件，如 /images/logo.svg）
+const siteLogo = computed(() => personal.site?.logo ?? '')
 </script>
 
 <template>
@@ -55,13 +60,16 @@ const repos = computed(() => visibleItems(personal.repos ?? []))
         class="app-logo app-title-wrapper"
         to="/"
       >
-        <div
-          class="d-flex"
-          v-html="logo"
-        />
+        <img
+          v-if="siteLogo"
+          :src="siteLogo"
+          alt="logo"
+          class="d-flex app-logo-img"
+          style="height: 24px; width: auto;"
+        >
 
         <h1 class="font-weight-medium leading-normal text-xl text-uppercase">
-          Portfolio
+          {{ siteName }}
         </h1>
       </RouterLink>
 
