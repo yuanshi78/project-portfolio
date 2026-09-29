@@ -1,4 +1,5 @@
 import Default from '@/layouts/default.vue'
+import details from '@/data/details.json'
 
 export const routes = [
   { path: '/', redirect: '/person' },
@@ -11,143 +12,37 @@ export const routes = [
         path: '/person',
         component: () => import('@/pages/personal/personal.vue'),
       },
+
+      // 项目综合页：单一模板，由 companies 数据驱动（category 取路由参数）
       {
-        path: '/rainbow',
-        redirect: '/rainbow/all',
-        children: [
-          {
-            path: '/rainbow/all',
-            component: () => import('@/pages/work/rainbow.vue'),
-          }, {
-            path: '/rainbow/cinema_hall',
-            component: () => import('@/views/pages/projects/rainbow/cinema-hall.vue'),
-          },
-          {
-            path: '/rainbow/smart_operation',
-            component: () => import('@/views/pages/projects/rainbow/smart-operation.vue'),
-          },
-          {
-            path: '/rainbow/pharmacy',
-            component: () => import('@/views/pages/projects/rainbow/pharmacy.vue'),
-          },
-          {
-            path: '/rainbow/smart_area',
-            component: () => import('@/views/pages/projects/rainbow/smart-area.vue'),
-          },
-          {
-            path: '/rainbow/topo_tool',
-            component: () => import('@/views/pages/projects/rainbow/topo-tool.vue'),
-          },
-          {
-            path: '/rainbow/nocobase-plugins',
-            component: () => import('@/views/pages/projects/rainbow/nocobase-plugins.vue'),
-          },
-        ],
+        path: '/:category',
+        redirect: to => `/${to.params.category}/all`,
+      },
+      {
+        path: '/:category/all',
+        component: () => import('@/pages/work/ProjectOverview.vue'),
       },
 
+      // 项目详情页：完全由 src/data/details.json 驱动
       {
-        path: '/jinhe',
-        redirect: '/jinhe/all',
-        children: [
-          {
-            path: '/jinhe/all',
-            component: () => import('@/pages/work/jinhe.vue'),
-          },
-          {
-            path: '/jinhe/chemistry_plant',
-            component: () => import('@/views/pages/projects/jinhe/chemistry_plant.vue'),
-          },
-          {
-            path: '/jinhe/ruidebaoer',
-            component: () => import('@/views/pages/projects/jinhe/ruidebaoer.vue'),
-          },
-
-        ],
-      },
-      {
-        path: '/shuzixinxi',
-        redirect: '/shuzixinxi/all',
-        children: [
-          {
-            path: '/shuzixinxi/all',
-            component: () => import('@/pages/work/shuzixinxi.vue'),
-          },
-          {
-            path: '/shuzixinxi/book_reader',
-            component: () => import('@/views/pages/projects/shuzixinxi/book-reader.vue'),
-          },
-          {
-            path: '/shuzixinxi/dinosaur',
-            component: () => import('@/views/pages/projects/shuzixinxi/dinosaur.vue'),
-          },
-
-        ],
-      },
-      {
-        path: '/eds',
-        redirect: '/eds/all',
-        children: [
-          {
-            path: '/eds/all',
-            component: () => import('@/pages/work/eds.vue'),
-          },
-          {
-            path: '/eds/runway',
-            component: () => import('@/views/pages/projects/eds/runway.vue'),
-          },
-        ],
-      },
-      {
-        path: '/iba',
-        redirect: '/iba/all',
-        children: [
-          {
-            path: '/iba/all',
-            component: () => import('@/pages/work/iba.vue'),
-          },
-          {
-            path: '/iba/planning_engine',
-            component: () => import('@/views/pages/projects/iba/planning-engine.vue'),
-          },
-          {
-            path: '/iba/adm',
-            component: () => import('@/views/pages/projects/iba/adm.vue'),
-          },
-          {
-            path: '/iba/mie',
-            component: () => import('@/views/pages/projects/iba/mie.vue'),
-          },
-          {
-            path: '/iba/urt',
-            component: () => import('@/views/pages/projects/iba/urt.vue'),
-          },
-        ],
+        path: '/project/:category/:slug',
+        component: () => import('@/components/ProjectDetail.vue'),
       },
 
+      // 旧版详情 URL（如 /rainbow/pharmacy、/jinhe/chemistry_plant，无 /project 前缀，
+      // 且分类可能与现数据不一致）向后兼容：按 slug 查出正确分类后重定向到新地址。
+      {
+        path: '/:category/:slug',
+        redirect: to => {
+          const d = details.find(x => x.slug === to.params.slug)
+          return d ? `/project/${d.category}/${d.slug}` : '/person'
+        },
+      },
 
       {
         path: '/:pathMatch(.*)*',
         component: () => import('@/pages/[...error].vue'),
-      }
+      },
     ],
-
   },
-  // {
-  //   path: '/',
-  //   component: () => import('@/layouts/blank.vue'),
-  //   children: [
-  //     {
-  //       path: 'login',
-  //       component: () => import('@/pages/login.vue'),
-  //     },
-  //     {
-  //       path: 'register',
-  //       component: () => import('@/pages/register.vue'),
-  //     },
-  //     {
-  //       path: '/:pathMatch(.*)*',
-  //       component: () => import('@/pages/[...error].vue'),
-  //     },
-  //   ],
-  // },
 ]

@@ -1,9 +1,11 @@
 <script setup>
 import { useTheme } from 'vuetify'
-import misc404 from '@images/pages/404.png'
-import miscMaskDark from '@images/pages/misc-mask-dark.png'
-import miscMaskLight from '@images/pages/misc-mask-light.png'
-import tree from '@images/pages/tree.png'
+
+// 图片已移至 public/images/pages/，直接用绝对路径引用（无需走构建解析）
+const misc404 = '/images/pages/404.png'
+const miscMaskDark = '/images/pages/misc-mask-dark.png'
+const miscMaskLight = '/images/pages/misc-mask-light.png'
+const tree = '/images/pages/tree.png'
 
 const vuetifyTheme = useTheme()
 

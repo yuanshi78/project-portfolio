@@ -1,0 +1,228 @@
+[
+  {
+    "category": "aidiweike",
+    "company": "西安艾迪韦科网络科技有限公司",
+    "icon": "ri-building-2-line",
+    "projects": [
+      {
+        "slug": "nocobase-plugins",
+        "name": "Nocobase插件",
+        "image": "rainbow/nocobase/echars-plugin.png",
+        "description": "**Nocobase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
+        "tags": [
+          "react",
+          "TypeScript",
+          "ant-design"
+        ]
+      },
+      {
+        "slug": "smart_operation",
+        "name": "可视化运维系统",
+        "image": "rainbow/project4.png",
+        "description": "区域电，水，气系统运维管理平台",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "DataEase",
+          "echarts",
+          "diboot",
+          "ant-design-vue"
+        ]
+      },
+      {
+        "slug": "cinema_hall",
+        "name": "票务管理系统",
+        "image": "rainbow/project3.png",
+        "description": "该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "diboot",
+          "ant-design-vue",
+          "svg"
+        ]
+      },
+      {
+        "slug": "pharmacy",
+        "name": "兆益生物生产管理系统",
+        "image": "rainbow/pharmacy/1.png",
+        "description": "管理生产兽药的系统",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "diboot",
+          "ant-design-vue",
+          "Colaiven",
+          "echarts"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "rainbow",
+    "company": "西安睿博科技股份有限公司",
+    "icon": "ri-rainbow-line",
+    "projects": [
+      {
+        "slug": "smart_area",
+        "name": "智慧区域",
+        "image": "rainbow/smart-area/1.png",
+        "description": "大屏系统包括三个大屏: 设备运维大屏, 综合态势大屏和智慧安防大屏. 每个大屏展示相关的数据. 大屏中间展示区域地图或监控设备拓扑图 . 地图上展示热力图, 摄像头.可以播放来自摄像头的视频. 拓扑图上展示监控设备结构,设备网络速率和状态. 拓扑图工具用于创建监控设备拓扑图",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "echarts"
+        ]
+      },
+      {
+        "slug": "topo_tool",
+        "name": "拓扑图工具",
+        "image": "rainbow/project2.png",
+        "description": "创建监控设备拓扑图的应用",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "twave js"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "jinhe",
+    "company": "陕西金合信息科技股份有限公司",
+    "icon": "ri-building-line",
+    "projects": [
+      {
+        "slug": "chemistry_plant",
+        "name": "中煤陕西应急指挥系统",
+        "image": "it_general.jpg",
+        "description": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统",
+        "tags": [
+          "vue 2",
+          "JavaScript",
+          "Cesium js"
+        ]
+      },
+      {
+        "slug": "ruidebaoer",
+        "name": "瑞德宝尔智慧矿山",
+        "image": "it_general.jpg",
+        "description": "陕西瑞德宝尔投资有限公司安全，生产，运营管理系统",
+        "tags": [
+          "vue 2",
+          "JavaScript"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "shuzixinxi",
+    "company": "陕西数字信息技术有限公司",
+    "icon": "ri-computer-line",
+    "projects": [
+      {
+        "slug": "book_reader",
+        "name": "谷堆书城",
+        "image": "it_general.jpg",
+        "description": "提供在线阅读电子书的服务的平台",
+        "tags": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "slug": "dinosaur",
+        "name": "魔幻恐龙",
+        "image": "it_general.jpg",
+        "description": "小游戏",
+        "tags": [
+          "HTML5",
+          "CSS",
+          "JavaScript",
+          "LayaAir"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "eds",
+    "company": "EDS武汉",
+    "icon": "ri-flight-line",
+    "projects": [
+      {
+        "slug": "runway",
+        "name": "CO Runway, OnePass",
+        "image": "it_general.jpg",
+        "description": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
+        "tags": [
+          "IBM zSeries",
+          "IBM z/OS",
+          "JCL",
+          "PL/I",
+          "IMS"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "iba",
+    "company": "IBA（国际商业联盟），白俄罗斯",
+    "icon": "ri-global-line",
+    "projects": [
+      {
+        "slug": "planning_engine",
+        "name": "Central Planning Engine系统",
+        "image": "it_general.jpg",
+        "description": "IBM美国微电子部Central Planning Engine系统",
+        "tags": [
+          "IBM zSeries",
+          "IBM z/OS",
+          "JCL",
+          "C/C++",
+          "DB2",
+          "SQL"
+        ]
+      },
+      {
+        "slug": "adm",
+        "name": "IBM法国ADM France BA",
+        "image": "it_general.jpg",
+        "description": "IBM法国ADM France BA",
+        "tags": [
+          "IBM zSeries",
+          "IBM z/OS",
+          "JCL",
+          "C/C++",
+          "DB2",
+          "SQL",
+          "CICS"
+        ]
+      },
+      {
+        "slug": "mie",
+        "name": "MIE France",
+        "image": "it_general.jpg",
+        "description": "IBM法国MIE France",
+        "tags": [
+          "TDI",
+          "JavaScript",
+          "DB2",
+          "SQL"
+        ]
+      },
+      {
+        "slug": "urt",
+        "name": "URT Extractors ISD",
+        "image": "it_general.jpg",
+        "description": "IBM法国URT Extractors ISD",
+        "tags": [
+          "Perl",
+          "korn-shell",
+          "DB2",
+          "SQL"
+        ]
+      }
+    ]
+  }
+]

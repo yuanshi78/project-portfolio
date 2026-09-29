@@ -1,0 +1,583 @@
+[
+  {
+    "category": "aidiweike",
+    "slug": "nocobase-plugins",
+    "title": "Nocobase插件",
+    "date": "2024/11 - 2025/09",
+    "images": [
+      "rainbow/nocobase/echars-plugin.png"
+    ],
+    "sections": [
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "React, TypeScript, ant-design"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "aidiweike",
+    "slug": "smart_operation",
+    "title": "可视化运维系统",
+    "date": "2024/03 - 2024/07",
+    "images": [
+      "rainbow/smart-oper/6.png",
+      "rainbow/smart-oper/4.png",
+      "rainbow/smart-oper/5.png",
+      "rainbow/smart-oper/可视化运维系统设备台长.png",
+      "rainbow/smart-oper/可视化运维系统保养任务管理.png",
+      "rainbow/smart-oper/7.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "区域电，水，气系统可视化运维系统。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 用数据可视化分析电水气的使用情况",
+          "2. 电，水，气系统设备的巡检（线上和线下），保养和维修"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 通过电，水，气系统管理数字化优化电，水，气的使用",
+          "2. 保证电，水，气系统设备正常运行"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, diboot, ant-design-vue, echarts, DataEase，Fuxa"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 开发了diboot无法生产的功能",
+          "2. 开发了能流图"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "aidiweike",
+    "slug": "cinema_hall",
+    "title": "票务管理系统",
+    "date": "2024/03 - 2024/06",
+    "images": [
+      "aidiweike/tickets/1.png",
+      "aidiweike/tickets/2.png",
+      "aidiweike/tickets/3.png",
+      "aidiweike/tickets/4.png",
+      "aidiweike/tickets/5.png",
+      "aidiweike/tickets/6.png",
+      "aidiweike/tickets/7.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "aidiweike",
+    "slug": "pharmacy",
+    "title": "兆益生物生产管理系统",
+    "date": "2023/01 - 2024/03",
+    "images": [
+      "rainbow/pharmacy/1.png",
+      "rainbow/pharmacy/1_1.png",
+      "rainbow/pharmacy/2.png",
+      "rainbow/pharmacy/4.png",
+      "rainbow/pharmacy/5.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "管理生产兽药的系统。管理采购、生产、销售流程。包括采购计划、采购订单、采购库存、产品计划、产品库存、销售计划、销售库存、年度统计、月度统计、日度统计等。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 管理兽药的采购、生产、销售流程",
+          "2. 通过可视化统计数据, 帮助用户了解产品生产情况"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 此生产管理系统使采购、生产、销售流程数字化，并合在一起。通过这个第一，提高人员的工作效率, 第二，使采购、生产、销售数据合在一起。数据集中化让更有效并全面地控制生产兽药的流程，并通过不同的统计提高采购、生产、销售计划准确度，因此提高兆益生物有限公司的利润。"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript, diboot, Colaiven, echarts"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 虽然这个项目开始的时候，我没参加它，我开发了很多模块儿的前端，也优化了别人开发的前端。"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "rainbow",
+    "slug": "smart_area",
+    "title": "智慧区域",
+    "date": "2020/08 - 2023/04",
+    "images": [
+      "rainbow/smart-area/1.png",
+      "rainbow/smart-area/2.png",
+      "rainbow/smart-area/3.png",
+      "rainbow/smart-area/4.png",
+      "rainbow/smart-area/5.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "\"智慧区域\"由四个部分组成: 门禁管理 app (手机端), 智慧区域管理系统, 大屏系统 (PC端), 监控设备拓扑图工具. 大屏系统包括三个大屏: 设备运维大屏, 综合态势大屏和智慧安防大屏. 每个大屏展示相关的数据. 大屏中间展示区域地图或监控设备拓扑图。 地图上展示热力图, 摄像头.可以播放来自摄像头的视频. 拓扑图上展示监控设备结构,设备网络速率和状态. 拓扑图工具用于创建监控设备拓扑图。"
+        ]
+      },
+      {
+        "heading": "项目demo链接",
+        "links": [
+          {
+            "text": "可视化大屏",
+            "href": "https://8-hospital-datavis-demo-yuanshi-public-bbc282b11cf332f4ae1e0fd2.gitlab.io/#/screen2"
+          },
+          {
+            "text": "拓扑图工具",
+            "href": "https://topo-tool-demo-yuanshi-public-5d3fd63e9725a30883c298fcc611f965b.gitlab.io/"
+          }
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 通过可视化监控区域",
+          "2. 通过可视化监督监控设备状态"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. \"智慧区域\"通过区域管理数字化提高区域管理的效率",
+          "2. 门禁管理 app 提高门禁管理的效率",
+          "3. 大屏系统通过数据展示,拓扑图展示,摄像头视频播放提高及时发现并解决监控设备问题的效率, 提高区域的安全性, 并使热力图能够预测在哪些地方可能出现问题"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript, echarts"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 研发了大屏系统",
+          "2. 最初，我为了给每个客户在大屏上展示监控设备拓扑图必须每一次手动创建包含 JSON 格式的监控设备结构的文件. 因为区域里的摄像头一般很多, 创建非常耗时, 而且只有我才能创建它. 所以我推荐了开发创建拓扑图的工具, 并开发了它. 这个工具提高了创建监控设备拓扑图的速度,并且开发监控系统的工程师可以用它创建拓扑图"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "rainbow",
+    "slug": "topo_tool",
+    "title": "拓扑图工具",
+    "date": "2020/12 - 2023/04",
+    "images": [
+      "rainbow/topo-tool/1.png",
+      "rainbow/topo-tool/3.png",
+      "rainbow/topo-tool/2.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "拓扑图工具用于创建监控设备拓扑图。"
+        ]
+      },
+      {
+        "heading": "项目demo链接",
+        "links": [
+          {
+            "text": "拓扑图工具",
+            "href": "https://topo-tool-demo-yuanshi-public-5d3fd63e9725a30883c298fcc611f965b.gitlab.io/"
+          }
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 创建监控设备拓扑图"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 简化监控拓扑图的创建",
+          "2. 其他人能轻松地创建拓扑图"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript, twave js"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 最初，我为了给每个客户在大屏上展示监控设备拓扑图必须每一次手动创建包含 JSON 格式的监控设备结构的文件. 因为区域里的摄像头一般很多, 创建非常耗时, 而且只有我才能创建它. 所以我推荐了开发创建拓扑图的工具, 并开发了它. 这个工具提高了创建监控设备拓扑图的速度,并且开发监控系统的工程师可以用它创建拓扑图"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "jinhe",
+    "slug": "chemistry_plant",
+    "title": "中煤陕西应急指挥系统",
+    "date": "2019/01 - 2019/06",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 展示工厂区域3D模型",
+          "2. 展示事故情况：火灾, 爆炸, 泄露. 展示伴随条件，比如风向和风速",
+          "3. 展示员工位置"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 通过业务数字化提高业务效率。",
+          "2. 提高安全监控的效率。"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript, Cesium js"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 用 Cesium js 创建了显示化工工厂区域的3D模型大屏平台。"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "jinhe",
+    "slug": "ruidebaoer",
+    "title": "瑞德宝尔智慧矿山",
+    "date": "2019/07 - 2019/11",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目的目标是为陕西瑞德宝尔投资有限公司提供安全、数字化生产、数字化运营、数字化资产管理平台。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 基础安全、人员安全、环境安全、设备安全、生产安全管理",
+          "2. 运营管理",
+          "3. 资产管理"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "shuzixinxi",
+    "slug": "book_reader",
+    "title": "谷堆书城",
+    "date": "2016/06 - 2016/08",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "谷堆书城网站用于收费/免费看电子书(像《多看》一样)。谷堆书城网站和《谷堆看书》软件(也是陕西数字信息技术有限公司制作的)构成一个系统。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 阅读电子书"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 公司的主业务是制造电子书。 谷堆书城网站用于方便阅读公司制造的电子书。"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "HTML, CSS, JavaScript"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "shuzixinxi",
+    "slug": "dinosaur",
+    "title": "魔幻恐龙",
+    "date": "2016/05 - 2016/05",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "魔幻恐龙是用LayaAir制作的小游戏。LayaAir是有大型游戏线上产品（裸跑）案例的HTML5引擎。"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 此小游戏用于推荐公司研发的AR产品"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "HTML5, CSS, JavaScript, LayaAir"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "eds",
+    "slug": "runway",
+    "title": "CO Runway, OnePass",
+    "date": "2007/12 - 2009/11",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目的目的是按照美国航空Continental Airlines（CO）的要求改变EDS美国对CO研制的Frequent Flyer (飞行常客奖励计划)软件系统。"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 通过数字化提高Frequent Flyer运营效率"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "IBM z/OS, JCL, PL/I, IMS, CA-7, Endevor, CA-View"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 学会了和中国同事合作",
+          "2. 在实践中获得了关于层次数据库IMS的知识",
+          "3. 完成了许多JCL（Job Control Language）脚本和PL/I程序，优化同事做的程序"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "iba",
+    "slug": "planning_engine",
+    "title": "IBM美国微电子部Central Planning Engine系统",
+    "date": "2002/12 - 2003/11",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "用C/C++,PL/I, DB2 SQL查询研发程序。"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "---"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "IBM zSeries, IBM z/OS, JCL, C/C++, PL/I, DB2, SQL, SCLM"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 获得关于IBM大型主机zSeries的知识",
+          "2. 了解IBM大型主机的zOS操作系",
+          "3. 学会和IBM大型主机有关的特殊的技术(JCL, PL/I)，了解数据库DB2、项目管理器SCLM",
+          "4. 研发项目的一部分M"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "iba",
+    "slug": "adm",
+    "title": "IBM法国ADM France BA",
+    "date": "2004/02 - 2007/05",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目的目的是研发计算IBM大型主机构件价格的软件系统"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 通过数字化的方式，实现主机构件价格计算"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "IBM zSeries, IBM z/OS, JCL, C/C++, DB2, SQL, SCLM, CICS"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 用C/C++研制这个项目的大部分程序，优化同事做的程序"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "iba",
+    "slug": "mie",
+    "title": "IBM法国IE France",
+    "date": "2010/04 - 2011/05",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目的目的是研发一种综合性的软件。软件的用途是从在IBM大型机上运行不同的分系统（DB2,CICS, IMS等）提取用户资料，然后把提取的资料变成它所需要的格式。"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "JavaScript，TDI，DB2, SQL"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 自动化IMS、CICS、DB2等系统上的用户资料的处理"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 学会了TDI、JavaScript",
+          "2. 一个人设计了项目的TDI部分",
+          "3. 用TDI和JavaScript研发了处理IBM大型主机上DB2、CICS、IMS等的用户资料的系统"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "iba",
+    "slug": "urt",
+    "title": "IBM法国URT Extractors ISD",
+    "date": "2011/06 - 2012/03",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目的目的是研发在Unix、 AIX、 Solaris、 Linux,、HP-UX操作系统上运行一种综合性的软件。软件的用途是从在Unix、AIX、 Solaris、 Linux、 HP-UX操作系统上运行不同的分系统（Oracle、SAP、 DB2等）提取用户资料，然后把提取的资料变成它所需要的格式。"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1.自动化Unix、AIX、 Solaris、 Linux、 HP-UX操作系统上运行不同的分系统提取用户资料的处理"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Perl, korn-shell, DB2, SQL"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 学会了Perl、基于Unix系统的korn-shell",
+          "2. 用Perl和korn-shell研发了获取DB2、Oracle、SAP等用户资料的程序"
+        ]
+      }
+    ]
+  }
+]

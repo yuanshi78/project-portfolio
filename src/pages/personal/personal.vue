@@ -1,148 +1,96 @@
 <script setup>
-import abs from '@images/pages/abstract.jpg'
 import me from '@images/avatars/me.png'
 import Profile from './profile.vue'
 import Projects from './projects.vue'
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
+import { personal } from '@/data/personal'
 
-let selectedPage = ref('personal')
-selectedPage.value = 0
-watch(selectedPage, (value) => {
-  console.log(value)
-})
+const data = personal
+const selectedPage = ref(0)
+const meta = data.meta
+const tabs = data.tabs
 </script>
 
 <template>
-  <div class="">
-    <VRow>
-      <VCol
-        cols="12"
-        md="12"
-        sm="12"
-      >
-        <VCard>
-          <VImg :src="abs" aspect-ratio="3" cover max-height="250" min-height="125" />
+  <div class="detail-content mx-auto">
+    <!-- 👉 Hero 个人卡 -->
+    <VCard
+      class="hero-card mb-6"
+      rounded="xl"
+      elevation="2"
+    >
+      <VImg
+        :src="data.cover"
+        aspect-ratio="3"
+        cover
+        max-height="200"
+      />
 
-          <VCardText class="d-flex align-bottom flex-sm-row flex-column justify-left gap-x-6">
-            <div class="d-flex h-0">
-              <!-- User Avatar -->
-              <VAvatar
-                :image="me"
-                class="avatar-center mx-auto"
-                size="130px"
-              />
-            </div>
+      <VCardText class="text-center pt-0">
+        <VAvatar
+          :image="me"
+          class="avatar-center"
+          size="120"
+        />
 
+        <VCardTitle class="text-h4 text-lg-h3 font-weight-bold pa-0 hero-title mt-2">
+          {{ data.name }}
+        </VCardTitle>
 
-            <!-- Title, Subtitle & Action Button -->
-            <div class="user-profile-info w-100 mt-16 pt-6 pt-sm-0 mt-sm-0">
-              <div class="me-2 mb-2">
-                <VCardTitle class="text-h4 pa-0">
-                  Aliaksandr Kuzmiankou 元实
-                </VCardTitle>
-                <v-list class="d-flex justify-center flex-wrap gap-6 justify-sm-start" density="compact">
-                  <v-list-item
-                    color="primary"
-                    style="padding-left: 0"
-                    value="1"
-                  >
-                    <template v-slot:prepend>
-                      <v-icon icon="ri-computer-line"></v-icon>
-                    </template>
-
-                    <v-list-item-title>web前端工程师</v-list-item-title>
-                  </v-list-item>
-
-                  <v-list-item
-                    color="primary"
-                    value="1"
-                  >
-                    <template v-slot:prepend>
-                      <v-icon icon="ri-user-location-line"></v-icon>
-                    </template>
-
-                    <v-list-item-title>西安</v-list-item-title>
-                  </v-list-item>
-
-                  <v-list-item
-                    color="primary"
-                    style="padding-left: 0"
-                    value="1"
-                  >
-                    <template v-slot:prepend>
-                      <v-icon icon="ri-global-line"></v-icon>
-                    </template>
-
-                    <v-list-item-title>白俄罗斯</v-list-item-title>
-                  </v-list-item>
-
-<!--                  <v-list-item-->
-<!--                    color="primary"-->
-<!--                    value="1"-->
-<!--                  >-->
-<!--                    <template v-slot:prepend>-->
-<!--                      <v-icon icon="ri-building-2-line"></v-icon>-->
-<!--                    </template>-->
-
-<!--                    <v-list-item-title>西安艾迪韦克网络科技有限公司</v-list-item-title>-->
-<!--                  </v-list-item>-->
-                </v-list>
-              </div>
-            </div>
-
-          </VCardText>
-        </VCard>
-      </VCol>
-    </VRow>
-
-    <VRow>
-      <VCol
-        class="mt-6"
-        cols="12"
-        md="12"
-        sm="12"
-      >
-        <v-slide-group v-model="selectedPage">
-          <v-slide-group-item
-            v-slot="{ isSelected, toggle }"
+        <div class="d-flex flex-wrap justify-center mt-3">
+          <VChip
+            v-for="(m, i) in meta"
+            :key="i"
+            size="small"
+            variant="tonal"
+            :prepend-icon="m.icon"
+            class="me-1 mb-1"
           >
-            <v-btn
-              :color="isSelected ? 'primary' : null"
-              :variant="isSelected ? 'elevated' : 'test'"
-              class="ma-2"
-              prepend-icon="ri-user-fill"
-              @click="toggle"
-            >
-              个人信息
-            </v-btn>
-          </v-slide-group-item>
-          <v-slide-group-item
-            v-slot="{ isSelected, toggle }"
-          >
-            <v-btn
-              :color="isSelected ? 'primary' : null"
-              :variant="isSelected ? 'elevated' : 'test'"
-              class="ma-2"
-              prepend-icon="ri-folders-fill"
-              @click="toggle"
-            >
-              项目
-            </v-btn>
-          </v-slide-group-item>
-        </v-slide-group>
-      </VCol>
-    </VRow>
+            {{ m.text }}
+          </VChip>
+        </div>
+      </VCardText>
+    </VCard>
 
-    <Profile v-if="selectedPage === 0" />
-    <Projects v-if="selectedPage === 1" />
+    <!-- 👉 切换：个人信息 / 项目 -->
+    <div class="d-flex flex-wrap mb-6">
+      <VBtn
+        v-for="t in tabs"
+        :key="t.key"
+        :color="selectedPage === t.key ? 'primary' : undefined"
+        :variant="selectedPage === t.key ? 'flat' : 'tonal'"
+        :prepend-icon="t.icon"
+        class="me-2"
+        @click="selectedPage = t.key"
+      >
+        {{ t.label }}
+      </VBtn>
+    </div>
+
+    <Profile v-if="selectedPage === 0" :data="data.profile" :birthday="data.birthday" />
+    <Projects v-if="selectedPage === 1" :data="data.experience" />
   </div>
 </template>
 
 <style lang="scss" scoped>
+.detail-content {
+  max-width: 960px;
+}
+
+.hero-card {
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+.hero-title {
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
 .avatar-center {
-  border-radius: 10px;
-  border: 5px solid rgb(var(--v-theme-surface));
-  background-color: rgb(var(--v-theme-surface)) !important;
-  inset-block-start: -3rem;
+  margin-top: -60px;
+  border: 4px solid rgb(var(--v-theme-surface));
+  background-color: rgb(var(--v-theme-surface));
+  position: relative;
+  z-index: 1;
 }
 </style>

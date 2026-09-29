@@ -1,0 +1,284 @@
+{
+  "name": "Aliaksandr Kuzmiankou 元实",
+  "cover": "/images/pages/abstract.jpg",
+  "birthday": "1978-03-16",
+  "meta": [
+    {
+      "icon": "ri-computer-line",
+      "text": "web前端工程师"
+    },
+    {
+      "icon": "ri-user-location-line",
+      "text": "西安"
+    },
+    {
+      "icon": "ri-global-line",
+      "text": "白俄罗斯"
+    }
+  ],
+  "tabs": [
+    {
+      "key": 0,
+      "label": "个人信息",
+      "icon": "ri-user-fill"
+    },
+    {
+      "key": 1,
+      "label": "项目",
+      "icon": "ri-folders-fill"
+    }
+  ],
+  "profile": {
+    "left": [
+      {
+        "title": "自我介绍",
+        "items": [
+          {
+            "icon": "ri-user-line",
+            "text": "姓名: Aliaksandr Kuzmiankou 元实"
+          },
+          {
+            "icon": "ri-calendar-line",
+            "text": "年龄：{age}岁"
+          },
+          {
+            "icon": "ri-global-line",
+            "text": "国籍：白俄罗斯 🇧🇾"
+          },
+          {
+            "icon": "ri-speak-line",
+            "text": "语言：俄语、白俄语、汉语、英语"
+          },
+          {
+            "icon": "ri-calendar-2-line",
+            "text": "居住：在西安 {years} 年了"
+          },
+          {
+            "icon": "ri-parent-line",
+            "text": "婚姻状况：已婚，有孩子"
+          },
+          {
+            "icon": "ri-star-line",
+            "text": "角色： web前端工程师"
+          },
+          {
+            "icon": "ri-graduation-cap-line",
+            "text": "教育： 白俄罗斯国立信息和无线电电子大学\n1997-2002\n软件工程师"
+          },
+          {
+            "icon": "ri-user-location-line",
+            "text": "家庭地址：西安莲湖区环城西路南段8号"
+          },
+          {
+            "icon": "ri-wechat-2-line",
+            "text": "微信号：yuanshi78"
+          },
+          {
+            "icon": "ri-phone-line",
+            "text": "手机号：18681876326"
+          }
+        ]
+      },
+      {
+        "title": "爱好",
+        "items": [
+          {
+            "icon": "ri-computer-line",
+            "text": "IT：人工智能（特别是人工神经网络）、web前端、算法、系统结构设计"
+          },
+          {
+            "icon": "ri-reactjs-fill",
+            "text": "科学：数学、神经生物学"
+          },
+          {
+            "icon": "ri-ancient-gate-line",
+            "text": "中国🇨🇳: 文化（特别是道家/道教）、 历史、古汉语、现代汉语、茶叶"
+          },
+          {
+            "icon": "ri-music-line",
+            "text": "音乐: 西方古典音乐（从巴洛克时代的到20/21世纪时代的）、中国古典音乐（古琴）、早期摇滚(The Beatles, The Who, Pink Floyd, Led Zeppelin, Deep Purple, Queen等)、早期流行音乐、爵士"
+          }
+        ]
+      }
+    ],
+    "skills": {
+      "title": "专业技能",
+      "grid": 2,
+      "items": [
+        {
+          "icon": "ri-vuejs-line",
+          "text": "前端：HTML5、CSS3、JavaScript （ES5, ES2015, ES2015以上）、Typescript、Vue 2/3, React"
+        },
+        {
+          "icon": "ri-code-s-slash-line",
+          "text": "语言：JavaScript （ES5, ES2015, ES2015以上）、C/C++、Lisp Scheme、SQL、JCL"
+        },
+        {
+          "icon": "ri-code-box-line",
+          "important": true,
+          "text": "低代码框架：Nocobase, AMIS"
+        },
+        {
+          "icon": "ri-earth-line",
+          "text": "GIS工具：高德地图API、AntV L7、Cesium js"
+        },
+        {
+          "icon": "ri-pie-chart-line",
+          "important": true,
+          "text": "可视化：echarts"
+        },
+        {
+          "icon": "ri-tools-line",
+          "text": "IDE：Webstorm, Windsurf AI IDE, Cursor AI IDE, VS Code"
+        },
+        {
+          "icon": "ri-ubuntu-line",
+          "text": "OS：Linux (Manjaro & Mint)、Windows、IBM z/OS"
+        },
+        {
+          "icon": "ri-computer-line",
+          "text": "硬件环境：PC、IBM zSeries (Z Mainframes)"
+        }
+      ]
+    },
+    "rightBottom": [
+      {
+        "title": "自我评价",
+        "items": [
+          {
+            "icon": "ri-speak-line",
+            "text": "俄语🇷🇺、白俄语🇧🇾、汉语🇨🇳、英语🇬🇧。有一定的汉语基础，在听、说、读、写方面都有长处，可以用中文与人顺利的交流"
+          },
+          {
+            "icon": "ri-code-s-slash-line",
+            "text": "拥有**二十二年**的软件创作和应用经验"
+          },
+          {
+            "icon": "ri-lightbulb-flash-line",
+            "important": true,
+            "text": "产生新想法的能力较强"
+          },
+          {
+            "icon": "ri-parentheses-fill",
+            "important": true,
+            "text": "研发(研究+开发)能力较强"
+          },
+          {
+            "icon": "ri-apps-line",
+            "text": "复合软件研制和了解项目业务流程能力较强"
+          },
+          {
+            "icon": "ri-dashboard-2-line",
+            "important": true,
+            "text": "研发大数据可视化系统能力较强"
+          },
+          {
+            "icon": "ri-stackshare-line",
+            "important": true,
+            "text": "有研发IoT平台前端的经验"
+          },
+          {
+            "icon": "ri-stack-line",
+            "text": "了解敏捷开发 Scrum 的基础"
+          },
+          {
+            "icon": "ri-group-3-line",
+            "text": "有团队合作精神"
+          },
+          {
+            "icon": "ri-task-line",
+            "text": "本人适应性强，责任心强，有优秀的中文口头表达能力"
+          },
+          {
+            "icon": "ri-globe-line",
+            "text": "会努力吸引白俄罗斯项目"
+          }
+        ]
+      },
+      {
+        "title": "想法",
+        "items": [
+          {
+            "important": true,
+            "text": "1. 以思想为主. 技术是实现思想的工具"
+          },
+          {
+            "text": "2. 充分利用抽象的力量"
+          },
+          {
+            "text": "4. 尽量利用模块化架构"
+          },
+          {
+            "text": "5. 尽量减少重复代码"
+          },
+          {
+            "text": "6. 尽量利用提高工作效率的工具， 包括AI, 低代码/无代码工具"
+          },
+          {
+            "important": true,
+            "text": "7. 团队合作很重要"
+          },
+          {
+            "text": "8. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）"
+          },
+          {
+            "text": "9. 想做出自己的产品"
+          },
+          {
+            "important": true,
+            "text": "10. 利用以前研发的拓扑工具为基础，研发完整的IoT拓扑图工具， 作为在IoT平台上使用的模块"
+          },
+          {
+            "text": "11. 我的梦想是对人工神经网络技术的发展有贡献"
+          }
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "工作经历",
+    "items": [
+      {
+        "subtitle": "2023/08 - 现在， 西安",
+        "title": "西安艾迪韦科网络科技有限公司",
+        "to": "/aidiweike/all",
+        "text": "Nocobase插件、“智慧运维系统”、“票务管理系统”、“生产管理系统”"
+      },
+      {
+        "subtitle": "2020/04 - 2023/08， 西安",
+        "title": "西安睿博智能科技有限公司",
+        "to": "/rainbow/all",
+        "text": "“智能区域平台”、“产云销一体化平台”、“电力配电设备监控系统”、“国新LNG平台”"
+      },
+      {
+        "subtitle": "2019/05—2020/04， 西安",
+        "title": "陕西金合信息科技股份有限公司",
+        "to": "/jinhe/all",
+        "text": "瑞德宝尔管理平台、王家岭管理平台、合金可视化平台、西安咸阳国际机场、中美陕西应急指挥系统"
+      },
+      {
+        "subtitle": "2016/09—2019/05， 西安",
+        "title": "陕西秦快互联科技有限公司",
+        "text": "《秦天下》、《东美》"
+      },
+      {
+        "subtitle": "2015/07—2016/09， 西安",
+        "title": "陕西数字信息技术有限公司",
+        "to": "/shuzixinxi/all",
+        "text": "谷堆书城网、《奇咔奇咔》网站(推荐陕西数字信息技术有限公司研制的AR游戏项目的网站)、中国演员网站、《口述天下》网站、《陕西木有啥》网站等"
+      },
+      {
+        "subtitle": "2007/12—2009/11， 武汉",
+        "title": "EDS武汉（惠普公司武汉分公司）",
+        "to": "/eds/all",
+        "text": "CO Runway, OnePass"
+      },
+      {
+        "subtitle": "2002/12—2012/03, 白俄罗斯",
+        "title": "IBA （International Business Alliance)",
+        "to": "/iba/all",
+        "text": "IBM美国微电子部Central Planning Engine系统、IBM法国ADM France BA、IBM法国MIE France, IBM法国URT Extractors ISD"
+      }
+    ]
+  }
+}

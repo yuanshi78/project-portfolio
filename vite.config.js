@@ -9,6 +9,10 @@ import svgLoader from 'vite-svg-loader'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // 部署到 GitHub Pages 子路径（/project-portfolio/）时使用相对 base，
+  // 让 dist 内资源用相对路径引用，dev 与 Pages 均无需硬编码仓库名。
+  base: './',
+
   plugins: [
     vue(),
     vueJsx(),
@@ -39,6 +43,17 @@ export default defineConfig({
     svgLoader(),
   ],
   define: { 'process.env': {} },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // 切换到 sass 现代 API，消除 legacy-js-api 废弃告警。
+        // 注意：Vite 5.4.21 不支持 quietDeps/silenceDeprecations（Vite 6 才支持），
+        // 故来自 Vuetify 3.4.9 自带的 if-function / global-builtin 告警无法通过配置消除，
+        // 只能升级 Vuetify 到现代 Sass 语法版本或升级到 Vite 6 后使用 silenceDeprecations。
+        api: 'modern',
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
