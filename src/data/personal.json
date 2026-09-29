@@ -7,6 +7,10 @@
     "title": "Alexander Kuzmenkov - Portfolio",
     "logo": "/images/logo.svg"
   },
+  "cv": {
+    "url": "/cv.pdf",
+    "label": "下载简历"
+  },
   "meta": [
     {
       "icon": "ri-computer-line",

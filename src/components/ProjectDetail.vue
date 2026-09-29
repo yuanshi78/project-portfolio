@@ -33,8 +33,10 @@ const visibleSections = computed(() => visibleItems(detail.value?.sections ?? []
 const { smAndDown } = useDisplay()
 const zoomSrc = ref('')
 const zoomOpen = ref(false)
+const zoomLoaded = ref(false)
 const openZoom = img => {
   zoomSrc.value = resolveImage(img)
+  zoomLoaded.value = false
   zoomOpen.value = true
 }
 </script>
@@ -222,7 +224,7 @@ const openZoom = img => {
       scrim="black"
     >
       <div
-        class="d-flex align-center justify-center"
+        class="d-flex align-center justify-center position-relative"
         style="padding: 8px;"
         @click="zoomOpen = false"
       >
@@ -230,7 +232,16 @@ const openZoom = img => {
           :src="zoomSrc"
           alt="放大预览"
           style="max-width: 100%; max-height: 88vh; object-fit: contain; display: block; border-radius: 12px; box-shadow: 0 10px 40px rgb(0 0 0 / 60%);"
+          @load="zoomLoaded = true"
         >
+        <VProgressCircular
+          v-if="!zoomLoaded"
+          indeterminate
+          color="primary"
+          size="48"
+          width="4"
+          style="position: absolute;"
+        />
         <VBtn
           icon
           variant="tonal"

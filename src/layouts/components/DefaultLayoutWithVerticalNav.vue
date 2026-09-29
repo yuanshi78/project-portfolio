@@ -15,6 +15,10 @@ const siteName = computed(() => personal.site?.name ?? '')
 
 // 站点 logo 由 personal.json 的 site.logo 配置（路径指向 public/ 下的文件，如 /images/logo.svg）
 const siteLogo = computed(() => personal.site?.logo ?? '')
+
+// 简历下载入口由 personal.json 的 cv 配置驱动（未配置 url 则不在导航栏显示）
+const cvUrl = computed(() => personal.cv?.url ?? '')
+const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
 </script>
 
 <template>
@@ -48,6 +52,23 @@ const siteLogo = computed(() => personal.site?.logo ?? '')
             scroll-strategy="close"
           >
             {{ repo.name }}
+          </VTooltip>
+        </IconBtn>
+
+        <!-- 👉 简历下载（来自 personal.json 的 cv 配置） -->
+        <IconBtn
+          v-if="cvUrl"
+          class="me-2"
+          :href="cvUrl"
+          download
+        >
+          <VIcon icon="ri-download-line" />
+          <VTooltip
+            activator="parent"
+            open-delay="500"
+            scroll-strategy="close"
+          >
+            {{ cvLabel }}
           </VTooltip>
         </IconBtn>
 

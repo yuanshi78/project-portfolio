@@ -49,6 +49,7 @@ const tabs = data.tabs
             {{ m.text }}
           </VChip>
         </div>
+
       </VCardText>
     </VCard>
 
