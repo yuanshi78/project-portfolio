@@ -1,11 +1,12 @@
 <script setup>
 // 项目详情页：完全由 src/data/details.json 驱动渲染。
 // 路由 /project/:category/:slug 对应 JSON 中的一条记录。
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import details from '@/data/details.json'
 import { getCompany } from '@/data/companies'
 import { parseEmphasis } from '@/utils/emphasis'
+import { useDisplay } from 'vuetify'
 
 const route = useRoute()
 
@@ -23,6 +24,15 @@ const tags = computed(() => project.value?.tags ?? [])
 
 // 图片放在 public/images/pages/ 下，JSON 中只存相对路径
 const resolveImage = img => `/images/pages/${img}`
+
+// 点击轮播图片放大预览（灯箱）
+const { smAndDown } = useDisplay()
+const zoomSrc = ref('')
+const zoomOpen = ref(false)
+const openZoom = img => {
+  zoomSrc.value = resolveImage(img)
+  zoomOpen.value = true
+}
 </script>
 
 <template>
@@ -101,11 +111,23 @@ const resolveImage = img => `/images/pages/${img}`
           v-for="(img, i) in detail.images"
           :key="i"
         >
-          <v-img
-            :src="resolveImage(img)"
-            height="100%"
-            cover
-          />
+          <div
+            class="carousel-item-wrap"
+            @click="openZoom(img)"
+          >
+            <v-img
+              :src="resolveImage(img)"
+              height="100%"
+              cover
+            />
+            <div class="zoom-hint">
+              <VIcon
+                icon="ri-zoom-in-line"
+                size="16"
+              />
+              <span>点击放大</span>
+            </div>
+          </div>
         </v-carousel-item>
       </v-carousel>
     </div>
@@ -187,6 +209,35 @@ const resolveImage = img => `/images/pages/${img}`
         </VCardText>
       </VCard>
     </section>
+
+    <!-- 👉 图片放大预览（灯箱） -->
+    <VDialog
+      v-model="zoomOpen"
+      :fullscreen="smAndDown"
+      max-width="92vw"
+      scrim="black"
+    >
+      <div
+        class="d-flex align-center justify-center"
+        style="padding: 8px;"
+        @click="zoomOpen = false"
+      >
+        <img
+          :src="zoomSrc"
+          alt="放大预览"
+          style="max-width: 100%; max-height: 88vh; object-fit: contain; display: block; border-radius: 12px; box-shadow: 0 10px 40px rgb(0 0 0 / 60%);"
+        >
+        <VBtn
+          icon
+          variant="tonal"
+          color="white"
+          style="position: fixed; top: 16px; right: 16px; z-index: 10;"
+          @click.stop="zoomOpen = false"
+        >
+          <VIcon icon="ri-close-line" />
+        </VBtn>
+      </div>
+    </VDialog>
   </div>
 
   <div v-else>
@@ -213,8 +264,81 @@ const resolveImage = img => `/images/pages/${img}`
 .detail-carousel {
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px -12px rgb(0 0 0 / 40%);
+  border-radius: 20px;
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+  box-shadow: 0 12px 32px -12px rgb(0 0 0 / 35%);
+
+  // 图片悬停轻微放大，增加层次感
+  :deep(.v-carousel-item img) {
+    transition: transform 0.6s ease;
+  }
+
+  &:hover :deep(.v-carousel-item img) {
+    transform: scale(1.04);
+  }
+
+  // 底部控制点：实心暗色圆角胶囊衬底，底部居中
+  :deep(.v-carousel__controls) {
+    background: rgb(0 0 0 / 60%);
+    border-radius: 999px;
+    padding: 6px 14px;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    bottom: 14px !important;
+    width: fit-content !important;
+    max-width: 90% !important;
+  }
+
+  // 非激活点：纯白 + 微光晕，更亮更醒目
+  :deep(.v-carousel__controls .v-btn--icon) {
+    color: #fff;
+  }
+
+  :deep(.v-carousel__controls .v-btn__content .v-icon) {
+    block-size: 10px !important;
+    inline-size: 10px !important;
+    filter: drop-shadow(0 0 3px rgb(255 255 255 / 75%));
+  }
+
+  // 激活点：主题 primary 色 + 放大 + 更强白光晕，更亮
+  :deep(.v-carousel__controls .v-btn--active) {
+    color: rgb(var(--v-theme-primary));
+  }
+
+  :deep(.v-carousel__controls .v-btn--active .v-btn__content .v-icon) {
+    block-size: 15px !important;
+    inline-size: 15px !important;
+    filter: brightness(1.3) drop-shadow(0 0 6px rgb(255 255 255 / 95%));
+  }
+}
+
+.carousel-item-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+.zoom-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 50%);
+  color: #fff;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.carousel-item-wrap:hover .zoom-hint {
+  opacity: 1;
 }
 
 .section-head {
