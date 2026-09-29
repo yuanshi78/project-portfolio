@@ -13,44 +13,48 @@ const projects = computed(() => getProjects(category.value))
 
 <template>
   <div class="overview-page">
-    <!-- 👉 企业头部 -->
-    <div class="overview-header d-flex align-center flex-wrap mb-8">
-      <VAvatar
-        :icon="companyInfo?.icon || 'ri-building-line'"
-        color="primary"
-        variant="tonal"
-        size="64"
-        rounded="lg"
-        class="me-4 overview-avatar"
-      />
-      <div class="me-auto overview-heading">
-        <p class="text-overline text-medium-emphasis mb-1 ls-1">
-          项目综合
-        </p>
-        <h1 class="text-h4 text-lg-h3 font-weight-bold overview-title">
-          {{ company }}
-        </h1>
-      </div>
-      <VChip
-        v-if="projects.length"
-        size="small"
-        variant="tonal"
-        prepend-icon="ri-folders-line"
-        class="overview-count mt-1"
-      >
-        {{ projects.length }} 个项目
-      </VChip>
-    </div>
+    <!-- 👉 企业头部：包进卡片，与详情页 / 个人页的 hero 卡节奏保持一致 -->
+    <VCard
+      class="overview-card mb-8"
+      rounded="xl"
+    >
+      <VCardText>
+        <div class="overview-header d-flex align-center flex-wrap">
+          <VAvatar
+            :icon="companyInfo?.icon || 'ri-building-line'"
+            color="primary"
+            variant="tonal"
+            size="64"
+            rounded="lg"
+            class="me-4"
+          />
+          <div class="me-auto overview-heading">
+            <p class="text-overline text-medium-emphasis mb-1 ls-1">
+              项目综合
+            </p>
+            <h1 class="text-h4 text-lg-h3 font-weight-bold overview-title">
+              {{ company }}
+            </h1>
+          </div>
+          <VChip
+            v-if="projects.length"
+            size="small"
+            variant="tonal"
+            prepend-icon="ri-folders-line"
+            class="overview-count mt-1"
+          >
+            {{ projects.length }} 个项目
+          </VChip>
+        </div>
+      </VCardText>
+    </VCard>
 
     <ProjectList :projects="projects" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.overview-avatar {
-  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.45);
-}
-
+// 头像阴影由全局新拟态规则（.v-avatar）统一提供，此处不再重复设置
 .overview-heading {
   min-width: 0;
 }
