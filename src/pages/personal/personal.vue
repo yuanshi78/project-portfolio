@@ -2,13 +2,17 @@
 import me from '@images/avatars/me.png'
 import Profile from './profile.vue'
 import Projects from './projects.vue'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { personal } from '@/data/personal'
+import { parseEmphasis } from '@/utils/emphasis'
 
 const data = personal
 const selectedPage = ref(0)
 const meta = data.meta
 const tabs = data.tabs
+
+// 👉 顶部叙述性自我介绍（非列表）：支持多段 \n 与 **强调**
+const aboutSegments = computed(() => parseEmphasis(data.about ?? ''))
 </script>
 
 <template>
@@ -53,6 +57,32 @@ const tabs = data.tabs
       </VCardText>
     </VCard>
 
+    <!-- 👉 关于我（叙述性自我介绍，非列表格式） -->
+    <VCard
+      v-if="data.about"
+      class="mb-6"
+      rounded="lg"
+      elevation="1"
+    >
+      <VCardText>
+        <div class="section-head text-h5 font-weight-bold mb-2">
+          关于我
+        </div>
+        <p class="about-text">
+          <template
+            v-for="(seg, si) in aboutSegments"
+            :key="si"
+          >
+            <strong
+              v-if="seg.strong"
+              class="about-emphasis"
+            >{{ seg.text }}</strong>
+            <template v-else>{{ seg.text }}</template>
+          </template>
+        </p>
+      </VCardText>
+    </VCard>
+
     <!-- 👉 切换：个人信息 / 项目 -->
     <div class="d-flex flex-wrap mb-6">
       <VBtn
@@ -93,5 +123,18 @@ const tabs = data.tabs
   background-color: rgb(var(--v-theme-surface));
   position: relative;
   z-index: 1;
+}
+
+.about-text {
+  white-space: pre-line;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin: 0;
+  color: rgba(var(--v-theme-on-surface), 0.85);
+}
+
+.about-emphasis {
+  font-weight: 600;
+  color: rgb(var(--v-theme-warning));
 }
 </style>
