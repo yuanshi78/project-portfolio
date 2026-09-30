@@ -2,6 +2,9 @@
 import { computed, ref } from 'vue'
 import { parseEmphasis } from '@/utils/emphasis'
 import { visibleItems } from '@/utils/visibility'
+import { useDisplay } from 'vuetify'
+
+const { smAndDown } = useDisplay()
 
 const props = defineProps({
   data: {
@@ -79,12 +82,13 @@ const currentSections = computed(() => {
         color="primary"
         density="comfortable"
         grow
+        :show-arrows="false"
       >
         <VTab
           v-for="t in tabs"
           :key="t.key"
           :value="t.key"
-          :prepend-icon="t.icon"
+          :prepend-icon="smAndDown ? undefined : t.icon"
         >
           {{ t.label }}
         </VTab>
@@ -210,5 +214,14 @@ const currentSections = computed(() => {
 
 .v-card {
   border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+// 👉 手机端：四个子标签一行内平分，去掉多余间距，确保「职业想法」可见
+@media (max-width: 600px) {
+  :deep(.v-tab) {
+    min-width: 0 !important;
+    padding-inline: 6px !important;
+    font-size: 0.8rem !important;
+  }
 }
 </style>

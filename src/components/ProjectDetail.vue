@@ -326,6 +326,29 @@ const openZoom = img => {
     inline-size: 15px !important;
     filter: brightness(1.3) drop-shadow(0 0 6px rgb(255 255 255 / 95%));
   }
+
+  // 👉 手机端：底部控制按钮整体缩小，避免过大
+  @media (max-width: 600px) {
+    :deep(.v-carousel__controls) {
+      padding: 4px 10px !important;
+      bottom: 10px !important;
+    }
+
+    :deep(.v-carousel__controls .v-btn--icon) {
+      block-size: 28px !important;
+      inline-size: 28px !important;
+    }
+
+    :deep(.v-carousel__controls .v-btn__content .v-icon) {
+      block-size: 8px !important;
+      inline-size: 8px !important;
+    }
+
+    :deep(.v-carousel__controls .v-btn--active .v-btn__content .v-icon) {
+      block-size: 11px !important;
+      inline-size: 11px !important;
+    }
+  }
 }
 
 .carousel-item-wrap {
