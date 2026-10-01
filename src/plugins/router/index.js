@@ -6,6 +6,13 @@ import { routes } from './routes'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
+
+  // 👉 跳转到新页面时滚回顶部
+  // 布局用的是 layout-content-width-fluid（未启用 layout-content-height-fixed），
+  // 滚动容器是 window，因此返回 { top: 0 } 即可生效。
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default function (app) {
