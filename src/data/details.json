@@ -49,7 +49,7 @@
       {
         "heading": "技术",
         "paragraphs": [
-          "Plugin-first 架构、微内核、JSON Schema 配置、内置 AI 智能体、TypeScript、Vue/React（具体技术栈持续完善中）"
+          "Plugin-first 架构、微内核、JSON Schema 配置、内置 AI 智能体、TypeScript、Vue 3（具体技术栈持续完善中）"
         ]
       },
       {
@@ -727,7 +727,11 @@
     "slug": "book_reader",
     "title": "谷堆书城",
     "date": "2016/06 - 2016/08",
-    "images": [],
+    "images": [
+      "shuzixinxi/reader/1.png",
+      "shuzixinxi/reader/2.png",
+      "shuzixinxi/reader/3.png"
+    ],
     "sections": [
       {
         "heading": "简介",
@@ -775,7 +779,14 @@
     "slug": "dinosaur",
     "title": "魔幻恐龙",
     "date": "2016/05 - 2016/05",
-    "images": [],
+    "images": [
+      "shuzixinxi/game/1.png",
+      "shuzixinxi/game/2.png",
+      "shuzixinxi/game/3.png",
+      "shuzixinxi/game/4.png",
+      "shuzixinxi/game/5.png",
+      "shuzixinxi/game/6.png"
+    ],
     "sections": [
       {
         "heading": "简介",
@@ -814,6 +825,55 @@
         "heading": "成就",
         "list": [
           "1. 使用 LayaAir 开发 HTML5 小游戏，用于推荐公司 AR 产品。"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "shuzixinxi",
+    "slug": "china_actor",
+    "title": "中国演员网",
+    "date": "2016/01 - 2016/04",
+    "images": [
+      "shuzixinxi/actors/1.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "中国演员网（www.chinaactor.com）是国内规模最大的影视商务网站，致力于为影视娱乐行业的企业与组织提供全方位的互联网信息服务，拥有演员、剧组、影视机构等影视人才数据库。",
+          "网站设有影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品、会员中心等板块，并按制作设备、服装服饰、后期制作、场景场地、道具布景等类别提供影视商务资源。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要页面："
+        ],
+        "list": [
+          "1. 首页：影视招聘、影视商务、原创影视、新闻资讯等板块入口与搜索",
+          "2. 演员分类：按类别检索演员",
+          "3. 登录与注册",
+          "4. 演员简历页：展示演员资料与履历",
+          "5. 会员中心与个人设置"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "HTML, CSS, JavaScript, jQuery"
+        ]
+      },
+      {
+        "heading": "职责",
+        "paragraphs": [
+          "前端开发"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 完成中国演员网的前端页面开发，网站已部署上线（www.chinaactor.com）。"
         ]
       }
     ]

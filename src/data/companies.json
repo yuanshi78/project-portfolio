@@ -186,7 +186,7 @@
       {
         "slug": "book_reader",
         "name": "谷堆书城",
-        "image": "it_general.jpg",
+        "image": "shuzixinxi/reader/1.png",
         "description": "提供在线阅读电子书的服务的平台",
         "tags": [
           "HTML",
@@ -197,13 +197,25 @@
       {
         "slug": "dinosaur",
         "name": "魔幻恐龙",
-        "image": "it_general.jpg",
+        "image": "shuzixinxi/game/1.png",
         "description": "小游戏",
         "tags": [
           "HTML5",
           "CSS",
           "JavaScript",
           "LayaAir"
+        ]
+      },
+      {
+        "slug": "china_actor",
+        "name": "中国演员网",
+        "image": "shuzixinxi/actors/1.png",
+        "description": "国内规模最大的影视商务网站（www.chinaactor.com），提供影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品等服务。",
+        "tags": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery"
         ]
       }
     ]
