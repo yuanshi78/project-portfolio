@@ -106,34 +106,46 @@
       },
       {
         "slug": "production_sales_platform",
-        "name": "产云销一体化平台",
+        "name": "产运销一体化平台",
         "image": "it_general.jpg",
-        "description": "产云销一体化平台，打通生产、销售与云端数据，实现生产—销售一体化管理。",
+        "description": "山西国新产运销一体化大数据平台，打通 LNG 生产—运输—销售全链条，实现产运销动态平衡与智能定价。",
         "tags": [
           "vue",
-          "JavaScript"
+          "JavaScript",
+          "ECharts"
         ]
       },
       {
         "slug": "power_distribution_monitor",
         "name": "电力配电设备监控系统",
-        "image": "it_general.jpg",
-        "description": "电力配电设备监控系统，用于监控配电设备的运行状态、告警与运维。",
+        "image": "rainbow/power-distribution/1.jpg",
+        "description": "国网临汾供电公司设备综合管控中心，融汇视频监控、消防、安防、环境监测等多系统数据，实现监测指挥大屏可视化。",
         "tags": [
           "vue",
           "JavaScript",
-          "echarts"
+          "ECharts"
         ]
       },
       {
         "slug": "guoxin_lng",
         "name": "国新LNG平台",
-        "image": "it_general.jpg",
-        "description": "国新LNG平台，面向液化天然气（LNG）业务的管理与监控平台。",
+        "image": "rainbow/guoxin-lng/1.png",
+        "description": "LNG 天然气供应链云平台，含产运销、危化品调度、集中管控、终端销售、智能定价等 8 个子系统，已在华新燃气集团上线。",
         "tags": [
           "vue",
           "JavaScript",
-          "echarts"
+          "ECharts"
+        ]
+      },
+      {
+        "slug": "xingfu_lindai",
+        "name": "幸福林带智慧管控平台",
+        "image": "rainbow/xingfu-lindai/1.png",
+        "description": "西安幸福林带「世纪工程」的智慧管控平台，投资 8300 万元，统一管控 5.8 公里区域内十几个子系统、上万部硬件设备。",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "ECharts"
         ]
       }
     ]
