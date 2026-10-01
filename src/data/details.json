@@ -784,6 +784,15 @@
         ]
       },
       {
+        "heading": "项目 demo 链接",
+        "links": [
+          {
+            "text": "试玩小游戏",
+            "href": "/games/dinosaur/index.html"
+          }
+        ]
+      },
+      {
         "heading": "项目目标",
         "list": [
           "1. 此小游戏用于推荐公司研发的 AR 产品"

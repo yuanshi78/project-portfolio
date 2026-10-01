@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>小恐龙</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <style>
+        #eat_meat {
+            position: absolute;
+            top: 20px;
+            left: 20px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/chicken_leg.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+            visibility: hidden;
+        }
+
+        #ar_site {
+            position: absolute;
+            top: 20px;
+            left: 92px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/ar_site.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+            visibility: hidden;
+        }
+
+        #sound {
+            visibility: hidden;
+        }
+
+        .no_sound {
+            position: absolute;
+            top: 20px;
+            left: 164px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/no_sound.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+        }
+
+        .sound {
+            position: absolute;
+            top: 20px;
+            left: 164px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/sound.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+        }
+
+        #share {
+            position: absolute;
+            top: 15px;
+            right: 20px;            
+            width: 60px;
+            height: 60px;
+            background: url(images/share.png);
+            background-size: 60px 60px;
+            z-index: 1111;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="eat_meat" style="position: absolute; top: 20px; left: 20px; z-index: 1111">他妈的，按上我把！</button> -->
+    <div id="eat_meat">
+    </div>
+
+    <div id="sound" class="sound">
+    </div>
+
+    <a id="ar_site" href="http://weidian.com/?userid=897975368&wfr=wx&share_id=897975368&code=041DTiio09Bu5d1i1Uho0Yskio0DTiio&state=H5WXshare">
+    </a>
+
+    <a id="share">
+    </a>
+</body>
+<!-- libraries -->
+<script src="js/laya/matter.js"></script>
+<script src="js/laya/laya.core.js"></script>
+<script src="js/laya/matter-RenderLaya.js"></script>
+<script src="js/laya/laya.webgl.js"></script>
+<script src="js/laya/laya.filters.js"></script>
+<script src="js/laya/laya.particle.js"></script>
+<script src="js/laya/laya.ani.js"></script>
+<script src="js/laya/laya.ui.js"></script>
+<script src="js/laya/laya.html.js"></script>
+<script src="js/dinosaur.js"></script>
+<script>
+var options = {
+    bg_full_width: 2553,
+    bg_full_height: 1911,
+    area_width: 1024,
+    area_height: 768
+};
+
+var ld = new LittleDinosaur(options);
+</script> 
+</html>

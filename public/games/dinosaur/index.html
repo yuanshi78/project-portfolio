@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>小恐龙</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <style>
+        #eat_meat {
+            position: absolute;
+            top: 20px;
+            left: 20px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/chicken_leg.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+            visibility: hidden;
+        }
+
+        #ar_site {
+            position: absolute;
+            top: 20px;
+            left: 92px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/ar_site.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+            visibility: hidden;
+        }
+
+        #sound {
+            visibility: hidden;
+        }
+
+        .no_sound {
+            position: absolute;
+            top: 20px;
+            left: 164px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/no_sound.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+        }
+
+        .sound {
+            position: absolute;
+            top: 20px;
+            left: 164px;            
+            width: 52px;
+            height: 63px;
+            background: url(images/sound.png);
+            background-size: 52px 63px;
+            z-index: 1111;
+        }
+
+        #share {
+            position: absolute;
+            top: 15px;
+            right: 20px;            
+            width: 60px;
+            height: 60px;
+            background: url(images/share.png);
+            background-size: 60px 60px;
+            z-index: 1111;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="eat_meat" style="position: absolute; top: 20px; left: 20px; z-index: 1111">他妈的，按上我把！</button> -->
+    <div id="eat_meat">
+    </div>
+
+    <div id="sound" class="sound">
+    </div>
+
+    <a id="ar_site" href="http://weidian.com/?userid=897975368&wfr=wx&share_id=897975368&code=041DTiio09Bu5d1i1Uho0Yskio0DTiio&state=H5WXshare">
+    </a>
+
+    <a id="share">
+    </a>
+
+    <div id="file-protocol-warning" style="display: none; position: fixed; inset: 0; z-index: 999999; background: #ffffff; color: #333; font-family: sans-serif; padding: 40px; line-height: 1.8; overflow: auto;">
+      <h1 style="font-size: 22px; margin: 0 0 16px;">请通过 HTTP 访问本页</h1>
+      <p>当前是用 <code>file://</code> 直接打开的。浏览器出于安全策略会禁止加载游戏资源（XHR / CORS），所以画面无法渲染。</p>
+      <p>请在本目录启动一个本地服务器，再用 http 打开：</p>
+      <pre style="background: #f5f5f5; padding: 12px; border-radius: 6px; overflow: auto;">python3 -m http.server 8080
+# 然后浏览器打开 http://localhost:8080/</pre>
+      <p style="color: #888; font-size: 14px;">在作品集网站中，请从「魔幻恐龙」详情页点击「试玩小游戏」按钮访问。</p>
+    </div>
+    <script>
+      if (location.protocol === 'file:') {
+        document.getElementById('file-protocol-warning').style.display = 'block';
+      }
+    </script>
+</body>
+<!-- libraries -->
+<script src="js/laya/matter.js"></script>
+<script src="js/laya/laya.core.js"></script>
+<script src="js/laya/matter-RenderLaya.js"></script>
+<script src="js/laya/laya.webgl.js"></script>
+<script src="js/laya/laya.filters.js"></script>
+<script src="js/laya/laya.particle.js"></script>
+<script src="js/laya/laya.ani.js"></script>
+<script src="js/laya/laya.ui.js"></script>
+<script src="js/laya/laya.html.js"></script>
+<script src="js/dinosaur.js"></script>
+<script>
+var options = {
+    bg_full_width: 2553,
+    bg_full_height: 1911,
+    area_width: 1024,
+    area_height: 768
+};
+
+var ld = new LittleDinosaur(options);
+</script> 
+</html>
