@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { parseEmphasis } from '@/utils/emphasis'
 import { visibleItems } from '@/utils/visibility'
+import { getYears, getExpYears } from '@/utils/years'
 import { useDisplay } from 'vuetify'
 
 const { smAndDown } = useDisplay()
@@ -18,8 +19,7 @@ const props = defineProps({
   },
 })
 
-// 保留“居住 N 年”的动态计算：JSON 中用 {years} 占位，这里替换为实际年数
-const getYears = () => new Date().getFullYear() - 2014
+// {years} 来华年数、{exp} 工龄，均来自 @/utils/years 全局配置
 
 // 由生日自动计算周岁年龄（含月/日判断），生日本身不展示
 const getAge = () => {
@@ -43,6 +43,7 @@ const renderSegments = text => {
   return parseEmphasis(
     text
       .replace('{years}', getYears())
+      .replace('{exp}', getExpYears())
       .replace('{age}', getAge()),
   )
 }

@@ -5,6 +5,7 @@ import Projects from './projects.vue'
 import { ref, computed } from 'vue'
 import { personal } from '@/data/personal'
 import { parseEmphasis } from '@/utils/emphasis'
+import { getYears, getExpYears } from '@/utils/years'
 
 const data = personal
 const selectedPage = ref(0)
@@ -12,7 +13,17 @@ const meta = data.meta
 const tabs = data.tabs
 
 // 👉 顶部叙述性自我介绍（非列表）：支持多段 \n 与 **强调**
-const aboutSegments = computed(() => parseEmphasis(data.about ?? ''))
+// 与 profile.vue 保持一致：{years} 来华年数、{exp} 工龄，均来自 @/utils/years 全局配置
+const aboutSegments = computed(() =>
+  parseEmphasis(
+    (data.about ?? '')
+      .replace('{years}', getYears())
+      .replace('{exp}', getExpYears()),
+  ),
+)
+
+// 👉 致雇主 / 合作意向（独立板块，不混入 CV 与 about）
+const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? ''))
 </script>
 
 <template>
@@ -83,6 +94,32 @@ const aboutSegments = computed(() => parseEmphasis(data.about ?? ''))
       </VCardText>
     </VCard>
 
+    <!-- 👉 致雇主 / 合作意向（独立板块，避免与 CV、about 混淆） -->
+    <VCard
+      v-if="data.forEmployers"
+      class="mb-6 for-employers"
+      rounded="lg"
+      elevation="1"
+    >
+      <VCardText>
+        <div class="section-head text-h5 font-weight-bold mb-2">
+          致雇主 / 合作意向
+        </div>
+        <p class="about-text">
+          <template
+            v-for="(seg, si) in forEmployersSegments"
+            :key="si"
+          >
+            <strong
+              v-if="seg.strong"
+              class="about-emphasis"
+            >{{ seg.text }}</strong>
+            <template v-else>{{ seg.text }}</template>
+          </template>
+        </p>
+      </VCardText>
+    </VCard>
+
     <!-- 👉 切换：个人信息 / 项目 -->
     <div class="d-flex flex-wrap mb-6">
       <VBtn
@@ -136,5 +173,10 @@ const aboutSegments = computed(() => parseEmphasis(data.about ?? ''))
 .about-emphasis {
   font-weight: 600;
   color: rgb(var(--v-theme-warning));
+}
+
+// 👉 致雇主板块：左侧主色描边，区别于普通自我介绍
+.for-employers {
+  border-inline-start: 4px solid rgb(var(--v-theme-primary));
 }
 </style>

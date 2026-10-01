@@ -292,27 +292,37 @@ const openZoom = img => {
     transform: scale(1.04);
   }
 
-  // 底部控制点：实心暗色圆角胶囊衬底，底部居中
+  // 底部控制点：实心暗色圆角胶囊衬底，底部居中（尺寸随视口自适应）
   :deep(.v-carousel__controls) {
     background: rgb(0 0 0 / 60%);
     border-radius: 999px;
-    padding: 6px 14px;
+    padding: clamp(2px, 0.8vw, 6px) clamp(6px, 1.8vw, 14px);
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
-    bottom: 14px !important;
+    bottom: clamp(6px, 1.5vw, 14px) !important;
     width: fit-content !important;
     max-width: 90% !important;
+    height: auto !important;
   }
 
   // 非激活点：纯白 + 微光晕，更亮更醒目
   :deep(.v-carousel__controls .v-btn--icon) {
     color: #fff;
+    // 覆盖 Vuetify 默认高度变量与最小尺寸，确保自适应真正生效
+    --v-btn-height: clamp(16px, 4.5vw, 36px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    block-size: clamp(16px, 4.5vw, 36px) !important;
+    inline-size: clamp(16px, 4.5vw, 36px) !important;
+    padding: 0 !important;
   }
 
   :deep(.v-carousel__controls .v-btn__content .v-icon) {
-    block-size: 10px !important;
-    inline-size: 10px !important;
+    block-size: clamp(5px, 1.3vw, 10px) !important;
+    inline-size: clamp(5px, 1.3vw, 10px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
     filter: drop-shadow(0 0 3px rgb(255 255 255 / 75%));
   }
 
@@ -322,32 +332,11 @@ const openZoom = img => {
   }
 
   :deep(.v-carousel__controls .v-btn--active .v-btn__content .v-icon) {
-    block-size: 15px !important;
-    inline-size: 15px !important;
+    block-size: clamp(7px, 2vw, 15px) !important;
+    inline-size: clamp(7px, 2vw, 15px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
     filter: brightness(1.3) drop-shadow(0 0 6px rgb(255 255 255 / 95%));
-  }
-
-  // 👉 手机端：底部控制按钮整体缩小，避免过大
-  @media (max-width: 600px) {
-    :deep(.v-carousel__controls) {
-      padding: 4px 10px !important;
-      bottom: 10px !important;
-    }
-
-    :deep(.v-carousel__controls .v-btn--icon) {
-      block-size: 28px !important;
-      inline-size: 28px !important;
-    }
-
-    :deep(.v-carousel__controls .v-btn__content .v-icon) {
-      block-size: 8px !important;
-      inline-size: 8px !important;
-    }
-
-    :deep(.v-carousel__controls .v-btn--active .v-btn__content .v-icon) {
-      block-size: 11px !important;
-      inline-size: 11px !important;
-    }
   }
 }
 

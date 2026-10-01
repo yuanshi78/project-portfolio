@@ -1,5 +1,24 @@
 [
   {
+    "category": "self",
+    "company": "自研产品",
+    "icon": "ri-flask-line",
+    "projects": [
+      {
+        "slug": "aethera",
+        "name": "智能多模态数据呈现工具Aethera",
+        "image": "it_general.jpg",
+        "description": "**Aethera** 是智能多模态数据呈现工具：以 **plugin-first** 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
+        "tags": [
+          "vue",
+          "多模态数据呈现",
+          "AI",
+          "插件化架构"
+        ]
+      }
+    ]
+  },
+  {
     "category": "aidiweike",
     "company": "西安艾迪韦科网络科技有限公司",
     "icon": "ri-building-2-line",
@@ -7,7 +26,7 @@
       {
         "slug": "nocobase-plugins",
         "name": "Nocobase插件",
-        "image": "rainbow/nocobase/echars-plugin.png",
+        "image": "rainbow/nocobase/echarts-plugin.png",
         "description": "**Nocobase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
         "tags": [
           "react",
@@ -83,6 +102,38 @@
           "vue",
           "JavaScript",
           "twave js"
+        ]
+      },
+      {
+        "slug": "production_sales_platform",
+        "name": "产云销一体化平台",
+        "image": "it_general.jpg",
+        "description": "产云销一体化平台，打通生产、销售与云端数据，实现生产—销售一体化管理。",
+        "tags": [
+          "vue",
+          "JavaScript"
+        ]
+      },
+      {
+        "slug": "power_distribution_monitor",
+        "name": "电力配电设备监控系统",
+        "image": "it_general.jpg",
+        "description": "电力配电设备监控系统，用于监控配电设备的运行状态、告警与运维。",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "echarts"
+        ]
+      },
+      {
+        "slug": "guoxin_lng",
+        "name": "国新LNG平台",
+        "image": "it_general.jpg",
+        "description": "国新LNG平台，面向液化天然气（LNG）业务的管理与监控平台。",
+        "tags": [
+          "vue",
+          "JavaScript",
+          "echarts"
         ]
       }
     ]

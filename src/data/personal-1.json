@@ -2,11 +2,6 @@
   "name": "Aliaksandr Kuzmiankou 元实",
   "cover": "/images/pages/abstract.jpg",
   "birthday": "1978-03-16",
-  "chinaSince": 2014,
-  "career": {
-    "since": 2002,
-    "gap": 2
-  },
   "site": {
     "name": "Portfolio",
     "title": "Alexander Kuzmenkov - Portfolio",
@@ -16,12 +11,11 @@
     "url": "/cv/CV Kuzmiankou Aliaksandr元实 - web前端工程师.docx",
     "label": "下载简历"
   },
-  "about": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍研发负责人（数据呈现与AI方向）、软件工程师与web前端架构师。\n\n专注数据呈现与AI方向：软件工程、前端架构、低代码平台（NocoBase、AMIS）、数据可视化。目前致力于研发前沿的智能多模态数据呈现工具（可视化、可听化及其他感知通道），基于带微内核的插件优先架构，AI 作为呈现的智能基础。该工具既面向现代智能仪表盘，也面向未来的数据交互方式。\n\n我的独特优势：**{years}年在中国 + 中文流利 + 俄语母语 + {exp}年软件工程经验 + web前端架构 + AI辅助开发 + 产品思维**。我是中国与俄语市场之间的技术桥梁。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
-  "forEmployers": "如果您公司对我正在研发的智能多模态数据呈现工具感兴趣，我愿意以公司项目的形式与公司共同推进研发。新产生的成果归属公司；此前已有的个人研究与原型的使用条件，建议另行协商。",
+  "about": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍 web 前端工程师。\n\n专注 Vue / React 与低代码平台（Nocobase、AMIS），热爱把复杂业务拆成清晰、可维护的前端结构。**对人工智能与人工神经网络尤其着迷**，业余也研究数学与神经生物学。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
   "meta": [
     {
       "icon": "ri-computer-line",
-      "text": "研发负责人（数据呈现与AI方向） / 软件工程师 / web前端"
+      "text": "web前端工程师"
     },
     {
       "icon": "ri-user-location-line",
@@ -76,7 +70,7 @@
           },
           {
             "icon": "ri-speak-line",
-            "text": "语言：俄语（母语）、白俄语、汉语（流利）、英语"
+            "text": "语言：俄语、白俄语、汉语、英语"
           },
           {
             "icon": "ri-calendar-2-line",
@@ -88,7 +82,7 @@
           },
           {
             "icon": "ri-star-line",
-            "text": "角色：研发负责人（数据呈现与AI方向） / 软件工程师 / web前端"
+            "text": "角色： web前端工程师"
           },
           {
             "icon": "ri-graduation-cap-line",
@@ -105,10 +99,6 @@
           {
             "icon": "ri-phone-line",
             "text": "手机号：18681876326"
-          },
-          {
-            "icon": "ri-mail-line",
-            "text": "邮箱：yuanshi78@foxmail.com"
           }
         ]
       },
@@ -139,35 +129,30 @@
       "grid": 2,
       "items": [
         {
-          "icon": "ri-earth-line",
-          "text": "GIS工具：高德地图API、AntV L7、CesiumJS"
-        },
-        {
           "icon": "ri-vuejs-line",
-          "text": "前端：HTML5、CSS3/SCSS、JavaScript （ES5、 ES2015、ES2015以上）、TypeScript、Vue 2/3、React"
+          "text": "前端：HTML5、CSS3、JavaScript （ES5, ES2015, ES2015以上）、Typescript、Vue 2/3, React"
         },
         {
           "icon": "ri-code-s-slash-line",
-          "text": "语言：JavaScript （ES5, ES2015, ES2015以上）、TypeScript、C/C++、Lisp Scheme、SQL、JCL"
+          "text": "语言：JavaScript （ES5, ES2015, ES2015以上）、C/C++、Lisp Scheme、SQL、JCL"
         },
         {
           "icon": "ri-code-box-line",
           "important": true,
-          "text": "低代码框架：NocoBase, AMIS"
+          "text": "低代码框架：Nocobase, AMIS"
+        },
+        {
+          "icon": "ri-earth-line",
+          "text": "GIS工具：高德地图API、AntV L7、Cesium js"
         },
         {
           "icon": "ri-pie-chart-line",
           "important": true,
-          "text": "可视化：ECharts"
-        },
-        {
-          "icon": "ri-robot-line",
-          "important": true,
-          "text": "AI辅助软件开发：熟练使用AI工具进行软件系统开发、原型构建与代码生成"
+          "text": "可视化：echarts"
         },
         {
           "icon": "ri-tools-line",
-          "text": "IDE：Webstorm、 VS Code、 CodeBuddy AI IDE、 QWenWork、Windsurf AI IDE、 Cursor AI IDE"
+          "text": "IDE：Webstorm, Windsurf AI IDE, Cursor AI IDE, VS Code"
         },
         {
           "icon": "ri-ubuntu-line",
@@ -185,16 +170,11 @@
         "items": [
           {
             "icon": "ri-speak-line",
-            "text": "俄语🇷🇺（母语）、白俄语🇧🇾、汉语🇨🇳（流利）、英语🇬🇧。可以用中文与人顺利交流"
+            "text": "俄语🇷🇺、白俄语🇧🇾、汉语🇨🇳、英语🇬🇧。有一定的汉语基础，在听、说、读、写方面都有长处，可以用中文与人顺利的交流"
           },
           {
             "icon": "ri-code-s-slash-line",
-            "text": "拥有**{exp}年**的软件工程、软件创作和应用经验"
-          },
-          {
-            "icon": "ri-globe-line",
-            "important": true,
-            "text": "**中国与俄语市场之间的技术桥梁**：{years}年在中国 + 中文流利 + 俄语母语"
+            "text": "拥有**二十二年**的软件创作和应用经验"
           },
           {
             "icon": "ri-lightbulb-flash-line",
@@ -213,17 +193,12 @@
           {
             "icon": "ri-dashboard-2-line",
             "important": true,
-            "text": "研发数据可视化与智能呈现系统能力较强"
+            "text": "研发大数据可视化系统能力较强"
           },
           {
             "icon": "ri-stackshare-line",
             "important": true,
-            "text": "有研发插件化架构与低代码平台扩展的经验"
-          },
-          {
-            "icon": "ri-robot-line",
-            "important": true,
-            "text": "熟练使用AI辅助开发，能快速构建原型与验证产品思路"
+            "text": "有研发IoT平台前端的经验"
           },
           {
             "icon": "ri-stack-line",
@@ -236,22 +211,22 @@
           {
             "icon": "ri-task-line",
             "text": "本人适应性强，责任心强，有优秀的中文口头表达能力"
+          },
+          {
+            "icon": "ri-globe-line",
+            "text": "会努力吸引白俄罗斯项目"
           }
         ]
       },
       {
-        "title": "职业想法",
+        "title": "想法",
         "items": [
           {
             "important": true,
-            "text": "1. 我相信数据是未来竞争的核心。谁更好地理解和呈现数据，谁就赢得先机。我研发智能多模态数据呈现工具，正是为了帮助公司把数据转化为决策优势。"
+            "text": "1. 以思想为主. 技术是实现思想的工具"
           },
           {
-            "important": true,
-            "text": "2. 以思想为主. 技术是实现思想的工具"
-          },
-          {
-            "text": "3. 充分利用抽象的力量"
+            "text": "2. 充分利用抽象的力量"
           },
           {
             "text": "4. 尽量利用模块化架构"
@@ -267,19 +242,17 @@
             "text": "7. 团队合作很重要"
           },
           {
-            "important": true,
             "text": "8. 我不是coder monkey, 而是软件工程师， 喜欢挑战新思路， 喜欢挑战新想法，喜欢研发（研究 + 开发）"
           },
           {
-            "important": true,
-            "text": "9. 研发前沿的智能多模态数据呈现工具，基于带微内核的插件优先架构，AI 作为呈现的智能基础"
-          },
-          {
-            "text": "10. 想做出自己的产品"
+            "text": "9. 想做出自己的产品"
           },
           {
             "important": true,
-            "text": "11. 我的梦想是对人工神经网络和数据呈现技术的发展有贡献"
+            "text": "10. 利用以前研发的拓扑工具为基础，研发完整的IoT拓扑图工具， 作为在IoT平台上使用的模块"
+          },
+          {
+            "text": "11. 我的梦想是对人工神经网络技术的发展有贡献"
           }
         ]
       }
@@ -292,7 +265,7 @@
         "subtitle": "2023/08 - 现在， 西安",
         "title": "西安艾迪韦科网络科技有限公司",
         "to": "/aidiweike/all",
-        "text": "NocoBase插件、数据可视化与智能呈现工具研发、“智慧运维系统”、“票务管理系统”、“生产管理系统”"
+        "text": "Nocobase插件、“智慧运维系统”、“票务管理系统”、“生产管理系统”"
       },
       {
         "subtitle": "2020/04 - 2023/08， 西安",
@@ -304,7 +277,7 @@
         "subtitle": "2019/05—2020/04， 西安",
         "title": "陕西金合信息科技股份有限公司",
         "to": "/jinhe/all",
-        "text": "瑞德宝尔管理平台、王家岭管理平台、合金可视化平台、西安咸阳国际机场、中煤陕西应急指挥系统"
+        "text": "瑞德宝尔管理平台、王家岭管理平台、合金可视化平台、西安咸阳国际机场、中美陕西应急指挥系统"
       },
       {
         "subtitle": "2016/09—2019/05， 西安",
