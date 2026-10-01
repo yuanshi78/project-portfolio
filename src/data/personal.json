@@ -51,11 +51,29 @@
       "icon": "ri-user-fill"
     },
     {
+      "key": 2,
+      "label": "产品",
+      "icon": "ri-lightbulb-fill"
+    },
+    {
       "key": 1,
       "label": "项目",
       "icon": "ri-folders-fill"
     }
   ],
+  "products": {
+    "title": "产品",
+    "items": [
+      {
+        "title": "Aethera",
+        "subtitle": "2026/01 至今",
+        "status": "研发中",
+        "statusColor": "warning",
+        "text": "智能多模态数据呈现工具：以 plugin-first 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
+        "to": "/project/self/aethera"
+      }
+    ]
+  },
   "profile": {
     "left": [
       {
@@ -260,7 +278,7 @@
             "text": "5. 尽量减少重复代码"
           },
           {
-            "text": "6. 尽量利用提高工作效率的工具， 包括AI, 低代码/无代码工具"
+            "text": "6. 尽量利用提高工作效率的工具， 包括**AI**, 低代码/无代码工具"
           },
           {
             "important": true,

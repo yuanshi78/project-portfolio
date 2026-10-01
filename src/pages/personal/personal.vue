@@ -1,6 +1,7 @@
 <script setup>
 import me from '@images/avatars/me.png'
 import Profile from './profile.vue'
+import Products from './products.vue'
 import Projects from './projects.vue'
 import { ref, computed } from 'vue'
 import { personal } from '@/data/personal'
@@ -137,6 +138,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 
     <Profile v-if="selectedPage === 0" :data="data.profile" :birthday="data.birthday" />
     <Projects v-if="selectedPage === 1" :data="data.experience" />
+    <Products v-if="selectedPage === 2" :data="data.products" />
   </div>
 </template>
 
