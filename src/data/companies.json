@@ -7,7 +7,6 @@
       {
         "slug": "aethera",
         "name": "智能多模态数据呈现工具Aethera",
-        "image": "it_general.jpg",
         "description": "**Aethera** 是智能多模态数据呈现工具：以 **plugin-first** 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
         "tags": [
           "vue",
@@ -107,7 +106,6 @@
       {
         "slug": "production_sales_platform",
         "name": "产运销一体化平台",
-        "image": "it_general.jpg",
         "description": "山西国新产运销一体化大数据平台，打通 LNG 生产—运输—销售全链条，实现产运销动态平衡与智能定价。",
         "tags": [
           "vue",
@@ -158,7 +156,6 @@
       {
         "slug": "chemistry_plant",
         "name": "中煤陕西应急指挥系统",
-        "image": "it_general.jpg",
         "description": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统",
         "tags": [
           "vue 2",
@@ -169,7 +166,6 @@
       {
         "slug": "ruidebaoer",
         "name": "瑞德宝尔智慧矿山",
-        "image": "it_general.jpg",
         "description": "陕西瑞德宝尔投资有限公司安全，生产，运营管理系统",
         "tags": [
           "vue 2",
@@ -228,7 +224,6 @@
       {
         "slug": "runway",
         "name": "CO Runway, OnePass",
-        "image": "it_general.jpg",
         "description": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
         "tags": [
           "IBM zSeries",
@@ -248,7 +243,6 @@
       {
         "slug": "planning_engine",
         "name": "Central Planning Engine系统",
-        "image": "it_general.jpg",
         "description": "IBM美国微电子部Central Planning Engine系统",
         "tags": [
           "IBM zSeries",
@@ -262,7 +256,6 @@
       {
         "slug": "adm",
         "name": "IBM法国ADM France BA",
-        "image": "it_general.jpg",
         "description": "IBM法国ADM France BA",
         "tags": [
           "IBM zSeries",
@@ -277,7 +270,6 @@
       {
         "slug": "mie",
         "name": "MIE France",
-        "image": "it_general.jpg",
         "description": "IBM法国MIE France",
         "tags": [
           "TDI",
@@ -289,7 +281,6 @@
       {
         "slug": "urt",
         "name": "URT Extractors ISD",
-        "image": "it_general.jpg",
         "description": "IBM法国URT Extractors ISD",
         "tags": [
           "Perl",

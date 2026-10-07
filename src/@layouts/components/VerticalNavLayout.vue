@@ -11,9 +11,7 @@ export default defineComponent({
     const { mdAndDown } = useDisplay()
 
     onMounted(() => {
-      console.log('mounted')
-      window.addEventListener('scroll', (e) => {
-        console.log(document.documentElement.scrollTop)
+      window.addEventListener('scroll', () => {
         if (document.documentElement.scrollTop > 20) {
           document.querySelector('.layout-wrapper').classList.add('window-scrolled')
         } else {

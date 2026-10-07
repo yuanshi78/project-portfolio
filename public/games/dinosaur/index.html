@@ -97,39 +97,6 @@
         document.getElementById('file-protocol-warning').style.display = 'block';
       }
     </script>
-
-    <!-- 👉 玩法说明 -->
-    <div id="game-tip">点击画面 → 小恐龙走到你点击的地方</div>
-    <style>
-      #game-tip {
-        position: fixed;
-        left: 50%;
-        bottom: 28px;
-        transform: translateX(-50%);
-        z-index: 9998;
-        padding: 10px 20px;
-        border-radius: 999px;
-        background: rgba(0, 0, 0, 0.55);
-        color: #fff;
-        font-size: 15px;
-        font-family: sans-serif;
-        line-height: 1.4;
-        white-space: nowrap;
-        pointer-events: none; /* 关键：不拦截点击，否则恐龙不会走 */
-        transition: opacity 600ms ease;
-      }
-      #game-tip.hide { opacity: 0; }
-    </style>
-    <script>
-      (function () {
-        var tip = document.getElementById('game-tip');
-        if (!tip) return;
-        var hide = function () { tip.classList.add('hide'); };
-        // 玩家开始点击后淡出；加载较慢时最长保留 15 秒
-        document.addEventListener('click', hide, { once: true });
-        setTimeout(hide, 15000);
-      })();
-    </script>
 </body>
 <!-- libraries -->
 <script src="js/laya/matter.js"></script>

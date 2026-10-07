@@ -1,12 +1,8 @@
-// 👉 全局年份配置：基准参数写在 personal.json（chinaSince / career.since / career.gap）
-// 改 personal.json 即可全站同步，无需改代码。
-// 工龄表达式：今年 - 职业起始年 - 不做职业的年数（空档）
-import { personal } from '@/data/personal'
+// 👉 全局年份配置：只需改这里，所有页面的年数自动同步
+// 来华 / 定居西安的年份（用于 {years}）
+export const CHINA_SINCE = 2014
+// 软件工程职业生涯起始年份（用于 {exp}，与“22 年经验”一致）
+export const CAREER_SINCE = 2004
 
-export const getYears = () =>
-  new Date().getFullYear() - (personal.chinaSince ?? 2014)
-
-export const getExpYears = () =>
-  new Date().getFullYear() -
-  (personal.career?.since ?? 2002) -
-  (personal.career?.gap ?? 0)
+export const getYears = () => new Date().getFullYear() - CHINA_SINCE
+export const getExpYears = () => new Date().getFullYear() - CAREER_SINCE
