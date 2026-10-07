@@ -76,8 +76,9 @@ defineProps({
   border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
 }
 
+// 👉 基准 14px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
 .product-text {
-  font-size: 0.875rem;
+  font-size: calc(0.875rem * var(--content-font-scale, 1));
   line-height: 1.6;
   color: rgba(var(--v-theme-on-surface), 0.85);
 }

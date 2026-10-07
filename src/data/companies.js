@@ -4,7 +4,7 @@
 // 编辑展示内容只需改 companies.json：
 //   - 新增企业：在数组里加一项（含 category / company / projects）
 //   - 新增项目：在对应企业的 projects 里加一条（slug / name / image / description / tags）
-// 详情正文仍在 src/data/details.json（按 slug 关联），不要在这里配置。
+// 详情正文仍在 src/data/details/ 下按单位拆分的 json（按 slug 关联），不要在这里配置。
 import companiesData from '@/data/companies.json'
 import { visibleItems } from '@/utils/visibility'
 

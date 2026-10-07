@@ -169,7 +169,8 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 .about-text {
   white-space: pre-line;
   line-height: 1.8;
-  font-size: 0.95rem;
+  // 基准 16px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
+  font-size: calc(1rem * var(--content-font-scale, 1));
   margin: 0;
   color: rgba(var(--v-theme-on-surface), 0.85);
 }

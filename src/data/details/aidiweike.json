@@ -1,0 +1,214 @@
+[
+  {
+    "category": "aidiweike",
+    "slug": "nocobase-plugins",
+    "title": "NocoBase 插件",
+    "date": "2024/11 - 2025/09",
+    "images": [
+      "rainbow/nocobase/amis-plugin.png",
+      "rainbow/nocobase/echarts-plugin.png",
+      "rainbow/nocobase/tree-plugin.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "NocoBase 插件，包括 AMIS、ECharts、Tree，用于扩展低代码平台能力，使平台可以更灵活地展示和操作数据。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. **AMIS 联动**：将插件配置为可添加到表单中，实现参数（如记录 ID）传递到 AMIS 插件；表单保存成功后重新加载表格数据；实现 AMIS 插件与页面上其他显示表格的插件连接；通过全局 CSS 配置 AMIS 样式；拆分 AMIS JSON Schema 配置。",
+          "2. **ECharts 坐标类插件**：支持折线图、柱状图等；提供图块类型选择、标题显示与位置配置、JSON 格式图配置参数；支持关联数据源、创建独立数据源、定时刷新、事件刷新、默认数据规则、条件显示。",
+          "3. **Tree 插件**：提供树结构的筛选区块。"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "React, TypeScript, Ant Design, NocoBase, AMIS, ECharts"
+        ]
+      },
+      {
+        "heading": "职责",
+        "paragraphs": [
+          "插件独立开发者"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 我开发的 NocoBase AMIS、ECharts、Tree 插件已在实际项目中使用，实现了表单与图表的数据联动、参数传递、表格重载、全局样式配置、JSON Schema 拆分、数据源关联、定时/事件刷新与条件显示，提升了系统的可视化配置与数据筛选能力。"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "aidiweike",
+    "slug": "smart_operation",
+    "title": "可视化运维系统",
+    "date": "2024/03 - 2024/07",
+    "images": [
+      "rainbow/smart-oper/6.png",
+      "rainbow/smart-oper/4.png",
+      "rainbow/smart-oper/5.png",
+      "rainbow/smart-oper/可视化运维系统设备台长.png",
+      "rainbow/smart-oper/可视化运维系统保养任务管理.png",
+      "rainbow/smart-oper/7.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "区域电、水、气系统可视化运维系统。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 用数据可视化分析电、水、气的使用情况",
+          "2. 电、水、气系统设备的巡检（线上和线下）、保养和维修"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 通过电、水、气系统管理数字化优化电、水、气的使用",
+          "2. 保证电、水、气系统设备正常运行"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, diboot, Ant Design Vue, ECharts, DataEase, Fuxa"
+        ]
+      },
+      {
+        "heading": "职责",
+        "paragraphs": [
+          "前端核心开发"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 开发了 diboot 无法生成的功能",
+          "2. 开发了能流图"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "aidiweike",
+    "slug": "cinema_hall",
+    "title": "票务管理系统",
+    "date": "2024/03 - 2024/06",
+    "images": [
+      "aidiweike/tickets/1.png",
+      "aidiweike/tickets/2.png",
+      "aidiweike/tickets/3.png",
+      "aidiweike/tickets/4.png",
+      "aidiweike/tickets/5.png",
+      "aidiweike/tickets/6.png",
+      "aidiweike/tickets/7.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "该系统用于管理剧场票务信息、订单信息、票价信息、票价规则信息、票价规则明细信息等。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 管理票务信息、订单信息、票价信息",
+          "2. 管理票价规则及规则明细"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript, ECharts"
+        ]
+      },
+      {
+        "heading": "职责",
+        "paragraphs": [
+          "前端开发"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 负责前端开发，实现票务、订单、票价及规则模块的可视化与交互。"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "aidiweike",
+    "slug": "pharmacy",
+    "title": "兆益生物生产管理系统",
+    "date": "2023/01 - 2024/03",
+    "images": [
+      "rainbow/pharmacy/1.png",
+      "rainbow/pharmacy/1_1.png",
+      "rainbow/pharmacy/2.png",
+      "rainbow/pharmacy/4.png",
+      "rainbow/pharmacy/5.png"
+    ],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "管理生产兽药的系统。管理采购、生产、销售流程。包括采购计划、采购订单、采购库存、产品计划、产品库存、销售计划、销售库存、年度统计、月度统计、日度统计等。"
+        ]
+      },
+      {
+        "heading": "功能",
+        "paragraphs": [
+          "主要功能是："
+        ],
+        "list": [
+          "1. 管理兽药的采购、生产、销售流程",
+          "2. 通过可视化统计数据，帮助用户了解产品生产情况"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 此生产管理系统使采购、生产、销售流程数字化，并合在一起。通过这个第一，提高人员的工作效率；第二，使采购、生产、销售数据合在一起。数据集中化让更有效并全面地控制生产兽药的流程，并通过不同的统计提高采购、生产、销售计划准确度，因此提高兆益生物有限公司的利润。"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "Vue 2, JavaScript, diboot, Colaiven, ECharts"
+        ]
+      },
+      {
+        "heading": "职责",
+        "paragraphs": [
+          "前端开发"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 虽然这个项目开始的时候，我没参加它，我开发了很多模块的前端，也优化了别人开发的前端。"
+        ]
+      }
+    ]
+  }
+]

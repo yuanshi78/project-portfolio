@@ -22,6 +22,57 @@ const props = defineProps({
 const { mdAndDown } = useDisplay()
 const refNav = ref()
 
+// PerfectScrollbar 实例（组件暴露的 ps），用于在菜单内容变化后重算滚动状态
+const refPs = ref()
+
+/*ℹ️ 菜单内容变化（分组展开/折叠、路由切换、导航折叠）后同步滚动条状态：
+滚动条只在「实际可见菜单高度 > 可用高度（页面高度去掉头部）」时出现。*/
+const updatePs = () => {
+  requestAnimationFrame(() => {
+    const ps = refPs.value?.ps
+
+    if (ps && typeof ps.update === 'function')
+      ps.update()
+  })
+}
+
+let observer = null
+let boxObserver = null
+const handleTransitionEnd = evt => {
+  // 分组展开/折叠用的是 grid-template-rows 过渡，动画结束后再重算
+  if (evt.propertyName === 'grid-template-rows')
+    updatePs()
+}
+
+onMounted(() => {
+  updatePs()
+
+  // 内容/DOM 变化（分组开合、路由切换等）→ 重算
+  if (refNav.value && window.MutationObserver) {
+    observer = new MutationObserver(updatePs)
+    observer.observe(refNav.value, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['class'],
+    })
+  }
+
+  // 导航折叠（mini）↔ 悬停展开：容器尺寸变化、条目高度随之变化 → 重算
+  if (refNav.value && window.ResizeObserver) {
+    boxObserver = new ResizeObserver(updatePs)
+    boxObserver.observe(refNav.value)
+  }
+
+  refNav.value?.addEventListener('transitionend', handleTransitionEnd)
+})
+
+onBeforeUnmount(() => {
+  observer?.disconnect()
+  boxObserver?.disconnect()
+  refNav.value?.removeEventListener('transitionend', handleTransitionEnd)
+})
+
 /*ℹ️ Close overlay side when route is changed
 Close overlay vertical nav when link is clicked
 */
@@ -79,6 +130,7 @@ const handleNavScroll = evt => {
       :update-is-vertical-nav-scrolled="updateIsVerticalNavScrolled"
     >
       <PerfectScrollbar
+        ref="refPs"
         tag="ul"
         class="nav-items"
         :options="{ wheelPropagation: false }"
@@ -146,14 +198,19 @@ const handleNavScroll = evt => {
     margin-inline-end: auto;
   }
 
+  // 👉 菜单滚动区：只占「页面高度去掉头部」的剩余空间。
+  // 原先 block-size:100% 是把整个导航高度都给它（会把底部挤出可视区）；
+  // 改成 flex 填充剩余空间后，只有当菜单实际高度（折叠或展开）大于这块空间时才出现滚动条。
   .nav-items {
-    block-size: 100%;
+    flex: 1 1 0;
+    min-block-size: 0;
 
-    // ℹ️ We no loner needs this overflow styles as perfect scrollbar applies it
-    // overflow-x: hidden;
-
-    // // ℹ️ We used `overflow-y` instead of `overflow` to mitigate overflow x. Revert back if any issue found.
-    // overflow-y: auto;
+    // 👉 内容未溢出时彻底隐藏滚动条：
+    // PS 的 rail 只有在容器带 ps--active-y（内容溢出）时才 display:block，
+    // 这里再加一道保险，防止状态滞后时残留轨道。
+    &:not(.ps--active-y) .ps__rail-y {
+      display: none !important;
+    }
   }
 
   .nav-item-title {

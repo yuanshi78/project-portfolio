@@ -1,9 +1,9 @@
 <script setup>
-// 项目详情页：完全由 src/data/details.json 驱动渲染。
+// 项目详情页：由 src/data/details/ 下按单位拆分的 json 驱动渲染。
 // 路由 /project/:category/:slug 对应 JSON 中的一条记录。
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import details from '@/data/details.json'
+import details from '@/data/details'
 import { getCompany } from '@/data/companies'
 import { parseEmphasis } from '@/utils/emphasis'
 import { visibleItems } from '@/utils/visibility'
@@ -26,7 +26,7 @@ const tags = computed(() => project.value?.tags ?? [])
 // 图片放在 public/images/pages/ 下，JSON 中只存相对路径
 const resolveImage = img => `/images/pages/${img}`
 
-// 章节可在 details.json 中标记 visibility: "hidden" 隐藏（完全不渲染）
+// 章节可在详情 JSON 中标记 visibility: "hidden" 隐藏（完全不渲染）
 const visibleSections = computed(() => visibleItems(detail.value?.sections ?? []))
 
 // 点击轮播图片放大预览（灯箱）
@@ -182,16 +182,19 @@ const openZoom = img => {
               prepend-icon="ri-check-line"
               class="px-0"
             >
-              <template
-                v-for="(seg, si) in parseEmphasis(li)"
-                :key="si"
-              >
-                <strong
-                  v-if="seg.strong"
-                  class="detail-emphasis"
-                >{{ seg.text }}</strong>
-                <template v-else>{{ seg.text }}</template>
-              </template>
+              <!-- 显式包裹一层，才能稳定控制字号（Vuetify 内部容器类名不保证） -->
+              <span class="detail-list-text">
+                <template
+                  v-for="(seg, si) in parseEmphasis(li)"
+                  :key="si"
+                >
+                  <strong
+                    v-if="seg.strong"
+                    class="detail-emphasis"
+                  >{{ seg.text }}</strong>
+                  <template v-else>{{ seg.text }}</template>
+                </template>
+              </span>
             </v-list-item>
           </v-list>
 
@@ -358,7 +361,7 @@ const openZoom = img => {
   border-radius: 999px;
   background: rgb(0 0 0 / 50%);
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -394,8 +397,9 @@ const openZoom = img => {
   }
 }
 
+// 👉 基准 15px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
 .section-paragraph {
-  font-size: 0.875rem;
+  font-size: calc(0.9375rem * var(--content-font-scale, 1));
   line-height: 1.75;
 }
 
@@ -405,9 +409,10 @@ const openZoom = img => {
   color: rgb(var(--v-theme-primary));
 }
 
-// 👉 章节正文与列表项统一 14px（与自我介绍页 item-text 一致）
-.section-card :deep(.v-list-item__title) {
-  font-size: 0.875rem;
+// 👉 章节列表项文字：与正文统一 15px（与自我介绍页 item-text 一致）
+.detail-list-text {
+  display: block;
+  font-size: calc(0.9375rem * var(--content-font-scale, 1));
   line-height: 1.6;
 }
 </style>

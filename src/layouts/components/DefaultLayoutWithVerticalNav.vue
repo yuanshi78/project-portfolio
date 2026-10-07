@@ -6,6 +6,16 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import personal from '@/data/personal.json'
 import { visibleItems } from '@/utils/visibility'
+import { useFontScale } from '@/utils/fontScale'
+
+// 内容正文字号：放大 / 放小 两个独立按钮，选择记在 localStorage
+const {
+  current: fontLevel,
+  increase: increaseFontLevel,
+  decrease: decreaseFontLevel,
+  canIncrease,
+  canDecrease,
+} = useFontScale()
 
 // 顶部代码仓库入口由 personal.json 的 repos 配置驱动（可加可减，也支持 visibility: hidden）
 const repos = computed(() => visibleItems(personal.repos ?? []))
@@ -69,6 +79,36 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
             scroll-strategy="close"
           >
             {{ cvLabel }}
+          </VTooltip>
+        </IconBtn>
+
+        <!-- 👉 内容正文字号：放小 / 放大 两个独立按钮，到两端自动禁用 -->
+        <IconBtn
+          class="me-1"
+          :disabled="!canDecrease"
+          @click="decreaseFontLevel"
+        >
+          <VIcon icon="ri-zoom-out-line" />
+          <VTooltip
+            activator="parent"
+            open-delay="500"
+            scroll-strategy="close"
+          >
+            放小正文（当前：{{ fontLevel.label }}）
+          </VTooltip>
+        </IconBtn>
+        <IconBtn
+          class="me-2"
+          :disabled="!canIncrease"
+          @click="increaseFontLevel"
+        >
+          <VIcon icon="ri-zoom-in-line" />
+          <VTooltip
+            activator="parent"
+            open-delay="500"
+            scroll-strategy="close"
+          >
+            放大正文（当前：{{ fontLevel.label }}）
           </VTooltip>
         </IconBtn>
 

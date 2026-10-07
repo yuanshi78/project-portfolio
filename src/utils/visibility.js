@@ -5,7 +5,7 @@
 //   - personal.json      的 profile.left[].items / skills.items / rightBottom[].items（个人信息条目）
 //   - personal.json      的 experience.items（工作经历条目）
 //   - companies.json     的 projects（项目卡片，含侧边导航与「项目综合」列表）
-//   - details.json       的 sections（详情页章节）
+//   - 详情 JSON（src/data/details/*.json） 的 sections（详情页章节）
 //
 // 用法示例：
 //   { "icon": "ri-phone-line", "text": "手机号：...", "visibility": "hidden" }

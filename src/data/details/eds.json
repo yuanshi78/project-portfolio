@@ -1,0 +1,43 @@
+[
+  {
+    "category": "eds",
+    "slug": "runway",
+    "title": "CO Runway, OnePass",
+    "date": "2007/12 - 2009/11",
+    "images": [],
+    "sections": [
+      {
+        "heading": "简介",
+        "paragraphs": [
+          "项目的目的是按照美国航空 Continental Airlines（CO）的要求改变 EDS 美国对 CO 研制的 Frequent Flyer（飞行常客奖励计划）软件系统。"
+        ]
+      },
+      {
+        "heading": "项目目标",
+        "list": [
+          "1. 通过数字化提高 Frequent Flyer 运营效率"
+        ]
+      },
+      {
+        "heading": "技术",
+        "paragraphs": [
+          "IBM z/OS, JCL, PL/I, IMS, CA-7, Endevor, CA-View"
+        ]
+      },
+      {
+        "heading": "职责",
+        "paragraphs": [
+          "开发工程师"
+        ]
+      },
+      {
+        "heading": "成就",
+        "list": [
+          "1. 学会了和中国同事合作",
+          "2. 在实践中获得了关于层次数据库 IMS 的知识",
+          "3. 完成了许多 JCL（Job Control Language）脚本和 PL/I 程序，优化同事做的程序"
+        ]
+      }
+    ]
+  }
+]

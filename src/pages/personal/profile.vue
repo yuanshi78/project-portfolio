@@ -207,10 +207,11 @@ const currentSections = computed(() => {
   color: rgb(var(--v-theme-warning));
 }
 
+// 👉 基准 15px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
 .item-text {
   white-space: pre-line;
   line-height: 1.6;
-  font-size: 0.875rem;
+  font-size: calc(0.9375rem * var(--content-font-scale, 1));
 }
 
 .v-card {
@@ -233,7 +234,7 @@ const currentSections = computed(() => {
   :deep(.v-tab) {
     min-width: 0 !important;
     padding-inline: 6px !important;
-    font-size: 0.8rem !important;
+    font-size: 0.875rem !important;
   }
 }
 </style>

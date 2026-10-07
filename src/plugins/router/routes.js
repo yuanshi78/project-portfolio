@@ -1,5 +1,5 @@
 import Default from '@/layouts/default.vue'
-import details from '@/data/details.json'
+import details from '@/data/details'
 
 export const routes = [
   { path: '/', redirect: '/person' },
@@ -23,7 +23,7 @@ export const routes = [
         component: () => import('@/pages/work/ProjectOverview.vue'),
       },
 
-      // 项目详情页：完全由 src/data/details.json 驱动
+      // 项目详情页：完全由 src/data/details/ 下按单位拆分的 json 驱动
       {
         path: '/project/:category/:slug',
         component: () => import('@/components/ProjectDetail.vue'),
