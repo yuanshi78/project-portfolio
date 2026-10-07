@@ -1,8 +1,9 @@
 <script setup>
 // 项目卡片网格：由数据驱动渲染，内容统一来自 @/data/companies.js（企业-项目目录配置）
 import { computed } from 'vue'
-import { useTheme } from 'vuetify'
+import { useTheme, useDisplay } from 'vuetify'
 import { parseEmphasis } from '@/utils/emphasis'
+import { resolveImage } from '@/utils/image'
 
 defineProps({
   projects: {
@@ -13,6 +14,7 @@ defineProps({
 
 const theme = useTheme()
 const isDark = computed(() => theme.global.current.value.dark)
+const { smAndDown } = useDisplay()
 
 // 👉 无截图项目的占位配色：按 slug 哈希从柔和色板中取色。
 // 用 RGB 三元组（而非 hex）是为了能用 rgba() 控制浓度；
@@ -78,10 +80,10 @@ const placeholderInitial = prj => {
             <div class="project-media">
               <VImg
                 v-if="prj.image"
-                :src="prj.image"
+                :src="resolveImage(prj.image, smAndDown ? 'card-mobile' : 'card-pc')"
                 class="projects_image"
                 aspect-ratio="1.7778"
-                cover
+                contain
               />
 
               <!-- 👉 无可用截图的项目：彩色占位块，避免出现空白或破图 -->
@@ -172,6 +174,8 @@ const placeholderInitial = prj => {
 .project-media {
   position: relative;
   overflow: hidden;
+  // 竖图（移动端截图）在 16:9 卡片里会左右留白，用深色衬底，和轮播/灯箱一致
+  background: #312d4b;
 
   // 设为尺寸容器，使占位字号可用 cqi 随「卡片宽度」自适应
   // （卡片在不同断点下是 12/6/4 栏，宽度差别很大，写死 px/rem 会不协调）

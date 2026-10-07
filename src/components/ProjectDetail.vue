@@ -6,6 +6,7 @@ import { useRoute } from 'vue-router'
 import details from '@/data/details'
 import { getCompany } from '@/data/companies'
 import { parseEmphasis } from '@/utils/emphasis'
+import { resolveImage } from '@/utils/image'
 import { visibleItems } from '@/utils/visibility'
 import { useDisplay } from 'vuetify'
 
@@ -23,8 +24,7 @@ const company = computed(() => getCompany(route.params.category))
 const project = computed(() => company.value?.projects.find(p => p.slug === route.params.slug))
 const tags = computed(() => project.value?.tags ?? [])
 
-// 图片放在 public/images/pages/ 下，JSON 中只存相对路径
-const resolveImage = img => `/images/pages/${img}`
+// 图片放在 public/images/pages/ 下，JSON 中只存相对路径（变体由 resolveImage 加角色后缀）
 
 // 章节可在详情 JSON 中标记 visibility: "hidden" 隐藏（完全不渲染）
 const visibleSections = computed(() => visibleItems(detail.value?.sections ?? []))
@@ -36,7 +36,7 @@ const zoomOpen = ref(false)
 const zoomLoaded = ref(false)
 const openZoom = img => {
   if (touchMoved.value) return // 手指滑动时不应触发放大
-  zoomSrc.value = resolveImage(img)
+  zoomSrc.value = resolveImage(img, smAndDown.value ? 'zoom-mobile' : 'zoom-pc')
   zoomLoaded.value = false
   zoomOpen.value = true
 }
@@ -87,30 +87,54 @@ const wrapperTransform = computed(() => `translateZ(${-radius.value}px)`)
 const targetAngle = computed(() => -activeIndex.value * anglePer.value)
 const currentAngle = ref(0)
 let rafId = null
+// 旋转进行中：显示全部柱体面（保留 3D 转动观感）；
+// 静止时只显示当前面，避免相邻面在边缘露出接缝。
+const rotating = ref(false)
 
 const animateTo = to => {
   cancelAnimationFrame(rafId)
   const from = currentAngle.value
   // 取最短旋转路径（≤180°），保证前后切换都朝自然方向转
   const diff = (((to - from) % 360) + 540) % 360 - 180
+
+  // 已在目标面：直接对齐，避免无谓的显隐切换
+  if (Math.abs(diff) < 0.01) {
+    currentAngle.value = to
+    rotating.value = false
+
+    return
+  }
+
   const target = from + diff
   const dur = 900
   const start = performance.now()
   const easeOutCubic = t => 1 - (1 - t) ** 3
+
+  rotating.value = true
   const step = now => {
     const t = Math.min(1, (now - start) / dur)
+
     currentAngle.value = from + (target - from) * easeOutCubic(t)
-    if (t < 1)
+    if (t < 1) {
       rafId = requestAnimationFrame(step)
+    }
+    else {
+      currentAngle.value = target
+      rotating.value = false
+    }
   }
+
   rafId = requestAnimationFrame(step)
 }
 
 watch(targetAngle, v => animateTo(v))
 
 const polyTransform = computed(() => `rotateY(${currentAngle.value}deg)`)
+// 静止时仅当前面可见（其余面不透明度 0），确保边缘不露相邻面接缝；
+// 旋转过程中所有面可见，保留 3D 柱体转动观感。
 const faceStyle = i => ({
   transform: `rotateY(${i * anglePer.value}deg) translateZ(${radius.value}px)`,
+  opacity: i === activeIndex.value || rotating.value ? 1 : 0,
 })
 const go = dir => {
   const n = faceCount.value
@@ -228,7 +252,7 @@ onBeforeUnmount(() => {
               @click.stop="openZoom(img)"
           >
             <v-img
-              :src="resolveImage(img)"
+              :src="resolveImage(img, smAndDown ? 'carousel-mobile' : 'carousel-pc')"
               height="100%"
               cover
             />
@@ -265,7 +289,7 @@ onBeforeUnmount(() => {
             @click.stop="activeIndex = i"
           >
             <img
-              :src="resolveImage(img)"
+              :src="resolveImage(img, 'thumb')"
               alt=""
               class="carousel-dot-thumb"
             >
@@ -366,9 +390,9 @@ onBeforeUnmount(() => {
     <!-- 👉 图片放大预览（灯箱） -->
     <VDialog
       v-model="zoomOpen"
+      class="zoom-lightbox"
       :fullscreen="smAndDown"
       max-width="92vw"
-      scrim="black"
     >
       <div
         class="d-flex align-center justify-center position-relative"
@@ -410,6 +434,10 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
+// 图片背景（轮播面 / 大图灯箱共用）：固定深色，不随主题变化。
+// 灯箱是「看图」场景，浅色主题下也需要深底；轮播面同样用它保持两处一致。
+$image-backdrop: #312d4b;
+
 .detail-content {
   max-width: 960px;
 }
@@ -461,22 +489,18 @@ onBeforeUnmount(() => {
     // 背对观察者的面（柱体背面）不渲染，避免穿透看到镜像图
     backface-visibility: hidden;
     overflow: hidden;
-    background: rgb(var(--v-theme-surface));
+    // 仅过渡不透明度（不可过渡 transform，否则会打断 rAF 驱动的那 3D 旋转）
+    transition: opacity 0.3s ease;
+    background: $image-backdrop;
     box-shadow: inset 0 0 0 1px rgba(var(--v-border-color), var(--v-border-opacity));
 
     :deep(img) {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      // 横图（16:9 变体）正好铺满；竖图（移动端截图）按比例居中完整显示，两侧留给面背景
+      object-fit: contain;
       display: block;
-      // 轻微推近，让画面更有呼吸感
-      animation: kenburns 12s ease-out infinite alternate;
     }
-  }
-
-  @keyframes kenburns {
-    from { transform: scale(1.02); }
-    to   { transform: scale(1.1) translate(-1%, -1%); }
   }
 
   // 👉 左右切换按钮：还原最初 v-carousel 箭头的观感（悬停浮现的浅色圆钮 + 暗色衬底）
@@ -589,7 +613,8 @@ onBeforeUnmount(() => {
           display: block;
           inline-size: 100%;
           block-size: 100%;
-          object-fit: cover;
+          // 竖图（移动端）也完整显示在缩略图框内
+          object-fit: contain;
           border-radius: 6px;
         }
       }
@@ -630,6 +655,13 @@ onBeforeUnmount(() => {
 
 .carousel-3d-stage:hover .zoom-hint {
   opacity: 1;
+}
+
+// 👉 大图灯箱背景：与轮播面一致的固定深色（不透明，且不随主题变白）
+// （Vuetify 主题 scrim 默认是 50% 半透明，页面会透出，故在此覆盖）
+.zoom-lightbox :deep(.v-overlay__scrim) {
+  background: $image-backdrop !important;
+  opacity: 1 !important;
 }
 
 .zoom-close {
