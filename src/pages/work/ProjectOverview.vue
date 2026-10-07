@@ -34,7 +34,7 @@ const projects = computed(() => getProjects(category.value))
             <p class="text-overline text-medium-emphasis mb-1 ls-1">
               项目综合
             </p>
-            <h1 class="text-h5 text-sm-h4 text-lg-h3 font-weight-bold overview-title">
+            <h1 class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 font-weight-bold overview-title">
               {{ company }}
             </h1>
           </div>

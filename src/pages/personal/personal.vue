@@ -127,8 +127,8 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
         <VBtn
           v-for="t in tabs"
           :key="t.key"
-          :color="selectedPage === t.key ? 'primary' : undefined"
-          :variant="selectedPage === t.key ? 'flat' : 'tonal'"
+          :color="selectedPage === t.key ? 'primary' : 'surface'"
+          variant="flat"
           :prepend-icon="t.icon"
           class="me-2"
           @click="selectedPage = t.key"
