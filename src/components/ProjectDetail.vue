@@ -35,6 +35,7 @@ const zoomSrc = ref('')
 const zoomOpen = ref(false)
 const zoomLoaded = ref(false)
 const openZoom = img => {
+  if (touchMoved.value) return // 手指滑动时不应触发放大
   zoomSrc.value = resolveImage(img)
   zoomLoaded.value = false
   zoomOpen.value = true
@@ -45,6 +46,29 @@ const activeIndex = ref(0)
 const stageRef = ref(null)
 const stageW = ref(0)
 let ro = null
+
+// 👉 移动端：用手指左右滑动切换图片，替代箭头按钮
+const touchStartX = ref(0)
+const touchStartY = ref(0)
+const touchMoved = ref(false)
+const onTouchStart = e => {
+  touchStartX.value = e.changedTouches[0].clientX
+  touchStartY.value = e.changedTouches[0].clientY
+  touchMoved.value = false
+}
+const onTouchMove = e => {
+  const dx = e.changedTouches[0].clientX - touchStartX.value
+  const dy = e.changedTouches[0].clientY - touchStartY.value
+  if (Math.abs(dx) > 8 || Math.abs(dy) > 8)
+    touchMoved.value = true
+}
+const onTouchEnd = e => {
+  const dx = e.changedTouches[0].clientX - touchStartX.value
+  const dy = e.changedTouches[0].clientY - touchStartY.value
+  // 仅当明显是水平滑动时才切换，避免与垂直滚动冲突
+  if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy))
+    go(dx < 0 ? 1 : -1)
+}
 
 const faceCount = computed(() => detail.value?.images?.length ?? 0)
 const anglePer = computed(() => (faceCount.value ? 360 / faceCount.value : 0))
@@ -184,6 +208,9 @@ onBeforeUnmount(() => {
         ref="stageRef"
         class="carousel-3d-stage"
         @click="openZoom(detail.images[activeIndex])"
+        @touchstart.passive="onTouchStart"
+        @touchmove.passive="onTouchMove"
+        @touchend="onTouchEnd"
       >
         <div
           class="carousel-3d-wrapper"
@@ -572,6 +599,13 @@ onBeforeUnmount(() => {
         transform: none;
         outline-color: rgb(var(--v-theme-primary));
       }
+    }
+  }
+
+  // 👉 移动端：用左右滑动切换，隐藏箭头按钮
+  @media (max-width: 959px) {
+    .carousel-nav {
+      display: none;
     }
   }
 }
