@@ -72,11 +72,11 @@ const currentSections = computed(() => {
 
 <template>
   <div class="profile-content">
-    <!-- 👉 页内子标签 -->
+    <!-- 👉 页内子标签（吸顶，紧贴主标签栏下方，滚动时常驻可见） -->
     <VCard
       rounded="lg"
-      elevation="1"
-      class="mb-6"
+      flat
+      class="subtabs-sticky mb-6"
     >
       <VTabs
         v-model="activeTab"
@@ -215,6 +215,17 @@ const currentSections = computed(() => {
 
 .v-card {
   border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+// 👉 页内子标签吸顶：紧贴主标签栏下方（导航栏 64px + 主标签栏约 52px）
+// 背景透明，仅用一条底线与下方内容分隔。
+.subtabs-sticky {
+  position: sticky;
+  top: 116px;
+  z-index: 10;
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
 }
 
 // 👉 手机端：四个子标签一行内平分，去掉多余间距，确保「职业想法」可见

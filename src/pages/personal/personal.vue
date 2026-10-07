@@ -121,19 +121,21 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
       </VCardText>
     </VCard>
 
-    <!-- 👉 切换：个人信息 / 项目 -->
-    <div class="d-flex flex-wrap mb-6">
-      <VBtn
-        v-for="t in tabs"
-        :key="t.key"
-        :color="selectedPage === t.key ? 'primary' : undefined"
-        :variant="selectedPage === t.key ? 'flat' : 'tonal'"
-        :prepend-icon="t.icon"
-        class="me-2"
-        @click="selectedPage = t.key"
-      >
-        {{ t.label }}
-      </VBtn>
+    <!-- 👉 切换：个人信息 / 项目 / 产品（吸顶，滚动时常驻可见） -->
+    <div class="sticky-tabs">
+      <div class="d-flex flex-wrap">
+        <VBtn
+          v-for="t in tabs"
+          :key="t.key"
+          :color="selectedPage === t.key ? 'primary' : undefined"
+          :variant="selectedPage === t.key ? 'flat' : 'tonal'"
+          :prepend-icon="t.icon"
+          class="me-2"
+          @click="selectedPage = t.key"
+        >
+          {{ t.label }}
+        </VBtn>
+      </div>
     </div>
 
     <Profile v-if="selectedPage === 0" :data="data.profile" :birthday="data.birthday" />
@@ -180,5 +182,16 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 // 👉 致雇主板块：左侧主色描边，区别于普通自我介绍
 .for-employers {
   border-inline-start: 4px solid rgb(var(--v-theme-primary));
+}
+
+// 👉 主标签栏吸顶：导航栏本身已 sticky（高 64px），本栏贴在它正下方。
+// 背景保持透明（不遮挡下方内容），z-index 高于 Profile 内的子标签栏。
+.sticky-tabs {
+  position: sticky;
+  top: 64px;
+  z-index: 20;
+  background: transparent;
+  padding-block: 8px;
+  margin-bottom: 24px; // 等价于原来的 mb-6
 }
 </style>
