@@ -102,7 +102,7 @@ onMounted(() => {
       stageW.value = stageRef.value.clientWidth
   }
   measure()
-  if ('ResizeObserver' in window) {
+  if ('ResizeObserver' in window && stageRef.value) {
     ro = new ResizeObserver(measure)
     ro.observe(stageRef.value)
   }
@@ -363,10 +363,10 @@ onBeforeUnmount(() => {
           style="position: absolute;"
         />
         <VBtn
+          class="zoom-close"
           icon
-          variant="tonal"
+          variant="flat"
           color="white"
-          style="position: fixed; top: 16px; right: 16px; z-index: 10;"
           @click.stop="zoomOpen = false"
         >
           <VIcon icon="ri-close-line" />
@@ -596,6 +596,26 @@ onBeforeUnmount(() => {
 
 .carousel-3d-stage:hover .zoom-hint {
   opacity: 1;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: rgb(0 0 0 / 55%) !important;
+  color: #fff !important;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    background: rgb(0 0 0 / 75%) !important;
+  }
+
+  .v-icon {
+    color: #fff !important;
+  }
 }
 
 .section-head {

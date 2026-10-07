@@ -201,10 +201,10 @@ const currentSections = computed(() => {
   color: rgb(var(--v-theme-primary));
 }
 
-// 👉 文本内局部强调（JSON 中用 **文字** 标记），黄色高亮
+// 👉 文本内局部强调（JSON 中用 **文字** 标记），暖金色高亮（紫金双色）
 .item-emphasis {
   font-weight: 600;
-  color: rgb(var(--v-theme-warning));
+  color: #FFC857;
 }
 
 // 👉 基准 15px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）

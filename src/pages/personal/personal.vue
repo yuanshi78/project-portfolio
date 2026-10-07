@@ -177,7 +177,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 
 .about-emphasis {
   font-weight: 600;
-  color: rgb(var(--v-theme-warning));
+  color: #FFC857;
 }
 
 // 👉 致雇主板块：左侧主色描边，区别于普通自我介绍
