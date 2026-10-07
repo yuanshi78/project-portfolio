@@ -1,7 +1,7 @@
 <script setup>
 // 项目详情页：由 src/data/details/ 下按单位拆分的 json 驱动渲染。
 // 路由 /project/:category/:slug 对应 JSON 中的一条记录。
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import details from '@/data/details'
 import { getCompany } from '@/data/companies'
@@ -39,6 +39,78 @@ const openZoom = img => {
   zoomLoaded.value = false
   zoomOpen.value = true
 }
+
+// 👉 图集：3D 多面柱体轮播。面数 = 图片数，每面一张图，切换即把柱体旋转到对应面。
+const activeIndex = ref(0)
+const stageRef = ref(null)
+const stageW = ref(0)
+let ro = null
+
+const faceCount = computed(() => detail.value?.images?.length ?? 0)
+const anglePer = computed(() => (faceCount.value ? 360 / faceCount.value : 0))
+// 柱体半径：让每张面刚好拼成闭合 N 棱柱（faceWidth/2 / tan(π/N)）。N<2 时无意义，半径取 0。
+const radius = computed(() => {
+  const n = faceCount.value
+  if (n < 2)
+    return 0
+  return (stageW.value / 2) / Math.tan(Math.PI / n)
+})
+// 静态居中 wrapper：把柱体中心后移一个半径，让正面停在观察者平面（无过渡，避免过渡干扰旋转）
+const wrapperTransform = computed(() => `translateZ(${-radius.value}px)`)
+// 柱体旋转：只绕 Y 轴转到目标面（纯 rotateY）。
+// 注意：在 preserve-3d 元素上用 CSS transition 旋转 3D 会因浏览器怪癖失效，
+// 故用 requestAnimationFrame 自行插值，保证平滑且可靠。
+const targetAngle = computed(() => -activeIndex.value * anglePer.value)
+const currentAngle = ref(0)
+let rafId = null
+
+const animateTo = to => {
+  cancelAnimationFrame(rafId)
+  const from = currentAngle.value
+  // 取最短旋转路径（≤180°），保证前后切换都朝自然方向转
+  const diff = (((to - from) % 360) + 540) % 360 - 180
+  const target = from + diff
+  const dur = 900
+  const start = performance.now()
+  const easeOutCubic = t => 1 - (1 - t) ** 3
+  const step = now => {
+    const t = Math.min(1, (now - start) / dur)
+    currentAngle.value = from + (target - from) * easeOutCubic(t)
+    if (t < 1)
+      rafId = requestAnimationFrame(step)
+  }
+  rafId = requestAnimationFrame(step)
+}
+
+watch(targetAngle, v => animateTo(v))
+
+const polyTransform = computed(() => `rotateY(${currentAngle.value}deg)`)
+const faceStyle = i => ({
+  transform: `rotateY(${i * anglePer.value}deg) translateZ(${radius.value}px)`,
+})
+const go = dir => {
+  const n = faceCount.value
+  if (!n)
+    return
+  activeIndex.value = (activeIndex.value + dir + n) % n
+}
+
+onMounted(() => {
+  currentAngle.value = targetAngle.value
+  const measure = () => {
+    if (stageRef.value)
+      stageW.value = stageRef.value.clientWidth
+  }
+  measure()
+  if ('ResizeObserver' in window) {
+    ro = new ResizeObserver(measure)
+    ro.observe(stageRef.value)
+  }
+})
+onBeforeUnmount(() => {
+  cancelAnimationFrame(rafId)
+  ro?.disconnect()
+})
 </script>
 
 <template>
@@ -103,39 +175,84 @@ const openZoom = img => {
       </VCardText>
     </VCard>
 
-    <!-- 👉 图集 -->
+    <!-- 👉 图集：3D 多面柱体，面数 = 图片数，切换即旋转到对应面 -->
     <div
       v-if="detail.images && detail.images.length"
       class="detail-carousel rounded mb-8"
     >
-      <v-carousel
-        height="100%"
-        hide-delimiter-background
-        show-arrows="hover"
+      <div
+        ref="stageRef"
+        class="carousel-3d-stage"
+        @click="openZoom(detail.images[activeIndex])"
       >
-        <v-carousel-item
-          v-for="(img, i) in detail.images"
-          :key="i"
+        <div
+          class="carousel-3d-wrapper"
+          :style="{ transform: wrapperTransform }"
         >
           <div
-            class="carousel-item-wrap"
-            @click="openZoom(img)"
+            class="carousel-3d-poly"
+            :style="{ transform: polyTransform }"
+          >
+            <div
+              v-for="(img, i) in detail.images"
+              :key="i"
+              class="carousel-3d-face"
+              :style="faceStyle(i)"
+              @click.stop="openZoom(img)"
           >
             <v-img
               :src="resolveImage(img)"
               height="100%"
               cover
             />
-            <div class="zoom-hint">
-              <VIcon
-                icon="ri-zoom-in-line"
-                size="16"
-              />
-              <span>点击放大</span>
-            </div>
           </div>
-        </v-carousel-item>
-      </v-carousel>
+        </div>
+        </div>
+
+        <!-- 左右切换 -->
+        <button
+          class="carousel-nav prev"
+          type="button"
+          aria-label="上一张"
+          @click.stop="go(-1)"
+        >
+          <VIcon icon="ri-arrow-left-line" />
+        </button>
+        <button
+          class="carousel-nav next"
+          type="button"
+          aria-label="下一张"
+          @click.stop="go(1)"
+        >
+          <VIcon icon="ri-arrow-right-line" />
+        </button>
+
+        <!-- 指示点：PC 显示为缩略图，移动端显示为小圆点 -->
+        <div class="carousel-dots">
+          <button
+            v-for="(img, i) in detail.images"
+            :key="i"
+            type="button"
+            :class="{ active: i === activeIndex }"
+            :aria-label="`第 ${i + 1} 张`"
+            @click.stop="activeIndex = i"
+          >
+            <img
+              :src="resolveImage(img)"
+              alt=""
+              class="carousel-dot-thumb"
+            >
+          </button>
+        </div>
+
+        <div class="zoom-hint">
+          <VIcon
+            icon="ri-zoom-in-line"
+            size="16"
+          />
+          <span>点击放大</span>
+        </div>
+      </div>
     </div>
 
     <!-- 👉 章节（每节独立成卡） -->
@@ -286,74 +403,184 @@ const openZoom = img => {
   border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   box-shadow: 0 12px 32px -12px rgb(0 0 0 / 35%);
 
-  // 图片悬停轻微放大，增加层次感
-  :deep(.v-carousel-item img) {
-    transition: transform 0.6s ease;
+  // 👉 3D 多面柱体轮播：stage 提供透视，poly 在 3D 空间里旋转，每个 face 是一面（面数 = 图片数）。
+  .carousel-3d-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1600px;
+    cursor: zoom-in;
+
+    // 静态居中层：仅把柱体中心后移一个半径，让正面停在观察者平面（无过渡，避免过渡干扰旋转）
+    .carousel-3d-wrapper {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+    }
+
+    .carousel-3d-poly {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      // 旋转由 JS(rAF) 插值驱动，故不在此用 CSS transition（preserve-3d 下 transition 旋转会失效）
+    }
   }
 
-  &:hover :deep(.v-carousel-item img) {
-    transform: scale(1.04);
+  .carousel-3d-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    // 背对观察者的面（柱体背面）不渲染，避免穿透看到镜像图
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: rgb(var(--v-theme-surface));
+    box-shadow: inset 0 0 0 1px rgba(var(--v-border-color), var(--v-border-opacity));
+
+    :deep(img) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      // 轻微推近，让画面更有呼吸感
+      animation: kenburns 12s ease-out infinite alternate;
+    }
   }
 
-  // 底部控制点：实心暗色圆角胶囊衬底，底部居中（尺寸随视口自适应）
-  :deep(.v-carousel__controls) {
-    background: rgb(0 0 0 / 60%);
+  @keyframes kenburns {
+    from { transform: scale(1.02); }
+    to   { transform: scale(1.1) translate(-1%, -1%); }
+  }
+
+  // 👉 左右切换按钮：还原最初 v-carousel 箭头的观感（悬停浮现的浅色圆钮 + 暗色衬底）
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // 与最初 v-carousel 箭头一致的自适应尺寸
+    inline-size: clamp(34px, 4.5vw, 48px);
+    block-size: clamp(34px, 4.5vw, 48px);
+    border: none;
     border-radius: 999px;
-    padding: clamp(2px, 0.8vw, 6px) clamp(6px, 1.8vw, 14px);
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    bottom: clamp(6px, 1.5vw, 14px) !important;
-    width: fit-content !important;
-    max-width: 90% !important;
-    height: auto !important;
-  }
-
-  // 非激活点：纯白 + 微光晕，更亮更醒目
-  :deep(.v-carousel__controls .v-btn--icon) {
     color: #fff;
-    // 覆盖 Vuetify 默认高度变量与最小尺寸，确保自适应真正生效
-    --v-btn-height: clamp(16px, 4.5vw, 36px) !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    block-size: clamp(16px, 4.5vw, 36px) !important;
-    inline-size: clamp(16px, 4.5vw, 36px) !important;
-    padding: 0 !important;
+    background: rgb(0 0 0 / 45%);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s ease, background 0.2s ease, transform 0.2s ease;
+
+    .v-icon {
+      block-size: clamp(18px, 2.6vw, 26px);
+      inline-size: clamp(18px, 2.6vw, 26px);
+      font-size: clamp(18px, 2.6vw, 26px);
+    }
+
+    &:hover {
+      background: rgb(0 0 0 / 65%);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.94);
+    }
   }
 
-  :deep(.v-carousel__controls .v-btn__content .v-icon) {
-    block-size: clamp(5px, 1.3vw, 10px) !important;
-    inline-size: clamp(5px, 1.3vw, 10px) !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    filter: drop-shadow(0 0 3px rgb(255 255 255 / 75%));
+  .carousel-nav.prev { left: clamp(6px, 2vw, 16px); }
+  .carousel-nav.next { right: clamp(6px, 2vw, 16px); }
+
+  .carousel-3d-stage:hover .carousel-nav { opacity: 1; }
+
+  // 👉 底部指示点：移动端为小圆点；PC 改为图片缩略图（见下方媒体查询）
+  .carousel-dots {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: clamp(6px, 1.5vw, 14px);
+    z-index: 3;
+    width: fit-content;
+    max-width: 92%;
+    height: auto;
+    display: flex;
+    gap: clamp(5px, 1vw, 9px);
+    padding: clamp(4px, 0.8vw, 7px) clamp(8px, 1.8vw, 14px);
+    background: rgb(0 0 0 / 55%);
+    border-radius: 999px;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    button {
+      // 默认（移动端）：小圆点
+      position: relative;
+      inline-size: clamp(6px, 1.4vw, 10px);
+      block-size: clamp(6px, 1.4vw, 10px);
+      min-width: 0;
+      min-height: 0;
+      padding: 0;
+      border: none;
+      border-radius: 999px;
+      background: #fff;
+      opacity: 0.7;
+      cursor: pointer;
+      flex: 0 0 auto;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, outline-color 0.2s ease;
+
+      .carousel-dot-thumb {
+        display: none; // 移动端不显示缩略图
+      }
+    }
+
+    button.active {
+      background: rgb(var(--v-theme-primary));
+      transform: scale(1.4);
+      opacity: 1;
+    }
   }
 
-  // 激活点：主题 primary 色 + 放大 + 更强白光晕，更亮
-  :deep(.v-carousel__controls .v-btn--active) {
-    color: rgb(var(--v-theme-primary));
-  }
+  // 👉 PC（≥960px）：指示点升级为图片缩略图，激活态加主题色描边
+  @media (min-width: 960px) {
+    .carousel-dots {
+      gap: clamp(6px, 0.8vw, 10px);
 
-  :deep(.v-carousel__controls .v-btn--active .v-btn__content .v-icon) {
-    block-size: clamp(7px, 2vw, 15px) !important;
-    inline-size: clamp(7px, 2vw, 15px) !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    filter: brightness(1.3) drop-shadow(0 0 6px rgb(255 255 255 / 95%));
-  }
-}
+      button {
+        inline-size: 64px;
+        block-size: 36px;
+        border-radius: 6px;
+        background: transparent;
+        opacity: 0.55;
+        overflow: hidden;
+        outline: 2px solid transparent;
+        outline-offset: 1px;
 
-.carousel-item-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  cursor: zoom-in;
+        .carousel-dot-thumb {
+          display: block;
+          inline-size: 100%;
+          block-size: 100%;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+      }
+
+      button.active {
+        opacity: 1;
+        transform: none;
+        outline-color: rgb(var(--v-theme-primary));
+      }
+    }
+  }
 }
 
 .zoom-hint {
   position: absolute;
   right: 12px;
   bottom: 12px;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -367,7 +594,7 @@ const openZoom = img => {
   pointer-events: none;
 }
 
-.carousel-item-wrap:hover .zoom-hint {
+.carousel-3d-stage:hover .zoom-hint {
   opacity: 1;
 }
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .stage { width: 400px; height: 300px; perspective: 1200px; position: relative; }
+      .wrap { position: absolute; inset: 0; transform-style: preserve-3d; transform: translateZ(-150px); }
+      .poly { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateY(0deg); transition: transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+      .face { position: absolute; inset: 0; backface-visibility: hidden; background: #4caf50; display: flex; align-items: center; justify-content: center; font-size: 60px; color: #fff; }
+      .f0 { transform: rotateY(0deg) translateZ(200px); }
+      .f1 { transform: rotateY(90deg) translateZ(200px); }
+      .f2 { transform: rotateY(180deg) translateZ(200px); }
+      .f3 { transform: rotateY(270deg) translateZ(200px); }
+    </style>
+  </head>
+  <body>
+    <button onclick="document.querySelector('.poly').style.transform='rotateY(-180deg)';">旋到 face2 (CSS transition)</button>
+    <div class="stage">
+      <div class="wrap"><div class="poly">
+        <div class="face f0">0</div><div class="face f1">1</div>
+        <div class="face f2">2</div><div class="face f3">3</div>
+      </div></div>
+    </div>
+    <pre id="out"></pre>
+    <script>
+      function report(){const f=[...document.querySelectorAll('.face')];document.getElementById('out').textContent='各面宽度: '+JSON.stringify(f.map(x=>Math.round(x.getBoundingClientRect().width)))}
+      report();document.querySelector('button').addEventListener('click',()=>setTimeout(report,1400))
+    </script>
+  </body>
+</html>
