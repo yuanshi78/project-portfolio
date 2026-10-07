@@ -46,73 +46,75 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
 
         <VSpacer />
 
-        <!-- 👉 代码仓库入口（来自 personal.json 的 repos） -->
-        <IconBtn
-          v-for="repo in repos"
-          :key="repo.url"
-          class="me-2"
-          :href="repo.url"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <VIcon :icon="repo.icon" />
-          <VTooltip
-            activator="parent"
-            open-delay="500"
-            scroll-strategy="close"
+        <div class="navbar-actions d-flex align-center">
+          <!-- 👉 代码仓库入口（来自 personal.json 的 repos） -->
+          <IconBtn
+            v-for="repo in repos"
+            :key="repo.url"
+            class="me-2"
+            :href="repo.url"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            {{ repo.name }}
-          </VTooltip>
-        </IconBtn>
+            <VIcon :icon="repo.icon" />
+            <VTooltip
+              activator="parent"
+              open-delay="500"
+              scroll-strategy="close"
+            >
+              {{ repo.name }}
+            </VTooltip>
+          </IconBtn>
 
-        <!-- 👉 简历下载（来自 personal.json 的 cv 配置） -->
-        <IconBtn
-          v-if="cvUrl"
-          class="me-2"
-          :href="cvUrl"
-          download
-        >
-          <VIcon icon="ri-download-line" />
-          <VTooltip
-            activator="parent"
-            open-delay="500"
-            scroll-strategy="close"
+          <!-- 👉 简历下载（来自 personal.json 的 cv 配置） -->
+          <IconBtn
+            v-if="cvUrl"
+            class="me-2"
+            :href="cvUrl"
+            download
           >
-            {{ cvLabel }}
-          </VTooltip>
-        </IconBtn>
+            <VIcon icon="ri-download-line" />
+            <VTooltip
+              activator="parent"
+              open-delay="500"
+              scroll-strategy="close"
+            >
+              {{ cvLabel }}
+            </VTooltip>
+          </IconBtn>
 
-        <!-- 👉 内容正文字号：放小 / 放大 两个独立按钮，到两端自动禁用 -->
-        <IconBtn
-          class="me-1"
-          :disabled="!canDecrease"
-          @click="decreaseFontLevel"
-        >
-          <VIcon icon="ri-zoom-out-line" />
-          <VTooltip
-            activator="parent"
-            open-delay="500"
-            scroll-strategy="close"
+          <!-- 👉 内容正文字号：放小 / 放大 两个独立按钮，到两端自动禁用 -->
+          <IconBtn
+            class="me-1"
+            :disabled="!canDecrease"
+            @click="decreaseFontLevel"
           >
-            放小正文（当前：{{ fontLevel.label }}）
-          </VTooltip>
-        </IconBtn>
-        <IconBtn
-          class="me-2"
-          :disabled="!canIncrease"
-          @click="increaseFontLevel"
-        >
-          <VIcon icon="ri-zoom-in-line" />
-          <VTooltip
-            activator="parent"
-            open-delay="500"
-            scroll-strategy="close"
+            <VIcon icon="ri-zoom-out-line" />
+            <VTooltip
+              activator="parent"
+              open-delay="500"
+              scroll-strategy="close"
+            >
+              放小正文（当前：{{ fontLevel.label }}）
+            </VTooltip>
+          </IconBtn>
+          <IconBtn
+            class="me-2"
+            :disabled="!canIncrease"
+            @click="increaseFontLevel"
           >
-            放大正文（当前：{{ fontLevel.label }}）
-          </VTooltip>
-        </IconBtn>
+            <VIcon icon="ri-zoom-in-line" />
+            <VTooltip
+              activator="parent"
+              open-delay="500"
+              scroll-strategy="close"
+            >
+              放大正文（当前：{{ fontLevel.label }}）
+            </VTooltip>
+          </IconBtn>
 
-        <UserProfile />
+          <UserProfile />
+        </div>
       </div>
     </template>
 
@@ -176,6 +178,22 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
     font-weight: 500;
     line-height: 1.75rem;
     text-transform: uppercase;
+  }
+}
+
+// 👉 顶部动作区：手机上收紧间距，并给头像留出右边距，避免拥挤 / 贴边
+.navbar-actions {
+  margin-inline-end: 2px;
+}
+
+@media (max-width: 599px) {
+  .navbar-actions {
+    margin-inline-end: 6px;
+  }
+
+  // 覆盖按钮自带的 me-* 间距，排得更紧凑
+  .navbar-actions :deep(.v-btn) {
+    margin-inline-end: 2px !important;
   }
 }
 </style>
