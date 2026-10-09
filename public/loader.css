@@ -56,6 +56,18 @@ html {
   transition: all 0.3s ease;
 }
 
+.loading-logo-text {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  background: linear-gradient(135deg, #9155FD 0%, #C89BF8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Hiragino Sans GB", "Source Han Sans SC", sans-serif;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
