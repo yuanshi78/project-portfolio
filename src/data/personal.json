@@ -46,6 +46,11 @@
   ],
   "tabs": [
     {
+      "key": 3,
+      "label": "关于我",
+      "icon": "ri-information-line"
+    },
+    {
       "key": 0,
       "label": "个人信息",
       "icon": "ri-user-fill"
@@ -304,7 +309,7 @@
     ]
   },
   "experience": {
-    "title": "工作经历",
+    "title": "项目",
     "items": [
       {
         "subtitle": "2023/08 - 现在， 西安",
