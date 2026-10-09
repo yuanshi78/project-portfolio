@@ -135,7 +135,7 @@
         "items": [
           {
             "icon": "ri-computer-line",
-            "text": "IT：人工智能（特别是人工神经网络）、web前端、算法、系统结构设计"
+            "text": "IT：人工智能（特别是人工神经网络）、数据可视化与多模态数据呈现、智能呈现工具（plugin-first 微内核 + AI 驱动配置）研发、web前端、算法、系统结构设计"
           },
           {
             "icon": "ri-reactjs-fill",
