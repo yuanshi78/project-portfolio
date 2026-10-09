@@ -1,0 +1,21 @@
+{
+  "shortcuts": [
+    {
+      "combo": "Ctrl+Shift+A",
+      "to": "/project/self/aethera",
+      "label": "Aethera 详情页"
+    },
+    {
+      "combo": "Ctrl+Shift+L",
+      "to": "/rainbow/all",
+      "label": "项目列表（rainbow）"
+    }
+  ],
+  "quickLinks": [
+    {
+      "label": "Aethera 详情",
+      "to": "/project/self/aethera",
+      "icon": "ri-flashlight-line"
+    }
+  ]
+}

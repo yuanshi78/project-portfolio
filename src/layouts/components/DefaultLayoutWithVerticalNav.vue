@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import Footer from '@/layouts/components/Footer.vue'
 import NavItems from '@/layouts/components/NavItems.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
+import QuickLinks from '@/components/QuickLinks.vue'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import personal from '@/data/personal.json'
 import { visibleItems } from '@/utils/visibility'
@@ -145,6 +146,8 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
     </template>
 
     <template #vertical-nav-content>
+      <QuickLinks />
+      <VDivider class="my-2" />
       <NavItems />
     </template>
 
