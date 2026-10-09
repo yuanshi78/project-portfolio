@@ -14,7 +14,11 @@ const meta = data.meta
 const tabs = data.tabs
 
 // 👉 快速入口：与侧栏 QuickLinks 同源配置，跳转站点其他板块
-const quickLinks = shortcutsConfig?.quickLinks ?? []
+// 并关联全局快捷键（shortcuts.json 的 shortcuts，按 `to` 匹配），用于展示键位提示
+const quickLinks = (shortcutsConfig?.quickLinks ?? []).map(q => {
+  const sc = (shortcutsConfig?.shortcuts ?? []).find(s => s.to === q.to)
+  return { ...q, combo: sc?.combo ?? '' }
+})
 
 // 👉 主标签 = 板块锚点导航（点击平滑滚动到对应板块，而非切换显隐）
 const activeKey = ref(0)
@@ -165,7 +169,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
         <div class="section-title mb-3">
           快速入口
         </div>
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap align-center">
           <VBtn
             v-for="q in quickLinks"
             :key="q.to"
@@ -176,6 +180,11 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
             class="me-2 mb-2"
           >
             {{ q.label }}
+            <span
+              v-if="q.combo"
+              class="kbd-chip ms-2"
+              :title="`快捷键：${q.combo}`"
+            >{{ q.combo }}</span>
           </VBtn>
         </div>
       </VCardText>
@@ -333,18 +342,18 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 .main-tabs {
   position: fixed;
   left: 50%;
-  bottom: 12px;
+  bottom: 0.75rem; // 12px
   transform: translateX(-50%);
   z-index: 30;
   display: flex;
   flex-wrap: nowrap;
-  gap: 6px;
-  max-width: calc(100% - 24px);
-  padding: 6px;
-  border-radius: 999px;
+  gap: 0.375rem; // 6px
+  max-width: calc(100% - 1.5rem); // 24px
+  padding: 0.375rem; // 6px
+  border-radius: 0.875rem; // 14px
   background: rgb(var(--v-theme-surface));
-  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
-  box-shadow: 0 10px 28px -12px rgba(0, 0, 0, 0.45);
+  border: 0.0625rem solid rgba(var(--v-border-color), var(--v-border-opacity)); // 1px
+  box-shadow: 0 0.625rem 1.75rem -0.75rem rgba(0, 0, 0, 0.45);
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
@@ -361,7 +370,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 // 窄屏：隐藏图标、收紧内边距，保证一行放得下
 @media (max-width: 599px) {
   .main-tabs :deep(.v-btn) {
-    padding-inline: 10px;
+    padding-inline: 0.625rem; // 10px
     font-size: 0.8125rem;
   }
 
@@ -374,7 +383,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 @media (min-width: 1280px) {
   .main-tabs {
     top: 50%;
-    right: 24px;
+    right: 1.5rem; // 24px
     bottom: auto;
     left: auto;
     transform: translateY(-50%);
@@ -382,9 +391,9 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
     align-items: stretch;
     max-width: none;
     overflow: visible;
-    gap: 14px;
-    padding: 8px;
-    border-radius: 14px;
+    gap: 0.875rem; // 14px
+    padding: 0.5rem; // 8px
+    border-radius: 0.875rem; // 14px
   }
 }
 
@@ -411,5 +420,18 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
     border-radius: 4px;
     background: rgb(var(--v-theme-primary));
   }
+}
+
+// 👉 快捷键位提示（kbd 风格小标签）
+.kbd-chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  line-height: 1;
+  padding: 0.1875rem 0.375rem;
+  border-radius: 0.375rem;
+  color: rgb(var(--v-theme-primary));
+  background: rgba(var(--v-theme-primary), 0.12);
+  border: 1px solid rgba(var(--v-theme-primary), 0.25);
+  white-space: nowrap;
 }
 </style>

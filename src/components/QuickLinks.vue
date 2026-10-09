@@ -1,7 +1,12 @@
 <script setup>
 import config from '@/data/shortcuts.json'
 
-const links = config?.quickLinks ?? []
+// 与全局快捷键（src/data/shortcuts.json 的 shortcuts）按 `to` 关联，
+// 在为某个入口匹配到快捷键时，展示对应的键位提示。
+const links = (config?.quickLinks ?? []).map(link => {
+  const sc = (config?.shortcuts ?? []).find(s => s.to === link.to)
+  return { ...link, combo: sc?.combo ?? '' }
+})
 </script>
 
 <template>
@@ -29,6 +34,11 @@ const links = config?.quickLinks ?? []
       rounded="lg"
     >
       {{ link.label }}
+      <span
+        v-if="link.combo"
+        class="kbd-chip ms-auto"
+        :title="`快捷键：${link.combo}`"
+      >{{ link.combo }}</span>
     </VBtn>
   </div>
 </template>
@@ -37,5 +47,17 @@ const links = config?.quickLinks ?? []
 .quick-links :deep(.v-btn__content) {
   flex: 1 1 auto;
   justify-content: flex-start;
+}
+
+.kbd-chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  line-height: 1;
+  padding: 0.1875rem 0.375rem;
+  border-radius: 0.375rem;
+  color: rgb(var(--v-theme-primary));
+  background: rgba(var(--v-theme-primary), 0.12);
+  border: 1px solid rgba(var(--v-theme-primary), 0.25);
+  white-space: nowrap;
 }
 </style>
