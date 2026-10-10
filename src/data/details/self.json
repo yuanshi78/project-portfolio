@@ -22,6 +22,11 @@
         ]
       },
       {
+        "heading": "Aethera 架构",
+        "image": "aethera/architecture.svg",
+        "imageAspect": "4/3"
+      },
+      {
         "heading": "实施成熟度",
         "paragraphs": [
           "Aethera 不是概念，而是有完整实施方案的 R&D 项目。方案包含可追踪的需求清单、阶段性检查点、自动化验收标准，以及基于 AI 辅助开发的协作流程。",

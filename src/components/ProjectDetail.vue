@@ -26,6 +26,19 @@ const tags = computed(() => project.value?.tags ?? [])
 
 // 图片放在 public/images/pages/ 下，JSON 中只存相对路径（变体由 resolveImage 加角色后缀）
 
+// 👉 sec.imageAspect 支持 "4/3"（宽/高）或纯数字字符串；VImg 的 aspectRatio 只接受数字，
+//    "4/3" 会被 Number() 成 NaN 导致占位失效，故在此解析。无效值返回 undefined（不占位）。
+const parseAspect = v => {
+  if (v == null || v === '') return undefined
+  if (typeof v === 'number') return v > 0 ? v : undefined
+  if (v.includes('/')) {
+    const [w, h] = v.split('/').map(Number)
+    return w > 0 && h > 0 ? w / h : undefined
+  }
+  const n = Number(v)
+  return Number.isFinite(n) && n > 0 ? n : undefined
+}
+
 // 章节可在详情 JSON 中标记 visibility: "hidden" 隐藏（完全不渲染）
 const visibleSections = computed(() => visibleItems(detail.value?.sections ?? []))
 
@@ -317,11 +330,14 @@ onBeforeUnmount(() => {
       </div>
 
       <VCard
+        v-if="sec.paragraphs?.length || sec.list?.length || sec.links?.length || sec.image"
         class="section-card"
         rounded="lg"
         elevation="1"
       >
-        <VCardText>
+        <VCardText
+          v-if="sec.paragraphs?.length || sec.list?.length || sec.links?.length"
+        >
           <p
             v-for="(p, pi) in (sec.paragraphs || [])"
             :key="`p-${pi}`"
@@ -384,6 +400,19 @@ onBeforeUnmount(() => {
             </VBtn>
           </div>
         </VCardText>
+
+        <!-- 👉 章节配图（JSON 中 sec.image 可选）：与文字同卡，贴卡片底边，点击走灯箱放大。
+             加载动画由全局 .v-img shimmer 负责（_image-loading.scss + main.js），加载完自动停止 -->
+        <v-img
+          v-if="sec.image"
+          class="section-figure"
+          :src="resolveImage(sec.image)"
+          :alt="sec.imageAlt || sec.heading"
+          :aspect-ratio="parseAspect(sec.imageAspect)"
+          max-height="640"
+          contain
+          @click.stop="openZoom(sec.image)"
+        />
       </VCard>
     </section>
 
@@ -738,6 +767,24 @@ $image-backdrop: #312d4b;
 .detail-emphasis {
   font-weight: 600;
   color: rgb(var(--v-theme-primary));
+}
+
+// 👉 章节配图（sec.image）：与文字同卡、贴卡底，contain 完整展示，hover 轻微放大提示可点击
+// 加载动画由全局 .v-img shimmer 负责，加载完自动停止（见 _image-loading.scss / main.js）
+.section-card {
+  overflow: hidden;
+}
+
+.section-figure {
+  cursor: zoom-in;
+
+  :deep(.v-img__img) {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover :deep(.v-img__img) {
+    transform: scale(1.015);
+  }
 }
 
 // 👉 章节列表项文字：与正文统一 15px（与自我介绍页 item-text 一致）

@@ -6,7 +6,7 @@
 // 目标尺寸见 VARIANTS（均为 16:9，居中裁剪避免拉伸）。已存在的变体文件会跳过（可重复运行）。
 //
 // 运行：node scripts/gen-image-variants.mjs
-import { readFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs'
+import { readFileSync, readdirSync, existsSync, mkdirSync, copyFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
@@ -25,12 +25,12 @@ const VARIANTS = {
   'thumb': [200, 112],
 }
 
-// 从数据文件中收集被引用的图片路径（引号内、以 png/jpg 结尾的相对路径）
+// 从数据文件中收集被引用的图片路径（引号内、以 png/jpg/svg 结尾的相对路径）
 const refs = new Set()
 const collectFrom = fp => {
   if (!existsSync(fp)) return
   const text = readFileSync(fp, 'utf8')
-  const re = /["']([^"']*\.(?:png|jpe?g))["']/g
+  const re = /["']([^"']*\.(?:png|jpe?g|svg))["']/g
   let m
 
   while ((m = re.exec(text)))
@@ -64,6 +64,20 @@ let portraitCount = 0
 
 for (const img of sources) {
   const src = join(pagesDir, img)
+  // SVG 为矢量图：任意尺寸无损，直接复制到各角色目录即可（不做像素级裁剪/缩放）
+  if (img.endsWith('.svg')) {
+    for (const variant of Object.keys(VARIANTS)) {
+      const out = join(variantsDir, variant, img)
+
+      if (existsSync(out)) continue
+      mkdirSync(dirname(out), { recursive: true })
+      copyFileSync(src, out)
+      count++
+    }
+
+    continue
+  }
+
   const { w: sw, h: sh } = dimsOf(src)
   // 竖图（移动端页面截图）：不能裁成 16:9，否则只剩中间一条；保持比例、按高适配
   const isPortrait = sw / sh < 1

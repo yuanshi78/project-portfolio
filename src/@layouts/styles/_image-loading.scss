@@ -1,15 +1,20 @@
 /*
   👉 图片加载动画（骨架微光 shimmer）
 
-  原理：VImg 内部的 <img> 是绝对定位铺满容器的（cover），加载完成前它是透明的，
-  此时会透出容器的微光动画；图片加载完成后铺满容器，动画被自然遮住。
+  原理：图片未加载完成时，.v-img 容器显示微光动画；加载完成后停止动画、
+  背景恢复透明（露出所在卡片的底色）。
 
-  优点：纯 CSS，无需改动任何组件，自动作用于所有 VImg
-  （项目卡片图、详情页轮播图、个人页封面图等）。
+  「已加载」状态由 main.js 里的全局 capture 监听器维护：任何 <img> 触发
+  load / error 事件时，给其所在的 .v-img 根节点设置 data-img-loaded 属性。
+  （纯 CSS 无法感知 <img> 的加载状态——VImg 内部的 <img> 加载完成后依然存在，
+  若无条件播放 infinite 动画，contain / 透明图片周围会永远闪动。）
+  用 data-* 属性而非 class：Vue 重渲染会整体重写 VImg 根节点的 class，会抹掉手动加的类。
+
+  自动作用于所有 VImg（项目卡片图、详情页配图/轮播图、个人页封面图等）。
   颜色用 --v-theme-on-surface 低透明度，亮/暗主题自动适配。
 */
 
-.v-img {
+.v-img:not([data-img-loaded]) {
   background-color: rgba(var(--v-theme-on-surface), 0.06);
   background-image: linear-gradient(
     90deg,
@@ -19,6 +24,11 @@
   );
   background-size: 400% 100%;
   animation: app-image-shimmer 1.4s ease-in-out infinite;
+}
+
+// 加载完成（或失败）：动画停止，背景交还给所在卡片
+.v-img[data-img-loaded] {
+  background: none;
 }
 
 @keyframes app-image-shimmer {
@@ -33,7 +43,7 @@
 
 // 尊重系统「减少动态效果」偏好
 @media (prefers-reduced-motion: reduce) {
-  .v-img {
+  .v-img:not([data-img-loaded]) {
     animation: none;
   }
 }
