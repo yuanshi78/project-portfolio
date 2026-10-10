@@ -336,7 +336,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
           elevation="2"
         >
           <ImageGallery :images="featuredProduct.images" />
-          <VCardText>
+          <VCardText class="pa-8">
             <VChip
               v-if="featuredProduct.status"
               size="small"
