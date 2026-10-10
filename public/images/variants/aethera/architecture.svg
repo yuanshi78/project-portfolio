@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="'PingFang SC','Microsoft YaHei','Inter','SF Pro Display','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="kernelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bgGrad)"/>
+
+  <g opacity="0.03" stroke="#38bdf8" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="0" y1="800" x2="1200" y2="800"/>
+  </g>
+
+  <text x="60" y="60" fill="#f8fafc" font-size="28" font-weight="700" letter-spacing="-0.5">AETHERA</text>
+  <text x="60" y="86" fill="#64748b" font-size="13" font-weight="400" letter-spacing="2">认知数据运行时 — 架构</text>
+  <line x1="60" y1="100" x2="1140" y2="100" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- 输入层 -->
+  <rect x="60" y="120" width="1080" height="70" rx="10" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="147" fill="#38bdf8" font-size="11" font-weight="600" letter-spacing="1.5">输入</text>
+  <text x="80" y="172" fill="#cbd5e1" font-size="14" font-weight="500">意图文档</text>
+  <text x="300" y="172" fill="#64748b" font-size="12">·</text>
+  <text x="320" y="172" fill="#cbd5e1" font-size="14" font-weight="500">组合文档</text>
+  <text x="580" y="172" fill="#64748b" font-size="12">·</text>
+  <text x="600" y="172" fill="#cbd5e1" font-size="14" font-weight="500">版本化信封</text>
+
+  <line x1="600" y1="190" x2="600" y2="215" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 数据源 -->
+  <rect x="60" y="220" width="1080" height="70" rx="10" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="247" fill="#38bdf8" font-size="11" font-weight="600" letter-spacing="1.5">数据源</text>
+  <g fill="#cbd5e1" font-size="13" font-weight="500">
+    <text x="80" y="272">PostgreSQL</text>
+    <text x="200" y="272">MySQL</text>
+    <text x="290" y="272">Snowflake</text>
+    <text x="400" y="272">BigQuery</text>
+    <text x="500" y="272">REST</text>
+    <text x="570" y="272">WebSocket</text>
+    <text x="680" y="272">CSV / JSON</text>
+  </g>
+
+  <line x1="600" y1="290" x2="600" y2="315" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 数据现实图谱 -->
+  <rect x="60" y="320" width="1080" height="100" rx="10" fill="#0f172a" stroke="#1e40af" stroke-width="1.5"/>
+  <rect x="60" y="320" width="1080" height="100" rx="10" fill="url(#kernelGrad)" opacity="0.15"/>
+  <text x="80" y="348" fill="#60a5fa" font-size="11" font-weight="600" letter-spacing="1.5">数据现实图谱 — 规范模型</text>
+  <g fill="#e2e8f0" font-size="12" font-weight="500">
+    <rect x="80" y="360" width="100" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="130" y="377" text-anchor="middle" font-size="11">实体</text>
+    <rect x="195" y="360" width="100" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="245" y="377" text-anchor="middle" font-size="11">关系</text>
+    <rect x="310" y="360" width="100" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="360" y="377" text-anchor="middle" font-size="11">事件</text>
+    <rect x="425" y="360" width="110" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="480" y="377" text-anchor="middle" font-size="11">帧节点</text>
+    <rect x="550" y="360" width="110" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="605" y="377" text-anchor="middle" font-size="11">溯源</text>
+    <rect x="675" y="360" width="100" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="725" y="377" text-anchor="middle" font-size="11">时序</text>
+    <rect x="790" y="360" width="140" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="860" y="377" text-anchor="middle" font-size="11">保留语义</text>
+    <rect x="945" y="360" width="100" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="995" y="377" text-anchor="middle" font-size="11">感知</text>
+  </g>
+  <text x="80" y="408" fill="#475569" font-size="10" font-style="italic">属性值 · 坐标权威 · 经纬度投影 · 内容寻址血缘</text>
+
+  <line x1="600" y1="420" x2="600" y2="445" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 编译器 -->
+  <rect x="60" y="450" width="1080" height="100" rx="10" fill="#0f172a" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="60" y="450" width="1080" height="100" rx="10" fill="#4c1d95" opacity="0.12"/>
+  <text x="80" y="478" fill="#a78bfa" font-size="11" font-weight="600" letter-spacing="1.5">编译器 — 从意图到语义</text>
+  <g font-size="11" font-weight="500">
+    <rect x="80" y="490" width="120" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="140" y="508" text-anchor="middle" fill="#e2e8f0">意图解析器</text>
+    <text x="140" y="522" text-anchor="middle" fill="#64748b" font-size="9">IS-01…IS-09</text>
+
+    <rect x="220" y="490" width="120" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="280" y="508" text-anchor="middle" fill="#e2e8f0">语义范围</text>
+    <text x="280" y="522" text-anchor="middle" fill="#64748b" font-size="9">图谓词</text>
+
+    <rect x="360" y="490" width="120" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="420" y="508" text-anchor="middle" fill="#e2e8f0">语义切面</text>
+    <text x="420" y="522" text-anchor="middle" fill="#64748b" font-size="9">开放回退</text>
+
+    <rect x="500" y="490" width="120" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="560" y="508" text-anchor="middle" fill="#e2e8f0">感知中间表示</text>
+    <text x="560" y="522" text-anchor="middle" fill="#64748b" font-size="9">版本化</text>
+
+    <rect x="640" y="490" width="130" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="705" y="508" text-anchor="middle" fill="#e2e8f0">符号验证器</text>
+    <text x="705" y="522" text-anchor="middle" fill="#64748b" font-size="9">AR-07 · SP-05</text>
+
+    <rect x="790" y="490" width="110" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="845" y="508" text-anchor="middle" fill="#e2e8f0">路由</text>
+    <text x="845" y="522" text-anchor="middle" fill="#64748b" font-size="9">注册表解析</text>
+
+    <rect x="920" y="490" width="130" height="40" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="985" y="508" text-anchor="middle" fill="#e2e8f0">等价性检查</text>
+    <text x="985" y="522" text-anchor="middle" fill="#64748b" font-size="9">多模态</text>
+  </g>
+
+  <line x1="600" y1="550" x2="600" y2="575" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 内核 -->
+  <rect x="60" y="580" width="1080" height="90" rx="10" fill="#0f172a" stroke="#dc2626" stroke-width="1.5"/>
+  <rect x="60" y="580" width="1080" height="90" rx="10" fill="#7f1d1d" opacity="0.1"/>
+  <text x="80" y="608" fill="#f87171" font-size="11" font-weight="600" letter-spacing="1.5">内核 — 仅机制</text>
+  <text x="80" y="625" fill="#64748b" font-size="10" font-style="italic">无渲染 · 无布局 · 无大语言模型 · 无媒体词汇</text>
+  <g font-size="11" font-weight="500">
+    <rect x="80" y="635" width="95" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="127" y="652" text-anchor="middle" fill="#e2e8f0">身份</text>
+    <rect x="185" y="635" width="110" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="240" y="652" text-anchor="middle" fill="#e2e8f0">策略决策</text>
+    <rect x="305" y="635" width="105" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="357" y="652" text-anchor="middle" fill="#e2e8f0">事件路由器</text>
+    <rect x="420" y="635" width="95" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="467" y="652" text-anchor="middle" fill="#e2e8f0">生命周期</text>
+    <rect x="525" y="635" width="130" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="590" y="652" text-anchor="middle" fill="#e2e8f0">能力注册表</text>
+    <rect x="665" y="635" width="120" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="725" y="652" text-anchor="middle" fill="#e2e8f0">资源仲裁器</text>
+    <rect x="795" y="635" width="95" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="842" y="652" text-anchor="middle" fill="#e2e8f0">注意力</text>
+    <rect x="900" y="635" width="105" height="26" rx="5" fill="#1e293b" stroke="#334155"/>
+    <text x="952" y="652" text-anchor="middle" fill="#e2e8f0">代理钩子</text>
+  </g>
+
+  <line x1="600" y1="670" x2="600" y2="695" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 平台 -->
+  <rect x="60" y="700" width="530" height="90" rx="10" fill="#0f172a" stroke="#0891b2" stroke-width="1.5"/>
+  <rect x="60" y="700" width="530" height="90" rx="10" fill="#164e63" opacity="0.12"/>
+  <text x="80" y="725" fill="#22d3ee" font-size="11" font-weight="600" letter-spacing="1.5">平台</text>
+  <g font-size="11" font-weight="500" fill="#e2e8f0">
+    <rect x="80" y="735" width="80" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="120" y="751" text-anchor="middle" font-size="10">计时器端口</text>
+    <rect x="170" y="735" width="120" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="230" y="751" text-anchor="middle" font-size="10">输出端口代理</text>
+    <rect x="300" y="735" width="120" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="360" y="751" text-anchor="middle" font-size="10">沙箱宿主</text>
+    <rect x="430" y="735" width="100" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="480" y="751" text-anchor="middle" font-size="10">层级路由器</text>
+    <rect x="80" y="765" width="110" height="20" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="135" y="779" text-anchor="middle" font-size="9">资产代理</text>
+    <rect x="200" y="765" width="120" height="20" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="260" y="779" text-anchor="middle" font-size="9">验证端口</text>
+    <rect x="330" y="765" width="100" height="20" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="380" y="779" text-anchor="middle" font-size="9">内核API</text>
+  </g>
+
+  <!-- 注册表 -->
+  <rect x="610" y="700" width="530" height="90" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+  <rect x="610" y="700" width="530" height="90" rx="10" fill="#064e3b" opacity="0.12"/>
+  <text x="630" y="725" fill="#34d399" font-size="11" font-weight="600" letter-spacing="1.5">注册表 — 内核之外</text>
+  <g font-size="11" font-weight="500" fill="#e2e8f0">
+    <rect x="630" y="735" width="90" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="675" y="751" text-anchor="middle" font-size="10">模态</text>
+    <rect x="730" y="735" width="80" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="770" y="751" text-anchor="middle" font-size="10">框架</text>
+    <rect x="820" y="735" width="90" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="865" y="751" text-anchor="middle" font-size="10">模式</text>
+    <rect x="920" y="735" width="90" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="965" y="751" text-anchor="middle" font-size="10">策略</text>
+    <rect x="1020" y="735" width="110" height="24" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="1075" y="751" text-anchor="middle" font-size="10">组合</text>
+    <text x="630" y="782" fill="#475569" font-size="10" font-style="italic">开放字符串 · 增量注册 · 无需核心更改</text>
+  </g>
+
+  <line x1="600" y1="790" x2="600" y2="815" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 呈现器 -->
+  <rect x="60" y="820" width="1080" height="60" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="60" y="820" width="1080" height="60" rx="10" fill="#78350f" opacity="0.1"/>
+  <text x="80" y="845" fill="#fbbf24" font-size="11" font-weight="600" letter-spacing="1.5">呈现器 — 沙箱化</text>
+  <g font-size="10" font-weight="500" fill="#e2e8f0">
+    <rect x="80" y="852" width="145" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="152" y="867" text-anchor="middle">presenter-webgpu</text>
+    <rect x="235" y="852" width="140" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="305" y="867" text-anchor="middle">presenter-echarts</text>
+    <rect x="385" y="852" width="145" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="457" y="867" text-anchor="middle">presenter-spatial</text>
+    <rect x="540" y="852" width="130" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="605" y="867" text-anchor="middle">presenter-audio</text>
+    <rect x="680" y="852" width="125" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
+    <text x="742" y="867" text-anchor="middle">presenter-null</text>
+    <text x="820" y="867" fill="#64748b" font-size="10" font-style="italic">worker · iframe · 无直接 I/O</text>
+  </g>
+
+  <!-- 页脚 -->
+  <line x1="60" y1="895" x2="1140" y2="895" stroke="#1e293b" stroke-width="1"/>
+  <text x="60" y="915" fill="#475569" font-size="10" letter-spacing="1">微内核 · 插件优先 · JSON 模式</text>
+  <text x="1140" y="915" fill="#475569" font-size="10" text-anchor="end" letter-spacing="1">意图 → 语义 → 表示 → 现实</text>
+
+</svg>

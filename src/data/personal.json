@@ -7,6 +7,28 @@
     "since": 2002,
     "gap": 2
   },
+  "stats": [
+    {
+      "icon": "ri-code-s-slash-line",
+      "value": "**{exp} 年**",
+      "label": "软件工程经验"
+    },
+    {
+      "icon": "ri-map-pin-2-line",
+      "value": "{years} 年",
+      "label": "在西安"
+    },
+    {
+      "icon": "ri-speak-line",
+      "value": "语言",
+      "label": "**中文 · 俄语 · 英语**"
+    },
+    {
+      "icon": "ri-robot-line",
+      "value": "**AI**",
+      "label": "辅助开发"
+    }
+  ],
   "site": {
     "name": "元实",
     "title": "Alexander Kuzmenkov - Portfolio",
@@ -16,8 +38,8 @@
     "url": "/cv/Aliaksandr Kuzmiankou - 研发负责人+ 软件工程师+web前端.docx",
     "label": "下载简历"
   },
-  "about": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍研发负责人（数据呈现与AI方向）、软件工程师与web前端架构师。\n\n专注数据呈现与AI方向：软件工程、前端架构、低代码平台（NocoBase、AMIS）、数据可视化。目前致力于研发前沿的智能多模态数据呈现工具（可视化、可听化及其他感知通道），基于带微内核的插件优先架构，AI 作为呈现的智能基础。该工具既面向现代智能仪表盘，也面向未来的数据交互方式。\n\n我的独特优势：**{years}年在中国 + 中文流利 + 俄语母语 + {exp}年软件工程经验 + web前端架构 + AI辅助开发 + 产品思维**。我是中国与俄语市场之间的技术桥梁。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
-  "forEmployers": "如果您公司对我正在研发的智能多模态数据呈现工具感兴趣，我愿意以公司项目的形式与公司共同推进研发。新产生的成果归属公司；此前已有的个人研究与原型的使用条件，建议另行协商。",
+  "about": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍研发负责人（数据呈现与AI方向）、软件工程师与web前端架构师。\n\n专注数据呈现与AI方向：软件工程、前端架构、低代码平台（NocoBase、AMIS）、数据可视化。目前致力于研发前沿的智能多模态数据呈现工具（可视化、可听化及其他感知通道），基于带微内核的插件优先架构，AI 作为呈现的智能基础。该工具既面向现代智能仪表盘，也面向未来的数据交互方式。\n\n我的独特优势：**{years}年在西安 + 中文流利 + 俄语母语 + {exp}年软件工程经验 + web前端架构 + AI辅助开发 + 产品思维**。我是中国与俄语市场之间的技术桥梁。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
+  "forEmployers": "如果您公司对我研发的智能多模态数据呈现工具感兴趣，我愿意以公司项目的形式共同推进。Aethera 的架构方向被 8 个 AI 模型一致认定为认知时代唯一可信的基础；它的目标不是跟随数据呈现趋势，而是推动数据智能呈现的未来。新产生的成果归属公司；此前已有的个人研究与原型的使用条件，建议另行协商。",
   "meta": [
     {
       "icon": "ri-computer-line",
@@ -46,16 +68,6 @@
   ],
   "tabs": [
     {
-      "key": 3,
-      "label": "关于我",
-      "icon": "ri-information-line"
-    },
-    {
-      "key": 0,
-      "label": "个人信息",
-      "icon": "ri-user-fill"
-    },
-    {
       "key": 2,
       "label": "产品",
       "icon": "ri-lightbulb-fill"
@@ -64,6 +76,16 @@
       "key": 1,
       "label": "项目",
       "icon": "ri-folders-fill"
+    },
+    {
+      "key": 3,
+      "label": "关于我",
+      "icon": "ri-information-line"
+    },
+    {
+      "key": 0,
+      "label": "个人信息",
+      "icon": "ri-user-fill"
     }
   ],
   "products": {
@@ -75,6 +97,9 @@
         "status": "研发中",
         "statusColor": "warning",
         "text": "智能多模态数据呈现工具：以 plugin-first 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
+        "images": [
+          "it_general.jpg"
+        ],
         "to": "/project/self/aethera"
       }
     ]
@@ -172,7 +197,12 @@
         {
           "icon": "ri-robot-line",
           "important": true,
-          "text": "AI辅助软件开发：熟练使用AI工具进行软件系统开发、原型构建与代码生成"
+          "text": "AI辅助软件开发（vibe coding）：熟练使用AI工具进行软件系统开发、原型构建与代码生成；作为软件工程师，对LLM生成的方案与代码负责"
+        },
+        {
+          "icon": "ri-line-chart-line",
+          "important": true,
+          "text": "研究方法论：系统化思维；数据智能呈现的发展与未来趋势研究"
         },
         {
           "icon": "ri-code-box-line",
@@ -222,7 +252,7 @@
           {
             "icon": "ri-lightbulb-flash-line",
             "important": true,
-            "text": "产生新想法的能力较强"
+            "text": "具备系统化思维，研究系统化思维导论，并将其应用于复杂软件架构与产品设计"
           },
           {
             "icon": "ri-parentheses-fill",
@@ -236,7 +266,7 @@
           {
             "icon": "ri-dashboard-2-line",
             "important": true,
-            "text": "研发数据可视化与智能呈现系统能力较强"
+            "text": "研发数据可视化与智能呈现系统能力较强；研究数据智能呈现的发展与未来趋势，并应用于产品架构设计"
           },
           {
             "icon": "ri-stackshare-line",
@@ -246,7 +276,7 @@
           {
             "icon": "ri-robot-line",
             "important": true,
-            "text": "熟练使用AI辅助开发，能快速构建原型与验证产品思路"
+            "text": "熟练使用AI辅助开发（vibe coding），能快速构建原型与验证产品思路；作为软件工程师，对LLM生成的方案与代码负责"
           },
           {
             "icon": "ri-stack-line",
@@ -283,7 +313,7 @@
             "text": "5. 尽量减少**重复代码**"
           },
           {
-            "text": "6. 尽量利用**提高工作效率**的工具， 包括**AI**、**低代码/无代码工具**"
+            "text": "6. 尽量利用提高工作效率的工具，包括AI、低代码/无代码工具；采用vibe coding，但由软件工程师对LLM生成的方案与代码负责"
           },
           {
             "important": true,
@@ -295,7 +325,7 @@
           },
           {
             "important": true,
-            "text": "9. 研发前沿的**智能多模态数据呈现工具**，基于带**微内核**的**插件优先架构**，**AI** 作为呈现的智能基础"
+            "text": "9. 研发前沿的智能多模态数据呈现工具，基于带微内核的插件优先架构，AI 作为呈现的智能基础；目标不是跟随数据呈现趋势，而是推动数据智能呈现的未来"
           },
           {
             "text": "10. 想做出**自己的产品**"
@@ -303,6 +333,14 @@
           {
             "important": true,
             "text": "11. 我的梦想是对**人工神经网络**和**数据呈现技术**的发展有贡献"
+          },
+          {
+            "important": true,
+            "text": "12. 研究系统化思维，以整体视角看待软件架构、数据呈现与产品演进"
+          },
+          {
+            "important": true,
+            "text": "13. 研究数据智能呈现的发展与未来趋势，并将其应用于智能多模态数据呈现工具的架构设计"
           }
         ]
       }
@@ -315,12 +353,18 @@
         "subtitle": "2023/08 - 现在， 西安",
         "title": "西安艾迪韦科网络科技有限公司",
         "to": "/aidiweike/all",
+        "images": [
+          "/aidiweike/tickets/3.png"
+        ],
         "text": "NocoBase插件、数据可视化与智能呈现工具研发、“智慧运维系统”、“票务管理系统”、“生产管理系统”"
       },
       {
         "subtitle": "2020/04 - 2023/08， 西安",
         "title": "西安睿博智能科技有限公司",
         "to": "/rainbow/all",
+        "images": [
+          "rainbow/smart-area/1.png"
+        ],
         "text": "“智慧区域”、“产运销一体化平台”、“电力配电设备监控系统”、“国新LNG平台”"
       },
       {
@@ -338,6 +382,9 @@
         "subtitle": "2015/07—2016/09， 西安",
         "title": "陕西数字信息技术有限公司",
         "to": "/shuzixinxi/all",
+        "images": [
+          "shuzixinxi/actors/1.png"
+        ],
         "text": "谷堆书城网、《奇咔奇咔》网站(推荐陕西数字信息技术有限公司研制的AR游戏项目的网站)、中国演员网站、《口述天下》网站、《陕西木有啥》网站等"
       },
       {

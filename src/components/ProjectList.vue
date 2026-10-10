@@ -232,15 +232,24 @@ const placeholderInitial = prj => {
 .project-desc {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 0.875rem;
+  // 基准 14px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
+  font-size: calc(0.875rem * var(--content-font-scale, 1));
   line-height: 1.5;
 }
 
 // 👉 项目名（JSON 的 name 字段）加粗，层级高于卡片描述
 .project-title {
   font-weight: 700;
+  // 基准 15px（text-h6），接入字号缩放（覆盖工具类需 !important）
+  font-size: calc(0.9375rem * var(--content-font-scale, 1)) !important;
+}
+
+// 👉 标签 chips 接入字号缩放（基准 13px 小号 chip）
+.project-card :deep(.v-chip) {
+  font-size: calc(0.8125rem * var(--content-font-scale, 1)) !important;
 }
 
 // 👉 文本内局部强调（JSON 中用 **文字** 标记），紫色高亮

@@ -212,7 +212,7 @@ onBeforeUnmount(() => {
           {{ detail.title }}
         </h1>
 
-        <div class="d-flex align-center text-medium-emphasis mt-3">
+        <div class="d-flex align-center text-medium-emphasis mt-3 hero-date">
           <VIcon
             icon="ri-calendar-line"
             class="me-1"
@@ -449,6 +449,22 @@ $image-backdrop: #312d4b;
 .hero-title {
   line-height: 1.2;
   letter-spacing: -0.5px;
+  // 基准 = text-h4(1.5rem)，≥lg = text-lg-h3(1.75rem)；覆盖工具类需 !important
+  font-size: calc(1.5rem * var(--content-font-scale, 1)) !important;
+
+  @media (min-width: 1280px) {
+    font-size: calc(1.75rem * var(--content-font-scale, 1)) !important;
+  }
+}
+
+// 👉 Hero 信息卡的公司 / 标签 chips 接入字号缩放（基准 13px）
+.hero-card :deep(.v-chip) {
+  font-size: calc(0.8125rem * var(--content-font-scale, 1)) !important;
+}
+
+// 👉 基准 14px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
+.hero-date {
+  font-size: calc(0.875rem * var(--content-font-scale, 1));
 }
 
 .detail-carousel {
@@ -687,6 +703,8 @@ $image-backdrop: #312d4b;
 .section-head {
   position: relative;
   padding-left: 14px;
+  // 覆盖 text-h5 的固定字号（Vuetify 工具类带 !important，需同权重），接入字号缩放（P1）
+  font-size: calc(1.5rem * var(--content-font-scale, 1)) !important;
 
   // 用主题自带的 primary 作主色点缀（未改动主题色值）
   &::before {

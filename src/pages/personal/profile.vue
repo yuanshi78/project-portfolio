@@ -183,6 +183,8 @@ const currentSections = computed(() => {
   position: relative;
   padding-left: 14px;
   font-weight: 700;
+  // 覆盖 text-h5 的固定字号（Vuetify 工具类带 !important，需同权重），接入字号缩放（P1）
+  font-size: calc(1.5rem * var(--content-font-scale, 1)) !important;
 
   &::before {
     content: "";

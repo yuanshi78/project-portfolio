@@ -43,6 +43,8 @@ for (const f of readdirSync(join(root, 'src', 'data', 'details'))) {
 }
 collectFrom(join(root, 'src', 'data', 'companies.js'))
 collectFrom(join(root, 'src', 'data', 'companies.json'))
+// 首页产品/项目卡片（products.items / experience.items 的 images）
+collectFrom(join(root, 'src', 'data', 'personal.json'))
 
 // 仅保留真实存在的源文件
 const sources = [...refs].filter(img => existsSync(join(pagesDir, img)))

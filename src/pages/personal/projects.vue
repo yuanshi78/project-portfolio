@@ -1,4 +1,5 @@
 <script setup>
+import ImageGallery from '@/components/ImageGallery.vue'
 import { visibleItems } from '@/utils/visibility'
 
 const props = defineProps({
@@ -27,11 +28,31 @@ const props = defineProps({
           class="flex-1-1 work-card"
           rounded="lg"
           elevation="1"
-          :subtitle="job.subtitle"
-          :title="job.title"
-          :to="job.to"
         >
-          <VCardText>{{ job.text }}</VCardText>
+          <ImageGallery :images="job.images" />
+          <VCardItem>
+            <VCardTitle>
+              <RouterLink
+                :to="job.to"
+                class="text-decoration-none"
+              >{{ job.title }}</RouterLink>
+            </VCardTitle>
+            <VCardSubtitle v-if="job.subtitle">{{ job.subtitle }}</VCardSubtitle>
+          </VCardItem>
+          <VCardText class="project-text">
+            {{ job.text }}
+            <RouterLink
+              :to="job.to"
+              class="text-decoration-none d-inline-flex align-center mt-2 text-primary"
+            >
+              <span>查看详情</span>
+              <VIcon
+                icon="ri-arrow-right-line"
+                size="18"
+                class="ms-1"
+              />
+            </RouterLink>
+          </VCardText>
         </VCard>
       </VCol>
     </VRow>
@@ -64,5 +85,11 @@ const props = defineProps({
     transform: translateY(-4px);
     box-shadow: 0 14px 28px -14px rgba(0, 0, 0, 0.45);
   }
+}
+
+// 👉 基准 15px，乘 --content-font-scale（顶栏字号按钮控制，默认 1）
+.project-text {
+  font-size: calc(0.9375rem * var(--content-font-scale, 1));
+  line-height: 1.7;
 }
 </style>

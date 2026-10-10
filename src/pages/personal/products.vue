@@ -1,6 +1,8 @@
 <script setup>
 // 产品卡片：内容来自 @/data/personal.json 的 products 字段。
 // 与「项目」（各公司经历）区分：这里只放自己研发 / 主导的产品。
+// 每个产品可在 JSON 中配置 images（相对路径数组），卡片顶部展示封面 + 缩略图 + 灯箱。
+import ImageGallery from '@/components/ImageGallery.vue'
 import { visibleItems } from '@/utils/visibility'
 
 defineProps({
@@ -29,10 +31,17 @@ defineProps({
           class="flex-1-1 product-card"
           rounded="lg"
           elevation="1"
-          :subtitle="item.subtitle"
-          :title="item.title"
-          :to="item.to"
         >
+          <ImageGallery :images="item.images" />
+          <VCardItem>
+            <VCardTitle>
+              <RouterLink
+                :to="item.to"
+                class="text-decoration-none"
+              >{{ item.title }}</RouterLink>
+            </VCardTitle>
+            <VCardSubtitle v-if="item.subtitle">{{ item.subtitle }}</VCardSubtitle>
+          </VCardItem>
           <VCardText>
             <VChip
               v-if="item.status"
@@ -47,6 +56,17 @@ defineProps({
             <div class="product-text">
               {{ item.text }}
             </div>
+            <RouterLink
+              :to="item.to"
+              class="text-decoration-none d-inline-flex align-center mt-2 text-primary"
+            >
+              <span>查看详情</span>
+              <VIcon
+                icon="ri-arrow-right-line"
+                size="18"
+                class="ms-1"
+              />
+            </RouterLink>
           </VCardText>
         </VCard>
       </VCol>
