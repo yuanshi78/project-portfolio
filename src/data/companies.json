@@ -223,6 +223,7 @@
     "projects": [
       {
         "slug": "runway",
+        "image": "eds/cover.jpg",
         "name": "CO Runway, OnePass",
         "description": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
         "tags": [
@@ -242,6 +243,7 @@
     "projects": [
       {
         "slug": "planning_engine",
+        "image": "iba/cover.jpg",
         "name": "Central Planning Engine系统",
         "description": "IBM美国微电子部Central Planning Engine系统",
         "tags": [
@@ -255,6 +257,7 @@
       },
       {
         "slug": "adm",
+        "image": "iba/cover.jpg",
         "name": "IBM法国ADM France BA",
         "description": "IBM法国ADM France BA",
         "tags": [
@@ -269,6 +272,7 @@
       },
       {
         "slug": "mie",
+        "image": "iba/cover.jpg",
         "name": "MIE France",
         "description": "IBM法国MIE France",
         "tags": [
@@ -280,6 +284,7 @@
       },
       {
         "slug": "urt",
+        "image": "iba/cover.jpg",
         "name": "URT Extractors ISD",
         "description": "IBM法国URT Extractors ISD",
         "tags": [

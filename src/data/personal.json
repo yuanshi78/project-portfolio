@@ -98,7 +98,7 @@
         "statusColor": "warning",
         "text": "智能多模态数据呈现工具：以 plugin-first 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
         "images": [
-          "it_general.jpg"
+          "aethera/cover.jpg"
         ],
         "to": "/project/self/aethera"
       }
@@ -391,13 +391,19 @@
         "subtitle": "2007/12—2009/11， 武汉",
         "title": "EDS武汉（惠普公司武汉分公司）",
         "to": "/eds/all",
-        "text": "CO Runway, OnePass"
+        "text": "CO Runway, OnePass",
+        "images": [
+          "eds/cover.jpg"
+        ]
       },
       {
         "subtitle": "2002/12—2012/03, 白俄罗斯",
         "title": "IBA （International Business Alliance)",
         "to": "/iba/all",
-        "text": "IBM美国微电子部Central Planning Engine系统、IBM法国ADM France BA、IBM法国MIE France, IBM法国URT Extractors ISD"
+        "text": "IBM美国微电子部Central Planning Engine系统、IBM法国ADM France BA、IBM法国MIE France, IBM法国URT Extractors ISD",
+        "images": [
+          "iba/cover.jpg"
+        ]
       }
     ]
   }
