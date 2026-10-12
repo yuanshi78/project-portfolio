@@ -1,6 +1,6 @@
 {
   "name": "Aliaksandr Kuzmiankou 元实",
-  "cover": "/images/pages/abstract.jpg",
+  "cover": "/images/variants/zoom-pc/abstract.jpg",
   "birthday": "1978-03-16",
   "chinaSince": 2014,
   "career": {
@@ -376,7 +376,11 @@
       {
         "subtitle": "2016/09—2019/05， 西安",
         "title": "陕西秦快互联科技有限公司",
-        "text": "《秦天下》、《东美》"
+        "to": "/qinkuai/all",
+        "text": "《秦天下》",
+        "images": [
+          "qinkuai/qinkuai1.png"
+        ]
       },
       {
         "subtitle": "2015/07—2016/09， 西安",

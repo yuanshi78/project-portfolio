@@ -24,7 +24,7 @@ const company = computed(() => getCompany(route.params.category))
 const project = computed(() => company.value?.projects.find(p => p.slug === route.params.slug))
 const tags = computed(() => project.value?.tags ?? [])
 
-// 图片放在 public/images/pages/ 下，JSON 中只存相对路径（变体由 resolveImage 加角色后缀）
+// JSON 中只存相对路径，resolveImage 根据展示位置选择预生成变体。
 
 // 👉 sec.imageAspect 支持 "4/3"（宽/高）或纯数字字符串；VImg 的 aspectRatio 只接受数字，
 //    "4/3" 会被 Number() 成 NaN 导致占位失效，故在此解析。无效值返回 undefined（不占位）。

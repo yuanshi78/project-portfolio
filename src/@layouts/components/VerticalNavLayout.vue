@@ -89,10 +89,12 @@ export default defineComponent({
   block-size: 100%;
 
   &.window-scrolled {
-    .navbar-content-container {
-      padding: 0 1.5rem;
-      background-color: rgb(var(--v-theme-surface), .95);
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+    @media screen and (min-width: 1280px) {
+      .layout-navbar {
+        inline-size: calc(100% - 3rem);
+        border-end-start-radius: 1rem;
+        border-end-end-radius: 1rem;
+      }
     }
   }
 
@@ -113,6 +115,11 @@ export default defineComponent({
     position: sticky;
     inset-block-start: 0;
     z-index: variables.$layout-vertical-nav-layout-navbar-z-index;
+    inline-size: 100%;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    box-sizing: border-box;
+    transition: inline-size 0.3s ease, padding-inline 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
 
     .navbar-content-container {
       block-size: variables.$layout-vertical-nav-navbar-height;

@@ -6,14 +6,14 @@
 // 目标尺寸见 VARIANTS（均为 16:9，居中裁剪避免拉伸）。已存在的变体文件会跳过（可重复运行）。
 //
 // 运行：node scripts/gen-image-variants.mjs
-import { readFileSync, readdirSync, existsSync, mkdirSync, copyFileSync } from 'node:fs'
-import { join, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { execFileSync } from 'node:child_process'
+import { execFileSync } from 'node:child_process';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const pagesDir = join(root, 'public', 'images', 'pages')
 const variantsDir = join(root, 'public', 'images', 'variants')
+const sourceRoles = ['zoom-pc', 'carousel-pc', 'card-pc', 'zoom-mobile', 'carousel-mobile', 'card-mobile', 'thumb']
 
 const VARIANTS = {
   'card-pc': [800, 450],
@@ -46,10 +46,14 @@ collectFrom(join(root, 'src', 'data', 'companies.json'))
 // 首页产品/项目卡片（products.items / experience.items 的 images）
 collectFrom(join(root, 'src', 'data', 'personal.json'))
 
-// 仅保留真实存在的源文件
-const sources = [...refs].filter(img => existsSync(join(pagesDir, img)))
+// Rebuild from the highest-quality available generated variant now that originals are removed.
+const sources = [...refs].flatMap(img => {
+  const src = sourceRoles.map(role => join(variantsDir, role, img)).find(existsSync)
 
-console.log(`found ${sources.length} referenced source images`)
+  return src ? [{ img, src }] : []
+})
+
+console.log(`found ${sources.length} referenced variant sources`)
 
 let count = 0
 
@@ -62,8 +66,7 @@ const dimsOf = src => {
 
 let portraitCount = 0
 
-for (const img of sources) {
-  const src = join(pagesDir, img)
+for (const { img, src } of sources) {
   // SVG 为矢量图：任意尺寸无损，直接复制到各角色目录即可（不做像素级裁剪/缩放）
   if (img.endsWith('.svg')) {
     for (const variant of Object.keys(VARIANTS)) {

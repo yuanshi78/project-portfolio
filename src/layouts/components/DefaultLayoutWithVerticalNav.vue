@@ -201,17 +201,20 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
 }
 </style>
 
-<!-- 全局样式（非 scoped）：顶栏背景改为完全不透明 -->
+<!-- 全局样式（非 scoped）：顶栏由页面背景过渡到滚动后的 surface 色。 -->
 <style lang="scss">
-// 默认顶栏滚动时使用 surface 0.85 + backdrop-filter 模糊，页面内容会透出来。
-// 这里统一改为不透明的 surface 色并去掉模糊，避免内容（如「关于我」）从顶栏透出。
 .layout-navbar.navbar-blur {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+  background-color: rgb(var(--v-theme-background)) !important;
+}
+
+.layout-wrapper.window-scrolled .layout-navbar.navbar-blur {
   background-color: rgb(var(--v-theme-surface)) !important;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 .navbar-content-container {
-  background-color: rgb(var(--v-theme-surface)) !important;
+  background-color: transparent !important;
 }
 </style>

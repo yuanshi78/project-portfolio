@@ -14,19 +14,11 @@
 //   /images/variants/zoom-mobile/...     点击放大后的大图（移动）
 //   /images/variants/thumb/...           轮播底部缩略图
 //
-// 原图仍在 /images/pages/ 下。不传 variant 时返回原图路径，保持向后兼容。
-export const resolveImage = (img, variant) => {
+// 不指定角色时使用最大尺寸的预生成图，避免依赖原图目录。
+export const resolveImage = (img, variant = 'zoom-pc') => {
   if (!img) return ''
 
-  // 兼容「已带 /images/pages/ 前缀」的绝对路径（如 companies.js 预处理过的卡片图）
-  const relative = img.startsWith('/images/pages/')
-    ? img.slice('/images/pages/'.length)
-    : img
-
-  if (!variant)
-    return `/images/pages/${relative}`
-
-  return `/images/variants/${variant}/${relative}`
+  return `/images/variants/${variant}/${img}`
 }
 
 // 各变体目标尺寸 [宽, 高]，均为 16:9，居中裁剪避免拉伸
