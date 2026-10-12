@@ -1,8 +1,8 @@
 /*
   👉 图片加载动画（骨架微光 shimmer）
 
-  原理：图片未加载完成时，.v-img 容器显示微光动画；加载完成后停止动画、
-  背景恢复透明（露出所在卡片的底色）。
+  原理：图片未加载完成时，.v-img 容器显示微光动画；加载完成后停止动画，
+  并恢复容器原有背景。
 
   「已加载」状态由 main.js 里的全局 capture 监听器维护：任何 <img> 触发
   load / error 事件时，给其所在的 .v-img 根节点设置 data-img-loaded 属性。
@@ -24,11 +24,6 @@
   );
   background-size: 400% 100%;
   animation: app-image-shimmer 1.4s ease-in-out infinite;
-}
-
-// 加载完成（或失败）：动画停止，背景交还给所在卡片
-.v-img[data-img-loaded] {
-  background: none;
 }
 
 @keyframes app-image-shimmer {
