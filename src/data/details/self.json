@@ -24,7 +24,8 @@
       {
         "heading": "Aethera 架构",
         "image": "aethera/architecture.svg",
-        "imageAspect": "4/3"
+        "imageAspect": "4/3",
+        "draft": true
       },
       {
         "heading": "实施成熟度",

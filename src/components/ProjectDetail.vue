@@ -338,6 +338,16 @@ onBeforeUnmount(() => {
     >
       <div class="section-head text-h5 font-weight-bold mb-3">
         {{ sec.heading }}
+        <VChip
+          v-if="sec.draft"
+          size="x-small"
+          variant="tonal"
+          color="warning"
+          class="ms-3 align-center section-draft-chip"
+          prepend-icon="ri-draft-line"
+        >
+          {{ sec.draftText || '草案' }}
+        </VChip>
       </div>
 
       <VCard
@@ -778,6 +788,14 @@ $image-backdrop: #312d4b;
 .detail-emphasis {
   font-weight: 600;
   color: rgb(var(--v-theme-primary));
+}
+
+// 👉 章节标题行：标题与「草案」标签在同一行、垂直居中
+.section-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 // 👉 章节配图（sec.image）：与文字同卡、贴卡底，contain 完整展示，hover 轻微放大提示可点击
