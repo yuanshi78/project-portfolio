@@ -15,7 +15,7 @@
     },
     {
       "icon": "ri-map-pin-2-line",
-      "value": "{years} 年",
+      "value": "**{years} 年**",
       "label": "在西安"
     },
     {
