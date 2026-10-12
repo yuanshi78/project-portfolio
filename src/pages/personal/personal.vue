@@ -118,6 +118,7 @@ const onScroll = () => {
 const releaseLock = () => {
   lockUntil = 0
 }
+
 // capture:true 以便无论页面滚动发生在 window 还是内层滚动容器，都能收到滚动事件
 const SCROLL_OPTS = { passive: true, capture: true }
 onMounted(() => {

@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 import Footer from '@/layouts/components/Footer.vue'
 import NavItems from '@/layouts/components/NavItems.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
@@ -30,6 +30,31 @@ const siteLogo = computed(() => personal.site?.logo ?? '')
 // 简历下载入口由 personal.json 的 cv 配置驱动（未配置 url 则不在导航栏显示）
 const cvUrl = computed(() => personal.cv?.url ?? '')
 const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
+
+// 👉 回到顶部按钮：全局固定悬浮，向下滚动超过阈值时出现，点击平滑回顶。
+//    本布局包裹所有路由页面，故按钮在所有页面生效（首页/总览/详情等）。
+//    布局自身用 window 滚动（见 VerticalNavLayout 的 window scroll 监听），故用 window.scrollY 判定。
+const TO_TOP_THRESHOLD = 400
+const showToTop = ref(false)
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+let scrollRaf = false
+const onScrollToTop = () => {
+  if (scrollRaf) return
+  scrollRaf = true
+  requestAnimationFrame(() => {
+    showToTop.value = window.scrollY > TO_TOP_THRESHOLD
+    scrollRaf = false
+  })
+}
+onMounted(() => {
+  window.addEventListener('scroll', onScrollToTop, { passive: true, capture: true })
+  window.addEventListener('resize', onScrollToTop, { passive: true })
+  showToTop.value = window.scrollY > TO_TOP_THRESHOLD
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScrollToTop, { capture: true })
+  window.removeEventListener('resize', onScrollToTop)
+})
 </script>
 
 <template>
@@ -154,6 +179,20 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
     <!-- 👉 Pages -->
     <slot />
 
+    <!-- 👉 回到顶部：全局固定悬浮（右下角），向下滚动一段距离后出现，点击平滑回顶 -->
+    <Transition name="to-top-fade">
+      <VBtn
+        v-if="showToTop"
+        class="global-to-top"
+        icon="ri-arrow-up-line"
+        color="primary"
+        size="large"
+        elevation="4"
+        aria-label="回到顶部"
+        @click="scrollToTop"
+      />
+    </Transition>
+
     <!-- 👉 Footer -->
     <template #footer>
       <!--      <Footer />-->
@@ -198,6 +237,33 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
   .navbar-actions :deep(.v-btn) {
     margin-inline-end: 2px !important;
   }
+}
+
+// 👉 全局回到顶部按钮：fixed 悬浮于右下角（避免与移动端底部标签胶囊/桌面端其他悬浮元素冲突）
+.global-to-top {
+  position: fixed;
+  right: 1.5rem; // 24px
+  bottom: 1.5rem; // 24px
+  z-index: 35;
+}
+
+@media (max-width: 1279px) {
+  .global-to-top {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
+
+// 淡入淡出 + 轻微上滑过渡
+.to-top-fade-enter-active,
+.to-top-fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.to-top-fade-enter-from,
+.to-top-fade-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
 }
 </style>
 
