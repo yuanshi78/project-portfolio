@@ -166,7 +166,6 @@ $backdrop: #312d4b;
   .ig-cover-ph {
     width: 100%;
     height: 100%;
-    background: $backdrop;
   }
 
   .ig-zoom-hint {

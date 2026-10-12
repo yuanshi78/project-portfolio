@@ -140,6 +140,17 @@ const animateTo = to => {
   rafId = requestAnimationFrame(step)
 }
 
+watch(
+  () => [route.params.category, route.params.slug],
+  () => {
+    cancelAnimationFrame(rafId)
+    activeIndex.value = 0
+    currentAngle.value = 0
+    rotating.value = false
+  },
+  { flush: 'sync' },
+)
+
 watch(targetAngle, v => animateTo(v))
 
 const polyTransform = computed(() => `rotateY(${currentAngle.value}deg)`)
