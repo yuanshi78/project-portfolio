@@ -33,23 +33,39 @@ const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
 
 // 👉 回到顶部按钮：全局固定悬浮，向下滚动超过阈值时出现，点击平滑回顶。
 //    本布局包裹所有路由页面，故按钮在所有页面生效（首页/总览/详情等）。
-//    布局自身用 window 滚动（见 VerticalNavLayout 的 window scroll 监听），故用 window.scrollY 判定。
+//    注意：页面可能在 window 滚动，也可能在内层 .layout-page-content 容器滚动，
+//    需兼容两种场景（统一从「实际发生滚动的元素」读位置，回顶时也滚对应的容器）。
 const TO_TOP_THRESHOLD = 400
 const showToTop = ref(false)
-const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+const getScrollY = () => {
+  const root = document.documentElement
+  if (root.scrollTop > 0) return root.scrollTop
+  if (document.body.scrollTop > 0) return document.body.scrollTop
+  const inner = document.querySelector('.layout-page-content')
+  if (inner && inner.scrollTop > 0) return inner.scrollTop
+  return window.scrollY || 0
+}
+const scrollToTop = () => {
+  const inner = document.querySelector('.layout-page-content')
+  if (inner && inner.scrollHeight > inner.clientHeight) {
+    inner.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 let scrollRaf = false
 const onScrollToTop = () => {
   if (scrollRaf) return
   scrollRaf = true
   requestAnimationFrame(() => {
-    showToTop.value = window.scrollY > TO_TOP_THRESHOLD
+    showToTop.value = getScrollY() > TO_TOP_THRESHOLD
     scrollRaf = false
   })
 }
 onMounted(() => {
+  // scroll 不冒泡，但 capture:true 可在 window 捕获到内层容器的滚动事件
   window.addEventListener('scroll', onScrollToTop, { passive: true, capture: true })
   window.addEventListener('resize', onScrollToTop, { passive: true })
-  showToTop.value = window.scrollY > TO_TOP_THRESHOLD
+  showToTop.value = getScrollY() > TO_TOP_THRESHOLD
 })
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScrollToTop, { capture: true })
