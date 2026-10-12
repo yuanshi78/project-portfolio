@@ -22,12 +22,12 @@
         "heading": "项目 demo 链接",
         "links": [
           {
-            "text": "可视化大屏",
-            "href": "https://8-hospital-datavis-demo-yuanshi-public-bbc282b11cf332f4ae1e0fd2.gitlab.io/#/screen2"
+            "text": "可视化大屏（离线）",
+            "href": "/demos/hospital-dashboard/index.html#/screen2"
           },
           {
-            "text": "拓扑图工具",
-            "href": "https://topo-tool-demo-yuanshi-public-5d3fd63e9725a30883c298fcc611f965b.gitlab.io/"
+            "text": "拓扑图工具（离线）",
+            "href": "/demos/topo-tool/index.html"
           }
         ]
       },
@@ -91,8 +91,8 @@
         "heading": "项目 demo 链接",
         "links": [
           {
-            "text": "拓扑图工具",
-            "href": "https://topo-tool-demo-yuanshi-public-5d3fd63e9725a30883c298fcc611f965b.gitlab.io/"
+            "text": "拓扑图工具（离线）",
+            "href": "/demos/topo-tool/index.html"
           }
         ]
       },

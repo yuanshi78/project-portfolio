@@ -33,3 +33,12 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Offline Demos
+
+Run `npm run dev`, then open these local demos:
+
+- Hospital dashboard: `/demos/hospital-dashboard/index.html#/screen2`
+- Topology editor: `/demos/topo-tool/index.html`
+
+Both apps use local assets. The hospital dashboard uses sample data and an offline map preview; live weather and camera streams are not available. The topology editor stores edits in this browser's local storage and supports its built-in backup export/import.
