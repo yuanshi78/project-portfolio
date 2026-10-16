@@ -50,10 +50,10 @@ const renderSegments = text => {
 
 // 👉 页内子标签（不增路由）：概览 / 专业技能 / 自我评价 / 职业想法
 const tabs = [
-  { key: 'overview', label: '概览', icon: 'ri-user-line' },
-  { key: 'skills', label: '专业技能', icon: 'ri-tools-line' },
-  { key: 'evaluation', label: '自我评价', icon: 'ri-speak-line' },
-  { key: 'ideas', label: '职业想法', icon: 'ri-lightbulb-line' },
+  { key: 'overview', i18nKey: 'tabOverview', icon: 'ri-user-line' },
+  { key: 'skills', i18nKey: 'tabSkills', icon: 'ri-tools-line' },
+  { key: 'evaluation', i18nKey: 'tabEvaluation', icon: 'ri-speak-line' },
+  { key: 'ideas', i18nKey: 'tabIdeas', icon: 'ri-lightbulb-line' },
 ]
 const activeTab = ref('overview')
 
@@ -91,7 +91,7 @@ const currentSections = computed(() => {
           :value="t.key"
           :prepend-icon="smAndDown ? undefined : t.icon"
         >
-          {{ t.label }}
+          {{ $t(t.i18nKey) }}
         </VTab>
       </VTabs>
     </VCard>

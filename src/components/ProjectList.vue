@@ -107,7 +107,7 @@ const placeholderInitial = prj => {
                     icon="ri-arrow-right-line"
                     size="18"
                     class="me-1"
-                  />查看详情
+                  />{{ $t('viewDetail') }}
                 </span>
               </div>
             </div>
@@ -123,7 +123,7 @@ const placeholderInitial = prj => {
                   label
                   class="me-1 mb-1"
                 >
-                  {{ tag }}
+                  {{ $L(tag) }}
                 </VChip>
               </div>
             </VCardItem>
@@ -155,7 +155,7 @@ const placeholderInitial = prj => {
       size="48"
       class="mb-2"
     />
-    <p>暂无项目</p>
+    <p>{{ $t('noProjects') }}</p>
   </div>
 </template>
 
@@ -245,6 +245,11 @@ const placeholderInitial = prj => {
   font-weight: 700;
   // 基准 15px（text-h6），接入字号缩放（覆盖工具类需 !important）
   font-size: calc(0.9375rem * var(--content-font-scale, 1)) !important;
+  // 👉 名称允许换行，避免长名 / 长英文词溢出卡片
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 // 👉 标签 chips 接入字号缩放（基准 13px 小号 chip）

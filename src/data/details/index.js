@@ -7,20 +7,24 @@
 // 每个 json 文件是一个数组，条目结构与原来的单文件 details.json 一致。
 // category 字段可写可不写：没写时自动取文件名，保证与 companies.json 的单位标识一致。
 
+import { localize } from '@/i18n'
+
 const modules = import.meta.glob('./*.json', { eager: true })
 
-export const details = Object.keys(modules)
-  .sort()
-  .flatMap(file => {
-    // 文件名即单位标识（如 rainbow.json → category: "rainbow"）
-    const category = file.replace(/^\.\//, '').replace(/\.json$/, '')
-    const mod = modules[file]
-    const list = mod.default ?? mod
+export const details = localize(
+  Object.keys(modules)
+    .sort()
+    .flatMap(file => {
+      // 文件名即单位标识（如 rainbow.json → category: "rainbow"）
+      const category = file.replace(/^\.\//, '').replace(/\.json$/, '')
+      const mod = modules[file]
+      const list = mod.default ?? mod
 
-    return (Array.isArray(list) ? list : []).map(entry => ({
-      ...entry,
-      category: entry.category ?? category,
-    }))
-  })
+      return (Array.isArray(list) ? list : []).map(entry => ({
+        ...entry,
+        category: entry.category ?? category,
+      }))
+    }),
+)
 
 export default details

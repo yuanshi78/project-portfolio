@@ -5,15 +5,21 @@ import Projects from './projects.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
 import { ref, reactive, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useDisplay } from 'vuetify'
+import { useRouter } from 'vue-router'
 import { personal } from '@/data/personal'
 import { parseEmphasis } from '@/utils/emphasis'
 import { getYears, getExpYears } from '@/utils/years'
+import { t } from '@/i18n'
 import { visibleItems } from '@/utils/visibility'
-import shortcutsConfig from '@/data/shortcuts.json'
+import shortcutsConfig from '@/data/shortcuts'
 
 const data = personal
 const meta = data.meta
 const tabs = data.tabs
+
+// 👉 卡片整体可点击进入详情（点击图片不再放大，而是跳转到对应路由）
+const router = useRouter()
+const navTo = to => { if (to) router.push(to) }
 
 const { smAndDown } = useDisplay()
 
@@ -21,12 +27,12 @@ const { smAndDown } = useDisplay()
 // 并关联全局快捷键（shortcuts.json 的 shortcuts，按 `to` 匹配），用于展示键位提示
 const quickLinks = (shortcutsConfig?.quickLinks ?? []).map(q => {
   const sc = (shortcutsConfig?.shortcuts ?? []).find(s => s.to === q.to)
-  return { ...q, combo: sc?.combo ?? '' }
+  return { link: q, combo: sc?.combo ?? '' }
 })
 
 // 👉 简历下载（来自 personal.json 的 cv 配置）
 const cvUrl = computed(() => data.cv?.url ?? '')
-const cvLabel = computed(() => data.cv?.label ?? '下载简历')
+const cvLabel = computed(() => data.cv?.label ?? t('downloadResume'))
 
 // 👉 产品：第一个作为「精选大卡」，其余按普通卡片网格展示
 const productItems = computed(() => visibleItems(data.products?.items ?? []))
@@ -226,16 +232,16 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
                   prepend-icon="ri-rocket-line"
                   class="mb-2"
                 >
-                  快速入口
+                  {{ $t('quickEntry') }}
                 </VBtn>
               </template>
               <VList density="compact">
                 <VListItem
                   v-for="q in quickLinks"
-                  :key="q.to"
-                  :to="q.to"
-                  :prepend-icon="q.icon"
-                  :title="q.label"
+                  :key="q.link.to"
+                  :to="q.link.to"
+                  :prepend-icon="q.link.icon"
+                  :title="q.link.label"
                 >
                   <template #append>
                     <span
@@ -327,7 +333,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
       class="anchor-section"
     >
       <div class="section-title mb-3">
-        产品
+        {{ $t('products') }}
       </div>
 
       <template v-if="featuredProduct">
@@ -335,8 +341,12 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
           class="featured-card mb-6"
           rounded="xl"
           elevation="2"
+          @click="navTo(featuredProduct.to)"
         >
-          <ImageGallery :images="featuredProduct.images" />
+          <ImageGallery
+            :images="featuredProduct.images"
+            :navigate-to="featuredProduct.to"
+          />
           <VCardText class="pa-8">
             <VChip
               v-if="featuredProduct.status"
@@ -366,7 +376,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
               color="primary"
               prepend-icon="ri-arrow-right-line"
             >
-              查看详情
+              {{ $t('viewDetail') }}
             </VBtn>
           </VCardText>
         </VCard>
@@ -387,10 +397,14 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
               class="flex-1-1"
               rounded="lg"
               elevation="1"
+              @click="navTo(item.to)"
             >
-              <ImageGallery :images="item.images" />
+              <ImageGallery
+                :images="item.images"
+                :navigate-to="item.to"
+              />
               <VCardItem>
-                <VCardTitle>
+                <VCardTitle class="product-title">
                   <RouterLink
                     :to="item.to"
                     class="text-decoration-none"
@@ -417,7 +431,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
                   :to="item.to"
                   class="text-decoration-none d-inline-flex align-center text-primary"
                 >
-                  <span>查看详情</span>
+                  <span>{{ $t('viewDetail') }}</span>
                   <VIcon
                     icon="ri-arrow-right-line"
                     size="18"
@@ -457,7 +471,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
             @click="smAndDown && toggle('about')"
           >
             <div class="section-head text-h5 font-weight-bold">
-              关于我
+              {{ $t('aboutMe') }}
             </div>
             <VIcon
               v-if="smAndDown"
@@ -502,7 +516,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
             @click="smAndDown && toggle('employers')"
           >
             <div class="section-head text-h5 font-weight-bold">
-              致雇主 / 合作意向
+              {{ $t('forEmployers') }}
             </div>
             <VIcon
               v-if="smAndDown"
@@ -543,7 +557,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
         :class="{ 'is-toggle': smAndDown }"
         @click="smAndDown && toggle('profile')"
       >
-        个人信息
+        {{ $t('personalInfo') }}
         <VIcon
           v-if="smAndDown"
           :icon="isExpanded('profile') ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'"
@@ -861,6 +875,12 @@ body .hero-chip.v-chip {
   font-size: calc(0.9375rem * var(--content-font-scale, 1));
   line-height: 1.7;
   color: rgba(var(--v-theme-on-surface), 0.85);
+  // 👉 描述限 3 行，避免长文撑高卡片（与项目卡片一致）
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 // 👉 其余文字接入字号缩放：卡片标题 / 副标题 / 精选产品标题
@@ -876,6 +896,19 @@ body .hero-chip.v-chip {
 
 .featured-title {
   font-size: calc(1.125rem * var(--content-font-scale, 1)) !important;
+  // 👉 名称允许换行，避免长名 / 长英文词溢出卡片
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+// 👉 其余产品名允许换行
+.product-title {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 // 👉 快捷键位提示（kbd 风格小标签）

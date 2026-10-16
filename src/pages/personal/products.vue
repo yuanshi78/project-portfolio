@@ -2,6 +2,7 @@
 // 产品卡片：内容来自 @/data/personal.json 的 products 字段。
 // 与「项目」（各公司经历）区分：这里只放自己研发 / 主导的产品。
 // 每个产品可在 JSON 中配置 images（相对路径数组），卡片顶部展示封面 + 缩略图 + 灯箱。
+import { useRouter } from 'vue-router'
 import ImageGallery from '@/components/ImageGallery.vue'
 import { visibleItems } from '@/utils/visibility'
 
@@ -11,6 +12,10 @@ defineProps({
     required: true,
   },
 })
+
+// 👉 卡片整体可点击进入详情（点击图片不再放大，而是跳转到对应路由）
+const router = useRouter()
+const goTo = to => { if (to) router.push(to) }
 </script>
 
 <template>
@@ -31,10 +36,14 @@ defineProps({
           class="flex-1-1 product-card"
           rounded="lg"
           elevation="1"
+          @click="goTo(item.to)"
         >
-          <ImageGallery :images="item.images" />
+          <ImageGallery
+            :images="item.images"
+            :navigate-to="item.to"
+          />
           <VCardItem>
-            <VCardTitle>
+            <VCardTitle class="product-title">
               <RouterLink
                 :to="item.to"
                 class="text-decoration-none"
@@ -60,7 +69,7 @@ defineProps({
               :to="item.to"
               class="text-decoration-none d-inline-flex align-center mt-2 text-primary"
             >
-              <span>查看详情</span>
+              <span>{{ $t('viewDetail') }}</span>
               <VIcon
                 icon="ri-arrow-right-line"
                 size="18"
@@ -101,5 +110,19 @@ defineProps({
   font-size: calc(0.875rem * var(--content-font-scale, 1));
   line-height: 1.6;
   color: rgba(var(--v-theme-on-surface), 0.85);
+  // 👉 描述限 3 行，避免长文撑高卡片（与项目卡片一致）
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// 👉 产品名允许换行，避免长名 / 长英文词溢出卡片
+.product-title {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
 }
 </style>

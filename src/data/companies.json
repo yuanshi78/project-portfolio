@@ -1,147 +1,282 @@
 [
   {
     "category": "self",
-    "company": "自研产品",
+    "company": {
+      "zh": "自研产品",
+      "ru": "Собственные продукты",
+      "en": "Self-developed Products",
+      "be": "Уласныя прадукты"
+    },
     "icon": "ri-flask-line",
     "projects": [
       {
         "slug": "aethera",
-        "name": "智能多模态数据呈现工具Aethera",
-        "description": "**Aethera** 是智能多模态数据呈现工具：以 **plugin-first** 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
+        "name": {
+          "zh": "智能多模态数据呈现工具Aethera",
+          "ru": "Интеллектуальный инструмент мультимодального представления данных Aethera",
+          "en": "Intelligent Multimodal Data-Presentation Tool Aethera",
+          "be": "Інтэлектуальны інструмент мультымадальнага прадстаўлення дадзеных Aethera"
+        },
+        "description": {
+          "zh": "**Aethera** 是智能多模态数据呈现工具：以 **plugin-first** 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
+          "ru": "**Aethera** — инструмент интеллектуального мультимодального представления данных: построен на плагин-ориентированной (plugin-first) микроядерной архитектуре, поддерживает мультимодальное представление и ИИ-управляемую настройку, ориентирован на будущее распределённое и контекстное взаимодействие с информацией.",
+          "en": "**Aethera** is an intelligent multimodal data-presentation tool: built on a plugin-first microkernel architecture, supporting multimodal presentation and AI-driven configuration, aimed at future distributed, ambient information interaction.",
+          "be": "**Aethera** — інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных: пабудаваны на плагін-арыентаванай (plugin-first) мікраядзернай архітэктуры, падтрымлівае мультымадальнае прадстаўленне і ШІ-кіраваную наладку, арыентаваны на будучае размеркаванае і кантэкстнае ўзаемадзеянне з інфармацыяй."
+        },
         "tags": [
-          "vue",
-          "多模态数据呈现",
+          "Vue",
+          {
+            "zh": "多模态数据呈现",
+            "ru": "Мультимодальное представление данных",
+            "en": "Multimodal Data Presentation",
+            "be": "Мультымадальнае прадстаўленне дадзеных"
+          },
           "AI",
-          "插件化架构"
+          {
+            "zh": "插件化架构",
+            "ru": "Плагин-ориентированная архитектура",
+            "en": "Plugin-based Architecture",
+            "be": "Плагін-арыентаваная архітэктура"
+          }
         ]
       }
     ]
   },
   {
     "category": "aidiweike",
-    "company": "西安艾迪韦科网络科技有限公司",
+    "company": {
+      "zh": "西安艾迪韦科网络科技有限公司",
+      "ru": "Сиань Айдивейкэ Нетворк Текнолоджи",
+      "en": "Xi'an Aidiweike Network Technology Co., Ltd.",
+      "be": "Сіянь Айдзівэйкэ Нэтварк Тэкнолоджы"
+    },
     "icon": "ri-building-2-line",
     "projects": [
       {
         "slug": "nocobase-plugins",
-        "name": "Nocobase插件",
+        "name": {
+          "zh": "Nocobase插件",
+          "ru": "Плагины Nocobase",
+          "en": "Nocobase Plugins",
+          "be": "Плагіны Nocobase"
+        },
         "image": "rainbow/nocobase/echarts-plugin.png",
-        "description": "**Nocobase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
+        "description": {
+          "zh": "**Nocobase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
+          "ru": "**Nocobase** — исключительно расширяемая no-code платформа. Особенность: все функции реализованы в виде плагинов. Разработчики могут создавать собственные плагины",
+          "en": "**Nocobase** is a highly extensible no-code development platform. Its feature: all functionality is implemented as plugins. Developers can create their own plugins",
+          "be": "**Nocobase** — выключна пашыральная no-code платформа. Асаблівасць: усе функцыі рэалізаваны ў выглядзе плагінаў. Распрацоўшчыкі могуць ствараць уласныя плагіны"
+        },
         "tags": [
-          "react",
+          "React",
           "TypeScript",
-          "ant-design"
+          "Ant Design"
         ]
       },
       {
         "slug": "smart_operation",
-        "name": "可视化运维系统",
+        "name": {
+          "zh": "可视化运维系统",
+          "ru": "Система визуализированной эксплуатации",
+          "en": "Visual O&M System",
+          "be": "Сістэма візуалізаванай эксплуатацыі"
+        },
         "image": "rainbow/project4.png",
-        "description": "区域电，水，气系统运维管理平台",
+        "description": {
+          "zh": "区域电，水，气系统运维管理平台",
+          "ru": "Платформа управления эксплуатацией региональных систем электро-, водо- и газоснабжения",
+          "en": "Operations management platform for regional electricity, water and gas systems",
+          "be": "Платформа кіравання эксплуатацыяй рэгіянальных сістэм электра-, вада- і газазабеспячэння"
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "DataEase",
-          "echarts",
+          "ECharts",
           "diboot",
-          "ant-design-vue"
+          "Ant Design Vue"
         ]
       },
       {
         "slug": "cinema_hall",
-        "name": "票务管理系统",
+        "name": {
+          "zh": "票务管理系统",
+          "ru": "Система управления билетами",
+          "en": "Ticketing Management System",
+          "be": "Сістэма кіравання білетамі"
+        },
         "image": "rainbow/project3.png",
-        "description": "该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等",
+        "description": {
+          "zh": "该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等",
+          "ru": "Система для управления билетной информацией театра, информацией о заказах, ценах, правилах ценообразования и их деталях",
+          "en": "System for managing theater ticketing info, orders, fares, fare rules and their details",
+          "be": "Сістэма для кіравання білетнай інфармацыяй тэатра, інфармацыяй аб заказах, коштах, правілах ценаўтварэння і іх дэталях"
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "diboot",
-          "ant-design-vue",
-          "svg"
+          "Ant Design Vue",
+          "SVG"
         ]
       },
       {
         "slug": "pharmacy",
-        "name": "兆益生物生产管理系统",
+        "name": {
+          "zh": "兆益生物生产管理系统",
+          "ru": "Система управления производством Zhaoyi Bio",
+          "en": "Zhaoyi Bio Production Management System",
+          "be": "Сістэма кіравання вытворчасцю Zhaoyi Bio"
+        },
         "image": "rainbow/pharmacy/1.png",
-        "description": "管理生产兽药的系统",
+        "description": {
+          "zh": "管理生产兽药的系统",
+          "ru": "Система управления производством ветеринарных препаратов",
+          "en": "System for managing veterinary drug production",
+          "be": "Сістэма кіравання вытворчасцю ветэрынарных прэпаратаў"
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "diboot",
-          "ant-design-vue",
+          "Ant Design Vue",
           "Colaiven",
-          "echarts"
+          "ECharts"
         ]
       }
     ]
   },
   {
     "category": "rainbow",
-    "company": "西安睿博科技股份有限公司",
+    "company": {
+      "zh": "西安睿博科技股份有限公司",
+      "ru": "Сиань Жуйбо Текнолоджи",
+      "en": "Xi'an Ruibo Technology Co., Ltd.",
+      "be": "Сіянь Жуйбо Тэкнолоджы"
+    },
     "icon": "ri-rainbow-line",
     "projects": [
       {
         "slug": "smart_area",
-        "name": "智慧区域",
+        "name": {
+          "zh": "智慧区域",
+          "ru": "Умный район",
+          "en": "Smart Region",
+          "be": "Разумны раён"
+        },
         "image": "rainbow/smart-area/1.png",
-        "description": "大屏系统包括三个大屏: 设备运维大屏, 综合态势大屏和智慧安防大屏. 每个大屏展示相关的数据. 大屏中间展示区域地图或监控设备拓扑图 . 地图上展示热力图, 摄像头.可以播放来自摄像头的视频. 拓扑图上展示监控设备结构,设备网络速率和状态. 拓扑图工具用于创建监控设备拓扑图",
+        "description": {
+          "zh": "大屏系统包括三个大屏: 设备运维大屏, 综合态势大屏和智慧安防大屏. 每个大屏展示相关的数据. 大屏中间展示区域地图或监控设备拓扑图 . 地图上展示热力图, 摄像头.可以播放来自摄像头的视频. 拓扑图上展示监控设备结构,设备网络速率和状态. 拓扑图工具用于创建监控设备拓扑图",
+          "ru": "Система больших экранов включает три экрана: эксплуатация оборудования, комплексная ситуация и умная безопасность. Каждый экран показывает данные. В центре — карта района или топология наблюдения. На карте — тепловые карты и камеры с видео. На топологии — структура устройств, скорость сети и состояние. Инструмент топологии создаёт топологии устройств.",
+          "en": "The big-screen system includes three screens: equipment O&M, comprehensive situation, and smart security. Each shows related data. The center shows a district map or surveillance topology. The map shows heatmaps and cameras with live video. The topology shows device structure, network speed and status. The topology tool creates monitoring device topologies.",
+          "be": "Сістэма вялікіх экранаў уключае тры экраны: эксплуатацыя абсталявання, комплексная сітуацыя і разумная бяспека. Кожны экран паказвае даныя. У цэнтры — карта раёна або топалогія назірання. На карце — цеплавыя карты і камеры з відэа. На топалогіі — структура прылад, хуткасць сеткі і стан. Інструмент топалогіі стварае топалогіі прылад."
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
-          "echarts"
+          "ECharts"
         ]
       },
       {
         "slug": "topo_tool",
-        "name": "拓扑图工具",
+        "name": {
+          "zh": "拓扑图工具",
+          "ru": "Инструмент топологии",
+          "en": "Topology Tool",
+          "be": "Інструмент топалогіі"
+        },
         "image": "rainbow/project2.png",
-        "description": "创建监控设备拓扑图的应用",
+        "description": {
+          "zh": "创建监控设备拓扑图的应用",
+          "ru": "Приложение для создания топологий устройств мониторинга",
+          "en": "App for creating monitoring device topologies",
+          "be": "Прыкладанне для стварэння топалогій прылад маніторынгу"
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
-          "twave js"
+          "TWaver JS"
         ]
       },
       {
         "slug": "production_sales_platform",
-        "name": "产运销一体化平台",
-        "description": "山西国新产运销一体化大数据平台，打通 LNG 生产—运输—销售全链条，实现产运销动态平衡与智能定价。",
+        "name": {
+          "zh": "产运销一体化平台",
+          "ru": "Платформа интеграции производства-перевозок-сбыта",
+          "en": "Production-Transport-Sales Integration Platform",
+          "be": "Платформа інтэграцыі вытворчасці-перавозак-збыту"
+        },
+        "description": {
+          "zh": "山西国新产运销一体化大数据平台，打通 LNG 生产—运输—销售全链条，实现产运销动态平衡与智能定价。",
+          "ru": "Большая платформа данных Sinochem для интеграции производства—перевозок—сбыта СПГ, связывающая весь цикл и обеспечивающая динамический баланс и умное ценообразование.",
+          "en": "Shanxi Sinochem production-transport-sales big-data platform, connecting the LNG production–transport–sales chain for dynamic balance and smart pricing.",
+          "be": "Вялікая платформа дадзеных Sinochem для інтэграцыі вытворчасці—перавозак—збыту СПГ, якая звязвае ўвесь цыкл і забяспечвае дынамічны баланс і разумнае ценаўтварэнне."
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "ECharts"
         ]
       },
       {
         "slug": "power_distribution_monitor",
-        "name": "电力配电设备监控系统",
+        "name": {
+          "zh": "电力配电设备监控系统",
+          "ru": "Система мониторинга электрораспределительного оборудования",
+          "en": "Power Distribution Equipment Monitoring System",
+          "be": "Сістэма маніторынгу электраразмеркавальнага абсталявання"
+        },
         "image": "rainbow/power-distribution/1.jpg",
-        "description": "国网临汾供电公司设备综合管控中心，融汇视频监控、消防、安防、环境监测等多系统数据，实现监测指挥大屏可视化。",
+        "description": {
+          "zh": "国网临汾供电公司设备综合管控中心，融汇视频监控、消防、安防、环境监测等多系统数据，实现监测指挥大屏可视化。",
+          "ru": "Центр комплексного управления оборудованием Линфэньского филиала State Grid: объединение данных видеонаблюдения, пожарной безопасности, охраны и мониторинга среды для визуализации на командном экране.",
+          "en": "Linfen Power Supply equipment control center: integrates video, fire, security and environmental monitoring data for command-screen visualization.",
+          "be": "Цэнтр комплекснага кіравання абсталяваннем Лінфэньскага філіяла State Grid: аб'яднанне даных відэаназірання, пажарнай бяспекі, аховы і маніторынгу асяроддзя для візуалізацыі на камандным экране."
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "ECharts"
         ]
       },
       {
         "slug": "guoxin_lng",
-        "name": "国新LNG平台",
+        "name": {
+          "zh": "国新LNG平台",
+          "ru": "Платформа Sinochem LNG",
+          "en": "Sinochem LNG Platform",
+          "be": "Платформа Sinochem LNG"
+        },
         "image": "rainbow/guoxin-lng/1.png",
-        "description": "LNG 天然气供应链云平台，含产运销、危化品调度、集中管控、终端销售、智能定价等 8 个子系统，已在华新燃气集团上线。",
+        "description": {
+          "zh": "LNG 天然气供应链云平台，含产运销、危化品调度、集中管控、终端销售、智能定价等 8 个子系统，已在华新燃气集团上线。",
+          "ru": "Облачная платформа цепочки поставок природного газа СПГ: 8 подсистем (производство-перевозки-сбыт, диспетчеризация опасных грузов, централизованное управление, розничные продажи, умное ценообразование), запущена в China Huanxin Gas Group.",
+          "en": "LNG natural-gas supply-chain cloud platform with 8 subsystems (production-transport-sales, hazardous-chemical dispatch, centralized control, terminal sales, smart pricing), live at China Huanxin Gas Group.",
+          "be": "Воблачная платформа ланцуга паставак прыроднага газу СПГ: 8 падсістэм (вытворчасць-перавозкі-збыт, дыспетчарызацыя небяспечных грузаў, цэнтралізаванае кіраванне, рознічныя продажы, разумнае ценаўтварэнне), запушчана ў China Huanxin Gas Group."
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "ECharts"
         ]
       },
       {
         "slug": "xingfu_lindai",
-        "name": "幸福林带智慧管控平台",
+        "name": {
+          "zh": "幸福林带智慧管控平台",
+          "ru": "Платформа умного управления Xingfu Lindai",
+          "en": "Xingfu Lindai Smart Management Platform",
+          "be": "Платформа разумнага кіравання Xingfu Lindai"
+        },
         "image": "rainbow/xingfu-lindai/1.png",
-        "description": "西安幸福林带「世纪工程」的智慧管控平台，投资 8300 万元，统一管控 5.8 公里区域内十几个子系统、上万部硬件设备。",
+        "description": {
+          "zh": "西安幸福林带「世纪工程」的智慧管控平台，投资 8300 万元，统一管控 5.8 公里区域内十几个子系统、上万部硬件设备。",
+          "ru": "Платформа умного управления «вековым проектом» Сианя Xingfu Lindai: инвестиции 83 млн юаней, единое управление десятками подсистем и десятками тысяч устройств на участке 5,8 км.",
+          "en": "Smart management platform for Xi'an's Xingfu Lindai 'century project': 83M RMB investment, unified control of a dozen subsystems and tens of thousands of devices across 5.8 km.",
+          "be": "Платформа разумнага кіравання «векавым праектам» Сіяня Xingfu Lindai: інвестыцыі 83 млн юаняў, адзінае кіраванне дзясяткамі падсістэм і дзясяткамі тысяч прылад на ўчастку 5,8 км."
+        },
         "tags": [
-          "vue",
+          "Vue",
           "JavaScript",
           "ECharts"
         ]
@@ -150,25 +285,50 @@
   },
   {
     "category": "jinhe",
-    "company": "陕西金合信息科技股份有限公司",
+    "company": {
+      "zh": "陕西金合信息科技股份有限公司",
+      "ru": "Шэньси Цзиньхэ Информационные технологии",
+      "en": "Shaanxi Jinhe Information Technology Co., Ltd.",
+      "be": "Шэньсі Цзіньхэ Інфармацыйныя тэхналогіі"
+    },
     "icon": "ri-building-line",
     "projects": [
       {
         "slug": "chemistry_plant",
-        "name": "中煤陕西应急指挥系统",
-        "description": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统",
+        "name": {
+          "zh": "中煤陕西应急指挥系统",
+          "ru": "Система аварийного командования Shaanxi China Coal",
+          "en": "Shaanxi China Coal Emergency Command System",
+          "be": "Сістэма аварыйнага камандавання Shaanxi China Coal"
+        },
+        "description": {
+          "zh": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统",
+          "ru": "Проект — система предупреждения и мониторинга для химического завода China Coal в Ордосе.",
+          "en": "System developed for a China Coal chemical plant in Ordos: early-warning and monitoring.",
+          "be": "Праект — сістэма папярэджання і маніторынгу для хімічнага завода China Coal в Ордосе."
+        },
         "tags": [
-          "vue 2",
+          "Vue 2",
           "JavaScript",
-          "Cesium js"
+          "CesiumJS"
         ]
       },
       {
         "slug": "ruidebaoer",
-        "name": "瑞德宝尔智慧矿山",
-        "description": "陕西瑞德宝尔投资有限公司安全，生产，运营管理系统",
+        "name": {
+          "zh": "瑞德宝尔智慧矿山",
+          "ru": "Умная шахта Ruidebaoer",
+          "en": "Ruidebaoer Smart Mine",
+          "be": "Разумная шахта Ruidebaoer"
+        },
+        "description": {
+          "zh": "陕西瑞德宝尔投资有限公司安全，生产，运营管理系统",
+          "ru": "Система безопасности, производства и эксплуатации Shaanxi Ruidebaoer Investment Co., Ltd.",
+          "en": "Safety, production and operations management system for Shaanxi Ruidebaoer Investment Co., Ltd.",
+          "be": "Сістэма бяспекі, вытворчасці і эксплуатацыі Shaanxi Ruidebaoer Investment Co., Ltd."
+        },
         "tags": [
-          "vue 2",
+          "Vue 2",
           "JavaScript"
         ]
       }
@@ -176,32 +336,57 @@
   },
   {
     "category": "qinkuai",
-    "company": "陕西秦快互联科技有限公司",
+    "company": {
+      "zh": "陕西秦快互联科技有限公司",
+      "ru": "Шэньси Цинькуай Интернет-технологии",
+      "en": "Shaanxi Qinkuai Internet Technology Co., Ltd.",
+      "be": "Шэньсі Цінькуай Інтэрнэт-тэхналогіі"
+    },
     "icon": "ri-building-line",
     "projects": [
       {
         "slug": "qintianxia",
         "name": "秦天下",
         "image": "qinkuai/qinkuai1.png",
-        "description": "企业差旅管理后台，覆盖申请审批、机票与酒店订单及费用统计。",
+        "description": {
+          "zh": "企业差旅管理后台，覆盖申请审批、机票与酒店订单及费用统计。",
+          "ru": "Бэк-офис управления деловыми поездками предприятия: заявки и согласования, заказы на авиабилеты и отели, статистика расходов.",
+          "en": "Corporate travel management back-office covering approvals, flight/hotel orders and expense statistics.",
+          "be": "Бэк-офіс кіравання дзелавымі паездкамі прадпрыемства: заяўкі і ўзгадненні, заказы на авіябілеты і гатэлі, статыстыка выдаткаў."
+        },
         "tags": [
-          "企业差旅",
-          "审批管理",
-          "订单与报表"
+          "JavaScript",
+          "HTML",
+          "CSS"
         ]
       }
     ]
   },
   {
     "category": "shuzixinxi",
-    "company": "陕西数字信息技术有限公司",
+    "company": {
+      "zh": "陕西数字信息技术有限公司",
+      "ru": "Шэньси Цифровые информационные технологии",
+      "en": "Shaanxi Digital Information Technology Co., Ltd.",
+      "be": "Шэньсі Лічбавыя інфармацыйныя тэхналогіі"
+    },
     "icon": "ri-computer-line",
     "projects": [
       {
         "slug": "book_reader",
-        "name": "谷堆书城",
+        "name": {
+          "zh": "谷堆书城",
+          "ru": "Книжный город Gudui",
+          "en": "Gudui Book Mall",
+          "be": "Кніжны горад Gudui"
+        },
         "image": "shuzixinxi/reader/1.png",
-        "description": "提供在线阅读电子书的服务的平台",
+        "description": {
+          "zh": "提供在线阅读电子书的服务的平台",
+          "ru": "Платформа для онлайн-чтения электронных книг",
+          "en": "Platform providing online e-book reading service",
+          "be": "Платформа для анлайн-чытання электронных кніг"
+        },
         "tags": [
           "HTML",
           "CSS",
@@ -210,9 +395,19 @@
       },
       {
         "slug": "dinosaur",
-        "name": "魔幻恐龙",
+        "name": {
+          "zh": "魔幻恐龙",
+          "ru": "Волшебный динозавр",
+          "en": "Magic Dinosaur",
+          "be": "Чароўны дыназаўр"
+        },
         "image": "shuzixinxi/game/1.png",
-        "description": "小游戏",
+        "description": {
+          "zh": "小游戏",
+          "ru": "Мини-игра",
+          "en": "Mini-game",
+          "be": "Міні-гульня"
+        },
         "tags": [
           "HTML5",
           "CSS",
@@ -222,9 +417,19 @@
       },
       {
         "slug": "china_actor",
-        "name": "中国演员网",
+        "name": {
+          "zh": "中国演员网",
+          "ru": "Китайские актёры",
+          "en": "China Actors",
+          "be": "Кітайскія акцёры"
+        },
         "image": "shuzixinxi/actors/1.png",
-        "description": "国内规模最大的影视商务网站（www.chinaactor.com），提供影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品等服务。",
+        "description": {
+          "zh": "国内规模最大的影视商务网站（www.chinaactor.com），提供影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品等服务。",
+          "ru": "Крупнейший в Китае сайт киноиндустрии (www.chinaactor.com): подбор персонала, кинобизнес, база актёров, новости, агентства, оригинальные работы.",
+          "en": "China's largest film-business website (www.chinaactor.com): casting, film business, actor database, news, agencies, original works.",
+          "be": "Найбуйнейшы ў Кітаі сайт кінаіндустрыі (www.chinaactor.com): падбор персаналу, кінабізнес, база акцёраў, навіны, агенцтвы, арыгінальныя працы."
+        },
         "tags": [
           "HTML",
           "CSS",
@@ -236,14 +441,24 @@
   },
   {
     "category": "eds",
-    "company": "EDS武汉",
+    "company": {
+      "zh": "EDS武汉",
+      "ru": "EDS Ухань",
+      "en": "EDS Wuhan",
+      "be": "EDS Ухань"
+    },
     "icon": "ri-plane-line",
     "projects": [
       {
         "slug": "runway",
         "image": "eds/cover.jpg",
         "name": "CO Runway, OnePass",
-        "description": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
+        "description": {
+          "zh": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
+          "ru": "Программная система программы поощрения часто летающих пассажиров (Frequent Flyer) авиакомпании Continental Airlines (CO) США.",
+          "en": "Frequent Flyer rewards software system for Continental Airlines (CO), USA.",
+          "be": "Праграмная сістэма праграмы заахвочвання часта летаючых пасажыраў (Frequent Flyer) авіякампаніі Continental Airlines (CO) ЗША."
+        },
         "tags": [
           "IBM zSeries",
           "IBM z/OS",
@@ -256,14 +471,29 @@
   },
   {
     "category": "iba",
-    "company": "IBA（国际商业联盟），白俄罗斯",
+    "company": {
+      "zh": "IBA（国际商业联盟），白俄罗斯",
+      "ru": "IBA (International Business Alliance), Беларусь",
+      "en": "IBA (International Business Alliance), Belarus",
+      "be": "IBA (International Business Alliance), Беларусь"
+    },
     "icon": "ri-global-line",
     "projects": [
       {
         "slug": "planning_engine",
         "image": "iba/cover.jpg",
-        "name": "Central Planning Engine系统",
-        "description": "IBM美国微电子部Central Planning Engine系统",
+        "name": {
+          "zh": "Central Planning Engine系统",
+          "ru": "Система Central Planning Engine",
+          "en": "Central Planning Engine System",
+          "be": "Сістэма Central Planning Engine"
+        },
+        "description": {
+          "zh": "IBM美国微电子部Central Planning Engine系统",
+          "ru": "Система Central Planning Engine подразделения микроэлектроники IBM США",
+          "en": "IBM US Microelectronics Central Planning Engine system",
+          "be": "Сістэма Central Planning Engine падраздзялення мікраэлектронікі IBM ЗША"
+        },
         "tags": [
           "IBM zSeries",
           "IBM z/OS",
@@ -277,40 +507,19 @@
         "slug": "adm",
         "image": "iba/cover.jpg",
         "name": "IBM法国ADM France BA",
-        "description": "IBM法国ADM France BA",
-        "tags": [
-          "IBM zSeries",
-          "IBM z/OS",
-          "JCL",
-          "C/C++",
-          "DB2",
-          "SQL",
-          "CICS"
-        ]
+        "description": "IBM法国ADM France BA"
       },
       {
         "slug": "mie",
         "image": "iba/cover.jpg",
         "name": "MIE France",
-        "description": "IBM法国MIE France",
-        "tags": [
-          "TDI",
-          "JavaScript",
-          "DB2",
-          "SQL"
-        ]
+        "description": "IBM法国MIE France"
       },
       {
         "slug": "urt",
         "image": "iba/cover.jpg",
         "name": "URT Extractors ISD",
-        "description": "IBM法国URT Extractors ISD",
-        "tags": [
-          "Perl",
-          "korn-shell",
-          "DB2",
-          "SQL"
-        ]
+        "description": "IBM法国URT Extractors ISD"
       }
     ]
   }

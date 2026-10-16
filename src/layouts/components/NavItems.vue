@@ -33,7 +33,7 @@ watch(
 <template>
   <VerticalNavLink
     :item="{
-      title: '自我介绍',
+      title: $t('nav.profile'),
       to: '/person',
       icon: 'ri-home-smile-line'
     }"
@@ -44,7 +44,7 @@ watch(
     :item="{ title: c.company, icon: c.icon, isOpen: openMap[c.category] }"
   >
     <VerticalNavLink
-      :item="{ title: '项目综合', to: `/${c.category}/all`, icon: 'ri-apps-2-line' }"
+      :item="{ title: $t('nav.allProjects'), to: `/${c.category}/all`, icon: 'ri-apps-2-line' }"
     />
     <VerticalNavLink
       v-for="p in c.projects"

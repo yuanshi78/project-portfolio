@@ -32,7 +32,7 @@ const projects = computed(() => getProjects(category.value))
           />
           <div class="me-auto overview-heading">
             <p class="text-overline text-medium-emphasis mb-1 ls-1">
-              项目综合
+              {{ $t('nav.allProjects') }}
             </p>
             <h1 class="text-h6 text-sm-h5 text-md-h4 text-lg-h3 font-weight-bold overview-title">
               {{ company }}
@@ -47,7 +47,7 @@ const projects = computed(() => getProjects(category.value))
             prepend-icon="ri-folders-line"
             class="overview-count mt-1"
           >
-            {{ projects.length }} 个项目
+            {{ $t('projectsCount', { n: projects.length }) }}
           </VChip>
         </div>
       </VCardText>

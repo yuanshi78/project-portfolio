@@ -3,12 +3,22 @@
     {
       "combo": "Ctrl+Shift+A",
       "to": "/project/self/aethera",
-      "label": "Aethera 详情页"
+      "label": {
+        "zh": "Aethera 详情页",
+        "ru": "Страница Aethera",
+        "en": "Aethera Page",
+        "be": "Старонка Aethera"
+      }
     }
   ],
   "quickLinks": [
     {
-      "label": "Aethera 详情",
+      "label": {
+        "zh": "Aethera 详情",
+        "ru": "Подробнее об Aethera",
+        "en": "Aethera Details",
+        "be": "Падрабязней пра Aethera"
+      },
       "to": "/project/self/aethera",
       "icon": "ri-flashlight-line"
     }

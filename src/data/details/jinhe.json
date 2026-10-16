@@ -2,49 +2,124 @@
   {
     "category": "jinhe",
     "slug": "ruidebaoer",
-    "title": "瑞德宝尔智慧矿山",
+    "title": {
+      "zh": "瑞德宝尔智慧矿山",
+      "ru": "Умный рудник Ruidebaoer",
+      "en": "Ruidebaoer Smart Mine",
+      "be": "Разумны руднік Ruidebaoer"
+    },
     "date": "2019/07 - 2019/11",
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "项目的目标是为陕西瑞德宝尔投资有限公司提供安全、数字化生产、数字化运营、数字化资产管理平台。"
+          {
+            "zh": "项目的目标是为陕西瑞德宝尔投资有限公司提供安全、数字化生产、数字化运营、数字化资产管理平台。",
+            "ru": "Цель проекта — предоставить компании «Shaanxi Ruidebaoer Investment Co., Ltd.» платформу для безопасного, цифрового производства, цифровой эксплуатации и цифрового управления активами.",
+            "en": "The project's goal was to provide Shaanxi Ruidebaoer Investment Co., Ltd. with a platform for safe, digital production, digital operations, and digital asset management.",
+            "be": "Мэта праекта — прадаставіць кампаніі «Shaanxi Ruidebaoer Investment Co., Ltd.» платформу для бяспечнай, лічбавай вытворчасці, лічбавай эксплуатацыі і лічбавага кіравання актывамі."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. 基础安全、人员安全、环境安全、设备安全、生产安全管理",
-          "2. 运营管理",
-          "3. 资产管理"
+          {
+            "zh": "1. 基础安全、人员安全、环境安全、设备安全、生产安全管理",
+            "ru": "1. Управление безопасностью: базовая безопасность, безопасность персонала, экологическая безопасность, безопасность оборудования, безопасность производства",
+            "en": "1. Safety management: basic safety, personnel safety, environmental safety, equipment safety, and production safety",
+            "be": "1. Кіраванне бяспекай: базавая бяспека, бяспека персаналу, экалагічная бяспека, бяспека абсталявання, бяспека вытворчасці"
+          },
+          {
+            "zh": "2. 运营管理",
+            "ru": "2. Управление эксплуатацией",
+            "en": "2. Operations management",
+            "be": "2. Кіраванне эксплуатацыяй"
+          },
+          {
+            "zh": "3. 资产管理",
+            "ru": "3. Управление активами",
+            "en": "3. Asset management",
+            "be": "3. Кіраванне актывамі"
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 通过数字化管理，提高矿山安全管理、运营管理与资产管理效率"
+          {
+            "zh": "1. 通过数字化管理，提高矿山安全管理、运营管理与资产管理效率",
+            "ru": "1. Повысить эффективность управления безопасностью рудника, эксплуатацией и активами за счёт цифровизации",
+            "en": "1. Improve the efficiency of mine safety management, operations management, and asset management through digital management",
+            "be": "1. Павысіць эфектыўнасць кіравання бяспекай рудні, эксплуатацыяй і актывамі за кошт лічбавізацыі"
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "Vue 2, JavaScript"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端开发"
+          {
+            "zh": "前端开发",
+            "ru": "Фронтенд-разработка",
+            "en": "Front-end development",
+            "be": "Франтэнд-распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 负责前端开发，实现安全、运营、资产管理模块的数字化。"
+          {
+            "zh": "1. 负责前端开发，实现安全、运营、资产管理模块的数字化。",
+            "ru": "1. Отвечал за фронтенд-разработку, реализовав цифровизацию модулей безопасности, эксплуатации и управления активами.",
+            "en": "1. Responsible for front-end development, implementing the digitalization of the safety, operations, and asset-management modules.",
+            "be": "1. Адказваў за франтэнд-распрацоўку, рэалізаваўшы лічбавізацыю модуляў бяспекі, эксплуатацыі і кіравання актывамі."
+          }
         ]
       }
     ]
@@ -52,50 +127,130 @@
   {
     "category": "jinhe",
     "slug": "chemistry_plant",
-    "title": "中煤陕西应急指挥系统",
+    "title": {
+      "zh": "中煤陕西应急指挥系统",
+      "ru": "Система экстренного управления China Coal Shaanxi",
+      "en": "China Coal Shaanxi Emergency Command System",
+      "be": "Сістэма экстраннага кіравання China Coal Shaanxi"
+    },
     "date": "2019/01 - 2019/06",
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统。"
+          {
+            "zh": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统。",
+            "ru": "Проект — это система раннего предупреждения и мониторинга, разработанная для химического завода China Coal в Ордосе.",
+            "en": "The project is an early-warning and monitoring system developed for a chemical plant of China Coal in Ordos.",
+            "be": "Праект — гэта сістэма ранняга папярэджання і маніторынгу, распрацаваная для хімічнага завода China Coal ва Урдосе."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. 展示工厂区域 3D 模型",
-          "2. 展示事故情况：火灾、爆炸、泄露。展示伴随条件，比如风向和风速",
-          "3. 展示员工位置"
+          {
+            "zh": "1. 展示工厂区域 3D 模型",
+            "ru": "1. Отображение 3D-модели территории завода",
+            "en": "1. Display a 3D model of the plant area",
+            "be": "1. Адлюстраванне 3D-мадэлі тэрыторыі завода"
+          },
+          {
+            "zh": "2. 展示事故情况：火灾、爆炸、泄露。展示伴随条件，比如风向和风速",
+            "ru": "2. Отображение аварийных ситуаций: пожар, взрыв, утечка; показ сопутствующих условий, таких как направление и скорость ветра",
+            "en": "2. Display accident scenarios: fire, explosion, leak; show accompanying conditions such as wind direction and wind speed",
+            "be": "2. Адлюстраванне аварыйных сітуацый: пажар, выбух, ўцечка; паказ супутных умоваў, такіх як напрамак і хуткасць ветру"
+          },
+          {
+            "zh": "3. 展示员工位置",
+            "ru": "3. Отображение местоположения сотрудников",
+            "en": "3. Display employee locations",
+            "be": "3. Адлюстраванне месцазнаходжання супрацоўнікаў"
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 通过业务数字化提高业务效率",
-          "2. 提高安全监控的效率"
+          {
+            "zh": "1. 通过业务数字化提高业务效率",
+            "ru": "1. Повысить эффективность бизнеса за счёт его цифровизации",
+            "en": "1. Improve business efficiency through digitalization",
+            "be": "1. Павысіць эфектыўнасць бізнесу за кошт яго лічбавізацыі"
+          },
+          {
+            "zh": "2. 提高安全监控的效率",
+            "ru": "2. Повысить эффективность мониторинга безопасности",
+            "en": "2. Improve the efficiency of safety monitoring",
+            "be": "2. Павысіць эфектыўнасць маніторынгу бяспекі"
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "Vue 2, JavaScript, CesiumJS"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端开发"
+          {
+            "zh": "前端开发",
+            "ru": "Фронтенд-разработка",
+            "en": "Front-end development",
+            "be": "Франтэнд-распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 用 CesiumJS 创建了显示化工工厂区域的 3D 模型大屏平台。"
+          {
+            "zh": "1. 用 CesiumJS 创建了显示化工工厂区域的 3D 模型大屏平台。",
+            "ru": "1. Создал на CesiumJS платформу с большим экраном, отображающую 3D-модель территории химического завода.",
+            "en": "1. Created a large-screen platform using CesiumJS that displays a 3D model of the chemical plant area.",
+            "be": "1. Стварыў на CesiumJS платформу з вялікім экранам, якая адлюстроўвае 3D-мадэль тэрыторыі хімічнага завода."
+          }
         ]
       }
     ]

@@ -7,10 +7,11 @@
 // 详情正文仍在 src/data/details/ 下按单位拆分的 json（按 slug 关联），不要在这里配置。
 import companiesData from '@/data/companies.json';
 import { visibleItems } from '@/utils/visibility';
+import { localize } from '@/i18n';
 
 // 项目可在 JSON 中标记 visibility: "hidden" 临时下线：
 // 过滤后侧边导航与「项目综合」列表都不会再出现该项目（完全不渲染，不留空白）。
-export const companies = companiesData.map(c => ({
+const companiesMapped = companiesData.map(c => ({
   ...c,
   projects: visibleItems(c.projects).map(p => ({
     ...p,
@@ -18,6 +19,9 @@ export const companies = companiesData.map(c => ({
     image: p.image,
   })),
 }))
+
+// 包成「按当前语言自动解析 { zh, ru, en }」的代理
+export const companies = localize(companiesMapped)
 
 export const getProjects = category => companies.find(c => c.category === category)?.projects ?? []
 

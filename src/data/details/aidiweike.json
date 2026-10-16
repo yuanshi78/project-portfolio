@@ -2,7 +2,12 @@
   {
     "category": "aidiweike",
     "slug": "nocobase-plugins",
-    "title": "NocoBase 插件",
+    "title": {
+      "zh": "NocoBase 插件",
+      "ru": "Плагины NocoBase",
+      "en": "NocoBase Plugins",
+      "be": "Плагіны NocoBase"
+    },
     "date": "2024/11 - 2025/09",
     "images": [
       "rainbow/nocobase/amis-plugin.png",
@@ -11,38 +16,98 @@
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "NocoBase 插件，包括 AMIS、ECharts、Tree，用于扩展低代码平台能力，使平台可以更灵活地展示和操作数据。"
+          {
+            "zh": "NocoBase 插件，包括 AMIS、ECharts、Tree，用于扩展低代码平台能力，使平台可以更灵活地展示和操作数据。",
+            "ru": "Плагины NocoBase, включая AMIS, ECharts и Tree, предназначены для расширения возможностей low-code платформы, позволяя ей гибче отображать и обрабатывать данные.",
+            "en": "NocoBase plugins, including AMIS, ECharts, and Tree, used to extend the capabilities of the low-code platform so it can display and manipulate data more flexibly.",
+            "be": "Плагіны NocoBase, уключаючы AMIS, ECharts і Tree, прызначаны для пашырэння магчымасцей low-code платформы, дазваляючы ёй гнутчэй адлюстроўваць і апрацоўваць даныя."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. **AMIS 联动**：将插件配置为可添加到表单中，实现参数（如记录 ID）传递到 AMIS 插件；表单保存成功后重新加载表格数据；实现 AMIS 插件与页面上其他显示表格的插件连接；通过全局 CSS 配置 AMIS 样式；拆分 AMIS JSON Schema 配置。",
-          "2. **ECharts 坐标类插件**：支持折线图、柱状图等；提供图块类型选择、标题显示与位置配置、JSON 格式图配置参数；支持关联数据源、创建独立数据源、定时刷新、事件刷新、默认数据规则、条件显示。",
-          "3. **Tree 插件**：提供树结构的筛选区块。"
+          {
+            "zh": "1. **AMIS 插件**：AMIS 使用 JSON 配置来生成页面，可减少页面开发工作量，极大提升效率；包括 1）样式配置，2）分解配置 AMIS JSON Schema。",
+            "ru": "1. **Плагин AMIS**: AMIS использует JSON-конфигурацию для генерации страниц, что сокращает объём разработки страниц и значительно повышает эффективность; включает 1) настройку стилей, 2) разделение конфигурации AMIS JSON Schema.",
+            "en": "1. **AMIS plugin**: AMIS uses JSON configuration to generate pages, reducing page-development effort and greatly improving efficiency; including 1) style configuration, and 2) splitting the AMIS JSON Schema configuration.",
+            "be": "1. **Плагін AMIS**: AMIS выкарыстоўвае JSON-канфігурацыю для генерацыі старонак, што скарачае аб'ём распрацоўкі старонак і значна павышае эфектыўнасць; уключае 1) наладку стыляў, 2) падзел канфігурацыі AMIS JSON Schema."
+          },
+          {
+            "zh": "2. **ECharts 坐标类插件**：支持折线图、柱状图等；提供图块类型选择、标题显示与位置配置、JSON 格式图配置参数；支持关联数据源、创建独立数据源、定时刷新、事件刷新、默认数据规则、条件显示。",
+            "ru": "2. **Координатный плагин ECharts**: поддержка линейных, столбчатых и других диаграмм; выбор типа блока диаграммы, настройка отображения и позиции заголовка, параметры конфигурации диаграммы в формате JSON; поддержка привязки источника данных, создания независимого источника данных, периодического обновления, обновления по событию, правил данных по умолчанию и условного отображения.",
+            "en": "2. **ECharts coordinate plugin**: supports line charts, bar charts, etc.; provides chart-block type selection, title display and position configuration, and JSON-format chart configuration parameters; supports linking a data source, creating an independent data source, scheduled refresh, event refresh, default data rules, and conditional display.",
+            "be": "2. **Каардынатны плагін ECharts**: падтрымка лінейных, слупковых і іншых дыяграм; прадастаўляе выбар тыпу блока дыяграмы, наладку адлюстравання і пазіцыі загалоўка, параметры канфігурацыі дыяграмы ў фармаце JSON; падтрымлівае прывязку крыніцы даных, стварэнне незалежнай крыніцы даных, перыядычнае абнаўленне, абнаўленне паводле падзеі, правілы даных па змаўчанні і ўмоўнае адлюстраванне."
+          },
+          {
+            "zh": "3. **Tree 插件**：提供树结构的筛选区块。",
+            "ru": "3. **Плагин Tree**: предоставляет блок фильтрации в виде древовидной структуры.",
+            "en": "3. **Tree plugin**: provides a filter block with a tree structure.",
+            "be": "3. **Плагін Tree**: прадастаўляе блок фільтрацыі ў выглядзе дрэвападобнай структуры."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "React, TypeScript, Ant Design, NocoBase, AMIS, ECharts"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "插件独立开发者"
+          {
+            "zh": "插件独立开发者",
+            "ru": "Независимый разработчик плагинов",
+            "en": "Independent Plugin Developer",
+            "be": "Незалежны распрацоўшчык плагінаў"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 我开发的 NocoBase AMIS、ECharts、Tree 插件已在实际项目中使用，实现了表单与图表的数据联动、参数传递、表格重载、全局样式配置、JSON Schema 拆分、数据源关联、定时/事件刷新与条件显示，提升了系统的可视化配置与数据筛选能力。"
+          {
+            "zh": "1. 我开发的 NocoBase AMIS、ECharts、Tree 插件已在实际项目中使用，实现了表单与图表的数据联动、参数传递、表格重载、全局样式配置、JSON Schema 拆分、数据源关联、定时/事件刷新与条件显示，提升了系统的可视化配置与数据筛选能力。",
+            "ru": "1. Разработанные мной плагины NocoBase AMIS, ECharts и Tree уже используются в реальных проектах: реализованы связывание данных формы и диаграмм, передача параметров, перезагрузка таблиц, глобальная настройка стилей, разделение JSON Schema, привязка источников данных, периодическое/событийное обновление и условное отображение — что повысило возможности визуальной настройки и фильтрации данных системы.",
+            "en": "1. The NocoBase AMIS, ECharts, and Tree plugins I developed are already used in real projects, implementing form-chart data linkage, parameter passing, table reload, global style configuration, JSON Schema splitting, data-source linking, scheduled/event refresh, and conditional display, which enhanced the system's visual configuration and data-filtering capabilities.",
+            "be": "1. Распрацаваныя мной плагіны NocoBase AMIS, ECharts і Tree ужо выкарыстоўваюцца ў рэальных праектах: рэалізаваны сувязь даных формы і дыяграм, перадача параметраў, перазагрузка табліц, глабальная наладка стыляў, падзел JSON Schema, прывязка крыніц даных, перыядычнае/падзейнае абнаўленне і ўмоўнае адлюстраванне — што павысіла магчымасці візуальнай настройкі і фільтрацыі даных сістэмы."
+          }
         ]
       }
     ]
@@ -50,7 +115,12 @@
   {
     "category": "aidiweike",
     "slug": "smart_operation",
-    "title": "可视化运维系统",
+    "title": {
+      "zh": "可视化运维系统",
+      "ru": "Система визуализированной эксплуатации",
+      "en": "Visual O&M System",
+      "be": "Сістэма візуалізаванай эксплуатацыі"
+    },
     "date": "2024/03 - 2024/07",
     "images": [
       "rainbow/smart-oper/6.png",
@@ -62,45 +132,120 @@
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "区域电、水、气系统可视化运维系统。"
+          {
+            "zh": "区域电、水、气系统可视化运维系统。",
+            "ru": "Система визуализированной эксплуатации региональных систем электро-, водо- и газоснабжения.",
+            "en": "A visual O&M system for regional electricity, water, and gas systems.",
+            "be": "Сістэма візуалізаванай эксплуатацыі рэгіянальных сістэм электра-, вада- і газазабеспячэння."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. 用数据可视化分析电、水、气的使用情况",
-          "2. 电、水、气系统设备的巡检（线上和线下）、保养和维修"
+          {
+            "zh": "1. 用数据可视化分析电、水、气的使用情况",
+            "ru": "1. Анализ потребления электроэнергии, воды и газа средствами визуализации данных",
+            "en": "1. Analyze electricity, water, and gas usage through data visualization",
+            "be": "1. Аналіз спажывання электраэнергіі, вады і газу сродкамі візуалізацыі даных"
+          },
+          {
+            "zh": "2. 电、水、气系统设备的巡检（线上和线下）、保养和维修",
+            "ru": "2. Инспекция (онлайн и офлайн), техобслуживание и ремонт оборудования систем электро-, водо- и газоснабжения",
+            "en": "2. Inspection (online and offline), maintenance, and repair of electricity, water, and gas system equipment",
+            "be": "2. Інспекцыя (анлайн і афлайн), тэхнічнае абслугоўванне і рамонт абсталявання сістэм электра-, вада- і газазабеспячэння"
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 通过电、水、气系统管理数字化优化电、水、气的使用",
-          "2. 保证电、水、气系统设备正常运行"
+          {
+            "zh": "1. 通过电、水、气系统管理数字化优化电、水、气的使用",
+            "ru": "1. Оптимизировать потребление электроэнергии, воды и газа за счёт цифровизации управления системами",
+            "en": "1. Optimize electricity, water, and gas usage through digital management of the systems",
+            "be": "1. Аптымізаваць спажыванне электраэнергіі, вады і газу за кошт лічбавізацыі кіравання сістэмамі"
+          },
+          {
+            "zh": "2. 保证电、水、气系统设备正常运行",
+            "ru": "2. Обеспечить нормальную работу оборудования систем электро-, водо- и газоснабжения",
+            "en": "2. Ensure the normal operation of electricity, water, and gas system equipment",
+            "be": "2. Забяспечыць нармальную працу абсталявання сістэм электра-, вада- і газазабеспячэння"
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "Vue 2, diboot, Ant Design Vue, ECharts, DataEase, Fuxa"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端核心开发"
+          {
+            "zh": "前端核心开发",
+            "ru": "Ведущий фронтенд-разработчик",
+            "en": "Lead Front-end Developer",
+            "be": "Вядучы франтэнд-распрацоўшчык"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 开发了 diboot 无法生成的功能",
-          "2. 开发了能流图"
+          {
+            "zh": "1. 开发了 diboot 无法生成的功能",
+            "ru": "1. Разработал функции, которые diboot не может генерировать",
+            "en": "1. Developed features that diboot cannot generate",
+            "be": "1. Распрацаваў функцыі, якія diboot не можа генераваць"
+          },
+          {
+            "zh": "2. 开发了能流图",
+            "ru": "2. Разработал диаграмму энергетических потоков",
+            "en": "2. Developed the energy-flow diagram",
+            "be": "2. Распрацаваў дыяграму энергетычных патокаў"
+          }
         ]
       }
     ]
@@ -108,7 +253,12 @@
   {
     "category": "aidiweike",
     "slug": "cinema_hall",
-    "title": "票务管理系统",
+    "title": {
+      "zh": "票务管理系统",
+      "ru": "Система управления билетами",
+      "en": "Ticketing Management System",
+      "be": "Сістэма кіравання білетамі"
+    },
     "date": "2024/03 - 2024/06",
     "images": [
       "aidiweike/tickets/1.png",
@@ -121,37 +271,92 @@
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "该系统用于管理剧场票务信息、订单信息、票价信息、票价规则信息、票价规则明细信息等。"
+          {
+            "zh": "该系统用于管理剧场票务信息、订单信息、票价信息、票价规则信息、票价规则明细信息等。",
+            "ru": "Система предназначена для управления информацией о билетах театра, заказах, тарифах, тарифных правилах и деталях тарифных правил.",
+            "en": "The system is used to manage theater ticketing information, order information, ticket-price information, pricing-rule information, and pricing-rule detail information.",
+            "be": "Сістэма прызначана для кіравання інфармацыяй аб білетах тэатра, заказах, тарыфах, тарыфных правілах і дэталях тарыфных правіл."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. 管理票务信息、订单信息、票价信息",
-          "2. 管理票价规则及规则明细"
+          {
+            "zh": "1. 管理票务信息、订单信息、票价信息",
+            "ru": "1. Управление информацией о билетах, заказах и тарифах",
+            "en": "1. Manage ticketing, order, and ticket-price information",
+            "be": "1. Кіраванне інфармацыяй аб білетах, заказах і тарыфах"
+          },
+          {
+            "zh": "2. 管理票价规则及规则明细",
+            "ru": "2. Управление тарифными правилами и их деталями",
+            "en": "2. Manage pricing rules and rule details",
+            "be": "2. Кіраванне тарыфнымі правіламі і іх дэталямі"
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "Vue 2, JavaScript, ECharts"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端开发"
+          {
+            "zh": "前端开发",
+            "ru": "Фронтенд-разработка",
+            "en": "Front-end development",
+            "be": "Франтэнд-распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 负责前端开发，实现票务、订单、票价及规则模块的可视化与交互。"
+          {
+            "zh": "1. 负责前端开发，实现票务、订单、票价及规则模块的可视化与交互。",
+            "ru": "1. Отвечал за фронтенд-разработку, реализовав визуализацию и взаимодействие модулей билетов, заказов, тарифов и правил.",
+            "en": "1. Responsible for front-end development, implementing the visualization and interaction of the ticketing, order, price, and rule modules.",
+            "be": "1. Адказваў за франтэнд-распрацоўку, рэалізаваўшы візуалізацыю і ўзаемадзеянне модуляў білетаў, заказаў, тарыфаў і правіл."
+          }
         ]
       }
     ]
@@ -159,7 +364,12 @@
   {
     "category": "aidiweike",
     "slug": "pharmacy",
-    "title": "兆益生物生产管理系统",
+    "title": {
+      "zh": "兆益生物生产管理系统",
+      "ru": "Система управления производством Zhaoyi Bio",
+      "en": "Zhaoyi Bio Production Management System",
+      "be": "Сістэма кіравання вытворчасцю Zhaoyi Bio"
+    },
     "date": "2023/01 - 2024/03",
     "images": [
       "rainbow/pharmacy/1.png",
@@ -170,43 +380,108 @@
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "管理生产兽药的系统。管理采购、生产、销售流程。包括采购计划、采购订单、采购库存、产品计划、产品库存、销售计划、销售库存、年度统计、月度统计、日度统计等。"
+          {
+            "zh": "管理生产兽药的系统。管理采购、生产、销售流程。包括采购计划、采购订单、采购库存、产品计划、产品库存、销售计划、销售库存、年度统计、月度统计、日度统计等。",
+            "ru": "Система управления производством ветеринарных препаратов. Управляет процессами закупок, производства и продаж, включая планы закупок, заказы на закупку, закупочные запасы, планы продукции, склад продукции, планы продаж, склад продаж, годовую, месячную и дневную статистику.",
+            "en": "A system for managing the production of veterinary drugs. It manages procurement, production, and sales processes, including procurement plans, purchase orders, procurement inventory, product plans, product inventory, sales plans, sales inventory, annual statistics, monthly statistics, and daily statistics.",
+            "be": "Сістэма кіравання вытворчасцю ветэрынарных прэпаратаў. Кіруе працэсамі закупак, вытворчасці і продажаў, уключаючы планы закупак, заказы на закупку, запасы закупак, планы прадукцыі, склад прадукцыі, планы продажаў, склад продажаў, гадавую, месячную і штодзённую статыстыку."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. 管理兽药的采购、生产、销售流程",
-          "2. 通过可视化统计数据，帮助用户了解产品生产情况"
+          {
+            "zh": "1. 管理兽药的采购、生产、销售流程",
+            "ru": "1. Управление процессами закупок, производства и продаж ветеринарных препаратов",
+            "en": "1. Manage the procurement, production, and sales processes of veterinary drugs",
+            "be": "1. Кіраванне працэсамі закупак, вытворчасці і продажаў ветэрынарных прэпаратаў"
+          },
+          {
+            "zh": "2. 通过可视化统计数据，帮助用户了解产品生产情况",
+            "ru": "2. Помогать пользователям понимать ситуацию с производством продукции через визуализированную статистику",
+            "en": "2. Help users understand the product production situation through visualized statistics",
+            "be": "2. Дапамагаць карыстальнікам разумець сітуацыю з вытворчасцю прадукцыі праз візуалізаваную статыстыку"
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 此生产管理系统使采购、生产、销售流程数字化，并合在一起。通过这个第一，提高人员的工作效率；第二，使采购、生产、销售数据合在一起。数据集中化让更有效并全面地控制生产兽药的流程，并通过不同的统计提高采购、生产、销售计划准确度，因此提高兆益生物有限公司的利润。"
+          {
+            "zh": "1. 此生产管理系统使采购、生产、销售流程数字化，并合在一起。通过这个第一，提高人员的工作效率；第二，使采购、生产、销售数据合在一起。数据集中化让更有效并全面地控制生产兽药的流程，并通过不同的统计提高采购、生产、销售计划准确度，因此提高兆益生物有限公司的利润。",
+            "ru": "1. Эта система управления производством оцифровывает и объединяет процессы закупок, производства и продаж. Во-первых, это повышает эффективность работы персонала; во-вторых, объединяет данные закупок, производства и продаж. Централизация данных позволяет более эффективно и всесторонне контролировать процесс производства ветеринарных препаратов и, за счёт различной статистики, повышает точность планов закупок, производства и продаж, тем самым увеличивая прибыль компании Zhaoyi Bio Co., Ltd.",
+            "en": "1. This production management system digitizes and integrates the procurement, production, and sales processes. First, it improves staff work efficiency; second, it unifies the procurement, production, and sales data. Data centralization enables more effective and comprehensive control over the veterinary-drug production process, and through various statistics improves the accuracy of procurement, production, and sales plans, thereby increasing the profit of Zhaoyi Bio Co., Ltd.",
+            "be": "1. Гэтая сістэма кіравання вытворчасцю ацыфроўвае і аб'ядноўвае працэсы закупак, вытворчасці і продажаў. Па-першае, гэта павышае эфектыўнасць працы персаналу; па-другое, аб'ядноўвае даныя закупак, вытворчасці і продажаў. Цэнтралізацыя даных дазваляе больш эфектыўна і ўсестаронне кантраляваць працэс вытворчасці ветэрынарных прэпаратаў і, за кошт рознай статыстыкі, павышае дакладнасць планаў закупак, вытворчасці і продажаў, тым самым павялічваючы прыбытак кампаніі Zhaoyi Bio Co., Ltd."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "Vue 2, JavaScript, diboot, Colaiven, ECharts"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端开发"
+          {
+            "zh": "前端开发",
+            "ru": "Фронтенд-разработка",
+            "en": "Front-end development",
+            "be": "Франтэнд-распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 虽然这个项目开始的时候，我没参加它，我开发了很多模块的前端，也优化了别人开发的前端。"
+          {
+            "zh": "1. 虽然这个项目开始的时候，我没参加它，我开发了很多模块的前端，也优化了别人开发的前端。",
+            "ru": "1. Хотя я не участвовал в проекте с самого начала, я разработал фронтенд для многих модулей и оптимизировал фронтенд, созданный другими разработчиками.",
+            "en": "1. Although I did not join this project at its start, I developed the front end for many modules and also optimized the front end built by others.",
+            "be": "1. Хаця я не ўдзельнічаў у праекце з самага пачатку, я распрацаваў франтэнд для шматлікіх модуляў і таксама аптымізаваў франтэнд, створаны іншымі распрацоўшчыкамі."
+          }
         ]
       }
     ]

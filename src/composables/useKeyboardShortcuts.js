@@ -9,7 +9,7 @@
 //       无法（或不应）被页面拦截，请改用其它组合。
 import { onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import config from '@/data/shortcuts.json'
+import config from '@/data/shortcuts'
 
 const shortcuts = config?.shortcuts ?? []
 

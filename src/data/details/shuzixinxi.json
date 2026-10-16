@@ -2,7 +2,12 @@
   {
     "category": "shuzixinxi",
     "slug": "book_reader",
-    "title": "谷堆书城",
+    "title": {
+      "zh": "谷堆书城",
+      "ru": "Книжный магазин Gudui",
+      "en": "Gudui Bookstore",
+      "be": "Кніжная крама Gudui"
+    },
     "date": "2016/06 - 2016/08",
     "images": [
       "shuzixinxi/reader/1.png",
@@ -11,42 +16,102 @@
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "谷堆书城网站用于收费/免费看电子书（像《多看》一样）。谷堆书城网站和《谷堆看书》软件（也是陕西数字信息技术有限公司制作的）构成一个系统。"
+          {
+            "zh": "谷堆书城网站用于收费/免费看电子书（像《多看》一样）。谷堆书城网站和《谷堆看书》软件（也是陕西数字信息技术有限公司制作的）构成一个系统。",
+            "ru": "Сайт Gudui Bookstore служит для платного и бесплатного чтения электронных книг (как «Duokan»). Сайт Gudui Bookstore и программа «Gudui Reader» (также разработанные Shaanxi Digital Information Technology Co., Ltd.) образуют единую систему.",
+            "en": "The Gudui Bookstore website is used for paid/free reading of e-books (like Duokan). The Gudui Bookstore website and the Gudui Reader software (also made by Shaanxi Digital Information Technology Co., Ltd.) form one system.",
+            "be": "Сайт Gudui Bookstore прызначаны для платнага і бясплатнага чытання электронных кніг (як «Duokan»). Сайт Gudui Bookstore і праграма «Gudui Reader» (таксама створаныя Shaanxi Digital Information Technology Co., Ltd.) утвараюць адзіную сістэму."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要功能是："
+          {
+            "zh": "主要功能是：",
+            "ru": "Основные функции:",
+            "en": "Main features:",
+            "be": "Асноўныя функцыі:"
+          }
         ],
         "list": [
-          "1. 阅读电子书"
+          {
+            "zh": "1. 阅读电子书",
+            "ru": "1. Чтение электронных книг",
+            "en": "1. Reading e-books",
+            "be": "1. Чытанне электронных кніг"
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 公司的主业务是制造电子书。谷堆书城网站用于方便阅读公司制造的电子书。"
+          {
+            "zh": "1. 公司的主业务是制造电子书。谷堆书城网站用于方便阅读公司制造的电子书。",
+            "ru": "1. Основной бизнес компании — производство электронных книг. Сайт Gudui Bookstore служит для удобного чтения электронных книг, произведённых компанией.",
+            "en": "1. The company's main business is producing e-books. The Gudui Bookstore website is for conveniently reading the e-books the company produces.",
+            "be": "1. Асноўны бізнес кампаніі — вытворчасць электронных кніг. Сайт Gudui Bookstore прызначаны для зручнага чытання электронных кніг, якія вырабляе кампанія."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "HTML, CSS, JavaScript"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端开发"
+          {
+            "zh": "前端开发",
+            "ru": "Фронтенд-разработка",
+            "en": "Front-end development",
+            "be": "Франтэнд-распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 开发电子书阅读网站前端。"
+          {
+            "zh": "1. 开发电子书阅读网站前端。",
+            "ru": "1. Разработал фронтенд сайта чтения электронных книг.",
+            "en": "1. Developed the front end of the e-book reading website.",
+            "be": "1. Распрацаваў франтэнд сайта чытання электронных кніг."
+          }
         ]
       }
     ]
@@ -54,7 +119,12 @@
   {
     "category": "shuzixinxi",
     "slug": "dinosaur",
-    "title": "魔幻恐龙",
+    "title": {
+      "zh": "魔幻恐龙",
+      "ru": "Волшебный динозавр",
+      "en": "Magic Dinosaur",
+      "be": "Чароўны дзіназаўр"
+    },
     "date": "2016/05 - 2016/05",
     "images": [
       "shuzixinxi/game/1.png",
@@ -66,42 +136,97 @@
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "魔幻恐龙是用 LayaAir 制作的小游戏。LayaAir 是有大型游戏线上产品（裸跑）案例的 HTML5 引擎。"
+          {
+            "zh": "魔幻恐龙是用 LayaAir 制作的小游戏。LayaAir 是有大型游戏线上产品（裸跑）案例的 HTML5 引擎。",
+            "ru": "«Волшебный динозавр» — небольшая игра, созданная на LayaAir. LayaAir — это HTML5-движок, имеющий примеры крупных онлайн-игр (в нативном исполнении).",
+            "en": "Magic Dinosaur is a mini-game made with LayaAir. LayaAir is an HTML5 engine with cases of large online game products (running natively).",
+            "be": "«Чароўны дзіназаўр» — невялікая гульня, створаная на LayaAir. LayaAir — гэта HTML5-рухавік з прыкладамі буйных анлайн-гульняў (у натыўным выкананні)."
+          }
         ]
       },
       {
-        "heading": "项目 demo 链接",
+        "heading": {
+          "zh": "项目 demo 链接",
+          "ru": "Демо-ссылка проекта",
+          "en": "Project Demo Link",
+          "be": "Спасылка на дэма-праекта"
+        },
         "links": [
           {
-            "text": "试玩小游戏",
+            "text": {
+              "zh": "试玩小游戏",
+              "ru": "Попробовать игру",
+              "en": "Play the Game",
+              "be": "Паспрабаваць гульню"
+            },
             "href": "/games/dinosaur/index.html"
           }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 此小游戏用于推荐公司研发的 AR 产品"
+          {
+            "zh": "1. 此小游戏用于推荐公司研发的 AR 产品",
+            "ru": "1. Эта мини-игра служит для продвижения AR-продукта, разработанного компанией",
+            "en": "1. This mini-game is used to promote the AR product developed by the company",
+            "be": "1. Гэтая міні-гульня служыць для пасоўвання AR-прадукту, распрацаванага кампаніяй"
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "HTML5, CSS, JavaScript, LayaAir"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "独立开发"
+          {
+            "zh": "独立开发",
+            "ru": "Независимая разработка",
+            "en": "Independent Development",
+            "be": "Незалежная распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 使用 LayaAir 开发 HTML5 小游戏，用于推荐公司 AR 产品。"
+          {
+            "zh": "1. 使用 LayaAir 开发 HTML5 小游戏，用于推荐公司 AR 产品。",
+            "ru": "1. Разработал HTML5 мини-игру на LayaAir для продвижения AR-продукта компании.",
+            "en": "1. Developed an HTML5 mini-game with LayaAir to promote the company's AR product.",
+            "be": "1. Распрацаваў HTML5 міні-гульню на LayaAir для пасоўвання AR-прадукту кампаніі."
+          }
         ]
       }
     ]
@@ -109,48 +234,128 @@
   {
     "category": "shuzixinxi",
     "slug": "china_actor",
-    "title": "中国演员网",
+    "title": {
+      "zh": "中国演员网",
+      "ru": "Портал China Actor",
+      "en": "China Actor Portal",
+      "be": "Партал China Actor"
+    },
     "date": "2016/01 - 2016/04",
     "images": [
       "shuzixinxi/actors/1.png"
     ],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "中国演员网（www.chinaactor.com）是国内规模最大的影视商务网站，致力于为影视娱乐行业的企业与组织提供全方位的互联网信息服务，拥有演员、剧组、影视机构等影视人才数据库。",
-          "网站设有影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品、会员中心等板块，并按制作设备、服装服饰、后期制作、场景场地、道具布景等类别提供影视商务资源。"
+          {
+            "zh": "中国演员网（www.chinaactor.com）是国内规模最大的影视商务网站，致力于为影视娱乐行业的企业与组织提供全方位的互联网信息服务，拥有演员、剧组、影视机构等影视人才数据库。",
+            "ru": "China Actor (www.chinaactor.com) — крупнейший в стране сайт кино- и телебизнеса, который стремится предоставлять предприятиям и организациям индустрии развлечений всесторонние интернет-информационные услуги и располагает базами данных кинематографических талантов: актёров, съёмочных групп, кино- и телеорганизаций.",
+            "en": "China Actor (www.chinaactor.com) is the largest film and television business website in the country, dedicated to providing comprehensive Internet information services to enterprises and organizations in the entertainment industry, with databases of film and TV talents such as actors, crews, and production companies.",
+            "be": "China Actor (www.chinaactor.com) — найбуйнейшы ў краіне сайт кіна- і тэлебізнесу, які імкнецца прадастаўляць прадпрыемствам і арганізацыям індустрыі забаўлянняў ўсестароннія інтэрнэт-інфармацыйныя паслугі і мае базы даных кіна- і тэлёталентаў: акцёраў, здымачных груп, кіна- і тэлеарганізацый."
+          },
+          {
+            "zh": "网站设有影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品、会员中心等板块，并按制作设备、服装服饰、后期制作、场景场地、道具布景等类别提供影视商务资源。",
+            "ru": "На сайте есть разделы кинорекрутинга, кино- и телебизнеса, базы актёров, оперативных новостей, киноорганизаций, авторских работ и центра членства, а также ресурсы кино- и телебизнеса по категориям: съёмочное оборудование, костюмы, постпродакшн, площадки и декорации.",
+            "en": "The site has sections for film/TV recruitment, film/TV business, actor database, film/TV news, production companies, original works, and a member center, and provides film/TV business resources by categories such as production equipment, costumes, post-production, locations, and props/set design.",
+            "be": "На сайце ёсць раздзелы кінарэкруцінгу, кіна- і тэлебізнесу, базы акцёраў, аператыўных навін, кінаарганізацый, аўтарскіх прац і цэнтра членства, а таксама рэсурсы кіна- і тэлебізнесу паводле катэгорый: здымачнае абсталяванне, касцюмы, постпрадакшн, пляцоўкі і дэкарацыі."
+          }
         ]
       },
       {
-        "heading": "功能",
+        "heading": {
+          "zh": "功能",
+          "ru": "Функции",
+          "en": "Features",
+          "be": "Функцыі"
+        },
         "paragraphs": [
-          "主要页面："
+          {
+            "zh": "主要页面：",
+            "ru": "Основные страницы:",
+            "en": "Main pages:",
+            "be": "Асноўныя старонкі:"
+          }
         ],
         "list": [
-          "1. 首页：影视招聘、影视商务、原创影视、新闻资讯等板块入口与搜索",
-          "2. 演员分类：按类别检索演员",
-          "3. 登录与注册",
-          "4. 演员简历页：展示演员资料与履历",
-          "5. 会员中心与个人设置"
+          {
+            "zh": "1. 首页：影视招聘、影视商务、原创影视、新闻资讯等板块入口与搜索",
+            "ru": "1. Главная: входы в разделы кинорекрутинга, кино- и телебизнеса, авторских работ, новостей, а также поиск",
+            "en": "1. Home: entries to film/TV recruitment, film/TV business, original works, news, and search",
+            "be": "1. Галоўная: уваходы ў раздзелы кінарэкруцінгу, кіна- і тэлебізнесу, аўтарскіх прац, навін, а таксама пошук"
+          },
+          {
+            "zh": "2. 演员分类：按类别检索演员",
+            "ru": "2. Категории актёров: поиск актёров по категориям",
+            "en": "2. Actor categories: search actors by category",
+            "be": "2. Катэгорыі акцёраў: пошук акцёраў паводле катэгорый"
+          },
+          {
+            "zh": "3. 登录与注册",
+            "ru": "3. Вход и регистрация",
+            "en": "3. Login and registration",
+            "be": "3. Уваход і рэгістрацыя"
+          },
+          {
+            "zh": "4. 演员简历页：展示演员资料与履历",
+            "ru": "4. Страница резюме актёра: отображение данных и биографии актёра",
+            "en": "4. Actor résumé page: display actor profile and biography",
+            "be": "4. Старонка рэзюмэ акцёра: адлюстраванне даных і біяграфіі акцёра"
+          },
+          {
+            "zh": "5. 会员中心与个人设置",
+            "ru": "5. Центр членства и личные настройки",
+            "en": "5. Member center and personal settings",
+            "be": "5. Цэнтр членства і асабістыя налады"
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "HTML, CSS, JavaScript, jQuery"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "前端开发"
+          {
+            "zh": "前端开发",
+            "ru": "Фронтенд-разработка",
+            "en": "Front-end development",
+            "be": "Франтэнд-распрацоўка"
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 完成中国演员网的前端页面开发，网站已部署上线（www.chinaactor.com）。"
+          {
+            "zh": "1. 完成中国演员网的前端页面开发，网站已部署上线（www.chinaactor.com）。",
+            "ru": "1. Завершил фронтенд-разработку сайта China Actor; сайт развёрнут и запущен в эксплуатацию (www.chinaactor.com).",
+            "en": "1. Completed the front-end page development of the China Actor website; the site has been deployed and launched (www.chinaactor.com).",
+            "be": "1. Завяршыў франтэнд-распрацоўку сайта China Actor; сайт разгорнуты і запушчаны ў эксплуатацыю (www.chinaactor.com)."
+          }
         ]
       }
     ]

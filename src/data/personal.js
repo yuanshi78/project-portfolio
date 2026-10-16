@@ -6,5 +6,6 @@
 // 头像(me.png)与封面(abstract.jpg)为图片资源，封面路径在 JSON 的 cover 字段；
 // 头像为构建资源，保留在 personal.vue 中引用。
 import personalData from '@/data/personal.json'
+import { localize } from '@/i18n'
 
-export const personal = personalData
+export const personal = localize(personalData)

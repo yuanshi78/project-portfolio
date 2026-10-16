@@ -7,37 +7,102 @@
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "项目服务于美国大陆航空（Continental Airlines，IATA 代码 **CO**）的常旅客计划 **OnePass**。2007 年 10 月，IT 巨头 **EDS** 与大陆航空签署了价值 **5.5 亿美元**、为期 7 年的全面 IT 外包续约合同；作为 EDS 开发工程师，参与的是这一 **5.5 亿美元**核心交付团队，负责维护大陆航空最核心的常旅客资产。",
-          "项目正处于美国航空业最重大的战略转型期：2008–2009 年大陆航空退出天合联盟（**SkyTeam**）、转投星空联盟（**Star Alliance**），并启动与美联航（**United Airlines**）的合并谈判（2010 年正式合并，OnePass 后整体并入 MileagePlus）。CO Runway 是基于 **IBM z/OS 大型机**的 OnePass 底层重构与数据清洗工程，为跨联盟积分互通、代码共享、状态匹配，以及后续与美联航系统合并提供核心技术支撑。"
+          {
+            "zh": "项目服务于美国大陆航空（Continental Airlines，IATA 代码 **CO**）的常旅客计划 **OnePass**。2007 年 10 月，IT 巨头 **EDS** 与大陆航空签署了价值 **5.5 亿美元**、为期 7 年的全面 IT 外包续约合同；作为 EDS 开发工程师，参与的是这一 **5.5 亿美元**核心交付团队，负责维护大陆航空最核心的常旅客资产。",
+            "ru": "Проект обслуживал программу лояльности **OnePass** американской авиакомпании Continental Airlines (IATA-код **CO**). В октябре 2007 года IT-гигант **EDS** подписал с Continental Airlines договор о продлении полного IT-аутсорсинга стоимостью **550 млн долларов** сроком на 7 лет; как инженер-разработчик **EDS** я участвовал в этой ключевой команде поставки на **550 млн долларов**, отвечая за поддержку важнейшего актива лояльности Continental Airlines.",
+            "en": "The project served the frequent-flyer program **OnePass** of Continental Airlines (IATA code **CO**). In October 2007, IT giant **EDS** signed a 7-year, **$550 million** comprehensive IT outsourcing renewal contract with Continental Airlines; as an **EDS** development engineer, I was part of this **$550 million** core delivery team, responsible for maintaining Continental Airlines' most critical loyalty asset.",
+            "be": "Праект абслугоўваў праграму лаяльнасці **OnePass** амерыканскай авіякампаніі Continental Airlines (IATA-код **CO**). У кастрычніку 2007 года IT-гігант **EDS** падпісаў з Continental Airlines дагавор аб падаўжэнні поўнага IT-аўтсорсінгу вартасцю **550 млн долараў** тэрмінам на 7 гадоў; як інжынер-распрацоўшчык **EDS** я ўдзельнічаў у гэтай ключавой камандзе пастаўкі на **550 млн долараў**, адказваючы за падтрымку найважнейшага актыву лаяльнасці Continental Airlines."
+          },
+          {
+            "zh": "项目正处于美国航空业最重大的战略转型期：2008–2009 年大陆航空退出天合联盟（**SkyTeam**）、转投星空联盟（**Star Alliance**），并启动与美联航（**United Airlines**）的合并谈判（2010 年正式合并，OnePass 后整体并入 MileagePlus）。CO Runway 是基于 **IBM z/OS 大型机**的 OnePass 底层重构与数据清洗工程，为跨联盟积分互通、代码共享、状态匹配，以及后续与美联航系统合并提供核心技术支撑。",
+            "ru": "Проект пришёлся на важнейший период стратегической трансформации авиационной отрасли США: в 2008–2009 годах Continental Airlines вышла из альянса **SkyTeam**, перешла в **Star Alliance** и начала переговоры о слиянии с **United Airlines** (официально объединились в 2010 году, после чего OnePass была полностью интегрирована в MileagePlus). CO Runway — это проект реорганизации нижнего уровня и очистки данных OnePass на базе мейнфрейма **IBM z/OS**, обеспечивающий ключевую техническую поддержку обмена баллами между альянсами, совместного использования кодов, сопоставления статусов и последующего объединения систем с United Airlines.",
+            "en": "The project fell during the most significant strategic transformation in the US airline industry: in 2008–2009 Continental Airlines left **SkyTeam**, joined **Star Alliance**, and began merger talks with **United Airlines** (they officially merged in 2010, after which OnePass was fully integrated into MileagePlus). CO Runway was the OnePass bottom-layer re-engineering and data-cleansing project based on the **IBM z/OS mainframe**, providing core technical support for cross-alliance mileage interchange, code sharing, status matching, and the subsequent merger with United Airlines' systems.",
+            "be": "Праект прыйшоўся на найважнейшы перыяд стратэгічнай трансфармацыі авіяцыйнай галіны ЗША: у 2008–2009 гадах Continental Airlines выйшла з альянсу **SkyTeam**, перайшла ў **Star Alliance** і пачала перамовы аб зліцці з **United Airlines** (афіцыйна аб'ядналіся ў 2010 годзе, пасля чаго OnePass была поўнасцю інтэгравана ў MileagePlus). CO Runway — гэта праект рэарганізацыі ніжняга ўзроўню і ачысткі даных OnePass на базе мейнфрэйма **IBM z/OS**, які забяспечвае ключавую тэхнічную падтрымку абмену мілямі паміж альянсамі, сумеснага выкарыстання кодаў, супастаўлення статусаў і наступнага аб'яднання сістэм з United Airlines."
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 在 IBM 大型机 z/OS 上对 OnePass 常旅客系统进行底层重构与数据清洗，支撑星空联盟接入，以及与美联航、汉莎等数十家成员航司的积分互通、代码共享和状态匹配。",
-          "2. 为大陆航空与美联航的世纪合并做底层架构改造与数据对接准备，保障航空核心系统 **99.999%** 高可用。"
+          {
+            "zh": "1. 在 IBM 大型机 z/OS 上对 OnePass 常旅客系统进行底层重构与数据清洗，支撑星空联盟接入，以及与美联航、汉莎等数十家成员航司的积分互通、代码共享和状态匹配。",
+            "ru": "1. Реорганизация нижнего уровня и очистка данных системы лояльности OnePass на мейнфрейме IBM z/OS для поддержки подключения к Star Alliance, а также обмена баллами, совместного использования кодов и сопоставления статусов с десятками авиакомпаний-участниц, включая United Airlines и Lufthansa.",
+            "en": "1. Re-engineer and cleanse the OnePass loyalty system at the bottom layer on the IBM z/OS mainframe to support Star Alliance onboarding, as well as mileage interchange, code sharing, and status matching with dozens of member carriers including United Airlines and Lufthansa.",
+            "be": "1. Рэарганізацыя ніжняга ўзроўню і ачыстка даных сістэмы лаяльнасці OnePass на мейнфрэйме IBM z/OS для падтрымкі падключэння да Star Alliance, а таксама абмену мілямі, сумеснага выкарыстання кодаў і супастаўлення статусаў з дзясяткамі авіякампаній-удзельніц, уключаючы United Airlines і Lufthansa."
+          },
+          {
+            "zh": "2. 为大陆航空与美联航的世纪合并做底层架构改造与数据对接准备，保障航空核心系统 **99.999%** 高可用。",
+            "ru": "2. Подготовка модернизации нижнего уровня архитектуры и стыковки данных для исторического слияния Continental Airlines и United Airlines, обеспечивая **99.999%** высокой доступности ключевой авиационной системы.",
+            "en": "2. Prepare the bottom-layer architecture modernization and data integration for the historic merger of Continental Airlines and United Airlines, ensuring **99.999%** high availability of the airline's core system.",
+            "be": "2. Падрыхтоўка мадэрнізацыі ніжняга ўзроўню архітэктуры і стыкоўкі даных для гістарычнага зліцця Continental Airlines і United Airlines, забяспечваючы **99.999%** высокай даступнасці ключавой авіяцыйнай сістэмы."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "IBM z/OS, JCL, PL/I, IMS, CA-7, Endevor, CA-View"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "开发工程师。在 EDS 核心数据中心生产环境，使用 PL/I、IMS、JCL 于 **IBM z/OS 大型机**上修改并重构 OnePass 常旅客系统，并配合 CA-7（作业调度）与 Endevor（代码变更管理）完成高可靠交付。"
+          {
+            "zh": "开发工程师。在 EDS 核心数据中心生产环境，使用 PL/I、IMS、JCL 于 **IBM z/OS 大型机**上修改并重构 OnePass 常旅客系统，并配合 CA-7（作业调度）与 Endevor（代码变更管理）完成高可靠交付。",
+            "ru": "Инженер-разработчик. В производственной среде основного центра обработки данных EDS на мейнфрейме **IBM z/OS** с использованием PL/I, IMS и JCL я модифицировал и реорганизовывал систему лояльности OnePass, а также обеспечивал высоконадёжную поставку совместно с CA-7 (планировщик заданий) и Endevor (управление изменениями кода).",
+            "en": "Development engineer. In EDS's core data-center production environment, on the **IBM z/OS mainframe** using PL/I, IMS, and JCL, I modified and re-engineered the OnePass loyalty system, and delivered with high reliability together with CA-7 (job scheduling) and Endevor (code change management).",
+            "be": "Інжынер-распрацоўшчык. У вытворчым асяроддзі асноўнага цэнтра апрацоўкі даных EDS на мейнфрэйме **IBM z/OS** з выкарыстаннем PL/I, IMS і JCL я мадыфікаваў і рэарганізоўваў сістэму лаяльнасці OnePass, а таксама забяспечваў высоканадзейную пастаўку сумесна з CA-7 (планіроўшчык заданняў) і Endevor (кіраванне зменамі кода)."
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 在 EDS 核心生产环境中深入掌握大型机 **IMS（层次型数据库）**、PL/I 与 JCL，以及 CA-7、Endevor 等核心运维工具链。",
-          "2. 完成大量 JCL 脚本与 PL/I 程序的编写与优化，参与大陆航空常旅客系统向星空联盟迁移及美联航合并对接的底层改造。",
-          "3. 在要求 **99.999%** 可用性的航空核心大型机系统上交付稳定变更，积累了高并发、高可靠企业级系统的实战经验。"
+          {
+            "zh": "1. 在 EDS 核心生产环境中深入掌握大型机 **IMS（层次型数据库）**、PL/I 与 JCL，以及 CA-7、Endevor 等核心运维工具链。",
+            "ru": "1. В основной производственной среде EDS глубоко освоил мейнфреймовую **IMS (иерархическую СУБД)**, PL/I и JCL, а также ключевую цепочку эксплуатационных инструментов CA-7, Endevor и другие.",
+            "en": "1. In EDS's core production environment, gained deep mastery of the mainframe **IMS (hierarchical database)**, PL/I, and JCL, as well as the core operations toolchain including CA-7 and Endevor.",
+            "be": "1. У асноўным вытворчым асяроддзі EDS глыбока асвоіў мейнфрэймавую **IMS (іерархічную СКБД)**, PL/I і JCL, а таксама ключавы ланцужок эксплуатацыйных інструментаў CA-7, Endevor і іншыя."
+          },
+          {
+            "zh": "2. 完成大量 JCL 脚本与 PL/I 程序的编写与优化，参与大陆航空常旅客系统向星空联盟迁移及美联航合并对接的底层改造。",
+            "ru": "2. Написал и оптимизировал множество JCL-сценариев и программ на PL/I, участвовал в нижнеуровневой модернизации миграции системы лояльности Continental Airlines в Star Alliance и стыковке с объединением United Airlines.",
+            "en": "2. Wrote and optimized numerous JCL scripts and PL/I programs, and took part in the bottom-layer rework for Continental Airlines' loyalty-system migration to Star Alliance and its integration with the United Airlines merger.",
+            "be": "2. Напісаў і аптымізаваў мноства JCL-сцэнарыяў і праграм на PL/I, удзельнічаў у ніжнеўзроўневай мадэрнізацыі міграцыі сістэмы лаяльнасці Continental Airlines у Star Alliance і яе інтэграцыі з зліццём United Airlines."
+          },
+          {
+            "zh": "3. 在要求 **99.999%** 可用性的航空核心大型机系统上交付稳定变更，积累了高并发、高可靠企业级系统的实战经验。",
+            "ru": "3. Поставлял стабильные изменения в авиационной ключевой мейнфреймовой системе с требованием доступности **99.999%**, накопив практический опыт высоконагруженных и высоконадёжных корпоративных систем.",
+            "en": "3. Delivered stable changes on the airline's core mainframe system requiring **99.999%** availability, accumulating hands-on experience with high-concurrency, high-reliability enterprise systems.",
+            "be": "3. Пастаўляў стабільныя змены ў авіяцыйнай ключавой мейнфрэймавай сістэме з патрабаваннем даступнасці **99.999%**, назапасіўшы практычны вопыт высоканагружаных і высоканадзейных карпаратыўных сістэм."
+          }
         ]
       }
     ]

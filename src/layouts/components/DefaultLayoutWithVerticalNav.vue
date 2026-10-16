@@ -5,9 +5,10 @@ import NavItems from '@/layouts/components/NavItems.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
 import QuickLinks from '@/components/QuickLinks.vue'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
-import personal from '@/data/personal.json'
+import { personal } from '@/data/personal'
 import { visibleItems } from '@/utils/visibility'
 import { useFontScale } from '@/utils/fontScale'
+import { useI18n } from '@/i18n'
 
 // 内容正文字号：放大 / 放小 两个独立按钮，选择记在 localStorage
 const {
@@ -17,6 +18,11 @@ const {
   canIncrease,
   canDecrease,
 } = useFontScale()
+
+// 👉 语言切换（中文 / 英语 / 俄语 / 白俄文，带国旗）
+const { locale, locales, setLocale, t } = useI18n()
+const langMenu = ref(false)
+const currentLocale = computed(() => locales.find(l => l.code === locale.value) ?? locales[0])
 
 // 顶部代码仓库入口由 personal.json 的 repos 配置驱动（可加可减，也支持 visibility: hidden）
 const repos = computed(() => visibleItems(personal.repos ?? []))
@@ -29,7 +35,7 @@ const siteLogo = computed(() => personal.site?.logo ?? '')
 
 // 简历下载入口由 personal.json 的 cv 配置驱动（未配置 url 则不在导航栏显示）
 const cvUrl = computed(() => personal.cv?.url ?? '')
-const cvLabel = computed(() => personal.cv?.label ?? '下载简历')
+const cvLabel = computed(() => personal.cv?.label ?? t('downloadResume'))
 
 // 👉 回到顶部按钮：全局固定悬浮，向下滚动超过阈值时出现，点击平滑回顶。
 //    本布局包裹所有路由页面，故按钮在所有页面生效（首页/总览/详情等）。
@@ -137,7 +143,7 @@ onBeforeUnmount(() => {
               open-delay="500"
               scroll-strategy="close"
             >
-              放小正文（当前：{{ fontLevel.label }}）
+              {{ $t('fontSmaller') }} ({{ $t('current') }}: {{ fontLevel.label }})
             </VTooltip>
           </IconBtn>
           <IconBtn
@@ -151,9 +157,47 @@ onBeforeUnmount(() => {
               open-delay="500"
               scroll-strategy="close"
             >
-              放大正文（当前：{{ fontLevel.label }}）
+              {{ $t('fontLarger') }} ({{ $t('current') }}: {{ fontLevel.label }})
             </VTooltip>
           </IconBtn>
+
+          <!-- 👉 语言切换（中文 / 英语 / 俄语 / 白俄文，带国旗） -->
+          <VMenu
+            v-model="langMenu"
+            location="bottom end"
+          >
+            <template #activator="{ props }">
+              <IconBtn
+                v-bind="props"
+                class="me-2"
+              >
+                <span class="lang-flag">{{ currentLocale.flag }}</span>
+                <VTooltip
+                  activator="parent"
+                  open-delay="500"
+                  scroll-strategy="close"
+                >
+                  {{ $t('language') }}
+                </VTooltip>
+              </IconBtn>
+            </template>
+            <VList
+              density="compact"
+              min-width="168"
+            >
+              <VListItem
+                v-for="l in locales"
+                :key="l.code"
+                :active="l.code === locale"
+                @click="setLocale(l.code)"
+              >
+                <template #prepend>
+                  <span class="lang-flag">{{ l.flag }}</span>
+                </template>
+                <VListItemTitle>{{ l.label }}</VListItemTitle>
+              </VListItem>
+            </VList>
+          </VMenu>
 
           <UserProfile />
         </div>
@@ -204,7 +248,7 @@ onBeforeUnmount(() => {
         color="primary"
         size="large"
         elevation="4"
-        aria-label="回到顶部"
+        :aria-label="$t('backToTop')"
         @click="scrollToTop"
       />
     </Transition>
@@ -242,6 +286,12 @@ onBeforeUnmount(() => {
 // 👉 顶部动作区：手机上收紧间距，并给头像留出右边距，避免拥挤 / 贴边
 .navbar-actions {
   margin-inline-end: 2px;
+}
+
+// 👉 语言切换按钮里的国旗 emoji
+.lang-flag {
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 @media (max-width: 599px) {

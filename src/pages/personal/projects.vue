@@ -1,4 +1,5 @@
 <script setup>
+import { useRouter } from 'vue-router'
 import ImageGallery from '@/components/ImageGallery.vue'
 import { visibleItems } from '@/utils/visibility'
 
@@ -8,6 +9,10 @@ const props = defineProps({
     required: true,
   },
 })
+
+// 👉 卡片整体可点击进入详情（点击图片不再放大，而是跳转到对应路由）
+const router = useRouter()
+const goTo = to => { if (to) router.push(to) }
 </script>
 
 <template>
@@ -28,8 +33,12 @@ const props = defineProps({
           class="flex-1-1 work-card"
           rounded="lg"
           elevation="1"
+          @click="goTo(job.to)"
         >
-          <ImageGallery :images="job.images" />
+          <ImageGallery
+            :images="job.images"
+            :navigate-to="job.to"
+          />
           <VCardItem>
             <VCardTitle>
               <RouterLink
@@ -59,7 +68,7 @@ const props = defineProps({
               :to="job.to"
               class="text-decoration-none d-inline-flex align-center mt-2 text-primary"
             >
-              <span>查看详情</span>
+              <span>{{ $t('viewDetail') }}</span>
               <VIcon
                 icon="ri-arrow-right-line"
                 size="18"

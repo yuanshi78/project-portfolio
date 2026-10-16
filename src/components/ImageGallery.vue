@@ -5,6 +5,7 @@
 // - 点击封面 / 缩略图 / 灯箱内的图，可放大预览（灯箱，含上一张/下一张、关闭）。
 // 图片路径只存相对路径（如 "rainbow/project1.png"），变体由 resolveImage 解析。
 import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import { resolveImage } from '@/utils/image'
 
@@ -12,6 +13,11 @@ const props = defineProps({
   images: {
     type: Array,
     default: () => [],
+  },
+  // 可选：提供后，点击封面不再放大预览，而是进入该路由（用于卡片跳详情）
+  navigateTo: {
+    type: String,
+    default: '',
   },
 })
 
@@ -24,6 +30,7 @@ const { smAndDown } = useDisplay()
 const coverVariant = computed(() => (smAndDown.value ? 'card-mobile' : 'card-pc'))
 const zoomVariant = computed(() => (smAndDown.value ? 'zoom-mobile' : 'zoom-pc'))
 
+const router = useRouter()
 const active = ref(0)
 
 // 👉 灯箱
@@ -38,15 +45,23 @@ const zoomStep = dir => {
   if (n)
     zoomIndex.value = (zoomIndex.value + dir + n) % n
 }
+
+// 👉 封面点击：配置了 navigateTo 则进入对应路由（不放大），否则打开灯箱
+const onCoverClick = () => {
+  if (props.navigateTo) router.push(props.navigateTo)
+  else openZoom(active.value)
+}
 </script>
 
 <template>
   <div class="img-gallery">
-    <!-- 👉 封面（第一张，或当前选中的那张）。.prevent 阻止所在卡片（VCard :to）的路由跳转。 -->
+    <!-- 👉 封面（第一张，或当前选中的那张）。配置了 navigateTo 时进入路由（不再放大）；
+         .prevent.stop 阻止所在卡片的点击冒泡，避免与卡片整体跳转重复触发。 -->
     <div
       v-if="hasImages"
       class="ig-cover"
-      @click.prevent.stop="openZoom(active)"
+      :class="{ 'is-navigate': navigateTo }"
+      @click.prevent.stop="onCoverClick"
     >
       <VImg
         :src="resolveImage(images[active], coverVariant)"
@@ -58,7 +73,10 @@ const zoomStep = dir => {
           <div class="ig-cover-ph" />
         </template>
       </VImg>
-      <div class="ig-zoom-hint">
+      <div
+        v-if="!navigateTo"
+        class="ig-zoom-hint"
+      >
         <VIcon
           icon="ri-zoom-in-line"
           size="16"
@@ -73,7 +91,7 @@ const zoomStep = dir => {
     >
       <img
         :src="DEFAULT_COVER"
-        alt="暂无图片"
+        :alt="$t('noImage')"
         class="ig-default-img"
       >
     </div>
@@ -89,7 +107,7 @@ const zoomStep = dir => {
         type="button"
         class="ig-thumb"
         :class="{ active: i === active }"
-        :aria-label="`第 ${i + 1} 张`"
+        :aria-label="$t('imageOf', { n: i + 1 })"
         @click.prevent.stop="active = i"
       >
         <img
@@ -113,14 +131,14 @@ const zoomStep = dir => {
       >
         <img
           :src="resolveImage(images[zoomIndex], zoomVariant)"
-          alt="放大预览"
+          :alt="$t('zoomPreview')"
           class="ig-zoom-img"
         >
         <button
           v-if="images.length > 1"
           class="ig-nav prev"
           type="button"
-          aria-label="上一张"
+          :aria-label="$t('prevImage')"
           @click.prevent.stop="zoomStep(-1)"
         >
           <VIcon icon="ri-arrow-left-line" />
@@ -129,7 +147,7 @@ const zoomStep = dir => {
           v-if="images.length > 1"
           class="ig-nav next"
           type="button"
-          aria-label="下一张"
+          :aria-label="$t('nextImage')"
           @click.prevent.stop="zoomStep(1)"
         >
           <VIcon icon="ri-arrow-right-line" />
@@ -157,6 +175,11 @@ $backdrop: #312d4b;
   cursor: zoom-in;
   background: $backdrop;
   overflow: hidden;
+
+  // 导航模式（卡片跳详情）：用 pointer 取代放大光标
+  &.is-navigate {
+    cursor: pointer;
+  }
 
   .ig-cover-img :deep(img) {
     object-fit: contain;

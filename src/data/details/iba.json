@@ -2,41 +2,111 @@
   {
     "category": "iba",
     "slug": "urt",
-    "title": "IBM 法国 URT Extractors ISD",
+    "title": {
+      "zh": "IBM 法国 URT Extractors ISD",
+      "ru": "IBM France URT Extractors ISD",
+      "en": "IBM France URT Extractors ISD",
+      "be": "IBM France URT Extractors ISD"
+    },
     "date": "2011/06 - 2012/03",
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "跨平台 **IT 资产审计、安全合规检查与许可证管理 (License Management)** 系统。URT (Utilization Reporting Tool) 用于追踪 AIX/Unix 等系统的资源使用与用户账户；本项目以 Extractors 穿透 Unix / Linux / HP-UX 以及 Oracle / SAP / DB2 等异构系统，抓取用户与资产数据并标准化，属于典型的 **自动化运维与安全审计 (Compliance / Auditing)** 工具开发。"
+          {
+            "zh": "跨平台 **IT 资产审计、安全合规检查与许可证管理 (License Management)** 系统。URT (Utilization Reporting Tool) 用于追踪 AIX/Unix 等系统的资源使用与用户账户；本项目以 Extractors 穿透 Unix / Linux / HP-UX 以及 Oracle / SAP / DB2 等异构系统，抓取用户与资产数据并标准化，属于典型的 **自动化运维与安全审计 (Compliance / Auditing)** 工具开发。",
+            "ru": "Кроссплатформенная система **аудита IT-активов, проверок безопасности и соответствия требованиям, а также управления лицензиями (License Management)**. URT (Utilization Reporting Tool) используется для отслеживания использования ресурсов и учётных записей пользователей в системах AIX/Unix и других; в рамках проекта Extractors проникают в гетерогенные системы Unix / Linux / HP-UX, а также Oracle / SAP / DB2 и извлекают, а затем стандартизируют данные пользователей и активов — это типичная разработка инструментов **автоматизированной эксплуатации и аудита безопасности (Compliance / Auditing)**.",
+            "en": "A cross-platform **IT asset auditing, security compliance checking, and license management (License Management)** system. URT (Utilization Reporting Tool) is used to track resource usage and user accounts across systems such as AIX/Unix; this project uses Extractors to penetrate heterogeneous systems including Unix / Linux / HP-UX and Oracle / SAP / DB2, scraping and standardizing user and asset data — a typical **automated operations and security auditing (Compliance / Auditing)** tool development.",
+            "be": "Кросплатформавая сістэма **аўдыту IT-актываў, праверак бяспекі і адпаведнасці патрабаванням, а таксама кіравання ліцэнзіямі (License Management)**. URT (Utilization Reporting Tool) выкарыстоўваецца для адсочвання выкарыстання рэсурсаў і ўліковых запісаў карыстальнікаў у сістэмах AIX/Unix і іншых; у рамках праекта Extractors пранікаюць у гетэрагенныя сістэмы Unix / Linux / HP-UX, а таксама Oracle / SAP / DB2 і выцягваюць, а затым стандартызуюць даныя карыстальнікаў і актываў — гэта тыповая распрацоўка інструментаў **аўтаматызаванай эксплуатацыі і аўдыту бяспекі (Compliance / Auditing)**."
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 实现跨平台（Unix/AIX/Solaris/Linux/HP-UX）异构系统用户与资产数据的自动化抽取、清洗与标准化。",
-          "2. 保障数据抽取过程的安全性与脚本执行稳定性，支撑企业合规审计。"
+          {
+            "zh": "1. 实现跨平台（Unix/AIX/Solaris/Linux/HP-UX）异构系统用户与资产数据的自动化抽取、清洗与标准化。",
+            "ru": "1. Автоматизированное извлечение, очистка и стандартизация данных пользователей и активов из гетерогенных систем на разных платформах (Unix/AIX/Solaris/Linux/HP-UX).",
+            "en": "1. Automated extraction, cleansing, and standardization of user and asset data from heterogeneous cross-platform systems (Unix/AIX/Solaris/Linux/HP-UX).",
+            "be": "1. Аўтаматызаванае выцягванне, ачыстка і стандартызацыя даных карыстальнікаў і актываў з гетэрагенных кросплатформавых сістэм (Unix/AIX/Solaris/Linux/HP-UX)."
+          },
+          {
+            "zh": "2. 保障数据抽取过程的安全性与脚本执行稳定性，支撑企业合规审计。",
+            "ru": "2. Обеспечение безопасности процесса извлечения данных и стабильности выполнения сценариев для поддержки корпоративного аудита соответствия.",
+            "en": "2. Ensure the security of the data-extraction process and the stability of script execution, supporting enterprise compliance auditing.",
+            "be": "2. Забеспячэнне бяспекі працэсу выцягвання даных і стабільнасці выканання сцэнарыяў для падтрымкі карпаратыўнага аўдыту адпаведнасці."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
-          "Perl, korn-shell, DB2, SQL, 跨平台脚本"
+          {
+            "zh": "Perl, korn-shell, DB2, SQL, 跨平台脚本",
+            "ru": "Perl, korn-shell, DB2, SQL, кроссплатформенные сценарии",
+            "en": "Perl, korn-shell, DB2, SQL, cross-platform scripts",
+            "be": "Perl, korn-shell, DB2, SQL, кросплатформавыя сцэнарыі"
+          }
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "开发工程师。负责跨平台数据提取软件的研发、异构子系统安全管理配置，以及数据提取脚本 (extractor scripts) 的编写、调试与测试，确保从异构系统中准确获取并转换数据。"
+          {
+            "zh": "开发工程师。负责跨平台数据提取软件的研发、异构子系统安全管理配置，以及数据提取脚本 (extractor scripts) 的编写、调试与测试，确保从异构系统中准确获取并转换数据。",
+            "ru": "Инженер-разработчик. Отвечал за разработку кроссплатформенного ПО извлечения данных, настройку безопасности гетерогенных подсистем и написание, отладку и тестирование сценариев извлечения данных (extractor scripts), обеспечивая точное получение и преобразование данных из гетерогенных систем.",
+            "en": "Development engineer. Responsible for developing the cross-platform data-extraction software, configuring security management for heterogeneous subsystems, and writing, debugging, and testing the data-extraction scripts (extractor scripts), ensuring accurate retrieval and transformation of data from heterogeneous systems.",
+            "be": "Інжынер-распрацоўшчык. Адказваў за распрацоўку кросплатформавага ПЗ выцягвання даных, наладку бяспекі гетэрагенных падсістэм і напісанне, адладку і тэсціраванне сцэнарыяў выцягвання даных (extractor scripts), забяспечваючы дакладнае атрыманне і пераўтварэнне даных з гетэрагенных сістэм."
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 熟练掌握 Perl 语言及基于 Unix 系统的 korn-shell 脚本编程。",
-          "2. 成功研发并交付了可自动化获取、清洗并格式化 DB2、Oracle、SAP 等系统用户与资产资料的程序。",
-          "3. 建立并执行了提取脚本的测试流程，显著提升了跨平台数据抽取的稳定性和安全性。"
+          {
+            "zh": "1. 熟练掌握 Perl 语言及基于 Unix 系统的 korn-shell 脚本编程。",
+            "ru": "1. Уверенно освоил язык Perl и написание сценариев korn-shell на базе Unix-систем.",
+            "en": "1. Mastered the Perl language and korn-shell scripting on Unix-based systems.",
+            "be": "1. Упэўнена асвоіў мову Perl і напісанне сцэнарыяў korn-shell на базе Unix-сістэм."
+          },
+          {
+            "zh": "2. 成功研发并交付了可自动化获取、清洗并格式化 DB2、Oracle、SAP 等系统用户与资产资料的程序。",
+            "ru": "2. Успешно разработал и поставил программы, автоматически получающие, очищающие и форматирующие данные пользователей и активов из систем DB2, Oracle, SAP и других.",
+            "en": "2. Successfully developed and delivered programs that automatically acquire, cleanse, and format user and asset data from systems such as DB2, Oracle, and SAP.",
+            "be": "2. Паспяхова распрацаваў і паставіў праграмы, якія аўтаматычна атрымліваюць, ачышчаюць і фарматуюць даныя карыстальнікаў і актываў з сістэм DB2, Oracle, SAP і іншых."
+          },
+          {
+            "zh": "3. 建立并执行了提取脚本的测试流程，显著提升了跨平台数据抽取的稳定性和安全性。",
+            "ru": "3. Создал и внедрил процесс тестирования сценариев извлечения, существенно повысив стабильность и безопасность кроссплатформенного извлечения данных.",
+            "en": "3. Established and executed a testing process for extraction scripts, significantly improving the stability and security of cross-platform data extraction.",
+            "be": "3. Стварыў і ўкараніў працэс тэсціравання сцэнарыяў выцягвання, істотна павысіўшы стабільнасць і бяспеку кросплатформавага выцягвання даных."
+          }
         ]
       }
     ]
@@ -44,41 +114,106 @@
   {
     "category": "iba",
     "slug": "mie",
-    "title": "IBM 法国 MIE France",
+    "title": {
+      "zh": "IBM 法国 MIE France",
+      "ru": "IBM France MIE France",
+      "en": "IBM France MIE France",
+      "be": "IBM France MIE France"
+    },
     "date": "2010/04 - 2011/05",
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "企业级 **身份与访问管理 (IAM) / 身份联邦 (Identity Federation)** 项目。基于 IBM **Tivoli Directory Integrator (TDI，现 IBM Security Directory Integrator)** —— 一款用于跨异构系统同步用户身份与权限的旗舰中间件，从大型机核心事务系统 (CICS、IMS、DB2) 抽取并转换用户身份资料，支撑安全审计、自动化用户配置 (Provisioning) 与权限迁移。"
+          {
+            "zh": "企业级 **身份与访问管理 (IAM) / 身份联邦 (Identity Federation)** 项目。基于 IBM **Tivoli Directory Integrator (TDI，现 IBM Security Directory Integrator)** —— 一款用于跨异构系统同步用户身份与权限的旗舰中间件，从大型机核心事务系统 (CICS、IMS、DB2) 抽取并转换用户身份资料，支撑安全审计、自动化用户配置 (Provisioning) 与权限迁移。",
+            "ru": "Проект корпоративного уровня по **управлению идентификацией и доступом (IAM) / федерации идентичности (Identity Federation)**. Основан на IBM **Tivoli Directory Integrator (TDI, ныне IBM Security Directory Integrator)** — флагманской промежуточной платформе для синхронизации пользовательских идентификаций и прав между гетерогенными системами; извлекает и преобразует данные пользовательских идентичностей из мейнфреймовых ключевых транзакционных систем (CICS, IMS, DB2), поддерживая аудит безопасности, автоматическую настройку пользователей (Provisioning) и миграцию прав.",
+            "en": "An enterprise-level **Identity and Access Management (IAM) / Identity Federation** project. Based on IBM **Tivoli Directory Integrator (TDI, now IBM Security Directory Integrator)** — a flagship middleware for synchronizing user identities and permissions across heterogeneous systems; it extracts and transforms user identity data from mainframe core transaction systems (CICS, IMS, DB2), supporting security auditing, automated user provisioning, and permission migration.",
+            "be": "Праект карпаратыўнага ўзроўню па **кіраванні ідэнтыфікацыяй і доступам (IAM) / федэрацыі ідэнтычнасці (Identity Federation)**. Заснаваны на IBM **Tivoli Directory Integrator (TDI, цяпер IBM Security Directory Integrator)** — флагманскай прамежкавай платформе для сінхранізацыі карыстальніцкіх ідэнтыфікацый і правоў паміж гетэрагеннымі сістэмамі; выцягвае і пераўтварае даныя карыстальніцкіх ідэнтычнасцей з мейнфрэймавых ключавых транзакцыйных сістэм (CICS, IMS, DB2), падтрымліваючы аўдыт бяспекі, аўтаматызаваную наладку карыстальнікаў (Provisioning) і міграцыю правоў."
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 实现大型机 CICS / IMS / DB2 等异构系统间用户身份资料的自动化抽取、转换与同步。",
-          "2. 支撑企业级 IAM / 身份联邦与合规审计，提升大型机安全架构能力。"
+          {
+            "zh": "1. 实现大型机 CICS / IMS / DB2 等异构系统间用户身份资料的自动化抽取、转换与同步。",
+            "ru": "1. Автоматизированное извлечение, преобразование и синхронизация данных пользовательских идентичностей между гетерогенными системами мейнфрейма CICS / IMS / DB2 и другими.",
+            "en": "1. Automated extraction, transformation, and synchronization of user identity data across heterogeneous mainframe systems such as CICS / IMS / DB2.",
+            "be": "1. Аўтаматызаванае выцягванне, пераўтварэнне і сінхранізацыя даных карыстальніцкіх ідэнтычнасцей паміж гетэрагеннымі сістэмамі мейнфрэйма CICS / IMS / DB2 і іншымі."
+          },
+          {
+            "zh": "2. 支撑企业级 IAM / 身份联邦与合规审计，提升大型机安全架构能力。",
+            "ru": "2. Поддержка корпоративного IAM / федерации идентичности и аудита соответствия, повышение возможностей архитектуры безопасности мейнфрейма.",
+            "en": "2. Support enterprise IAM / identity federation and compliance auditing, enhancing mainframe security architecture capabilities.",
+            "be": "2. Падтрымка карпаратыўнага IAM / федэрацыі ідэнтычнасці і аўдыту адпаведнасці, павышэнне магчымасцей архітэктуры бяспекі мейнфрэйма."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "JavaScript, TDI, DB2, SQL, CICS, IMS"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "TDI 部分设计者 / 开发工程师。独立设计 TDI 数据流 (Dataflow) 与 JavaScript 处理逻辑，完成从大型机核心系统到目标身份仓库的资料集成。"
+          {
+            "zh": "TDI 部分设计者 / 开发工程师。独立设计 TDI 数据流 (Dataflow) 与 JavaScript 处理逻辑，完成从大型机核心系统到目标身份仓库的资料集成。",
+            "ru": "Проектировщик / инженер-разработчик части TDI. Самостоятельно спроектировал потоки данных TDI (Dataflow) и логику обработки на JavaScript, выполнив интеграцию данных из мейнфреймовых ключевых систем в целевой репозиторий идентичностей.",
+            "en": "TDI part designer / development engineer. Independently designed the TDI data flows (Dataflow) and JavaScript processing logic, completing the data integration from the mainframe core systems to the target identity repository.",
+            "be": "Праектавальнік / інжынер-распрацоўшчык часткі TDI. Самастойна праектаваў патокі даных TDI (Dataflow) і логіку апрацоўкі на JavaScript, выканаўшы інтэграцыю даных з мейнфрэймавых ключавых сістэм у мэтавы рэпазітар ідэнтычнасцей."
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 独立设计并交付项目 TDI 部分，掌握 TDI 与 JavaScript。",
-          "2. 用 TDI 和 JavaScript 研发了从 IBM 大型主机 DB2、CICS、IMS 等抽取、转换并同步用户身份的集成系统。",
-          "3. 体现大型机 **安全架构、身份数据集成** 与独立设计数据流的核心能力。"
+          {
+            "zh": "1. 独立设计并交付项目 TDI 部分，掌握 TDI 与 JavaScript。",
+            "ru": "1. Самостоятельно спроектировал и поставил TDI-часть проекта, освоив TDI и JavaScript.",
+            "en": "1. Independently designed and delivered the TDI portion of the project, mastering TDI and JavaScript.",
+            "be": "1. Самастойна праектаваў і паставіў TDI-частку праекта, асвоіўшы TDI і JavaScript."
+          },
+          {
+            "zh": "2. 用 TDI 和 JavaScript 研发了从 IBM 大型主机 DB2、CICS、IMS 等抽取、转换并同步用户身份的集成系统。",
+            "ru": "2. С помощью TDI и JavaScript разработал интеграционную систему, которая извлекает, преобразует и синхронизирует пользовательские идентичности из IBM мейнфрейма DB2, CICS, IMS и других.",
+            "en": "2. Using TDI and JavaScript, developed an integration system that extracts, transforms, and synchronizes user identities from the IBM mainframe's DB2, CICS, IMS, and other systems.",
+            "be": "2. З дапамогай TDI і JavaScript распрацаваў інтэграцыйную сістэму, якая выцягвае, пераўтварае і сінхранізуе карыстальніцкія ідэнтычнасці з IBM мейнфрэйма DB2, CICS, IMS і іншых."
+          },
+          {
+            "zh": "3. 体现大型机 **安全架构、身份数据集成** 与独立设计数据流的核心能力。",
+            "ru": "3. Демонстрирует ключевые компетенции в **архитектуре безопасности мейнфрейма, интеграции данных идентичности** и самостоятельном проектировании потоков данных.",
+            "en": "3. Demonstrates core capabilities in **mainframe security architecture, identity data integration**, and independently designing data flows.",
+            "be": "3. Дэманструе ключавыя кампетэнцыі ў **архітэктуры бяспекі мейнфрэйма, інтэграцыі даных ідэнтычнасці** і самастойным праектаванні патокаў даных."
+          }
         ]
       }
     ]
@@ -86,40 +221,100 @@
   {
     "category": "iba",
     "slug": "adm",
-    "title": "IBM 法国 ADM France BA",
+    "title": {
+      "zh": "IBM 法国 ADM France BA",
+      "ru": "IBM France ADM France BA",
+      "en": "IBM France ADM France BA",
+      "be": "IBM France ADM France BA"
+    },
     "date": "2004/02 - 2007/05",
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "IBM 内部 **IT 财务计费系统 (Chargeback) / 大型机硬件租赁定价引擎**。面向特定大客户或内部核算计算 IBM 大型主机构件的价格，承载复杂的财务模型与定价业务逻辑。"
+          {
+            "zh": "IBM 内部 **IT 财务计费系统 (Chargeback) / 大型机硬件租赁定价引擎**。面向特定大客户或内部核算计算 IBM 大型主机构件的价格，承载复杂的财务模型与定价业务逻辑。",
+            "ru": "Внутренняя система IBM для **финансового учёта (Chargeback) / движок ценообразования аренды мейнфреймового оборудования**. Для конкретных крупных клиентов или внутреннего учёта рассчитывает стоимость компонентов IBM мейнфрейма, реализуя сложные финансовые модели и бизнес-логику ценообразования.",
+            "en": "An internal IBM **IT financial chargeback / mainframe hardware leasing pricing engine**. It calculates the price of IBM mainframe components for specific large customers or internal accounting, carrying complex financial models and pricing business logic.",
+            "be": "Унутраная сістэма IBM для **фінансавага ўліку (Chargeback) / рухавіка ценаўтварэння арэнды мейнфрэймавага абсталявання**. Для канкрэтных буйных кліентаў або ўнутранага ўліку разлічвае кошт кампанентаў IBM мейнфрэйма, рэалізуючы складаныя фінансавыя мадэлі і бізнес-логіку ценаўтварэння."
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 通过数字化方式实现主机构件价格的精确计算与计费。",
-          "2. 在大型机环境稳定承载复杂定价 / 财务业务逻辑。"
+          {
+            "zh": "1. 通过数字化方式实现主机构件价格的精确计算与计费。",
+            "ru": "1. Точный расчёт и тарификация стоимости компонентов мейнфрейма цифровым способом.",
+            "en": "1. Accurately calculate and bill mainframe component prices through digital means.",
+            "be": "1. Дакладны разлік і тарыфікацыя кошту кампанентаў мейнфрэйма лічбавым спосабам."
+          },
+          {
+            "zh": "2. 在大型机环境稳定承载复杂定价 / 财务业务逻辑。",
+            "ru": "2. Стабильно поддерживать сложную бизнес-логику ценообразования / финансов в мейнфреймовой среде.",
+            "en": "2. Stably host complex pricing / financial business logic in a mainframe environment.",
+            "be": "2. Стала прымаць складаную бізнес-логіку ценаўтварэння / фінансаў у мейнфрэймавым асяроддзі."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "IBM zSeries, IBM z/OS, JCL, C/C++, DB2, SQL, SCLM, CICS"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "开发工程师。负责核心定价 / 计费逻辑的 IBM 大型机程序研发。"
+          {
+            "zh": "开发工程师。负责核心定价 / 计费逻辑的 IBM 大型机程序研发。",
+            "ru": "Инженер-разработчик. Отвечал за разработку программ IBM мейнфрейма для ключевой логики ценообразования / тарификации.",
+            "en": "Development engineer. Responsible for developing the IBM mainframe programs implementing the core pricing / billing logic.",
+            "be": "Інжынер-распрацоўшчык. Адказваў за распрацоўку праграм IBM мейнфрэйма для ключавой логікі ценаўтварэння / тарыфікацыі."
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 用 C/C++ 研制这个项目的大部分核心程序，并优化同事做的程序。",
-          "2. 在大型机环境下交付复杂 **财务 / 定价业务逻辑** 的可靠实现，体现核心逻辑开发能力。"
+          {
+            "zh": "1. 用 C/C++ 研制这个项目的大部分核心程序，并优化同事做的程序。",
+            "ru": "1. На C/C++ разработал бо́льшую часть ключевых программ проекта и оптимизировал программы, написанные коллегами.",
+            "en": "1. Developed most of the project's core programs in C/C++ and optimized the programs written by colleagues.",
+            "be": "1. На C/C++ распрацаваў большую частку ключавых праграм праекта і аптымізаваў праграмы, напісаныя калегамі."
+          },
+          {
+            "zh": "2. 在大型机环境下交付复杂 **财务 / 定价业务逻辑** 的可靠实现，体现核心逻辑开发能力。",
+            "ru": "2. Поставил надёжную реализацию сложной **финансовой / ценовой бизнес-логики** в мейнфреймовой среде, продемонстрировав компетенции в разработке ключевой логики.",
+            "en": "2. Delivered a reliable implementation of complex **financial / pricing business logic** in a mainframe environment, demonstrating core logic development capability.",
+            "be": "2. Паставіў надзейную рэалізацыю складанай **фінансавай / цэнавай бізнес-логікі** у мейнфрэймавым асяроддзі, прадэманстраваўшы кампетэнцыі ў распрацоўцы ключавой логікі."
+          }
         ]
       }
     ]
@@ -127,41 +322,106 @@
   {
     "category": "iba",
     "slug": "planning_engine",
-    "title": "IBM 美国微电子部 Central Planning Engine 系统",
+    "title": {
+      "zh": "IBM 美国微电子部 Central Planning Engine 系统",
+      "ru": "Система IBM US Microelectronics Central Planning Engine",
+      "en": "IBM US Microelectronics Central Planning Engine System",
+      "be": "Сістэма IBM US Microelectronics Central Planning Engine"
+    },
     "date": "2002/12 - 2003/11",
     "images": [],
     "sections": [
       {
-        "heading": "简介",
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
         "paragraphs": [
-          "IBM 美国微电子部 (IBM Microelectronics) 的核心企业级系统。Central Planning Engine (CPE) 是一套基于 **运筹学 (Operations Research)** 的半导体供应链优化引擎，核心任务是 **资产与需求的匹配 (Matching Assets with Demand)**，通过求解复杂的 **混合整数规划 (MIP)** 问题，优化半导体制造中的排产、库存与供应链网络。该系统在运筹学与大型机制造供应链管理领域具有极高的知名度，并被广泛引用。"
+          {
+            "zh": "IBM 美国微电子部 (IBM Microelectronics) 的核心企业级系统。Central Planning Engine (CPE) 是一套基于 **运筹学 (Operations Research)** 的半导体供应链优化引擎，核心任务是 **资产与需求的匹配 (Matching Assets with Demand)**，通过求解复杂的 **混合整数规划 (MIP)** 问题，优化半导体制造中的排产、库存与供应链网络。该系统在运筹学与大型机制造供应链管理领域具有极高的知名度，并被广泛引用。",
+            "ru": "Ключевая корпоративная система IBM US Microelectronics (IBM Microelectronics). Central Planning Engine (CPE) — это оптимизационный движок цепочки поставок полупроводников, основанный на **исследовании операций (Operations Research)**; его главная задача — **сопоставление активов со спросом (Matching Assets with Demand)**. Решая сложные задачи **смешанного целочисленного программирования (MIP)**, он оптимизирует планирование производства, запасы и сети цепочки поставок в полупроводниковом производстве. Система пользуется высочайшей известностью в области исследования операций и управления цепочками поставок мейнфреймового производства и широко цитируется.",
+            "en": "A core enterprise system of IBM US Microelectronics (IBM Microelectronics). Central Planning Engine (CPE) is a semiconductor supply-chain optimization engine based on **Operations Research**, whose core task is **matching assets with demand**. By solving complex **Mixed Integer Programming (MIP)** problems, it optimizes production scheduling, inventory, and supply-chain networks in semiconductor manufacturing. The system is highly renowned in the fields of operations research and mainframe manufacturing supply-chain management and is widely cited.",
+            "be": "Ключавая карпаратыўная сістэма IBM US Microelectronics (IBM Microelectronics). Central Planning Engine (CPE) — гэта аптымізацыйны рухавік ланцужка паставак паўправаднікоў, заснаваны на **даследаванні аперацый (Operations Research)**; яго галоўная задача — **супастаўленне актываў з попытам (Matching Assets with Demand)**. Рашаючы складаныя задачы **змешанага цэлалікавага праграмавання (MIP)**, ён аптымізуе планаванне вытворчасці, запасы і сеткі ланцужка паставак у паўправадніковай вытворчасці. Сістэма карыстаецца найвышэйшай вядомасцю ў галіне даследавання аперацый і кіравання ланцужком паставак мейнфрэймавай вытворчасці і шырока цытуецца."
+          }
         ]
       },
       {
-        "heading": "项目目标",
+        "heading": {
+          "zh": "项目目标",
+          "ru": "Цели проекта",
+          "en": "Project Goals",
+          "be": "Мэты праекта"
+        },
         "list": [
-          "1. 基于运筹学构建半导体供应链的产能-需求匹配与排产优化模型，提升资产利用率与交付效率。",
-          "2. 在 IBM 大型机 z/OS 平台上，以高性能 C/C++、PL/I 与 DB2 SQL 实现核心算法与数据访问层。"
+          {
+            "zh": "1. 基于运筹学构建半导体供应链的产能-需求匹配与排产优化模型，提升资产利用率与交付效率。",
+            "ru": "1. Построение на базе исследования операций модели сопоставления мощностей и спроса и оптимизации планирования производства для цепочки поставок полупроводников, повышающей утилизацию активов и эффективность поставок.",
+            "en": "1. Build, based on operations research, a capacity-demand matching and production-scheduling optimization model for the semiconductor supply chain, improving asset utilization and delivery efficiency.",
+            "be": "1. Пабудова на базе даследавання аперацый мадэлі супастаўлення магутнасцяў і попыту і аптымізацыі планавання вытворчасці для ланцужка паставак паўправаднікоў, якая павышае выкарыстанне актываў і эфектыўнасць паставак."
+          },
+          {
+            "zh": "2. 在 IBM 大型机 z/OS 平台上，以高性能 C/C++、PL/I 与 DB2 SQL 实现核心算法与数据访问层。",
+            "ru": "2. Реализация ключевых алгоритмов и слоя доступа к данным на высокопроизводительных C/C++, PL/I и DB2 SQL на платформе IBM мейнфрейма z/OS.",
+            "en": "2. Implement the core algorithms and data-access layer in high-performance C/C++, PL/I, and DB2 SQL on the IBM z/OS mainframe platform.",
+            "be": "2. Рэалізацыя ключавых алгарытмаў і слою доступу да даных на высокапрадукцыйных C/C++, PL/I і DB2 SQL на платформе IBM мейнфрэйма z/OS."
+          }
         ]
       },
       {
-        "heading": "技术",
+        "heading": {
+          "zh": "技术",
+          "ru": "Технологии",
+          "en": "Technology",
+          "be": "Тэхналогіі"
+        },
         "paragraphs": [
           "IBM zSeries, IBM z/OS, JCL, C/C++, PL/I, DB2 SQL, SCLM"
         ]
       },
       {
-        "heading": "职责",
+        "heading": {
+          "zh": "职责",
+          "ru": "Обязанности",
+          "en": "Responsibilities",
+          "be": "Абавязкі"
+        },
         "paragraphs": [
-          "底层研发工程师。参与 CPE 核心引擎的 C/C++/PL/I 模块开发，以及 DB2 SQL 数据访问层实现，运行于 IBM 大型机 z/OS 环境。"
+          {
+            "zh": "底层研发工程师。参与 CPE 核心引擎的 C/C++/PL/I 模块开发，以及 DB2 SQL 数据访问层实现，运行于 IBM 大型机 z/OS 环境。",
+            "ru": "Инженер базовой разработки. Участвовал в разработке модулей C/C++/PL/I ключевого движка CPE, а также в реализации слоя доступа к данным DB2 SQL, работающего в среде IBM мейнфрейма z/OS.",
+            "en": "Low-level R&D engineer. Participated in developing the C/C++/PL/I modules of the CPE core engine, as well as implementing the DB2 SQL data-access layer, running on the IBM z/OS mainframe environment.",
+            "be": "Інжынер базавай распрацоўкі. Удзельнічаў у распрацоўцы модуляў C/C++/PL/I ключавога рухавіка CPE, а таксама ў рэалізацыі слою доступу да даных DB2 SQL, які працуе ў асяроддзі IBM мейнфрэйма z/OS."
+          }
         ]
       },
       {
-        "heading": "成就",
+        "heading": {
+          "zh": "成就",
+          "ru": "Достижения",
+          "en": "Achievements",
+          "be": "Дасягненні"
+        },
         "list": [
-          "1. 深入掌握 zSeries/z/OS 大型机体系，以及 PL/I、JCL、SCLM 等大型机专属技术与 DB2 数据库。",
-          "2. 直接参与 IBM 最核心的 **企业级半导体供应链优化引擎 (CPE)** 底层研发；该系统在运筹学与供应链管理领域被广泛引用，技术壁垒极高。",
-          "3. 在高可靠大型机环境交付核心算法模块，积累了大型机高性能 C/C++ 与 PL/I 开发经验。"
+          {
+            "zh": "1. 深入掌握 zSeries/z/OS 大型机体系，以及 PL/I、JCL、SCLM 等大型机专属技术与 DB2 数据库。",
+            "ru": "1. Глубоко освоил архитектуру мейнфреймов zSeries/z/OS, а также специфичные для мейнфреймов технологии PL/I, JCL, SCLM и базу данных DB2.",
+            "en": "1. Gained deep mastery of the zSeries/z/OS mainframe architecture, as well as mainframe-specific technologies such as PL/I, JCL, SCLM, and the DB2 database.",
+            "be": "1. Глыбока асвоіў архітэктуру мейнфрэймаў zSeries/z/OS, а таксама спецыфічныя для мейнфрэймаў тэхналогіі PL/I, JCL, SCLM і базу даных DB2."
+          },
+          {
+            "zh": "2. 直接参与 IBM 最核心的 **企业级半导体供应链优化引擎 (CPE)** 底层研发；该系统在运筹学与供应链管理领域被广泛引用，技术壁垒极高。",
+            "ru": "2. Непосредственно участвовал в базовой разработке ключевого для IBM **корпоративного оптимизационного движка цепочки поставок полупроводников (CPE)**; система широко цитируется в области исследования операций и управления цепочками поставок, обладая чрезвычайно высоким техническим барьером.",
+            "en": "2. Directly participated in the low-level R&D of IBM's most core **enterprise semiconductor supply-chain optimization engine (CPE)**; the system is widely cited in operations research and supply-chain management and has an extremely high technical barrier.",
+            "be": "2. Непасрэдна ўдзельнічаў у базавай распрацоўцы найбольш ключавога для IBM **карпаратыўнага аптымізацыйнага рухавіка ланцужка паставак паўправаднікоў (CPE)**; сістэма шырока цытуецца ў галіне даследавання аперацый і кіравання ланцужком паставак і мае вельмі высокі тэхнічны бар'ер."
+          },
+          {
+            "zh": "3. 在高可靠大型机环境交付核心算法模块，积累了大型机高性能 C/C++ 与 PL/I 开发经验。",
+            "ru": "3. Поставил ключевые модули алгоритмов в высоконадёжной мейнфреймовой среде, накопив опыт высокопроизводительной разработки на C/C++ и PL/I для мейнфреймов.",
+            "en": "3. Delivered core algorithm modules in a high-reliability mainframe environment, accumulating experience in high-performance mainframe C/C++ and PL/I development.",
+            "be": "3. Паставіў ключавыя модулі алгарытмаў у высоканадзейным мейнфрэймавым асяроддзі, назапасіўшы вопыт высокапрадукцыйнай распрацоўкі на C/C++ і PL/I для мейнфрэймаў."
+          }
         ]
       }
     ]

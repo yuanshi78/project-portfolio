@@ -200,7 +200,7 @@ onBeforeUnmount(() => {
         icon="ri-arrow-left-line"
         class="me-1"
       />
-      <span>返回 {{ company.company }} 项目综合</span>
+      <span>{{ $t('back') }} {{ company.company }} {{ $t('nav.allProjects') }}</span>
     </RouterLink>
 
     <!-- 👉 Hero 信息卡 -->
@@ -228,7 +228,7 @@ onBeforeUnmount(() => {
             variant="tonal"
             class="me-1 mb-1"
           >
-            {{ t }}
+            {{ $L(t) }}
           </VChip>
         </div>
 
@@ -288,7 +288,7 @@ onBeforeUnmount(() => {
         <button
           class="carousel-nav prev"
           type="button"
-          aria-label="上一张"
+          :aria-label="$t('prevImage')"
           @click.stop="go(-1)"
         >
           <VIcon icon="ri-arrow-left-line" />
@@ -296,7 +296,7 @@ onBeforeUnmount(() => {
         <button
           class="carousel-nav next"
           type="button"
-          aria-label="下一张"
+          :aria-label="$t('nextImage')"
           @click.stop="go(1)"
         >
           <VIcon icon="ri-arrow-right-line" />
@@ -309,7 +309,7 @@ onBeforeUnmount(() => {
             :key="i"
             type="button"
             :class="{ active: i === activeIndex }"
-            :aria-label="`第 ${i + 1} 张`"
+            :aria-label="$t('imageOf', { n: i + 1 })"
             @click.stop="activeIndex = i"
           >
             <img
@@ -325,7 +325,7 @@ onBeforeUnmount(() => {
             icon="ri-zoom-in-line"
             size="16"
           />
-          <span>点击放大</span>
+          <span>{{ $t('zoomIn') }}</span>
         </div>
       </div>
     </div>
@@ -346,7 +346,7 @@ onBeforeUnmount(() => {
           class="ms-3 align-center section-draft-chip"
           prepend-icon="ri-draft-line"
         >
-          {{ sec.draftText || '草案' }}
+          {{ sec.draftText || $t('draft') }}
         </VChip>
       </div>
 
@@ -365,7 +365,7 @@ onBeforeUnmount(() => {
             class="section-paragraph mb-3"
           >
             <template
-              v-for="(seg, si) in parseEmphasis(p)"
+              v-for="(seg, si) in parseEmphasis($L(p))"
               :key="si"
             >
               <strong
@@ -390,7 +390,7 @@ onBeforeUnmount(() => {
               <!-- 显式包裹一层，才能稳定控制字号（Vuetify 内部容器类名不保证） -->
               <span class="detail-list-text">
                 <template
-                  v-for="(seg, si) in parseEmphasis(li)"
+                  v-for="(seg, si) in parseEmphasis($L(li))"
                   :key="si"
                 >
                   <strong
@@ -451,7 +451,7 @@ onBeforeUnmount(() => {
       >
         <img
           :src="zoomSrc"
-          alt="放大预览"
+          :alt="$t('zoomPreview')"
           style="max-width: 100%; max-height: 88vh; object-fit: contain; display: block; border-radius: 12px; box-shadow: 0 10px 40px rgb(0 0 0 / 60%);"
           @load="zoomLoaded = true"
         >
@@ -478,7 +478,7 @@ onBeforeUnmount(() => {
 
   <div v-else>
     <p class="text-h5">
-      未找到该项目详情
+      {{ $t('projectNotFound') }}
     </p>
   </div>
 </template>

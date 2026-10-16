@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import App from '@/App.vue'
 import { registerPlugins } from '@core/utils/plugins'
-import personal from '@/data/personal.json'
+import { personal } from '@/data/personal'
+import { L, t, locale, setLocale } from '@/i18n'
 
 // Styles
 import '@core/scss/template/index.scss'
@@ -9,7 +10,7 @@ import '@layouts/styles/index.scss'
 
 // 浏览器标签页标题由 personal.json 的 site.title 驱动（改 JSON 即可，无需改 index.html）
 if (personal.site?.title)
-  document.title = personal.site.title
+  document.title = L(personal.site.title)
 
 // 👉 图片加载完成标记：给已加载/失败的 <img> 所在的 .v-img 根节点设置 data-img-loaded 属性，
 //    配合 @layouts/styles/_image-loading.scss —— shimmer 动画只在未加载时播放。
@@ -31,6 +32,12 @@ const app = createApp(App)
 
 // Register plugins
 registerPlugins(app)
+
+// 👉 国际化：全局暴露 $t / $L / $locale / $setLocale（模板里直接用 {{ $t('key') }} / {{ $L(field) }}）
+app.config.globalProperties.$t = t
+app.config.globalProperties.$L = L
+app.config.globalProperties.$locale = locale
+app.config.globalProperties.$setLocale = setLocale
 
 // Mount vue app
 app.mount('#app')
