@@ -30,14 +30,17 @@ watch(() => globalTheme.name.value, val => {
 </script>
 
 <template>
-  <IconBtn @click="changeTheme">
+  <IconBtn
+    :aria-label="$t(currentThemeName === 'dark' ? 'switchToLight' : 'switchToDark')"
+    @click="changeTheme"
+  >
     <VIcon :icon="props.themes[currentThemeIndex].icon" />
     <VTooltip
       activator="parent"
       open-delay="1000"
       scroll-strategy="close"
     >
-      <span class="text-capitalize">{{ currentThemeName }}</span>
+      {{ $t(currentThemeName === 'dark' ? 'switchToLight' : 'switchToDark') }}
     </VTooltip>
   </IconBtn>
 </template>

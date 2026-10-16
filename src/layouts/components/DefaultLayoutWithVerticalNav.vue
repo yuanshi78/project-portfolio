@@ -3,6 +3,7 @@ import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 import Footer from '@/layouts/components/Footer.vue'
 import NavItems from '@/layouts/components/NavItems.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
+import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import QuickLinks from '@/components/QuickLinks.vue'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import { personal } from '@/data/personal'
@@ -130,6 +131,8 @@ onBeforeUnmount(() => {
               {{ cvLabel }}
             </VTooltip>
           </IconBtn>
+
+          <NavbarThemeSwitcher class="me-2" />
 
           <!-- 👉 内容正文字号：放小 / 放大 两个独立按钮，到两端自动禁用 -->
           <IconBtn
