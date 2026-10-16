@@ -41,7 +41,12 @@ watch(
   <VerticalNavGroup
     v-for="c in companies"
     :key="c.category"
-    :item="{ title: c.company, icon: c.icon, isOpen: openMap[c.category] }"
+    :item="{
+      title: c.company,
+      icon: c.icon,
+      isOpen: openMap[c.category],
+      isHighlighted: c.category === 'self',
+    }"
   >
     <VerticalNavLink
       :item="{ title: $t('nav.allProjects'), to: `/${c.category}/all`, icon: 'ri-apps-2-line' }"

@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
 
 <template>
   <li
-    :class="isOpen && 'open'"
+    :class="[isOpen && 'open', item.isHighlighted && 'self-products-highlight']"
     class="nav-group"
   >
     <div
@@ -97,6 +97,23 @@ onBeforeUnmount(() => {
       display: flex;
       align-items: center;
       cursor: pointer;
+    }
+
+    &.self-products-highlight {
+      .nav-group-label {
+        border-radius: 6px;
+        background-color: rgba(255, 193, 7, 0.16);
+      }
+
+      .nav-item-icon,
+      .nav-item-title,
+      .nav-group-arrow {
+        color: #f9a825;
+      }
+
+      .nav-item-title {
+        font-weight: 600;
+      }
     }
 
     // 过长名称截断为单行，配合上面的 tooltip 展示完整名称

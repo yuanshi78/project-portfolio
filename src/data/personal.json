@@ -139,11 +139,6 @@
       "name": "Gitee",
       "icon": "ri-gitee-fill",
       "url": "https://gitee.com/yuanshi78"
-    },
-    {
-      "name": "作品集",
-      "icon": "ri-global-line",
-      "url": "https://aliaksandr-kuzmiankou-portfolio.netlify.app"
     }
   ],
   "tabs": [

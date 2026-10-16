@@ -18,10 +18,10 @@
           "be": "Інтэлектуальны інструмент мультымадальнага прадстаўлення дадзеных Aethera"
         },
         "description": {
-          "zh": "**Aethera** 是智能多模态数据呈现工具：以 **plugin-first** 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
-          "ru": "**Aethera** — инструмент интеллектуального мультимодального представления данных: построен на плагин-ориентированной (plugin-first) микроядерной архитектуре, поддерживает мультимодальное представление и ИИ-управляемую настройку, ориентирован на будущее распределённое и контекстное взаимодействие с информацией.",
-          "en": "**Aethera** is an intelligent multimodal data-presentation tool: built on a plugin-first microkernel architecture, supporting multimodal presentation and AI-driven configuration, aimed at future distributed, ambient information interaction.",
-          "be": "**Aethera** — інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных: пабудаваны на плагін-арыентаванай (plugin-first) мікраядзернай архітэктуры, падтрымлівае мультымадальнае прадстаўленне і ШІ-кіраваную наладку, арыентаваны на будучае размеркаванае і кантэкстнае ўзаемадзеянне з інфармацыяй."
+          "zh": "**Aethera**：智能多模态数据呈现工具，plugin-first 微内核，AI 驱动配置。",
+          "ru": "**Aethera** — инструмент мультимодального представления данных: plugin-first микроядро, ИИ-настройка.",
+          "en": "**Aethera** — multimodal data-presentation tool: plugin-first microkernel, AI-driven config.",
+          "be": "**Aethera** — інструмент мультымадальнага прадстаўлення дадзеных: plugin-first мікраядро, ШІ-наладка."
         },
         "tags": [
           "Vue",
