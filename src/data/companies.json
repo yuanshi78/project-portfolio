@@ -506,20 +506,50 @@
       {
         "slug": "adm",
         "image": "iba/cover.jpg",
-        "name": "IBM法国ADM France BA",
-        "description": "IBM法国ADM France BA"
+        "name": {
+          "zh": "IBM 法国 ADM France BA",
+          "ru": "IBM Франция ADM France BA",
+          "en": "IBM France ADM France BA",
+          "be": "IBM Францыя ADM France BA"
+        },
+        "description": {
+          "zh": "IBM 法国 ADM France BA",
+          "ru": "IBM Франция ADM France BA",
+          "en": "IBM France ADM France BA",
+          "be": "IBM Францыя ADM France BA"
+        }
       },
       {
         "slug": "mie",
         "image": "iba/cover.jpg",
-        "name": "MIE France",
-        "description": "IBM法国MIE France"
+        "name": {
+          "zh": "IBM 法国 MIE France",
+          "ru": "IBM Франция MIE France",
+          "en": "IBM France MIE France",
+          "be": "IBM Францыя MIE France"
+        },
+        "description": {
+          "zh": "IBM 法国 MIE France",
+          "ru": "IBM Франция MIE France",
+          "en": "IBM France MIE France",
+          "be": "IBM Францыя MIE France"
+        }
       },
       {
         "slug": "urt",
         "image": "iba/cover.jpg",
-        "name": "URT Extractors ISD",
-        "description": "IBM法国URT Extractors ISD"
+        "name": {
+          "zh": "IBM 法国 URT Extractors ISD",
+          "ru": "IBM Франция URT Extractors ISD",
+          "en": "IBM France URT Extractors ISD",
+          "be": "IBM Францыя URT Extractors ISD"
+        },
+        "description": {
+          "zh": "IBM 法国 URT Extractors ISD",
+          "ru": "IBM Франция URT Extractors ISD",
+          "en": "IBM France URT Extractors ISD",
+          "be": "IBM Францыя URT Extractors ISD"
+        }
       }
     ]
   }
