@@ -53,19 +53,19 @@
     "icon": "ri-building-2-line",
     "projects": [
       {
-        "slug": "nocobase-plugins",
+        "slug": "NocoBase-plugins",
         "name": {
-          "zh": "Nocobase插件",
-          "ru": "Плагины Nocobase",
-          "en": "Nocobase Plugins",
-          "be": "Плагіны Nocobase"
+          "zh": "NocoBase 插件",
+          "ru": "Плагины NocoBase",
+          "en": "NocoBase Plugins",
+          "be": "Плагіны NocoBase"
         },
-        "image": "rainbow/nocobase/echarts-plugin.png",
+        "image": "rainbow/NocoBase/echarts-plugin.png",
         "description": {
-          "zh": "**Nocobase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
-          "ru": "**Nocobase** — исключительно расширяемая no-code платформа. Особенность: все функции реализованы в виде плагинов. Разработчики могут создавать собственные плагины",
-          "en": "**Nocobase** is a highly extensible no-code development platform. Its feature: all functionality is implemented as plugins. Developers can create their own plugins",
-          "be": "**Nocobase** — выключна пашыральная no-code платформа. Асаблівасць: усе функцыі рэалізаваны ў выглядзе плагінаў. Распрацоўшчыкі могуць ствараць уласныя плагіны"
+          "zh": "**NocoBase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
+          "ru": "**NocoBase** — исключительно расширяемая no-code платформа. Особенность: все функции реализованы в виде плагинов. Разработчики могут создавать собственные плагины",
+          "en": "**NocoBase** is a highly extensible no-code development platform. Its feature: all functionality is implemented as plugins. Developers can create their own plugins",
+          "be": "**NocoBase** — выключна пашыральная no-code платформа. Асаблівасць: усе функцыі рэалізаваны ў выглядзе плагінаў. Распрацоўшчыкі могуць ствараць уласныя плагіны"
         },
         "tags": [
           "React",
@@ -76,10 +76,10 @@
       {
         "slug": "smart_operation",
         "name": {
-          "zh": "可视化运维系统",
-          "ru": "Система визуализированной эксплуатации",
-          "en": "Visual O&M System",
-          "be": "Сістэма візуалізаванай эксплуатацыі"
+          "zh": "POXMS可视化智慧运维管理云平台",
+          "ru": "Облачная платформа интеллектуального визуального управления эксплуатацией POXMS",
+          "en": "POXMS Visual Smart O&M Management Cloud Platform",
+          "be": "Воблачная платформа разумнага візуальнага кіравання эксплуатацыяй POXMS"
         },
         "image": "rainbow/project4.png",
         "description": {

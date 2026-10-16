@@ -89,10 +89,10 @@
     }
   },
   "about": {
-    "zh": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍独立开发者（数据呈现与AI方向）、软件工程师与web前端架构师。\n\n专注数据呈现与AI方向：软件工程、前端架构、低代码平台（NocoBase、AMIS）、数据可视化。目前致力于研发前沿的智能多模态数据呈现工具（可视化、可听化及其他感知通道），基于带微内核的插件优先架构，AI 作为呈现的智能基础。该工具既面向现代智能仪表盘，也面向未来的数据交互方式。\n\n我的独特优势：**{years}年在西安 + 中文流利 + 俄语母语 + {exp}年软件工程经验 + web前端架构 + AI辅助开发 + 产品思维**。我是中国与俄语市场之间的技术桥梁。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
-    "ru": "Здравствуйте, меня зовут Aliaksandr Kuzmiankou (元实) — белорусский независимый разработчик (направление «представление данных и ИИ»), программист и архитектор веб-интерфейсов, живу и работаю в Сиане.\n\nСпециализируюсь на представлении данных и ИИ: программная инженерия, архитектура фронтенда, low-code платформы (NocoBase, AMIS), визуализация данных. Сейчас разрабатываю передовой инструмент интеллектуального мультимодального представления данных (визуализация, озвучивание и другие каналы восприятия) на основе плагин-ориентированной микроядерной архитектуры, где ИИ — интеллектуальная основа представления. Инструмент ориентирован как на современные умные дашборды, так и на будущие способы взаимодействия с данными.\n\nМоё уникальное преимущество: **{years} лет в Сиане + свободный китайский + родной русский + {exp} лет опыта разработки ПО + архитектура веб-фронтенда + ИИ-ассистированная разработка + продуктовое мышление**. Я — технический мост между Китаем и русскоязычным рынком.\n\nНа этом сайте я собрал свои профессиональные навыки, проектный опыт и мысли о карьере и технологиях. Добро пожаловать!",
-    "en": "Hello, I'm Aliaksandr Kuzmiankou (元实), a Belarusian independent developer (data presentation & AI), software engineer and web front-end architect based in Xi'an.\n\nI focus on data presentation and AI: software engineering, front-end architecture, low-code platforms (NocoBase, AMIS), and data visualization. I'm currently building a cutting-edge intelligent multimodal data-presentation tool (visual, audible and other perceptual channels) on a plugin-first microkernel architecture, with AI as the intelligent foundation of presentation. It targets both modern smart dashboards and future ways of interacting with data.\n\nMy unique edge: **{years} years in Xi'an + fluent Chinese + native Russian + {exp} years of software engineering + web front-end architecture + AI-assisted development + product thinking**. I am the technical bridge between China and the Russian-speaking market.\n\nOn this site I've compiled my skills, project experience, and some thoughts on career and technology. Welcome!",
-    "be": "Вітаю, мяне клічуць Aliaksandr Kuzmiankou (元实) — беларускі незалежны распрацоўшчык (напрамак «прадстаўленне дадзеных і ШІ»), праграміст і архітэктар вэб-інтэрфейсаў, жыву і працую ў Сіяні.\n\nСпецыялізуюся на прадстаўленні дадзеных і ШІ: праграмная інжынерыя, архітэктура фронтэнда, low-code платформы (NocoBase, AMIS), візуалізацыя дадзеных. Зараз распрацоўваю перадавы інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных (візуалізацыя, агучванне і іншыя каналы ўспрымання) на аснове плагін-арыентаванай мікраядзернай архітэктуры, дзе ШІ — інтэлектуальная аснова прадстаўлення. Інструмент арыентаваны як на сучасныя разумныя дашборды, так і на будучыя спосабы ўзаемадзеяння з дадзенымі.\n\nМая ўнікальная перавага: **{years} гадоў у Сіяні + вольная кітайская + родная руская + {exp} гадоў вопыту распрацоўкі ПЗ + архітэктура вэб-фронтэнда + ШІ-асістэнтская распрацоўка + прадуктовае мысленне**. Я — тэхнічны мост паміж Кітаем і рускамоўным рынкам.\n\nНа гэтым сайце я сабраў свае прафесійныя навыкі, вопыт праектаў і думкі аб кар'еры і тэхналогіях. Сардэчна запрашаю!"
+    "zh": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍独立研发者（数据呈现与AI方向）、软件工程师与web前端架构师。\n\n专注数据呈现与AI方向：软件工程、前端架构、低代码平台（NocoBase、AMIS）、数据可视化。目前致力于研发前沿的智能多模态数据呈现工具（可视化、可听化及其他感知通道），基于带微内核的插件优先架构，AI 作为呈现的智能基础。该工具既面向现代智能仪表盘，也面向未来的数据交互方式。\n\n我的独特优势：**{years}年在西安 + 中文流利 + 俄语母语 + {exp}年软件工程经验 + web前端架构 + AI辅助开发 + 产品思维**。我是中国与俄语市场之间的技术桥梁。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
+    "ru": "Здравствуйте, меня зовут Aliaksandr Kuzmiankou (元实) — белорусский независимый специалист по исследованиям и разработкам (направление «представление данных и ИИ»), программист и архитектор веб-интерфейсов, живу и работаю в Сиане.\n\nСпециализируюсь на представлении данных и ИИ: программная инженерия, архитектура фронтенда, low-code платформы (NocoBase, AMIS), визуализация данных. Сейчас разрабатываю передовой инструмент интеллектуального мультимодального представления данных (визуализация, озвучивание и другие каналы восприятия) на основе плагин-ориентированной микроядерной архитектуры, где ИИ — интеллектуальная основа представления. Инструмент ориентирован как на современные умные дашборды, так и на будущие способы взаимодействия с данными.\n\nМоё уникальное преимущество: **{years} лет в Сиане + свободный китайский + родной русский + {exp} лет опыта разработки ПО + архитектура веб-фронтенда + ИИ-ассистированная разработка + продуктовое мышление**. Я — технический мост между Китаем и русскоязычным рынком.\n\nНа этом сайте я собрал свои профессиональные навыки, проектный опыт и мысли о карьере и технологиях. Добро пожаловать!",
+    "en": "Hello, I'm Aliaksandr Kuzmiankou (元实), a Belarusian independent R&D professional (data presentation & AI), software engineer and web front-end architect based in Xi'an.\n\nI focus on data presentation and AI: software engineering, front-end architecture, low-code platforms (NocoBase, AMIS), and data visualization. I'm currently building a cutting-edge intelligent multimodal data-presentation tool (visual, audible and other perceptual channels) on a plugin-first microkernel architecture, with AI as the intelligent foundation of presentation. It targets both modern smart dashboards and future ways of interacting with data.\n\nMy unique edge: **{years} years in Xi'an + fluent Chinese + native Russian + {exp} years of software engineering + web front-end architecture + AI-assisted development + product thinking**. I am the technical bridge between China and the Russian-speaking market.\n\nOn this site I've compiled my skills, project experience, and some thoughts on career and technology. Welcome!",
+    "be": "Вітаю, мяне клічуць Aliaksandr Kuzmiankou (元实) — беларускі незалежны спецыяліст па даследаваннях і распрацоўках (напрамак «прадстаўленне дадзеных і ШІ»), праграміст і архітэктар вэб-інтэрфейсаў, жыву і працую ў Сіяні.\n\nСпецыялізуюся на прадстаўленні дадзеных і ШІ: праграмная інжынерыя, архітэктура фронтэнда, low-code платформы (NocoBase, AMIS), візуалізацыя дадзеных. Зараз распрацоўваю перадавы інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных (візуалізацыя, агучванне і іншыя каналы ўспрымання) на аснове плагін-арыентаванай мікраядзернай архітэктуры, дзе ШІ — інтэлектуальная аснова прадстаўлення. Інструмент арыентаваны як на сучасныя разумныя дашборды, так і на будучыя спосабы ўзаемадзеяння з дадзенымі.\n\nМая ўнікальная перавага: **{years} гадоў у Сіяні + вольная кітайская + родная руская + {exp} гадоў вопыту распрацоўкі ПЗ + архітэктура вэб-фронтэнда + ШІ-асістэнтская распрацоўка + прадуктовае мысленне**. Я — тэхнічны мост паміж Кітаем і рускамоўным рынкам.\n\nНа гэтым сайце я сабраў свае прафесійныя навыкі, вопыт праектаў і думкі аб кар'еры і тэхналогіях. Сардэчна запрашаю!"
   },
   "forEmployers": {
     "zh": "如果您公司对我研发的智能多模态数据呈现工具感兴趣，我愿意以公司项目的形式共同推进。Aethera 的架构方向被 8 个 AI 模型一致认定为认知时代唯一可信的基础；它的目标不是跟随数据呈现趋势，而是推动数据智能呈现的未来。新产生的成果归属公司；此前已有的个人研究与原型的使用条件，建议另行协商。",
@@ -104,10 +104,10 @@
     {
       "icon": "ri-computer-line",
       "text": {
-        "zh": "独立开发者（数据呈现与AI方向） / 软件工程师 / web前端",
-        "ru": "Независимый разработчик (представление данных и ИИ) / Программист / Веб-фронтенд",
-        "en": "Independent Developer (Data Presentation & AI) / Software Engineer / Web Front-end",
-        "be": "Незалежны распрацоўшчык (прадстаўленне дадзеных і ШІ) / Праграміст / Вэб-фронтэнд"
+        "zh": "独立研发者（数据呈现与AI方向） / 软件工程师 / web前端",
+        "ru": "Независимый специалист по исследованиям и разработкам (представление данных и ИИ) / Программист / Веб-фронтенд",
+        "en": "Independent R&D Professional (Data Presentation & AI) / Software Engineer / Web Front-end",
+        "be": "Незалежны спецыяліст па даследаваннях і распрацоўках (прадстаўленне дадзеных і ШІ) / Праграміст / Вэб-фронтэнд"
       }
     },
     {
@@ -287,10 +287,10 @@
           {
             "icon": "ri-star-line",
             "text": {
-              "zh": "角色：独立开发者（数据呈现与AI方向） / 软件工程师 / web前端",
-              "ru": "Роль: независимый разработчик (представление данных и ИИ) / программист / веб-фронтенд",
-              "en": "Role: Independent Developer (Data Presentation & AI) / Software Engineer / Web Front-end",
-              "be": "Роля: незалежны распрацоўшчык (прадстаўленне дадзеных і ШІ) / праграміст / вэб-фронтэнд"
+              "zh": "角色：独立研发者（数据呈现与AI方向） / 软件工程师 / web前端",
+              "ru": "Роль: независимый специалист по исследованиям и разработкам (представление данных и ИИ) / программист / веб-фронтенд",
+              "en": "Role: Independent R&D Professional (Data Presentation & AI) / Software Engineer / Web Front-end",
+              "be": "Роля: незалежны спецыяліст па даследаваннях і распрацоўках (прадстаўленне дадзеных і ШІ) / праграміст / вэб-фронтэнд"
             }
           },
           {
@@ -488,6 +488,33 @@
             "ru": "Аппаратное окружение: ПК, IBM zSeries (Z Mainframes)",
             "en": "Hardware: PC, IBM zSeries (Z Mainframes)",
             "be": "Апаратнае асяроддзе: ПК, IBM zSeries (Z Mainframes)"
+          }
+        },
+        {
+          "icon": "ri-test-tube-line",
+          "text": {
+            "zh": "测试工具：Jest",
+            "ru": "Инструменты тестирования: Jest",
+            "en": "Testing tools: Jest",
+            "be": "Інструменты тэсціравання: Jest"
+          }
+        },
+        {
+          "icon": "ri-global-line",
+          "text": {
+            "zh": "Web协议：HTTP 1.0/2.0",
+            "ru": "Веб-протоколы: HTTP 1.0/2.0",
+            "en": "Web protocols: HTTP 1.0/2.0",
+            "be": "Вэб-пратаколы: HTTP 1.0/2.0"
+          }
+        },
+        {
+          "icon": "ri-server-line",
+          "text": {
+            "zh": "软件系统：IBM Tivoli Directory Integrator (TDI)",
+            "ru": "Программные системы: IBM Tivoli Directory Integrator (TDI)",
+            "en": "Software systems: IBM Tivoli Directory Integrator (TDI)",
+            "be": "Праграмныя сістэмы: IBM Tivoli Directory Integrator (TDI)"
           }
         }
       ]
