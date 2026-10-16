@@ -37,7 +37,21 @@ const props = defineProps({
                 class="text-decoration-none"
               >{{ job.title }}</RouterLink>
             </VCardTitle>
-            <VCardSubtitle v-if="job.subtitle">{{ job.subtitle }}</VCardSubtitle>
+            <div
+              v-if="job.subtitle"
+              class="d-flex flex-wrap align-center mt-1"
+            >
+              <span class="text-medium-emphasis text-body-2 me-2">{{ job.subtitle.split(/[，,]/)[0].trim() }}</span>
+              <VChip
+                v-if="/[，,]/.test(job.subtitle)"
+                size="x-small"
+                variant="tonal"
+                label
+                class="location-chip"
+              >
+                {{ job.subtitle.split(/[，,]/).slice(1).join('，').trim() }}
+              </VChip>
+            </div>
           </VCardItem>
           <VCardText class="project-text">
             {{ job.text }}
@@ -91,5 +105,13 @@ const props = defineProps({
 .project-text {
   font-size: calc(0.9375rem * var(--content-font-scale, 1));
   line-height: 1.7;
+}
+
+// 👉 公司名等标题允许换行，避免长名被单行省略截断
+.work-card :deep(.v-card-title) {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.4;
 }
 </style>
