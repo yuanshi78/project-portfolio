@@ -53,7 +53,7 @@
     "icon": "ri-building-2-line",
     "projects": [
       {
-        "slug": "NocoBase-plugins",
+        "slug": "nocobase-plugins",
         "name": {
           "zh": "NocoBase 插件",
           "ru": "Плагины NocoBase",
