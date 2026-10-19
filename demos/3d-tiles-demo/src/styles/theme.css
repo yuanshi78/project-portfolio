@@ -1,0 +1,100 @@
+/* 主题：复用原 ordos 应急指挥平台的配色与质感
+   纯黑底 + 金色高亮(#ffbb01) + 辅助蓝(#38acfd) + 报警红，面板深色半透明。 */
+:root {
+  --bg-0: #000000;
+  --bg-1: #0a1626;
+  --bg-2: #0f2136;
+  --bg-3: #16304c;
+  --line: #1f3a5c;
+  --line-2: #2b4d74;
+  --txt-0: #eaf2fb;
+  --txt-1: #a9bcd2;
+  --txt-2: #6b819c;
+
+  /* ordos 主色：金色高亮 + 蓝色辅助 */
+  --gold: #ffbb01;
+  --blue: #38acfd;
+  --accent: #ffbb01;      /* 主强调（激活/主按钮）= 金 */
+  --accent-2: #38acfd;    /* 辅助强调 = 蓝 */
+  --on-accent: #1a1400;   /* 金底上的文字 */
+
+  --danger: #ff4d4f;
+  --warn: #ff9f2e;
+  --ok: #46d13a;
+
+  --radius: 4px;
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-0);
+  color: var(--txt-0);
+  font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+/* 通用面板：深色半透明 + 细边 + 顶部金色细线（ordos 面板质感） */
+.panel {
+  background: linear-gradient(180deg, rgba(15, 33, 54, 0.92), rgba(6, 14, 26, 0.94));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  border: 1px solid var(--line-2);
+  background: var(--bg-2);
+  color: var(--txt-0);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+.btn:hover { background: var(--bg-3); border-color: var(--blue); color: #fff; }
+.btn.active,
+.btn.primary { background: var(--gold); color: var(--on-accent); border-color: var(--gold); font-weight: 600; }
+.btn.danger { border-color: var(--danger); color: #ffb4b4; }
+.btn.danger:hover { background: rgba(255, 77, 79, 0.18); }
+.btn.warn { border-color: var(--warn); color: #ffd79a; }
+.btn.ghost { background: transparent; }
+
+input, textarea, select {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  color: var(--txt-0);
+  border-radius: var(--radius);
+  padding: 6px 8px;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--blue); }
+
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  border: 1px solid var(--line-2);
+  color: var(--txt-1);
+}
+.tag.ok { color: var(--ok); border-color: rgba(70, 209, 58, 0.5); }
+.tag.warn { color: var(--warn); border-color: rgba(255, 159, 46, 0.5); }
+.tag.danger { color: #ff8f90; border-color: rgba(255, 77, 79, 0.5); }
+
+.scroll { overflow-y: auto; }
+.scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 8px; }
+.scroll::-webkit-scrollbar-track { background: transparent; }
+
+/* Cesium 内部控件微调：与暗色主题一致 */
+.cesium-viewer-bottom,
+.cesium-widget-credits { display: none !important; }

@@ -1,0 +1,117 @@
+body {
+    background-color: #000;
+    color: #000;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+
+    height: 100%;
+}
+
+/* #container .labels {
+    pointer-events: none;
+} */
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /*初始状态 透明度为0*/
+    }
+
+    50% {
+        opacity: 1;
+        /*中间状态 透明度为0*/
+    }
+
+    100% {
+        opacity: 0;
+        /*结尾状态 透明度为1*/
+    }
+}
+
+
+
+#container .labels .label .line,
+.line {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    bottom: 0;
+    left: 5px;
+    left: 5px;
+    border-left: 2px double #0ff;
+    transform: skew(-45deg);
+}
+
+#container .labels .label .hot,
+.hot {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    left: -6px;
+    top: -6px;
+    border: none;
+    background: radial-gradient(#0ff, rgba(255, 255, 0, 0.6), rgba(255, 255, 0, 0.1));
+    border-radius: 6px;
+    margin: 0;
+}
+
+/*#container .labels .label .tag,
+.tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-size: 11px;
+
+    font-weight: bold;
+
+    padding: 4px 8px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+    !*border: 2px solid #ff0;*!
+    border-radius: 4px;
+
+    border-bottom-left-radius: 0;
+
+    background-color: rgba(60, 60, 60, 0.5);
+    color: #eeeeee;
+}*/
+
+/*#container .labels .label .tag:hover,
+.tag:hover {
+    color: #333;
+    !*background-color: #ff0;*!
+    border: 2px solid #ff0;
+}*/
+
+.button {
+    border: 2px solid #777;
+    border-radius: 6px;
+    color: #0ff;
+    background: rgba(100, 100, 100, 0.5);
+
+    width: 128px;
+    height: 100%;
+
+    line-height: 60px;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 16pt;
+
+    float: left;
+    margin-right: 12px;
+}
+
+.button:hover {
+    border: 2px solid #eee;
+    background: rgba(6, 255, 250, 0.75);
+    color: #333;
+}
+
+.alarmLable {
+    margin-left: 20px;
+}

@@ -331,6 +331,28 @@
           "Vue 2",
           "JavaScript"
         ]
+      },
+      {
+        "slug": "chemistry_plant_3d",
+        "name": {
+          "zh": "中煤陕西应急指挥系统 · 3D Tiles 演示",
+          "ru": "Система экстренного управления China Coal · демо 3D Tiles",
+          "en": "China Coal Emergency Command · 3D Tiles Demo",
+          "be": "Сістэма экстраннага кіравання China Coal · дэма 3D Tiles"
+        },
+        "description": {
+          "zh": "**离线可运行**的 CesiumJS 3D Tiles 化工应急指挥演示：图层、搜索、报警、演练、人员轨迹与测量。",
+          "ru": "**Автономная** демонстрация 3D Tiles на CesiumJS: слои, поиск, тревоги, учения, треки и измерения.",
+          "en": "**Offline** CesiumJS 3D Tiles emergency-command demo: layers, search, alarms, drills, personnel tracks, measurement.",
+          "be": "**Аўтаномная** дэма 3D Tiles на CesiumJS: пласты, пошук, трывогі, вучэнні, сцяжкі, вымярэнні."
+        },
+        "tags": [
+          "Vue 3",
+          "Vite",
+          "CesiumJS",
+          "3D Tiles",
+          "离线"
+        ]
       }
     ]
   },

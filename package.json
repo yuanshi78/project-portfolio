@@ -9,7 +9,8 @@
     "preview": "vite preview --port 5050",
     "lint": "eslint . -c .eslintrc.cjs --fix --ext .ts,.js,.cjs,.vue,.tsx,.jsx",
     "build:icons": "tsx src/plugins/iconify/build-icons.js",
-    "postinstall": "npm run build:icons"
+    "postinstall": "npm run build:icons",
+    "build:demo": "cd demos/3d-tiles-demo && npm install && npm run build && (mv dist/demos/3d-tiles-demo/cesium dist/cesium 2>/dev/null; rm -rf dist/demos) && cd ../.. && rm -rf public/demos/3d-tiles-demo && cp -r demos/3d-tiles-demo/dist public/demos/3d-tiles-demo"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.8.0",

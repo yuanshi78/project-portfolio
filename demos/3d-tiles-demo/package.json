@@ -1,0 +1,25 @@
+{
+  "name": "chemical-plant-3d-tiles-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "化工厂应急指挥 3D Tiles 独立演示（CesiumJS + Vite，离线可运行）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5174 --host",
+    "generate": "node scripts/generate-tileset.mjs",
+    "generate-tileset": "node scripts/generate-tileset.mjs",
+    "convert-glb-tiles": "node scripts/convert-glb-to-tiles.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "cesium": "^1.119.0",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.4.0",
+    "vite-plugin-cesium": "^1.2.23"
+  }
+}

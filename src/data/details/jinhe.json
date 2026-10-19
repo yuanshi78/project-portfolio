@@ -254,5 +254,37 @@
         ]
       }
     ]
+  },
+  {
+    "category": "jinhe",
+    "slug": "chemistry_plant_3d",
+    "title": {
+      "zh": "中煤陕西应急指挥系统 · 3D Tiles 演示",
+      "ru": "China Coal · демо 3D Tiles",
+      "en": "China Coal · 3D Tiles Demo",
+      "be": "China Coal · дэма 3D Tiles"
+    },
+    "date": "2026",
+    "images": [],
+    "sections": [
+      {
+        "heading": { "zh": "简介", "ru": "Описание", "en": "Overview", "be": "Апісанне" },
+        "paragraphs": [
+          { "zh": "基于原中煤鄂尔多斯化工应急指挥项目，独立重构的**离线 3D Tiles 演示**，不依赖任何内网服务或外部 CDN。" }
+        ]
+      },
+      {
+        "heading": { "zh": "在线演示", "ru": "Онлайн-демо", "en": "Live Demo", "be": "Анлайн-дэма" },
+        "paragraphs": [
+          { "zh": "点击下方按钮在新窗口打开完整演示（含 3D 工厂模型与全部交互）：" }
+        ],
+        "links": [
+          {
+            "text": { "zh": "打开 3D Tiles 演示（新窗口）", "ru": "Открыть демо 3D Tiles", "en": "Open 3D Tiles Demo", "be": "Адкрыць дэма 3D Tiles" },
+            "href": "/demos/3d-tiles-demo/index.html"
+          }
+        ]
+      }
+    ]
   }
 ]
