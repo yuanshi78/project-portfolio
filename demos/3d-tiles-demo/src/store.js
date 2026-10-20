@@ -32,7 +32,8 @@ export const store = reactive({
   infoWindow: { open: false, feature: null, screenX: 0, screenY:0, editing: false },
   toasts: [],
   // 底图：satellite=在线卫星影像，offline=离线 Natural Earth II
-  baseMap: 'satellite',
+  // 默认用离线底图（不依赖外网，也不会有卫星图）
+  baseMap: 'offline',
   // Start with the map visible; searchKeyword is shared with the top search box.
   ui: { activeTab: 'search', searchKeyword: '' },
 })

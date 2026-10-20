@@ -306,22 +306,24 @@ export const app = {
         options.position = Cesium.Cartesian3.fromDegrees(pos.lon, pos.lat, pos.height)
         options.billboard = {
           image: IMG_BASE + (def.icon || 'icon_default.png'),
-          width: 30,
-          height: 30,
+          // 显示尺寸限制远程收缩下限：厂区放大后相机在 km 级，原 30→0.7 会缩到 ~21px 发虚
+          width: 36,
+          height: 36,
           verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-          scaleByDistance: new Cesium.NearFarScalar(200, 1.1, 2000, 0.7),
+          scaleByDistance: new Cesium.NearFarScalar(300, 1.5, 8000, 1.0),
           disableDepthTestDistance: Number.POSITIVE_INFINITY,
         }
         options.label = {
           text: feature.name,
-          font: '12px "Segoe UI", sans-serif',
+          font: '14px "Segoe UI", "Microsoft YaHei", sans-serif',
           fillColor: Cesium.Color.fromCssColorString('#e6edf3'),
           showBackground: true,
-          backgroundColor: new Cesium.Color(0.05, 0.12, 0.2, 0.78),
-          pixelOffset: new Cesium.Cartesian2(0, 24),
-          scaleByDistance: new Cesium.NearFarScalar(200, 1, 2000, 0.6),
+          backgroundColor: new Cesium.Color(0.04, 0.1, 0.18, 0.82),
+          backgroundPadding: new Cesium.Cartesian2(6, 4),
+          pixelOffset: new Cesium.Cartesian2(0, 32),
+          scaleByDistance: new Cesium.NearFarScalar(300, 1.2, 8000, 0.9),
           disableDepthTestDistance: Number.POSITIVE_INFINITY,
-          translucencyByDistance: new Cesium.NearFarScalar(800, 1, 2000, 0.2),
+          translucencyByDistance: new Cesium.NearFarScalar(2000, 1, 5000, 0.15),
         }
       }
       ent = viewer.entities.add(options)
@@ -341,8 +343,8 @@ export const app = {
     }
     // 报警状态高亮
     if (feature.type === 'alarm' && ent.billboard) {
-      ent.billboard.width = feature.status === 'active' ? 38 : 26
-      ent.billboard.height = feature.status === 'active' ? 38 : 26
+      ent.billboard.width = feature.status === 'active' ? 44 : 36
+      ent.billboard.height = feature.status === 'active' ? 44 : 36
       ent.billboard.color = feature.status === 'active'
         ? Cesium.Color.fromCssColorString('#ff3b3b')
         : Cesium.Color.fromCssColorString('#7f8a99')
