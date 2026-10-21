@@ -1,33 +1,40 @@
 import { reactive, watch } from 'vue';
 import { GROUP_ORDER, seedDrills, seedFeatures, TYPE_DEFS } from './data/seed.js';
 
-const STORAGE_KEY = 'chemical-plant-demo-v2' // v2: 要素坐标收缩进模型占地（旧缓存坐标在模型外）
+const STORAGE_KEY = 'chemical-plant-demo-v4' // v4: 实体改由 JSON 配置驱动（features 始终以配置为准）
 
 function loadFromStorage() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return null
     const data = JSON.parse(raw)
-    if (!data.features || !data.drills) return null
+    if (!data.drills) return null
     return data
   } catch (e) {
     return null
   }
 }
 
+// 实体（features）始终以 entities-config.json 为准，不受 localStorage 覆盖；
+// 演练（drills）仍按用户上次编辑持久化。
+const persisted = loadFromStorage()
+const data = {
+  features: seedFeatures(),
+  drills: persisted ? persisted.drills : seedDrills(),
+}
+
 function initialData() {
   return { features: seedFeatures(), drills: seedDrills() }
 }
-
-const persisted = loadFromStorage()
-const data = persisted || initialData()
 
 export const store = reactive({
   features: data.features,
   drills: data.drills,
   selectedId: null,
-  // 图层分组可见性
+  // 图层分组可见性（一级开关，关闭则整组隐藏）
   groupVisible: Object.fromEntries(GROUP_ORDER.map((g) => [g, true])),
+  // 二级（按类型）可见性：默认跟随分组全部选中
+  typeVisible: Object.fromEntries(Object.entries(TYPE_DEFS).map(([type]) => [type, true])),
   // UI 状态
   infoWindow: { open: false, feature: null, screenX: 0, screenY:0, editing: false },
   toasts: [],
@@ -138,13 +145,39 @@ export function updateDrillStatus(id, status) {
 }
 
 // --------------------------- 图层 ---------------------------------------------
+// 一级（分组）开关：打开=该组全部类型选中；关闭=该组全部类型取消
 export function toggleGroup(group) {
-  store.groupVisible[group] = !store.groupVisible[group]
+  const next = !store.groupVisible[group]
+  store.groupVisible[group] = next
+  for (const [type, def] of Object.entries(TYPE_DEFS)) {
+    if (def.group === group) store.typeVisible[type] = next
+  }
+}
+
+// 二级（类型）开关：只切换该类型本身，不影响同组其它类型
+export function toggleType(type) {
+  const def = TYPE_DEFS[type]
+  if (!def) return
+  const next = !store.typeVisible[type]
+  store.typeVisible[type] = next
+  // 若本组被整体关闭，单独勾选某类型时自动打开该组（否则勾了也看不见）
+  if (next && !store.groupVisible[def.group]) store.groupVisible[def.group] = true
+}
+
+// 一级复选框的显示态：all=全选 / some=部分 / none=全不
+export function groupCheckState(group) {
+  const types = Object.entries(TYPE_DEFS).filter(([, d]) => d.group === group).map(([t]) => t)
+  if (types.length === 0) return store.groupVisible[group] ? 'all' : 'none'
+  const on = types.filter((t) => store.typeVisible[t]).length
+  if (on === 0) return 'none'
+  if (on === types.length) return 'all'
+  return 'some'
 }
 
 export function groupVisibleFor(type) {
   const def = TYPE_DEFS[type]
-  return def ? store.groupVisible[def.group] : true
+  if (!def) return true
+  return store.groupVisible[def.group] && store.typeVisible[type]
 }
 
 // --------------------------- 底图 ---------------------------------------------

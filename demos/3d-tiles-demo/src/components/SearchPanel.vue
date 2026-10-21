@@ -30,10 +30,5 @@ function go() {
 </script>
 
 <style scoped>
-/* nav.css 的 .asideSearch 只定义 top:10px（left 在原版被注释掉），这里补水平位置 */
-#search-panel { left: 320px; }
-@media (max-width: 768px) {
-  #search-panel { left: 8px; top: 8px; }
-  #search-input { width: 200px !important; }
-}
+/* 水平定位/尺寸由 theme.css 的 .asideSearch 覆盖统一控制（含移动端适配）。 */
 </style>

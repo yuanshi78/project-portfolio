@@ -1,0 +1,58 @@
+{
+  "_note": "实体坐标 JSON 配置（单一可信源，替代原硬编码 seedFeaturesDemo）。每个要素字段：id / type / name / e / n / h / status，以及类型相关附加属性（如 camera.online、gas.value、fire.pressure、pipe.path、person.trail 等）。坐标系：e=东(米)、n=北(米)、h=高(米)，均为本地 ENU，已含种子收缩系数 S；应用层会再乘 FEATURE_SPREAD(=8) 上图。修改此文件后重新构建部署即可生效；删除条目即移除对应实体。",
+  "features": [
+    {
+      "id": "alarm-001",
+      "type": "alarm",
+      "name": "火",
+      "e": 78.65625,
+      "n": -51.24625,
+      "h": 127.75,
+      "status": "active",
+      "direction": 35,
+      "vehicles": 3,
+      "windRange": 60,
+      "safeDistance": 80,
+      "minVehicleDistance": 100,
+      "effectRange": 120
+    },
+    {
+      "id": "alarm-002",
+      "type": "alarm",
+      "name": "火",
+      "e": 106.4247,
+      "n": 18.6015,
+      "h": 125.76,
+      "status": "active",
+      "direction": 35,
+      "vehicles": 3,
+      "windRange": 60,
+      "safeDistance": 80,
+      "minVehicleDistance": 100,
+      "effectRange": 120
+    },
+    {
+      "id": "smoke-001",
+      "type": "smoke",
+      "name": "烟雾扩散",
+      "e": 78.65625,
+      "n": -51.24625,
+      "h": 0,
+      "status": "正常",
+      "direction": 35,
+      "radius": 300,
+      "steps": 8
+    },
+    {
+      "id": "radar-001",
+      "type": "radar",
+      "name": "雷达监测",
+      "e": 12.46874,
+      "n": 21.70395,
+      "h": -0.57,
+      "status": "正常",
+      "radius": 32,
+      "height": 12
+    }
+  ]
+}

@@ -98,10 +98,15 @@ export function createFire(scene, modelMatrix, scale = 1) {
     emissionRate: viewModel.emissionRate,
     // [Sandcastle] 周期性轰燃
     bursts: [
+      // 「从开始就展示」：t=0 先炸一批，避免刚上图时火从 0 慢慢涨起来（前几秒几乎看不见）
+      new Cesium.ParticleBurst({ time: 0.0, minimum: 24, maximum: 44 }),
       new Cesium.ParticleBurst({ time: 2.0, minimum: 6, maximum: 14 }),
       new Cesium.ParticleBurst({ time: 7.0, minimum: 6, maximum: 14 }),
       new Cesium.ParticleBurst({ time: 12.0, minimum: 6, maximum: 14 }),
     ],
+    // 「一直烧」：loop 保证到寿命后继续发射（不会停），
+    // 而有限寿命 + loop 会让 bursts 周期性重放 → 每 16s 一次轰燃，火势一直在动。
+    loop: true,
     lifetime: 16.0,
     emitter: new Cesium.CircleEmitter(1.1 * s),
     emitterModelMatrix: computeEmitterModelMatrix(new Cesium.Matrix4()),
@@ -123,6 +128,9 @@ export function createFire(scene, modelMatrix, scale = 1) {
     maximumSpeed: viewModel.maximumSpeed,
     imageSize: new Cesium.Cartesian2(24 * s, 24 * s),
     emissionRate: 7,
+    // 同上：烟也一直冒；t=0 先生成一批，开局就有烟柱，之后每 25s 随 loop 重放
+    bursts: [new Cesium.ParticleBurst({ time: 0.0, minimum: 10, maximum: 22 })],
+    loop: true,
     lifetime: 25.0,
     emitter: new Cesium.CircleEmitter(1.1 * s),
     // 烟从火焰上方 4m*s 处开始生成，避免黑烟盖住下方火焰

@@ -76,6 +76,7 @@ function resetNorth() {
 </script>
 
 <style scoped>
+/* 放在右上角；右侧面板已移除，不再需要给它让位 */
 .compass {
   position: absolute; top: 14px; right: 14px; z-index: 20;
   width: 92px; height: 92px;
@@ -118,6 +119,7 @@ function resetNorth() {
 }
 
 @media (max-width: 768px) {
+  /* 移动端右侧面板占满顶部宽度，罗盘放回右上角避免被挤出屏幕 */
   .compass { width: 64px; height: 64px; top: 10px; right: 10px; }
   .label { font-size: 12px; }
   .label.north { font-size: 14px; }

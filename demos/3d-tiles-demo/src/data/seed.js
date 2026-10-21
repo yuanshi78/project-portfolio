@@ -2,6 +2,8 @@
 // 在 cesiumApp 中经厂区中心点 (PLANT) 转为经纬度上图，与 3D Tiles 模型共用同一 ENU 坐标系。
 // 注意：以下为演示示例数据，非真实监测/实测值。
 
+// 实体坐标 JSON 配置（单一可信源）：在 cesiumApp 中以 ENU 上图。
+import entitiesConfig from './entities-config.json'
 // 厂区中心（高德 GCJ-02 坐标，直接使用）。
 // 关键：底图是高德卫星瓦片，瓦片内容本身已按 GCJ-02 偏移（约 +490m 东 / +95m 北），
 // 模型若用换算后的 WGS-84（109.474290, 39.079134），会落在真实位置、影像却是偏移过的，
@@ -42,12 +44,14 @@ export const TYPE_DEFS = {
   warehouse: { label: '物资仓库', group: '物资',     color: '#facc15', icon: 'icon_building.png' },
   access:    { label: '门禁',     group: '安防',     color: '#94a3b8', icon: 'icon_rke.png' },
   alarm:     { label: '报警点',   group: '报警',     color: '#ef4444', icon: 'icon_alarm.png' },
+  poison:    { label: '毒气监测', group: '安全监测', color: '#84cc16', icon: 'icon_gasmask.png' },
   person:    { label: '人员',     group: '人员',     color: '#38bdf8', icon: 'icon_person.png' },
   // —— 移植自 ordos 的实体 ——
   radar:     { label: '雷达监测', group: '安全监测', color: '#31ff94', icon: 'icon_radar.png' },
   wind:      { label: '风向',     group: '安全监测', color: '#f472b6', icon: 'icon_monitoring.png' },
   fence:     { label: '电子围栏', group: '安防',     color: '#facc15', icon: 'icon_fence.png' },
   danger:    { label: '危险区',   group: '区域',     color: '#b91c1c', icon: 'icon_alarm.png' },
+  smoke:     { label: '烟雾扩散', group: '区域',     color: '#ef4444', icon: 'icon_alarm.png' },
 }
 
 export const GROUP_ORDER = ['安全监测', '消防', '生产', '区域', '物资', '安防', '报警', '人员']
@@ -83,7 +87,24 @@ function makeTrail(startE, startN) {
   return pts
 }
 
+// 实体坐标统一由 JSON 配置驱动（单一可信源，见 src/data/entities-config.json）。
+// 修改配置后重新构建即可生效；要恢复原始硬编码演示数据可改回 `return seedFeaturesDemo()`。
 export function seedFeatures() {
+  const cfg = (entitiesConfig && entitiesConfig.features) || []
+  return cfg.map((x) => ({
+    id: x.id || uid(x.type),
+    type: x.type,
+    name: x.name,
+    e: x.e,
+    n: x.n,
+    h: x.h ?? 2,
+    status: x.status ?? '正常',
+    ...x,
+  }))
+}
+
+// —— 原始演示实体数据（保留以便恢复，不要删除）——
+export function seedFeaturesDemo() {
   _id = 1
   const list = []
 

@@ -341,10 +341,10 @@
           "be": "Сістэма экстраннага кіравання China Coal · дэма 3D Tiles"
         },
         "description": {
-          "zh": "**离线可运行**的 CesiumJS 3D Tiles 化工应急指挥演示：图层、搜索、报警、演练、人员轨迹与测量。",
-          "ru": "**Автономная** демонстрация 3D Tiles на CesiumJS: слои, поиск, тревоги, учения, треки и измерения.",
-          "en": "**Offline** CesiumJS 3D Tiles emergency-command demo: layers, search, alarms, drills, personnel tracks, measurement.",
-          "be": "**Аўтаномная** дэма 3D Tiles на CesiumJS: пласты, пошук, трывогі, вучэнні, сцяжкі, вымярэнні."
+          "zh": "**离线可运行**的 CesiumJS 3D Tiles 化工应急指挥演示：3D 厂区模型与路网、图层树显隐、底图切换、要素信息窗、距离/面积测量、罗盘定向，以及「火警 → 消防车沿路网出动 → 熄火撤警 → 回队」的自动循环演练。",
+          "ru": "**Автономная** демонстрация аварийного командования на CesiumJS 3D Tiles: 3D-модель завода и дорожная сеть, видимость слоёв, переключение подложки, окно информации об объекте, измерение расстояний/площадей, компас и цикличное учение «тревога → выезд машин по дорожной сети → тушение и снятие тревоги → возвращение».",
+          "en": "**Offline** CesiumJS 3D Tiles emergency-command demo: 3D plant model and road network, layer-tree visibility, basemap switch, feature info window, distance/area measurement, compass, plus an auto-looping drill (alarm → trucks dispatched along the road network → extinguish & clear → return to station).",
+          "be": "**Аўтаномная** дэманстрацыя аварыйнага камандавання на CesiumJS 3D Tiles: 3D-мадэль завода і дарожная сетка, бачнасць слаёў, пераключэнне падложкі, акно інфармацыі пра аб'ект, вымярэнне адлегласцей/плошчаў, компас і цыклічнае вучэнне «трывога → выезд машын па дарожнай сетцы → тушэнне і зняцце трывогі → вяртанне»."
         },
         "tags": [
           "Vue 3",
