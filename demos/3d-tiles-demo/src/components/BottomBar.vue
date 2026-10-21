@@ -27,6 +27,12 @@
             <button class="btn" @click="setMeasure(null)">清除</button>
           </div>
         </li>
+        <li id="draw-route">
+          <a href="javascript:void(0)" @click.prevent="toggleRoute">
+            <div class="menu-btn" :class="{ active: store.ui.drawRoute }"></div>
+            <p class="footer_name whiteColor">{{ store.ui.drawRoute ? '取消' : '画路线' }}</p>
+          </a>
+        </li>
         <li id="manual-alarm">
           <a href="javascript:void(0)" @click.prevent="alarm">
             <div class="menu-btn" :class="{ active: flash === 'alarm' }"></div>
@@ -84,6 +90,7 @@ function restore() {
     resetData()
     app.clearMeasure()
     app.clearTrail && app.clearTrail()
+    app.clearRoute && app.clearRoute()
     app.resetView()
   }
   bump('refresh')
@@ -106,6 +113,10 @@ function setMeasure(mode) {
   activeMeasure.value = mode === null ? 'none' : mode
   emit('measure', mode)
   if (mode === null) measureOpen.value = false
+}
+function toggleRoute() {
+  if (store.ui.drawRoute) app.cancelRoute()
+  else app.startRoute()
 }
 </script>
 

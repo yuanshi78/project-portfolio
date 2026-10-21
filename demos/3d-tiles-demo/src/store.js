@@ -42,7 +42,7 @@ export const store = reactive({
   // 默认用离线底图（不依赖外网，也不会有卫星图）
   baseMap: 'offline',
   // Start with the map visible; searchKeyword is shared with the top search box.
-  ui: { activeTab: 'search', searchKeyword: '' },
+  ui: { activeTab: 'search', searchKeyword: '', drawRoute: false },
 })
 
 let toastSeq = 1

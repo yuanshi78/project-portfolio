@@ -2,7 +2,7 @@ import { watch } from 'vue';
 import * as Cesium from 'cesium';
 import 'cesium/Build/Cesium/Widgets/widgets.css';
 import { FEATURE_SPREAD, MODEL_LIFT, MODEL_SCALE, PLANT, TYPE_DEFS } from '../data/seed.js';
-import { addFeature, closeInfo, getFeature, groupVisibleFor, selectFeature, store } from '../store.js';
+import { addFeature, closeInfo, getFeature, groupVisibleFor, pushToast, selectFeature, store } from '../store.js';
 import {
   createCriticalZone, createFence, createFire, createFireVehicle, createRadarCoverage, createSmokeLocal,
   cylinderMatrix, toColor,
@@ -19,6 +19,11 @@ let addModeType = null
 let measureMode = null // 'distance' | 'area' | null
 const measurePoints = [] // 本地 [e,n,h]
 let measureEntities = []
+let routeMode = false // 画路线开关
+const routePoints = [] // 路线点（logPickedCoords 输出的 info 对象）
+let routeEntities = []
+let lastRouteClick = null // 上一次点击的屏幕坐标（用于同地双击检测）
+let lastRouteClickTime = 0
 let trailEntities = []
 let baseImageryLayer = null
 const entitiesById = new Map()
@@ -131,6 +136,7 @@ export const app = {
       scene3DOnly: true,
       requestRenderMode: false,
     })
+    if (typeof window !== 'undefined') window.__viewer = viewer
     viewer.scene.globe.baseColor = Cesium.Color.fromCssColorString('#0b1a2b')
     viewer.scene.globe.depthTestAgainstTerrain = true
     // 关键①：ParticleSystem 用「帧间时钟差 dt」计算发射量（numToEmit = dt * emissionRate）。
@@ -202,6 +208,7 @@ export const app = {
 
     try {
       this.drawRoadNetwork()
+      this.drawRoutes()
       this.syncFeatures()
       this.bindEvents()
       this.resetView()
@@ -537,6 +544,42 @@ export const app = {
     }
   },
 
+  // 预定义路线（roads-config.json 的 routes）：彩色折线 + 起点名称标签
+  drawRoutes() {
+    if (!roadsConfig.routes || !roadsConfig.routes.length) return
+    if (roadsConfig.routesVisible === false) return
+    for (const r of roadsConfig.routes) {
+      const pts = (r.points || []).map(([e, n]) => {
+        const d = this.localToDeg(this.spread(e), this.spread(n), 0)
+        return Cesium.Cartesian3.fromDegrees(d.lon, d.lat, d.height)
+      })
+      if (pts.length < 2) continue
+      const color = Cesium.Color.fromCssColorString(r.color || '#22d3ee')
+      viewer.entities.add({
+        polyline: {
+          positions: pts,
+          clampToGround: true,
+          width: 4,
+          material: color.withAlpha(0.95),
+        },
+      })
+      viewer.entities.add({
+        position: pts[0],
+        label: {
+          text: r.name || r.id,
+          font: '13px "Microsoft YaHei", sans-serif',
+          fillColor: color,
+          showBackground: true,
+          backgroundColor: new Cesium.Color(0.04, 0.1, 0.18, 0.85),
+          backgroundPadding: new Cesium.Cartesian2(6, 4),
+          pixelOffset: new Cesium.Cartesian2(0, -14),
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+          translucencyByDistance: new Cesium.NearFarScalar(3000, 1, 12000, 0.3),
+        },
+      })
+    }
+  },
+
   ensureEntity(feature) {
     const def = TYPE_DEFS[feature.type] || { color: '#ffffff', icon: 'icon_default.png' }
     let ent = entitiesById.get(feature.id)
@@ -849,6 +892,10 @@ export const app = {
         this.handleMeasureAt(movement.position)
         return
       }
+      if (routeMode) {
+        this.handleRouteAt(movement.position)
+        return
+      }
       if (picked && picked.id && picked.id.properties && picked.id.properties.featureId) {
         const id = picked.id.properties.featureId.getValue(viewer.clock.currentTime)
         const f = getFeature(id)
@@ -893,6 +940,9 @@ export const app = {
   setAddMode(type) {
     addModeType = type
     measureMode = null
+    routeMode = false
+    if (store) store.ui.drawRoute = false
+    this.clearRoute()
     this.clearMeasure()
     viewer.canvas.style.cursor = type ? 'crosshair' : 'default'
   },
@@ -922,6 +972,9 @@ export const app = {
   startMeasure(mode) {
     measureMode = mode
     addModeType = null
+    routeMode = false
+    if (store) store.ui.drawRoute = false
+    this.clearRoute()
     viewer.canvas.style.cursor = 'crosshair'
     this.clearMeasure()
   },
@@ -996,6 +1049,135 @@ export const app = {
       })
       measureEntities.push(label)
     }
+  },
+
+  // ----------------------- 画路线（点选放点 + 连线 + 同地双击结束） -----------------------
+  // 开关：开启后每次单击在地图放一个点并与上一个点连成折线；
+  // 在同一位置快速双击 = 结束画路线，把坐标数组打印到控制台。
+  startRoute() {
+    routeMode = true
+    measureMode = null
+    addModeType = null
+    this.clearMeasure()
+    this.clearRoute()
+    lastRouteClick = null
+    lastRouteClickTime = 0
+    viewer.canvas.style.cursor = 'crosshair'
+    if (store) store.ui.drawRoute = true
+    if (pushToast) pushToast('画路线：点击放置点并连线；同一位置双击结束并打印坐标', 'info')
+  },
+
+  stopRoute() {
+    routeMode = false
+    if (viewer) viewer.canvas.style.cursor = 'default'
+    if (store) store.ui.drawRoute = false
+    this.printRoute()
+  },
+
+  // 取消画路线：清空进行中的点并退出，不打印坐标
+  cancelRoute() {
+    routeMode = false
+    if (viewer) viewer.canvas.style.cursor = 'default'
+    if (store) store.ui.drawRoute = false
+    this.clearRoute()
+    lastRouteClick = null
+    lastRouteClickTime = 0
+    if (pushToast) pushToast('画路线已取消', 'warn')
+  },
+
+  clearRoute() {
+    routePoints.length = 0
+    routeEntities.forEach((e) => viewer.entities.remove(e))
+    routeEntities = []
+  },
+
+  handleRouteAt(screenPos) {
+    // 同一位置快速双击（与上次点击间隔 <350ms 且屏幕距离 <8px）= 结束画路线，不重复加点
+    const now = Date.now()
+    const isDouble =
+      lastRouteClick &&
+      now - lastRouteClickTime < 350 &&
+      Math.abs(screenPos.x - lastRouteClick.x) < 8 &&
+      Math.abs(screenPos.y - lastRouteClick.y) < 8
+    lastRouteClick = { x: screenPos.x, y: screenPos.y }
+    lastRouteClickTime = now
+    if (isDouble) {
+      this.stopRoute()
+      return
+    }
+    // 复用点击坐标拾取：每次点击都会输出 GCJ-02 / WGS-84 / 本地坐标（即“记得坐标”）
+    const info = this.logPickedCoords(screenPos)
+    if (!info) return
+    routePoints.push(info)
+    this.renderRoute()
+    if (pushToast)
+      pushToast(`画路线：已放置 ${routePoints.length} 个点，同一位置双击结束`, 'info')
+  },
+
+  renderRoute() {
+    routeEntities.forEach((e) => viewer.entities.remove(e))
+    routeEntities = []
+    if (routePoints.length === 0) return
+    const positions = routePoints.map((p) =>
+      Cesium.Cartesian3.fromDegrees(p.gcj02.lon, p.gcj02.lat, p.height),
+    )
+    // 点标记 + 编号标签
+    routePoints.forEach((p, i) => {
+      const e = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(p.gcj02.lon, p.gcj02.lat, p.height),
+        point: {
+          pixelSize: 11,
+          color: Cesium.Color.fromCssColorString('#22d3ee'),
+          outlineColor: Cesium.Color.WHITE,
+          outlineWidth: 2,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        },
+        label: {
+          text: `#${i + 1}  ${p.gcj02.lon.toFixed(5)}, ${p.gcj02.lat.toFixed(5)}`,
+          font: '12px "Microsoft YaHei", sans-serif',
+          fillColor: Cesium.Color.fromCssColorString('#22d3ee'),
+          showBackground: true,
+          backgroundColor: new Cesium.Color(0.04, 0.1, 0.18, 0.85),
+          backgroundPadding: new Cesium.Cartesian2(6, 4),
+          pixelOffset: new Cesium.Cartesian2(0, -16),
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+          translucencyByDistance: new Cesium.NearFarScalar(2000, 1, 9000, 0.4),
+        },
+      })
+      routeEntities.push(e)
+    })
+    // 连线
+    if (routePoints.length >= 2) {
+      const line = viewer.entities.add({
+        polyline: {
+          positions,
+          width: 3,
+          material: Cesium.Color.fromCssColorString('#22d3ee').withAlpha(0.9),
+          clampToGround: false,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        },
+      })
+      routeEntities.push(line)
+    }
+  },
+
+  printRoute() {
+    if (routePoints.length < 2) {
+      console.log('[画路线] 已取消，当前点数：', routePoints.length)
+      if (pushToast) pushToast(`画路线已取消（${routePoints.length} 个点）`, 'warn')
+      this.clearRoute()
+      return
+    }
+    const arr = routePoints.map((p, i) => ({
+      index: i + 1,
+      gcj02: [p.gcj02.lon, p.gcj02.lat],
+      wgs84: [p.wgs84.lon, p.wgs84.lat],
+      height: p.height,
+      local: { e: p.local.e, n: p.local.n, h: p.local.h },
+    }))
+    console.log(`[画路线] 路线坐标数组（共 ${routePoints.length} 点）：`, arr)
+    console.log('[画路线] JSON: ' + JSON.stringify(arr))
+    if (pushToast) pushToast(`画路线完成：${routePoints.length} 个点，坐标已打印到控制台`, 'success')
   },
 
   // ----------------------- 人员轨迹回放 ------------------------------------

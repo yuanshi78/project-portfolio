@@ -9,6 +9,16 @@
         "en": "Aethera Page",
         "be": "Старонка Aethera"
       }
+    },
+    {
+      "combo": "Ctrl+Shift+D",
+      "to": "/project/jinhe/chemistry_plant_3d",
+      "label": {
+        "zh": "3D Tiles 演示详情页",
+        "ru": "Страница демо 3D Tiles",
+        "en": "3D Tiles Demo Page",
+        "be": "Старонка дэмы 3D Tiles"
+      }
     }
   ],
   "quickLinks": [
@@ -21,6 +31,16 @@
       },
       "to": "/project/self/aethera",
       "icon": "ri-flashlight-line"
+    },
+    {
+      "label": {
+        "zh": "打开 3D Tiles 演示",
+        "ru": "Открыть демо 3D Tiles",
+        "en": "Open 3D Tiles Demo",
+        "be": "Адкрыць дэму 3D Tiles"
+      },
+      "to": "/project/jinhe/chemistry_plant_3d",
+      "icon": "ri-box-3-line"
     }
   ]
 }

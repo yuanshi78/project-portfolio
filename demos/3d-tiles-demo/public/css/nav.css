@@ -287,7 +287,7 @@ input.labelauty:not(:checked) + label {
 
 #menu-ul > li {
     position: relative;
-    width: 10%px;
+    width: 10%;
     height: 100%;
     padding: 0 1%;
 }
@@ -351,6 +351,40 @@ input.labelauty:not(:checked) + label {
 #measure .menu-btn.active {
     background: url(../data/img/menu_measure_a.png) center no-repeat;
     background-size: 100% 100%;
+}
+
+/* 画路线：醒目高亮（琥珀色发光描边 + 彩色底），即便图标缺失也能一眼找到 */
+#draw-route .menu-btn {
+  background-color: rgba(255, 187, 1, 0.22);
+  background-image: url(../data/img/menu_escaperoute.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 2px solid #ffbb01;
+  border-radius: 10px;
+  box-shadow: 0 0 14px 3px rgba(255, 187, 1, 0.85);
+}
+#draw-route:hover .menu-btn,
+#draw-route .menu-btn.active {
+  background-color: rgba(255, 187, 1, 0.45);
+  background-image: url(../data/img/menu_escaperoute_a.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: #ffd24d;
+  box-shadow: 0 0 20px 5px rgba(255, 210, 77, 0.95);
+}
+#draw-route .footer_name {
+  color: #ffbb01 !important;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(255, 187, 1, 0.7);
+}
+@keyframes drawRoutePulse {
+  0%, 100% { box-shadow: 0 0 14px 3px rgba(255, 187, 1, 0.85); }
+  50% { box-shadow: 0 0 22px 7px rgba(255, 187, 1, 1); }
+}
+#draw-route .menu-btn {
+  animation: drawRoutePulse 1.4s ease-in-out infinite;
 }
 
 #manual-alarm .menu-btn {

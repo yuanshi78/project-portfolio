@@ -335,16 +335,16 @@
       {
         "slug": "chemistry_plant_3d",
         "name": {
-          "zh": "中煤陕西应急指挥系统 · 3D Tiles 演示",
-          "ru": "Система экстренного управления China Coal · демо 3D Tiles",
-          "en": "China Coal Emergency Command · 3D Tiles Demo",
-          "be": "Сістэма экстраннага кіравання China Coal · дэма 3D Tiles"
+          "zh": "化工园区 GIS 大屏演示（3D Tiles）",
+          "ru": "Демо GIS-дашборда химического парка (3D Tiles)",
+          "en": "Chemical Park GIS Dashboard Demo (3D Tiles)",
+          "be": "Дэма GIS-дашборда хімічнага парка (3D Tiles)"
         },
         "description": {
-          "zh": "**离线可运行**的 CesiumJS 3D Tiles 化工应急指挥演示：3D 厂区模型与路网、图层树显隐、底图切换、要素信息窗、距离/面积测量、罗盘定向，以及「火警 → 消防车沿路网出动 → 熄火撤警 → 回队」的自动循环演练。",
-          "ru": "**Автономная** демонстрация аварийного командования на CesiumJS 3D Tiles: 3D-модель завода и дорожная сеть, видимость слоёв, переключение подложки, окно информации об объекте, измерение расстояний/площадей, компас и цикличное учение «тревога → выезд машин по дорожной сети → тушение и снятие тревоги → возвращение».",
-          "en": "**Offline** CesiumJS 3D Tiles emergency-command demo: 3D plant model and road network, layer-tree visibility, basemap switch, feature info window, distance/area measurement, compass, plus an auto-looping drill (alarm → trucks dispatched along the road network → extinguish & clear → return to station).",
-          "be": "**Аўтаномная** дэманстрацыя аварыйнага камандавання на CesiumJS 3D Tiles: 3D-мадэль завода і дарожная сетка, бачнасць слаёў, пераключэнне падложкі, акно інфармацыі пра аб'ект, вымярэнне адлегласцей/плошчаў, компас і цыклічнае вучэнне «трывога → выезд машын па дарожнай сетцы → тушэнне і зняцце трывогі → вяртанне»."
+          "zh": "**演示用**离线 GIS 大屏，形态高度相似于**中煤鄂尔多斯化工厂**应急指挥项目：基于 **CesiumJS 1.119 + Vue 3 + Vite** 的 3D Tiles 三维厂区，图层树显隐、底图（卫星影像 / 离线）切换、要素信息窗、距离/面积测量、罗盘定向，以及「火警 → 消防车沿路网出动 → 熄火撤警 → 回队」的自动循环演练。全部资源本地化，不依赖内网服务或外部 CDN。",
+          "ru": "**Демонстрационный** автономный GIS-экран, по виду близкий к проекту аварийного командования химического завода **China Coal в Ордосе**: трёхмерный завод на 3D Tiles на базе **CesiumJS 1.119 + Vue 3 + Vite**, видимость слоёв, переключение подложки (спутник / офлайн), окно информации об объекте, измерение расстояний/площадей, компас и цикличное учение «тревога → выезд машин по дорожной сети → тушение и снятие тревоги → возвращение». Все ресурсы локальны — без внутренних сервисов и внешних CDN.",
+          "en": "An **offline demo** GIS dashboard closely resembling the **China Coal Ordos chemical-plant** emergency-command project: a 3D Tiles plant built with **CesiumJS 1.119 + Vue 3 + Vite**, layer-tree visibility, basemap switch (satellite / offline), feature info window, distance/area measurement, compass, plus an auto-looping drill (alarm → trucks dispatched along the road network → extinguish & clear → return to station). All assets are local — no intranet services or external CDN.",
+          "be": "**Дэманстрацыйны** аўтаномны GIS-экран, паводле выгляду блізкі да праекта аварыйнага камандавання хімічнага завода **China Coal в Ордасе**: трохмерны завод на 3D Tiles на базе **CesiumJS 1.119 + Vue 3 + Vite**, бачнасць слаёў, пераключэнне падложкі (спадарожнік / афлайн), акно інфармацыі пра аб'ект, вымярэнне адлегласцей/плошчаў, компас і цыклічнае вучэнне «трывога → выезд машын па дарожнай сетцы → тушэнне і зняцце трывогі → вяртанне». Усе рэсурсы лакальныя — без унутраных сэрвісаў і знешніх CDN."
         },
         "tags": [
           "Vue 3",

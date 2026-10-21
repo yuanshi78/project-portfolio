@@ -6,7 +6,7 @@
   "description": "化工厂应急指挥 3D Tiles 独立演示（CesiumJS + Vite，离线可运行）",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/fix-cesium-base.mjs",
     "preview": "vite preview --port 5174 --host",
     "generate": "node scripts/generate-tileset.mjs",
     "generate-tileset": "node scripts/generate-tileset.mjs",
