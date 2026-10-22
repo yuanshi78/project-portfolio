@@ -30,7 +30,7 @@
         <li id="draw-route">
           <a href="javascript:void(0)" @click.prevent="toggleRoute">
             <div class="menu-btn" :class="{ active: store.ui.drawRoute }"></div>
-            <p class="footer_name whiteColor">{{ store.ui.drawRoute ? '取消' : '画路线' }}</p>
+            <p class="footer_name whiteColor">{{ store.ui.drawRoute ? '完成' : '画路线' }}</p>
           </a>
         </li>
         <li id="manual-alarm">
@@ -115,7 +115,8 @@ function setMeasure(mode) {
   if (mode === null) measureOpen.value = false
 }
 function toggleRoute() {
-  if (store.ui.drawRoute) app.cancelRoute()
+  // 绘制中点按钮 = 完成当前路线（提交并打印，保留在屏幕上）；未绘制时 = 开始画路线
+  if (store.ui.drawRoute) app.stopRoute()
   else app.startRoute()
 }
 </script>

@@ -21,9 +21,8 @@ const measurePoints = [] // 本地 [e,n,h]
 let measureEntities = []
 let routeMode = false // 画路线开关
 const routePoints = [] // 路线点（logPickedCoords 输出的 info 对象）
-let routeEntities = []
-let lastRouteClick = null // 上一次点击的屏幕坐标（用于同地双击检测）
-let lastRouteClickTime = 0
+let routeEntities = [] // 进行中的路线实体（被 clearRoute 清除）
+let committedRouteEntities = [] // 已画完的路线实体，跨多次绘制保留，不被 clearRoute 清掉
 let trailEntities = []
 let baseImageryLayer = null
 const entitiesById = new Map()
@@ -73,6 +72,28 @@ function gcj02ToWgs84(lon, lat) {
 
 // 复用 ordos 的要素图标（public/data/img，保持与 ordos 相同的相对目录，CSS 里 url(../data/img) 亦以此解析）。
 const IMG_BASE = import.meta.env.BASE_URL + 'data/img/'
+
+// 要素图标预加载 + 回退：单个图标 404 时，Cesium 默认会每帧刷
+// “Error loading image for billboard”。这里用 Promise 预加载，失败时回退到默认图标，
+// 既保证一定有图，也杜绝错误刷屏（返回 null 时 Cesium 仅不画该 billboard，不再报错）。
+function billboardImage(icon) {
+  const url = IMG_BASE + (icon || 'icon_default.png')
+  return new Promise((resolve) => {
+    const img = new Image()
+    img.onload = () => resolve(img)
+    img.onerror = () => {
+      if (icon && icon !== 'icon_default.png') {
+        const fb = new Image()
+        fb.onload = () => resolve(fb)
+        fb.onerror = () => resolve(null)
+        fb.src = IMG_BASE + 'icon_default.png'
+      } else {
+        resolve(null)
+      }
+    }
+    img.src = url
+  })
+}
 
 // 火焰贴图已随 createFire 迁移到 entities/Fire.js
 const fireParticles = new Map() // featureId -> { fire, smoke }
@@ -139,6 +160,10 @@ export const app = {
     if (typeof window !== 'undefined') window.__viewer = viewer
     viewer.scene.globe.baseColor = Cesium.Color.fromCssColorString('#0b1a2b')
     viewer.scene.globe.depthTestAgainstTerrain = true
+    // 允许相机自由穿行：关掉碰撞检测，避免贴近/进入 3D Tiles 模型时相机被推出、感觉“卡住/动不了”
+    viewer.scene.screenSpaceCameraController.enableCollisionDetection = false
+    // 关闭默认“左键拖拽绕视线落点公转”，改为原地自由视角（见 bindEvents 的 LEFT_DRAG），避免“绕固定点转、不能自由改朝向”
+    viewer.scene.screenSpaceCameraController.enableRotate = false
     // 关键①：ParticleSystem 用「帧间时钟差 dt」计算发射量（numToEmit = dt * emissionRate）。
     // 默认 Viewer 的 clock.shouldAnimate 为 false（动画/时间轴控件被关掉时更明显），
     // 时钟不走 → dt 恒为 0 → 一个粒子都不发射，火焰/烟雾完全看不见。
@@ -561,6 +586,7 @@ export const app = {
           clampToGround: true,
           width: 4,
           material: color.withAlpha(0.95),
+          depthFailMaterial: color.withAlpha(0.95),
         },
       })
       viewer.entities.add({
@@ -603,7 +629,7 @@ export const app = {
       } else {
         options.position = Cesium.Cartesian3.fromDegrees(pos.lon, pos.lat, pos.height)
         options.billboard = {
-          image: IMG_BASE + (def.icon || 'icon_default.png'),
+          image: billboardImage(def.icon),
           // 显示尺寸限制远程收缩下限：厂区放大后相机在 km 级，原 30→0.7 会缩到 ~21px 发虚
           width: 36,
           height: 36,
@@ -905,6 +931,18 @@ export const app = {
       }
     }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
 
+    // 自由视角：左键拖拽原地转动相机朝向（改变观察方向，不绕某个固定点公转）。
+    // 默认左键拖拽是“绕视线落点公转”，会让人感觉相机被锁在固定点上；这里改成 FPS 式自由看。
+    // 右键拖拽仍是平移（pan）、滚轮仍是缩放，画路线时单击放置点（LEFT_CLICK）不受影响。
+    handler.setInputAction((movement) => {
+      const c = viewer.camera
+      const dx = movement.endPosition.x - movement.startPosition.x
+      const dy = movement.endPosition.y - movement.startPosition.y
+      if (dx === 0 && dy === 0) return
+      c.look(Cesium.Cartesian3.UNIT_Z, -dx * 0.0035) // 偏航：绕世界向上轴
+      c.look(c.right, dy * 0.0035) // 俯仰：绕相机右轴
+    }, Cesium.ScreenSpaceEventType.LEFT_DRAG)
+
     // 信息窗跟随实体
     viewer.scene.postRender.addEventListener(() => {
       if (store.infoWindow.open && store.infoWindow.feature) {
@@ -1053,25 +1091,27 @@ export const app = {
 
   // ----------------------- 画路线（点选放点 + 连线 + 同地双击结束） -----------------------
   // 开关：开启后每次单击在地图放一个点并与上一个点连成折线；
-  // 在同一位置快速双击 = 结束画路线，把坐标数组打印到控制台。
+  // 画路线：点击放置点并连线；结束时点「完成」按钮（stopRoute）提交并打印坐标。
   startRoute() {
     routeMode = true
     measureMode = null
     addModeType = null
     this.clearMeasure()
     this.clearRoute()
-    lastRouteClick = null
-    lastRouteClickTime = 0
     viewer.canvas.style.cursor = 'crosshair'
     if (store) store.ui.drawRoute = true
-    if (pushToast) pushToast('画路线：点击放置点并连线；同一位置双击结束并打印坐标', 'info')
+    if (pushToast) pushToast('画路线：点击放置点并连线；点「完成」结束并打印坐标', 'info')
   },
 
   stopRoute() {
     routeMode = false
     if (viewer) viewer.canvas.style.cursor = 'default'
     if (store) store.ui.drawRoute = false
-    this.printRoute()
+    this.printRoute() // 先打印（读取 routePoints）
+    // 把本次已画完的路线移交为“已完成”，保留在屏幕上；之后 startRoute/clearRoute 不会再清掉它
+    committedRouteEntities.push(...routeEntities)
+    routeEntities = []
+    routePoints.length = 0
   },
 
   // 取消画路线：清空进行中的点并退出，不打印坐标
@@ -1080,8 +1120,6 @@ export const app = {
     if (viewer) viewer.canvas.style.cursor = 'default'
     if (store) store.ui.drawRoute = false
     this.clearRoute()
-    lastRouteClick = null
-    lastRouteClickTime = 0
     if (pushToast) pushToast('画路线已取消', 'warn')
   },
 
@@ -1174,19 +1212,7 @@ export const app = {
   },
 
   handleRouteAt(screenPos) {
-    // 同一位置快速双击（与上次点击间隔 <350ms 且屏幕距离 <8px）= 结束画路线，不重复加点
-    const now = Date.now()
-    const isDouble =
-      lastRouteClick &&
-      now - lastRouteClickTime < 350 &&
-      Math.abs(screenPos.x - lastRouteClick.x) < 8 &&
-      Math.abs(screenPos.y - lastRouteClick.y) < 8
-    lastRouteClick = { x: screenPos.x, y: screenPos.y }
-    lastRouteClickTime = now
-    if (isDouble) {
-      this.stopRoute()
-      return
-    }
+    // 注意：不再用“同位置双击”自动结束路线；结束请用「画路线/完成」按钮（stopRoute）。
     // 优先屏幕空间吸附（≤12px 即精确落在线上/端点上）；未命中再走点击拾取+世界空间吸附
     const sSnap = this.snapRouteScreen(screenPos)
     let info = null
@@ -1255,13 +1281,16 @@ export const app = {
     })
     // 连线
     if (routePoints.length >= 2) {
+      const lineColor = Cesium.Color.fromCssColorString('#22d3ee').withAlpha(0.9)
       const line = viewer.entities.add({
         polyline: {
           positions,
           width: 3,
-          material: Cesium.Color.fromCssColorString('#22d3ee').withAlpha(0.9),
-          clampToGround: false,
-          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+          material: lineColor,
+          // 贴地渲染：避免俯视(90°)时与地表/模型共面被深度测试吃掉（PolylineGraphics 不支持 disableDepthTestDistance）
+          clampToGround: true,
+          // 被建筑等遮挡时仍绘制，俯视规划时也能看到整条线
+          depthFailMaterial: lineColor,
         },
       })
       routeEntities.push(line)
