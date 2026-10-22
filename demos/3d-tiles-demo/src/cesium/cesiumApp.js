@@ -1091,6 +1091,88 @@ export const app = {
     routeEntities = []
   },
 
+  // 吸附：把本地坐标(铺开后米)吸附到 roads/_routes 的最近线段上。
+  // 返回 {e,n,snapped}（铺开后米）或 null。容差用「预铺开」单位：TOL≈10m、端点≈4m（乘 FEATURE_SPREAD）。
+  snapRoutePoint(localE, localN) {
+    const S = FEATURE_SPREAD
+    const TOL = 1.25
+    const VTOL = 0.5
+    const pe = localE / S
+    const pn = localN / S
+    const segs = []
+    for (const [a, b] of roadsConfig.roads || []) segs.push([a, b])
+    for (const r of roadsConfig.routes || []) {
+      const pts = r.points || []
+      for (let i = 0; i < pts.length - 1; i++) segs.push([pts[i], pts[i + 1]])
+    }
+    let best = null
+    for (const [a, b] of segs) {
+      const ax = a[0], ay = a[1], bx = b[0], by = b[1]
+      const dx = bx - ax, dy = by - ay
+      const len2 = dx * dx + dy * dy
+      let t = len2 ? ((pe - ax) * dx + (pn - ay) * dy) / len2 : 0
+      t = Math.max(0, Math.min(1, t))
+      const cx = ax + t * dx, cy = ay + t * dy
+      const d = Math.hypot(pe - cx, pn - cy)
+      if (!best || d < best.d) {
+        const nearA = Math.hypot(pe - ax, pn - ay) < VTOL
+        const nearB = Math.hypot(pe - bx, pn - by) < VTOL
+        best = { d, p: nearA ? [ax, ay] : nearB ? [bx, by] : [cx, cy] }
+      }
+    }
+    if (best && best.d <= TOL) return { e: best.p[0] * S, n: best.p[1] * S, snapped: true }
+    return null
+  },
+
+  // 屏幕空间吸附：把点击吸附到路网/路线的屏幕投影（≤12px，近端点≤6px 吸到端点）。
+  // 返回吸附点本地坐标{e,n}（铺开后米）或 null。比世界空间吸附稳：不依赖 pickPosition 是否打中地面/模型。
+  snapRouteScreen(screenPos) {
+    if (!viewer) return null
+    const segs = []
+    for (const [a, b] of roadsConfig.roads || []) segs.push([a, b])
+    for (const r of roadsConfig.routes || []) {
+      const pts = r.points || []
+      for (let i = 0; i < pts.length - 1; i++) segs.push([pts[i], pts[i + 1]])
+    }
+    const PX = 12
+    let best = null
+    for (const [a, b] of segs) {
+      const da = this.localToDeg(this.spread(a[0]), this.spread(a[1]), 0)
+      const db = this.localToDeg(this.spread(b[0]), this.spread(b[1]), 0)
+      const wa = Cesium.Cartesian3.fromDegrees(da.lon, da.lat, da.height || 0)
+      const wb = Cesium.Cartesian3.fromDegrees(db.lon, db.lat, db.height || 0)
+      const sa = viewer.scene.cartesianToCanvasCoordinates(wa)
+      const sb = viewer.scene.cartesianToCanvasCoordinates(wb)
+      if (!sa || !sb) continue
+      const dx = sb.x - sa.x, dy = sb.y - sa.y
+      const len2 = dx * dx + dy * dy
+      if (len2 < 4) continue // 屏幕上过短（接近视线方向）的段跳过
+      let t = ((screenPos.x - sa.x) * dx + (screenPos.y - sa.y) * dy) / len2
+      t = Math.max(0, Math.min(1, t))
+      const cx = sa.x + t * dx, cy = sa.y + t * dy
+      const d = Math.hypot(screenPos.x - cx, screenPos.y - cy)
+      if (!best || d < best.d) {
+        const nearA = Math.hypot(screenPos.x - sa.x, screenPos.y - sa.y) < 6
+        const nearB = Math.hypot(screenPos.x - sb.x, screenPos.y - sb.y) < 6
+        best = { d, a, b, t, sa, sb, vertex: nearA ? a : nearB ? b : null }
+      }
+    }
+    if (!best || best.d > PX) return null
+    if (best.vertex) return { e: this.spread(best.vertex[0]), n: this.spread(best.vertex[1]) }
+    // 中段：射线取点击投影处的地面交点（必在该线的 3D 线段上，透视下也更准），失败再线性插值兜底
+    const cx = best.sa.x + best.t * (best.sb.x - best.sa.x)
+    const cy = best.sa.y + best.t * (best.sb.y - best.sa.y)
+    const world = viewer.camera.pickEllipsoid(new Cesium.Cartesian2(cx, cy), viewer.scene.globe.ellipsoid)
+    if (world) {
+      const loc = this.worldToLocal(world)
+      if (Number.isFinite(loc.x) && Number.isFinite(loc.y)) return { e: loc.x, n: loc.y }
+    }
+    return {
+      e: this.spread(best.a[0] + (best.b[0] - best.a[0]) * best.t),
+      n: this.spread(best.a[1] + (best.b[1] - best.a[1]) * best.t),
+    }
+  },
+
   handleRouteAt(screenPos) {
     // 同一位置快速双击（与上次点击间隔 <350ms 且屏幕距离 <8px）= 结束画路线，不重复加点
     const now = Date.now()
@@ -1105,9 +1187,34 @@ export const app = {
       this.stopRoute()
       return
     }
-    // 复用点击坐标拾取：每次点击都会输出 GCJ-02 / WGS-84 / 本地坐标（即“记得坐标”）
-    const info = this.logPickedCoords(screenPos)
-    if (!info) return
+    // 优先屏幕空间吸附（≤12px 即精确落在线上/端点上）；未命中再走点击拾取+世界空间吸附
+    const sSnap = this.snapRouteScreen(screenPos)
+    let info = null
+    if (sSnap) {
+      const d = this.localToDeg(sSnap.e, sSnap.n, 0)
+      const wgs = gcj02ToWgs84(d.lon, d.lat)
+      info = {
+        gcj02: { lon: +d.lon.toFixed(6), lat: +d.lat.toFixed(6) },
+        wgs84: { lon: +wgs[0].toFixed(6), lat: +wgs[1].toFixed(6) },
+        height: +(d.height || 0).toFixed(2),
+        local: { e: +sSnap.e.toFixed(2), n: +sSnap.n.toFixed(2), h: +(d.height || 0).toFixed(2) },
+      }
+      if (pushToast) pushToast('画路线：已吸附到路网/路线', 'info')
+    } else {
+      // 复用点击坐标拾取：每次点击都会输出 GCJ-02 / WGS-84 / 本地坐标（即“记得坐标”）
+      info = this.logPickedCoords(screenPos)
+      if (!info) return
+      // 世界空间兜底吸附：靠近(≤约10m)路网/路线时自动落在线上
+      const snap = this.snapRoutePoint(info.local.e, info.local.n)
+      if (snap) {
+        const d = this.localToDeg(snap.e, snap.n, info.height)
+        const wgs = gcj02ToWgs84(d.lon, d.lat)
+        info.gcj02 = { lon: +d.lon.toFixed(6), lat: +d.lat.toFixed(6) }
+        info.wgs84 = { lon: +wgs[0].toFixed(6), lat: +wgs[1].toFixed(6) }
+        info.local = { e: +snap.e.toFixed(2), n: +snap.n.toFixed(2), h: info.local.h }
+        if (pushToast) pushToast('画路线：已吸附到路网/路线', 'info')
+      }
+    }
     routePoints.push(info)
     this.renderRoute()
     if (pushToast)
@@ -1174,8 +1281,9 @@ export const app = {
       wgs84: [p.wgs84.lon, p.wgs84.lat],
       height: p.height,
       local: { e: p.local.e, n: p.local.n, h: p.local.h },
+      preSpread: [+(p.local.e / FEATURE_SPREAD).toFixed(4), +(p.local.n / FEATURE_SPREAD).toFixed(4)],
     }))
-    console.log(`[画路线] 路线坐标数组（共 ${routePoints.length} 点）：`, arr)
+    console.log(`[画路线] 路线坐标数组（共 ${routePoints.length} 点；preSpread 即 roads-config.json 用的 [e,n]，可直接粘贴）：`, arr)
     console.log('[画路线] JSON: ' + JSON.stringify(arr))
     if (pushToast) pushToast(`画路线完成：${routePoints.length} 个点，坐标已打印到控制台`, 'success')
   },
