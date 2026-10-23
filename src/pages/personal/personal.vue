@@ -25,9 +25,13 @@ const { smAndDown } = useDisplay()
 
 // 👉 快速入口：与侧栏 QuickLinks 同源配置，跳转站点其他板块
 // 并关联全局快捷键（shortcuts.json 的 shortcuts，按 `to` 匹配），用于展示键位提示
+// 静态 demo（/demos/...html）不在 vue-router 路由表内：走新窗口打开，
+// 其余入口用路由跳转（判断规则与 QuickLinks.vue 保持一致）
+const isExternal = to => /^\/demos\//.test(to) || to.endsWith('.html')
+
 const quickLinks = (shortcutsConfig?.quickLinks ?? []).map(q => {
   const sc = (shortcutsConfig?.shortcuts ?? []).find(s => s.to === q.to)
-  return { link: q, combo: sc?.combo ?? '' }
+  return { link: q, combo: sc?.combo ?? '', external: isExternal(q.to) }
 })
 
 // 👉 简历下载（来自 personal.json 的 cv 配置）
@@ -44,8 +48,8 @@ const otherProducts = computed(() => productItems.value.slice(1))
 const stats = computed(() =>
   (data.stats ?? []).map(s => ({
     ...s,
-    value: String(s.value ?? '').replace('{years}', getYears()).replace('{exp}', getExpYears()),
-    label: String(s.label ?? '').replace('{years}', getYears()).replace('{exp}', getExpYears()),
+    value: String(s.value ?? '').replace(/\{years\}/g, getYears()).replace(/\{exp\}/g, getExpYears()),
+    label: String(s.label ?? '').replace(/\{years\}/g, getYears()).replace(/\{exp\}/g, getExpYears()),
   })),
 )
 
@@ -143,15 +147,22 @@ onBeforeUnmount(() => {
   window.removeEventListener('keydown', releaseLock)
 })
 
-// 👉 Hero 一句定位：about 的第一段（替换 {years}/{exp} 占位符）
-const heroTagline = computed(() => (data.about ?? '').split('\n')[0]?.trim() ?? '')
+// 👉 Hero 一句定位：about 的第一段（替换 {years}/{exp} 占位符，并解析 **强调**）
+const heroTaglineSegments = computed(() =>
+  parseEmphasis(
+    ((data.about ?? '').split('\n')[0] ?? '')
+      .replace(/\{years\}/g, getYears())
+      .replace(/\{exp\}/g, getExpYears())
+      .trim(),
+  ),
+)
 
 // 👉 叙述性长文（关于我 / 致雇主）：支持多段 \n 与 **强调**
 const aboutSegments = computed(() =>
   parseEmphasis(
     (data.about ?? '')
-      .replace('{years}', getYears())
-      .replace('{exp}', getExpYears()),
+      .replace(/\{years\}/g, getYears())
+      .replace(/\{exp\}/g, getExpYears()),
   ),
 )
 const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? ''))
@@ -202,10 +213,19 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
           </div>
 
           <p
-            v-if="heroTagline"
+            v-if="heroTaglineSegments.length"
             class="hero-tagline mt-3 mb-0"
           >
-            {{ heroTagline }}
+            <template
+              v-for="(seg, si) in heroTaglineSegments"
+              :key="si"
+            >
+              <strong
+                v-if="seg.strong"
+                class="about-emphasis"
+              >{{ seg.text }}</strong>
+              <template v-else>{{ seg.text }}</template>
+            </template>
           </p>
 
           <div class="d-flex flex-wrap justify-center mt-4">
@@ -239,7 +259,10 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
                 <VListItem
                   v-for="q in quickLinks"
                   :key="q.link.to"
-                  :to="q.link.to"
+                  :to="q.external ? undefined : q.link.to"
+                  :href="q.external ? q.link.to : undefined"
+                  :target="q.external ? '_blank' : undefined"
+                  :rel="q.external ? 'noopener' : undefined"
                   :prepend-icon="q.link.icon"
                   :title="q.link.label"
                 >
@@ -327,7 +350,15 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
       </VBtn>
     </div>
 
-    <!-- 👉 ③ 精选产品（第一个产品独占大卡，其余按普通卡片网格） -->
+    <!-- 👉 ③ 项目 -->
+    <section
+      id="section-projects"
+      class="anchor-section"
+    >
+      <Projects :data="data.experience" />
+    </section>
+
+    <!-- 👉 ④ 精选产品（第一个产品独占大卡，其余按普通卡片网格） -->
     <section
       id="section-products"
       class="anchor-section"
@@ -443,14 +474,6 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
           </VCol>
         </VRow>
       </template>
-    </section>
-
-    <!-- 👉 ④ 项目 -->
-    <section
-      id="section-projects"
-      class="anchor-section"
-    >
-      <Projects :data="data.experience" />
     </section>
 
     <!-- 👉 ⑤ 关于我 + 致雇主（PC ≥1280 双栏并排；移动端可折叠） -->
@@ -778,7 +801,7 @@ body .hero-chip.v-chip {
   }
 }
 
-// 👉 ⑤ 关于我 + 致雇主：PC ≥1280 双栏并排
+// 👉 ④ 关于我 + 致雇主：PC ≥1280 双栏并排
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;

@@ -106,6 +106,12 @@
             "ru": "3. Создал и внедрил процесс тестирования сценариев извлечения, существенно повысив стабильность и безопасность кроссплатформенного извлечения данных.",
             "en": "3. Established and executed a testing process for extraction scripts, significantly improving the stability and security of cross-platform data extraction.",
             "be": "3. Стварыў і ўкараніў працэс тэсціравання сцэнарыяў выцягвання, істотна павысіўшы стабільнасць і бяспеку кросплатформавага выцягвання даных."
+          },
+          {
+            "zh": "结果：DB2、Oracle、SAP 的用户与资产资料实现自动化抽取、清洗与格式化，并建立了提取脚本的测试流程。",
+            "ru": "Результат: данные пользователей и активов DB2, Oracle и SAP извлекаются, очищаются и форматируются автоматически; внедрён процесс тестирования скриптов извлечения.",
+            "en": "Result: user and asset data from DB2, Oracle, and SAP is extracted, cleaned, and formatted automatically, with a test process for extraction scripts.",
+            "be": "Рэзультат: дадзеныя карыстальнікаў і актываў DB2, Oracle і SAP выздабываюцца, ачышчаюцца і фарматуюцца аўтаматычна; укаранёны працэс тэставання скрыптаў выздабывання."
           }
         ]
       }
@@ -132,10 +138,10 @@
         },
         "paragraphs": [
           {
-            "zh": "企业级 **身份与访问管理 (IAM) / 身份联邦 (Identity Federation)** 项目。基于 IBM **Tivoli Directory Integrator (TDI，现 IBM Security Directory Integrator)** —— 一款用于跨异构系统同步用户身份与权限的旗舰中间件，从大型机核心事务系统 (CICS、IMS、DB2) 抽取并转换用户身份资料，支撑安全审计、自动化用户配置 (Provisioning) 与权限迁移。",
-            "ru": "Проект корпоративного уровня по **управлению идентификацией и доступом (IAM) / федерации идентичности (Identity Federation)**. Основан на IBM **Tivoli Directory Integrator (TDI, ныне IBM Security Directory Integrator)** — флагманской промежуточной платформе для синхронизации пользовательских идентификаций и прав между гетерогенными системами; извлекает и преобразует данные пользовательских идентичностей из мэйнфреймовых ключевых транзакционных систем (CICS, IMS, DB2), поддерживая аудит безопасности, автоматическую настройку пользователей (Provisioning) и миграцию прав.",
-            "en": "An enterprise-level **Identity and Access Management (IAM) / Identity Federation** project. Based on IBM **Tivoli Directory Integrator (TDI, now IBM Security Directory Integrator)** — a flagship middleware for synchronizing user identities and permissions across heterogeneous systems; it extracts and transforms user identity data from mainframe core transaction systems (CICS, IMS, DB2), supporting security auditing, automated user provisioning, and permission migration.",
-            "be": "Праект карпаратыўнага ўзроўню па **кіраванні ідэнтыфікацыяй і доступам (IAM) / федэрацыі ідэнтычнасці (Identity Federation)**. Заснаваны на IBM **Tivoli Directory Integrator (TDI, цяпер IBM Security Directory Integrator)** — флагманскай прамежкавай платформе для сінхранізацыі карыстальніцкіх ідэнтыфікацый і правоў паміж гетэрагеннымі сістэмамі; выцягвае і пераўтварае даныя карыстальніцкіх ідэнтычнасцей з мейнфрэймавых ключавых транзакцыйных сістэм (CICS, IMS, DB2), падтрымліваючы аўдыт бяспекі, аўтаматызаваную наладку карыстальнікаў (Provisioning) і міграцыю правоў."
+            "zh": "企业级 **身份与访问管理 (IAM) / 身份联邦 (Identity Federation)** 项目。基于 IBM **Tivoli Directory Integrator (TDI，现 IBM Security Directory Integrator)** —— 一款用于跨异构系统同步用户身份与权限的旗舰中间件，从 IBM 大型机软件系统 (CICS、IMS、DB2) 抽取并转换用户身份资料，支撑安全审计、自动化用户配置 (Provisioning) 与权限迁移。",
+            "ru": "Проект корпоративного уровня по **управлению идентификацией и доступом (IAM) / федерации идентичности (Identity Federation)**. Основан на IBM **Tivoli Directory Integrator (TDI, ныне IBM Security Directory Integrator)** — флагманской промежуточной платформе для синхронизации пользовательских идентификаций и прав между гетерогенными системами; извлекает и преобразует данные пользовательских идентичностей из программных комплексов для мейнфреймов IBM (CICS, IMS, DB2), поддерживая аудит безопасности, автоматическую настройку пользователей (Provisioning) и миграцию прав.",
+            "en": "An enterprise-level **Identity and Access Management (IAM) / Identity Federation** project. Based on IBM **Tivoli Directory Integrator (TDI, now IBM Security Directory Integrator)** — a flagship middleware for synchronizing user identities and permissions across heterogeneous systems; it extracts and transforms user identity data from IBM mainframe software systems (CICS, IMS, DB2), supporting security auditing, automated user provisioning, and permission migration.",
+            "be": "Праект карпаратыўнага ўзроўню па **кіраванні ідэнтыфікацыяй і доступам (IAM) / федэрацыі ідэнтычнасці (Identity Federation)**. Заснаваны на IBM **Tivoli Directory Integrator (TDI, цяпер IBM Security Directory Integrator)** — флагманскай прамежкавай платформе для сінхранізацыі карыстальніцкіх ідэнтыфікацый і правоў паміж гетэрагеннымі сістэмамі; выцягвае і пераўтварае даныя карыстальніцкіх ідэнтычнасцей з праграмных комплексаў для мейнфрэймаў IBM (CICS, IMS, DB2), падтрымліваючы аўдыт бяспекі, аўтаматызаваную наладку карыстальнікаў (Provisioning) і міграцыю правоў."
           }
         ]
       },
@@ -181,10 +187,10 @@
         },
         "paragraphs": [
           {
-            "zh": "TDI 部分设计者 / 开发工程师。独立设计 TDI 数据流 (Dataflow) 与 JavaScript 处理逻辑，完成从大型机核心系统到目标身份仓库的资料集成。",
-            "ru": "Проектировщик / инженер-разработчик части TDI. Самостоятельно спроектировал потоки данных TDI (Dataflow) и логику обработки на JavaScript, выполнив интеграцию данных из мэйнфреймовых ключевых систем в целевой репозиторий идентичностей.",
-            "en": "TDI part designer / development engineer. Independently designed the TDI data flows (Dataflow) and JavaScript processing logic, completing the data integration from the mainframe core systems to the target identity repository.",
-            "be": "Праектавальнік / інжынер-распрацоўшчык часткі TDI. Самастойна праектаваў патокі даных TDI (Dataflow) і логіку апрацоўкі на JavaScript, выканаўшы інтэграцыю даных з мейнфрэймавых ключавых сістэм у мэтавы рэпазітар ідэнтычнасцей."
+            "zh": "TDI 部分设计者 / 开发工程师。独立设计 TDI 数据流 (Dataflow) 与 JavaScript 处理逻辑，完成从 IBM 大型机软件系统到目标身份仓库的资料集成。",
+            "ru": "Проектировщик / инженер-разработчик части TDI. Самостоятельно спроектировал потоки данных TDI (Dataflow) и логику обработки на JavaScript, выполнив интеграцию данных из программных комплексов для мейнфреймов IBM в целевой репозиторий идентичностей.",
+            "en": "TDI part designer / development engineer. Independently designed the TDI data flows (Dataflow) and JavaScript processing logic, completing the data integration from IBM mainframe software systems to the target identity repository.",
+            "be": "Праектавальнік / інжынер-распрацоўшчык часткі TDI. Самастойна праектаваў патокі даных TDI (Dataflow) і логіку апрацоўкі на JavaScript, выканаўшы інтэграцыю даных з праграмных комплексаў для мейнфрэймаў IBM у мэтавы рэпазітар ідэнтычнасцей."
           }
         ]
       },
@@ -213,6 +219,12 @@
             "ru": "3. Демонстрирует ключевые компетенции в **архитектуре безопасности мэйнфрейма, интеграции данных идентичности** и самостоятельном проектировании потоков данных.",
             "en": "3. Demonstrates core capabilities in **mainframe security architecture, identity data integration**, and independently designing data flows.",
             "be": "3. Дэманструе ключавыя кампетэнцыі ў **архітэктуры бяспекі мейнфрэйма, інтэграцыі даных ідэнтычнасці** і самастойным праектаванні патокаў даных."
+          },
+          {
+            "zh": "结果：IBM 大型主机 DB2、CICS、IMS 的用户身份数据实现抽取、转换与跨系统同步。",
+            "ru": "Результат: данные идентичности пользователей из DB2, CICS и IBM mainframe IMS извлекаются, преобразуются и синхронизируются между системами.",
+            "en": "Result: user identity data from DB2, CICS, and IMS on the IBM mainframe is extracted, transformed, and synchronized across systems.",
+            "be": "Рэзультат: дадзеныя ідэнтычнасці карыстальнікаў з DB2, CICS і IMS на IBM mainframe выздабываюцца, пераўтвараюцца і сінхранізуюцца паміж сістэмамі."
           }
         ]
       }
@@ -304,7 +316,7 @@
         },
         "list": [
           {
-            "zh": "1. 用 C/C++ 研制这个项目的大部分核心程序，并优化同事做的程序。",
+            "zh": "1. 用 C/C++ 研发这个项目的大部分核心程序，并优化同事做的程序。",
             "ru": "1. На C/C++ разработал бо́льшую часть ключевых программ проекта и оптимизировал программы, написанные коллегами.",
             "en": "1. Developed most of the project's core programs in C/C++ and optimized the programs written by colleagues.",
             "be": "1. На C/C++ распрацаваў большую частку ключавых праграм праекта і аптымізаваў праграмы, напісаныя калегамі."
@@ -314,6 +326,12 @@
             "ru": "2. Поставил надёжную реализацию сложной **финансовой / ценовой бизнес-логики** в мэйнфреймовой среде, продемонстрировав компетенции в разработке ключевой логики.",
             "en": "2. Delivered a reliable implementation of complex **financial / pricing business logic** in a mainframe environment, demonstrating core logic development capability.",
             "be": "2. Паставіў надзейную рэалізацыю складанай **фінансавай / цэнавай бізнес-логікі** у мейнфрэймавым асяроддзі, прадэманстраваўшы кампетэнцыі ў распрацоўцы ключавой логікі."
+          },
+          {
+            "zh": "结果：财务 / 定价等核心业务逻辑在大型机环境可靠实现并交付。",
+            "ru": "Результат: ключевая бизнес-логика финансов и ценообразования надёжно рэалізавана и доставлена в среде mainframe.",
+            "en": "Result: core finance and pricing business logic implemented and delivered reliably in the mainframe environment.",
+            "be": "Рэзультат: ключавая бізнес-логіка фінансаў і цэнаўтварэння надзейна рэалізавана і дастаўлена ў асяроддзі mainframe."
           }
         ]
       }
@@ -421,6 +439,12 @@
             "ru": "3. Поставил ключевые модули алгоритмов в высоконадёжной мэйнфреймовой среде, накопив опыт высокопроизводительной разработки на C/C++ и PL/I для мэйнфреймов.",
             "en": "3. Delivered core algorithm modules in a high-reliability mainframe environment, accumulating experience in high-performance mainframe C/C++ and PL/I development.",
             "be": "3. Паставіў ключавыя модулі алгарытмаў у высоканадзейным мейнфрэймавым асяроддзі, назапасіўшы вопыт высокапрадукцыйнай распрацоўкі на C/C++ і PL/I для мейнфрэймаў."
+          },
+          {
+            "zh": "据项目对外资料，该系统在运筹学与供应链管理领域被广泛引用。",
+            "ru": "Согласно внешним материалам проекта, система широко цитируется в области исследования операций и управления цепями поставок.",
+            "en": "According to the project's external materials, the system is widely referenced in operations research and supply-chain management.",
+            "be": "Паводле знешніх матэрыялаў праекта, сістэма шырока цытуецца ў вобласці даследавання аперацый і кіравання ланцугамі паставак."
           }
         ]
       }

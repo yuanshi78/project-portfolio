@@ -5,9 +5,12 @@ import config from '@/data/shortcuts'
 // 在为某个入口匹配到快捷键时，展示对应的键位提示。
 // 注意：不要在此处把 link.label 展开成字符串（会按当时语言冻结、切换语言不更新）；
 // 保留代理对象，在模板里访问 link.label 由其 get 陷阱按当前响应式语言解析。
+// 静态 demo（/demos/...html）不在 vue-router 路由表内：走普通链接新标签打开，
+// 其余入口仍用路由跳转（VBtn :to）。
+const isExternal = to => /^\/demos\//. test(to) || to.endsWith('.html')
 const links = (config?.quickLinks ?? []).map(link => {
   const sc = (config?.shortcuts ?? []).find(s => s.to === link.to)
-  return { link, combo: sc?.combo ?? '' }
+  return { link, combo: sc?.combo ?? '', external: isExternal(link.to) }
 })
 </script>
 
@@ -27,7 +30,10 @@ const links = (config?.quickLinks ?? []).map(link => {
     <VBtn
       v-for="item in links"
       :key="item.link.to"
-      :to="item.link.to"
+      :to="item.external ? undefined : item.link.to"
+      :href="item.external ? item.link.to : undefined"
+      :target="item.external ? '_blank' : undefined"
+      :rel="item.external ? 'noopener' : undefined"
       :prepend-icon="item.link.icon"
       variant="tonal"
       color="primary"

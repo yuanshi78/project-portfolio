@@ -42,9 +42,9 @@ const renderSegments = text => {
 
   return parseEmphasis(
     text
-      .replace('{years}', getYears())
-      .replace('{exp}', getExpYears())
-      .replace('{age}', getAge()),
+      .replace(/\{years\}/g, getYears())
+      .replace(/\{exp\}/g, getExpYears())
+      .replace(/\{age\}/g, getAge()),
   )
 }
 

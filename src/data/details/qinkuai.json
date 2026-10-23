@@ -7,7 +7,7 @@
       "en": "Qin Tianxia",
       "be": "Qin Tianxia"
     },
-    "date": "2016/09—2019/05",
+    "date": "2016/09—2019/01",
     "images": [
       "qinkuai/qinkuai1.png",
       "qinkuai/qinkuai2.png",
@@ -81,6 +81,7 @@
           }
         ]
       }
-    ]
+    ],
+    "category": "qinkuai"
   }
 ]

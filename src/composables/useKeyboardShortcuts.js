@@ -1,4 +1,5 @@
-// 全局键盘快捷键：组合键 → 路由（配置见 src/data/shortcuts.json）
+// 全局键盘快捷键：组合键 → 路由 / 新窗口（配置见 src/data/shortcuts.json）
+// 静态 demo（/demos/...html）在新窗口打开，站内页面走路由跳转。
 //
 // combo 写法：修饰键 + 主键，用 "+" 连接，大小写不敏感。
 //   修饰键：Ctrl / Control / Alt / Shift / Cmd / Win / Meta
@@ -12,6 +13,11 @@ import { useRouter } from 'vue-router'
 import config from '@/data/shortcuts'
 
 const shortcuts = config?.shortcuts ?? []
+
+// 静态 demo（/demos/...html）不在 vue-router 路由表内：走新窗口打开，
+// 不能 router.push（会走 SPA 路由、带上 # 前缀而打不到静态文件）。
+// 判断规则与 QuickLinks.vue 保持一致。
+const isExternal = to => /^\/demos\//.test(to) || to.endsWith('.html')
 
 // 修饰键别名 → KeyboardEvent 上的布尔属性名
 const MOD = {
@@ -99,7 +105,10 @@ export function useKeyboardShortcuts() {
       if (e.repeat)
         return
 
-      router.push(s.to)
+      if (isExternal(s.to))
+        window.open(s.to, '_blank', 'noopener')
+      else
+        router.push(s.to)
 
       if (import.meta.env.DEV)
         console.info(`[快捷键] ${s.combo} → ${s.to}（${s.label ?? ''}）`)

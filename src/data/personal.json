@@ -6,7 +6,6 @@
     "be": "Аляксандр Кузьмянкоў 元实"
   },
   "cover": "/images/variants/zoom-pc/abstract.jpg",
-  "birthday": "1978-03-16",
   "chinaSince": 2014,
   "career": {
     "since": 2002,
@@ -23,9 +22,9 @@
       },
       "label": {
         "zh": "软件工程经验",
-        "ru": "Опыт разработки ПО",
+        "ru": "Опыт в разработке ПО",
         "en": "Software Engineering Experience",
-        "be": "Вопыт распрацоўкі ПЗ"
+        "be": "Вопыт у распрацоўцы ПЗ"
       }
     },
     {
@@ -52,30 +51,30 @@
         "be": "Мовы"
       },
       "label": {
-        "zh": "**中文 · 英语 · 俄语 · 白俄文**",
-        "ru": "**Китайский · Английский · Русский · Белорусский**",
-        "en": "**Chinese · English · Russian · Belarusian**",
-        "be": "**Кітайская · Англійская · Руская · Беларуская**"
+        "zh": "**中文 (流利) · 英语 (高级) · 俄语 (母语) · 白俄罗斯语 (母语)**",
+        "ru": "**Китайский (свободно) · Английский (продвинутый) · Русский (носитель) · Белорусский (носитель)**",
+        "en": "**Chinese (Fluent) · English (Advanced) · Russian (Native) · Belarusian (Native)**",
+        "be": "**Кітайская (вольна) · Англійская (прасунуты) · Руская (носьбіт) · Беларуская (носьбіт)**"
       }
     },
     {
       "icon": "ri-robot-line",
-      "value": "**AI**",
+      "value": "AI",
       "label": {
         "zh": "辅助开发",
-        "ru": "Поддержка разработки",
-        "en": "Assisted Development",
-        "be": "Падтрымка распрацоўкі"
+        "ru": "Разработка с помощью ИИ",
+        "en": "AI-Assisted Development",
+        "be": "Распрацоўка з дапамогай ШІ"
       }
     }
   ],
   "site": {
     "name": "元实",
     "title": {
-      "zh": "Aliaksandr Kuzmiankou 元实 - 作品集",
-      "ru": "Александр Кузьменков - Портфолио",
-      "en": "Aliaksandr Kuzmiankou - Portfolio",
-      "be": "Аляксандр Кузьменкоў - Партфоліа"
+      "zh": "Aliaksandr Kuzmiankou 元实 - 资深前端架构师 / 数据可视化技术专家 / 低代码平台研发 / 数据呈现研究",
+      "ru": "Aliaksandr Kuzmiankou — Старший фронтенд-архитектор, эксперт по визуализации данных и low-code",
+      "en": "Aliaksandr Kuzmiankou - Senior Frontend Architect / Data Visualization Expert / Low-Code Platform R&D",
+      "be": "Aliaksandr Kuzmiankou — Старшы фронтэнд-архітэктар, эксперт па візуалізацыі дадзеных і low-code"
     },
     "logo": "/images/logo.svg"
   },
@@ -89,25 +88,25 @@
     }
   },
   "about": {
-    "zh": "你好，我是 Aliaksandr Kuzmiankou（元实），一名常驻西安的白俄罗斯籍独立研发者（数据呈现与AI方向）、软件工程师与web前端架构师。\n\n专注数据呈现与AI方向：软件工程、前端架构、低代码平台（NocoBase、AMIS）、数据可视化。目前致力于研发前沿的智能多模态数据呈现工具（可视化、可听化及其他感知通道），基于带微内核的插件优先架构，AI 作为呈现的智能基础。该工具既面向现代智能仪表盘，也面向未来的数据交互方式。\n\n我的独特优势：**{years}年在西安 + 中文流利 + 俄语母语 + {exp}年软件工程经验 + web前端架构 + AI辅助开发 + 产品思维**。我是中国与俄语市场之间的技术桥梁。\n\n在这个站点，我整理了个人的专业技能、项目经历，以及一些关于职业与技术的想法，欢迎了解。",
-    "ru": "Здравствуйте, меня зовут Aliaksandr Kuzmiankou (元实) — белорусский независимый специалист по исследованиям и разработкам (направление «представление данных и ИИ»), программист и архитектор веб-интерфейсов, живу и работаю в Сиане.\n\nСпециализируюсь на представлении данных и ИИ: программная инженерия, архитектура фронтенда, low-code платформы (NocoBase, AMIS), визуализация данных. Сейчас разрабатываю передовой инструмент интеллектуального мультимодального представления данных (визуализация, озвучивание и другие каналы восприятия) на основе плагин-ориентированной микроядерной архитектуры, где ИИ — интеллектуальная основа представления. Инструмент ориентирован как на современные умные дашборды, так и на будущие способы взаимодействия с данными.\n\nМоё уникальное преимущество: **{years} лет в Сиане + свободный китайский + родной русский + {exp} лет опыта разработки ПО + архитектура веб-фронтенда + ИИ-ассистированная разработка + продуктовое мышление**. Я — технический мост между Китаем и русскоязычным рынком.\n\nНа этом сайте я собрал свои профессиональные навыки, проектный опыт и мысли о карьере и технологиях. Добро пожаловать!",
-    "en": "Hello, I'm Aliaksandr Kuzmiankou (元实), a Belarusian independent R&D professional (data presentation & AI), software engineer and web front-end architect based in Xi'an.\n\nI focus on data presentation and AI: software engineering, front-end architecture, low-code platforms (NocoBase, AMIS), and data visualization. I'm currently building a cutting-edge intelligent multimodal data-presentation tool (visual, audible and other perceptual channels) on a plugin-first microkernel architecture, with AI as the intelligent foundation of presentation. It targets both modern smart dashboards and future ways of interacting with data.\n\nMy unique edge: **{years} years in Xi'an + fluent Chinese + native Russian + {exp} years of software engineering + web front-end architecture + AI-assisted development + product thinking**. I am the technical bridge between China and the Russian-speaking market.\n\nOn this site I've compiled my skills, project experience, and some thoughts on career and technology. Welcome!",
-    "be": "Вітаю, мяне клічуць Aliaksandr Kuzmiankou (元实) — беларускі незалежны спецыяліст па даследаваннях і распрацоўках (напрамак «прадстаўленне дадзеных і ШІ»), праграміст і архітэктар вэб-інтэрфейсаў, жыву і працую ў Сіяні.\n\nСпецыялізуюся на прадстаўленні дадзеных і ШІ: праграмная інжынерыя, архітэктура фронтэнда, low-code платформы (NocoBase, AMIS), візуалізацыя дадзеных. Зараз распрацоўваю перадавы інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных (візуалізацыя, агучванне і іншыя каналы ўспрымання) на аснове плагін-арыентаванай мікраядзернай архітэктуры, дзе ШІ — інтэлектуальная аснова прадстаўлення. Інструмент арыентаваны як на сучасныя разумныя дашборды, так і на будучыя спосабы ўзаемадзеяння з дадзенымі.\n\nМая ўнікальная перавага: **{years} гадоў у Сіяні + вольная кітайская + родная руская + {exp} гадоў вопыту распрацоўкі ПЗ + архітэктура вэб-фронтэнда + ШІ-асістэнтская распрацоўка + прадуктовае мысленне**. Я — тэхнічны мост паміж Кітаем і рускамоўным рынкам.\n\nНа гэтым сайце я сабраў свае прафесійныя навыкі, вопыт праектаў і думкі аб кар'еры і тэхналогіях. Сардэчна запрашаю!"
+    "zh": "你好，我是 Aliaksandr Kuzmiankou（元实），常驻西安的资深前端架构师与软件工程师，**{exp} 年软件工程经验**。做过 IBM 大型机软件系统、NocoBase 低代码插件与工业能源可视化平台。\n\n我对数据呈现的未来有系统性判断：Aethera 研究如何弥合数据系统所知与人类感知之间的带宽差距。V1 是可靠仪表盘——比今天更快、更可靠、更私密；架构已为多模态预留。我找工作的首要目标是全职交付；如公司认同这个技术方向，可探讨合作。\n\n**我的独特优势：{exp} 年软件工程 + 大型机高可靠工程 + 低代码插件生态 + 工业大屏可视化 + 中文流利 + 俄语母语 + AI 辅助开发 + 产品判断力**；在西安 {years} 年，长期用中文参与客户项目交付。",
+    "ru": "Здравствуйте! Меня зовут Aliaksandr Kuzmiankou (元实), я старший фронтенд-архитектор и разработчик, живу и работаю в Сиане. У меня **{exp} лет** опыта в разработке ПО: программные комплексы для мейнфреймов IBM, low-code плагины для NocoBase, платформы промышленной и энергетической визуализации.\n\nУ меня системный взгляд на будущее визуализации данных: цель Aethera — сократить разрыв между машинным знанием и человеческим восприятием. V1 — это надёжный дашборд: быстрее, надёжнее и приватнее, чем существующие решения; архитектура изначально проектировалась с поддержкой мультимодальности. Моя главная цель — работа на полную ставку; если компании близко это техническое направление, готов обсудить сотрудничество.\n\n**Мои сильные стороны: **{exp} лет** разработки ПО + опыт высоконадёжных систем на мейнфреймах + экосистема low-code плагинов + промышленная визуализация для больших экранов + свободный китайский + русский как родной + разработка с помощью ИИ + продуктовое мышление**. Я живу и работаю в Сиане уже {years} лет, много лет работаю с китайскими клиентами.",
+    "en": "Hello, I'm Aliaksandr Kuzmiankou (元实), a senior frontend architect and software engineer based in Xi'an with **{exp} years of software engineering experience**. I've worked on IBM mainframe software systems, NocoBase low-code plugins, and industrial/energy visualization platforms.\n\nI have a systematic view of the future of data presentation: the goal of Aethera is to close the bandwidth gap between machine knowledge and human perception. V1 is a reliable dashboard—faster, more reliable, and more private than today's solutions; the architecture was designed from the start with multimodality in mind. My first priority is full-time delivery; if the company shares this technical direction, cooperation can be discussed.\n\n**My edge: {exp} years of software engineering + mainframe high-reliability engineering + low-code plugin ecosystem + industrial large-screen visualization + fluent Chinese + native Russian + AI-assisted development + product judgment**; I have lived and worked in Xi'an for {years} years, delivering projects with Chinese clients.",
+    "be": "Вітаю! Мяне завуць Aliaksandr Kuzmiankou (元实), я старшы фронтэнд-архітэктар і распрацоўшчык, жыву і працую ў Сіяні. Маю **{exp} гадоў вопыту ў распрацоўцы ПЗ**: праграмныя комплексы для мейнфрэймаў IBM, low-code плагіны для NocoBase, платформы прамысловай і энергетычнай візуалізацыі.\n\nУ мяне сістэмны погляд на будучыню візуалізацыі дадзеных: мэта Aethera — скараціць разрыў паміж машынным веданнем і чалавечым успрыманнем. V1 — гэта надзейны дашборд: хутчэйшы, надзейнейшы і прыватнейшы за існуючыя рашэнні; архітэктура ад пачатку праектавалася з падтрымкай мультымадальнасці. Мая галоўная мэта — праца на поўную стаўку; калі кампаніі блізкі гэты тэхнічны напрамак, гатовы абмеркаваць супрацоўніцтва.\n\n**Мае моцныя бакі: {exp} гадоў распрацоўкі ПЗ + вопыт высоканадзейных сістэм на мейнфрэймах + экасістэма low-code плагінаў + прамысловая візуалізацыя для вялікіх экранаў + вольная кітайская + руская як родная + распрацоўка з дапамогай ШІ + прадуктовае мысленне**. Я жыву і працую ў Сіяні ўжо {years} гадоў, на працягу многіх гадоў працую з кітайскімі кліентамі."
   },
   "forEmployers": {
-    "zh": "如果您公司对我研发的智能多模态数据呈现工具感兴趣，我愿意以公司项目的形式共同推进。Aethera 的架构方向被 8 个 AI 模型一致认定为认知时代唯一可信的基础；它的目标不是跟随数据呈现趋势，而是推动数据智能呈现的未来。新产生的成果归属公司；此前已有的个人研究与原型的使用条件，建议另行协商。",
-    "ru": "Если вашей компании интересен разрабатываемый мной инструмент интеллектуального мультимодального представления данных, я готов продвигать его совместно в рамках проекта компании. Направление архитектуры Aethera было единогласно признано 8 ИИ-моделями единственно надёжным фундаментом когнитивной эпохи; её цель — не следовать за трендами представления данных, а продвигать будущее интеллектуального представления данных. Новые результаты принадлежат компании; условия использования ранее созданных личных исследований и прототипов предлагаю обсудить отдельно.",
-    "en": "If your company is interested in the intelligent multimodal data-presentation tool I'm developing, I'm happy to advance it together as a company project. The architectural direction of Aethera was unanimously recognized by 8 AI models as the only trustworthy foundation of the cognitive era; its goal is not to follow data-presentation trends, but to advance the future of intelligent data presentation. New results belong to the company; the terms for using my prior personal research and prototypes should be negotiated separately.",
-    "be": "Калі вашай кампаніі цікавы распрацоўваны мной інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных, я гатовы прасоўваць яго сумесна ў рамках праекта кампаніі. Напрамак архітэктуры Aethera быў аднагалосна прызнаны 8 ШІ-мадэлямі адзіна надзейным падмуркам кагнітыўнай эпохі; яго мэта — не ісці ўслед за трэндамі прадстаўлення дадзеных, а прасоўваць будучыню інтэлектуальнага прадстаўлення дадзеных. Новыя вынікі належаць кампаніі; умовы выкарыстання раней створаных асабістых даследаванняў і прататыпаў прапаную абмеркаваць асобна."
+    "zh": "我求职的首要目标是全职交付公司项目。Aethera 是我利用个人时间进行的独立研究，尚未商业化，不是求职条件。它证明我在插件化架构、JSON Schema 配置、AI 辅助开发和系统性思考上的能力。\n\nV1 是楔子，不是负担。V1 的目标是做一个比今天更快、更可靠、更私密的仪表盘——这正是公司项目需要的。我不会为了 V2/V3+ 的愿景牺牲 V1；V1 必须先赢，产品才有资格谈未来。\n\n如果公司做数据呈现、低代码平台或多模态交互方向，我的架构研究、插件化经验和原型可直接用于公司项目；合作方式可按公司制度协商，不合作也完全不影响我的全职交付。入职前已有的个人研究与原型，其权属和使用条件会在入职协议中单独列明。",
+    "ru": "Моя главная цель — полноценная работа над проектами компании. Aethera — это самостоятельное исследование в свободное время; оно не является коммерческим продуктом и не влияет на трудоустройство. Оно показывает мои компетенции в плагинной архитектуре, настройке JSON Schema, разработке с помощью ИИ и системном мышлении.\n\nV1 — это клин, а не обуза. Задача V1 — сделать дашборд быстрее, надёжнее и приватнее существующих, — именно это и нужно проектам компании. Я не буду откладывать V1 ради планов на V2/V3+; сначала V1 должен добиться успеха, и только потом у продукта появится основание для развития.\n\nЕсли компания занимается визуализацией данных, low-code платформами или мультимодальным взаимодействием, мои архитектурные исследования, опыт с плагинами и прототип можно применить напрямую; условия сотрудничества — по правилам компании, а отказ не скажется на моей вовлечённости в основные задачи. Вопросы прав на прототипы и условия их использования мы можем отдельно зафиксировать в договоре.",
+    "en": "My first priority is full-time delivery of company projects. Aethera is independent research in my own time; it is not a commercial product and does not affect employment. It demonstrates my capability in plugin architecture, JSON Schema configuration, AI-assisted development, and systems thinking.\n\nV1 is the wedge, not a burden. V1 aims to be a dashboard faster, more reliable, and more private than today's—exactly what company projects need. I won't put off V1 for the sake of V2/V3+ plans; V1 must win first before the product earns the right to discuss its roadmap.\n\nIf the company works on data presentation, low-code platforms, or multimodal interaction, my architecture research, plugin experience, and prototype can be applied directly; cooperation terms follow company policy, and declining does not affect my engagement in core tasks. Ownership and usage terms of pre-employment research and prototype will be stated separately in the employment agreement.",
+    "be": "Мая галоўная мэта — поўная праца над праектамі кампаніі. Aethera — гэта самастойнае даследаванне ў вольны час; яно не з'яўляецца камерцыйным прадуктам і не ўплывае на працаўладкаванне. Яно паказвае мае кампетэнцыі ў плагіннай архітэктуры, наладзе JSON Schema, распрацоўцы з дапамогай ШІ і сістэмным мысленні.\n\nV1 — гэта клін, а не цяжар. Задача V1 — зрабіць дашборд хутчэйшым, надзейнейшым і прыватнейшым за існуючыя, — менавіта гэта і патрэбна праектам кампаніі. Я не буду адкладаць V1 дзеля планаў на V2/V3+; спачатку V1 павінен дасягнуць поспеху, і толькі потым у прадукта з'явіцца падстава для развіцця.\n\nКалі кампанія займаецца візуалізацыяй дадзеных, low-code платформамі або мультымадальным узаемадзеяннем, мае архітэктурныя даследаванні, вопыт з плагінамі і прататып можна прымяніць напрамую; умовы супрацоўніцтва — па правілах кампаніі, а адмова не паўплывае на маю ўцягнутасць у асноўныя задачы. Пытанні правоў на прататыпы і ўмовы іх выкарыстання мы можам асобна замацаваць у дамове."
   },
   "meta": [
     {
       "icon": "ri-computer-line",
       "text": {
-        "zh": "独立研发者（数据呈现与AI方向） / 软件工程师 / web前端",
-        "ru": "Независимый специалист по исследованиям и разработкам (представление данных и ИИ) / Программист / Веб-фронтенд",
-        "en": "Independent R&D Professional (Data Presentation & AI) / Software Engineer / Web Front-end",
-        "be": "Незалежны спецыяліст па даследаваннях і распрацоўках (прадстаўленне дадзеных і ШІ) / Праграміст / Вэб-фронтэнд"
+        "zh": "资深前端架构师 / 数据可视化技术专家 / 低代码平台研发 / 数据呈现研究",
+        "ru": "Старший фронтенд-архитектор, эксперт по визуализации данных и low-code",
+        "en": "Senior Frontend Architect / Data Visualization Expert / Low-Code Platform R&D",
+        "be": "Старшы фронтэнд-архітэктар, эксперт па візуалізацыі дадзеных і low-code"
       }
     },
     {
@@ -143,16 +142,6 @@
   ],
   "tabs": [
     {
-      "key": 2,
-      "label": {
-        "zh": "产品",
-        "ru": "Продукты",
-        "en": "Products",
-        "be": "Прадукты"
-      },
-      "icon": "ri-lightbulb-fill"
-    },
-    {
       "key": 1,
       "label": {
         "zh": "项目",
@@ -161,6 +150,16 @@
         "be": "Праекты"
       },
       "icon": "ri-folders-fill"
+    },
+    {
+      "key": 2,
+      "label": {
+        "zh": "产品",
+        "ru": "Продукты",
+        "en": "Products",
+        "be": "Прадукты"
+      },
+      "icon": "ri-lightbulb-fill"
     },
     {
       "key": 3,
@@ -194,23 +193,23 @@
       {
         "title": "Aethera",
         "subtitle": {
-          "zh": "2026/01 至今",
-          "ru": "2026/01 - наст. время",
-          "en": "2026/01 - Present",
-          "be": "2026/01 - цяп. час"
+          "zh": "2026/01 至今 · 个人研究",
+          "ru": "2026/01 — настоящее время · личное исследование",
+          "en": "2026/01 - Present · Personal Research",
+          "be": "2026/01 — цяпер · асабістае даследаванне"
         },
         "status": {
-          "zh": "研发中",
-          "ru": "В разработке",
-          "en": "In Development",
-          "be": "У распрацоўцы"
+          "zh": "V1 研发中 · 未商业化",
+          "ru": "V1 в разработке · не коммерческий продукт",
+          "en": "V1 in R&D · Not a commercial product",
+          "be": "V1 у распрацоўцы · не камерцыйны прадукт"
         },
-        "statusColor": "warning",
+        "statusColor": "info",
         "text": {
-          "zh": "智能多模态数据呈现工具：以 plugin-first 微内核架构为基础，支持多模态呈现与 AI 驱动配置，面向未来分布式、环境化的信息交互。",
-          "ru": "Интеллектуальный инструмент мультимодального представления данных: построен на плагин-ориентированной (plugin-first) микроядерной архитектуре, поддерживает мультимодальное представление и ИИ-управляемую настройку, ориентирован на будущее распределённое и контекстное взаимодействие с информацией.",
-          "en": "Intelligent multimodal data-presentation tool: built on a plugin-first microkernel architecture, supporting multimodal presentation and AI-driven configuration, aimed at future distributed, ambient information interaction.",
-          "be": "Інтэлектуальны інструмент мультымадальнага прадстаўлення дадзеных: пабудаваны на плагін-арыентаванай (plugin-first) мікраядзернай архітэктуры, падтрымлівае мультымадальнае прадстаўленне і ШІ-кіраваную наладку, арыентаваны на будучае размеркаванае і кантэкстнае ўзаемадзеянне з інфармацыяй."
+          "zh": "Aethera 的存在是为了弥合数据系统所知与人类感知之间的差距。V1 是可靠仪表盘——比今天更快、更可靠、更私密；架构（plugin-first + 微内核 + JSON Schema + AI agent）已为多模态预留。V1 是楔子：先做好仪表盘，产品才有资格谈未来。与求职不绑定；如公司有相关方向，可在入职后按公司制度探讨合作。",
+          "ru": "Цель Aethera — сократить разрыв между тем, что знают машины, и тем, что воспринимает человек. V1 — надёжный дашборд: быстрее, надёжнее и приватнее существующих решений; архитектура (plugin-first + микроядро + JSON Schema + AI-агент) изначально проектировалась с поддержкой мультимодальности. V1 — это клин: сначала хороший дашборд, и только потом у продукта появится основание для развития. С трудоустройством не связано; если у компании есть подходящее направление, сотрудничество можно обсудить после выхода на работу по правилам компании.",
+          "en": "The goal of Aethera is to close the gap between machine knowledge and human perception. V1 is a reliable dashboard—faster, more reliable, and more private than today's solutions; the architecture (plugin-first + microkernel + JSON Schema + AI agent) was designed from the start with multimodality in mind. V1 is the wedge: build the dashboard first, and only then does the product earn the right to discuss its roadmap. Not tied to employment; if the company has a relevant direction, cooperation can be discussed after onboarding under company policy.",
+          "be": "Мэта Aethera — скараціць разрыў паміж тым, што ведаюць машыны, і тым, што здольны ўспрыняць чалавек. V1 — надзейны дашборд: хутчэйшы, надзейнейшы і прыватнейшы за існуючыя рашэнні; архітэктура (plugin-first + мікраядро + JSON Schema + AI-агент) ад пачатку праектавалася з падтрымкай мультымадальнасці. V1 — гэта клін: спачатку добры дашборд, і толькі потым у прадукта з'явіцца падстава для развіцця. З працаўладкаваннем не звязана; калі ў кампаніі ёсць адпаведны напрамак, супрацоўніцтва можна абмеркаваць пасля выхаду на працу па правілах кампаніі."
         },
         "images": [
           "aethera/cover.jpg"
@@ -239,14 +238,13 @@
             }
           },
           {
-            "icon": "ri-calendar-line",
+            "icon": "ri-calendar-2-line",
             "text": {
-              "zh": "年龄：{age}岁",
-              "ru": "Возраст: {age}",
-              "en": "Age: {age}",
-              "be": "Узрост: {age}"
-            },
-            "visibility": "hidden"
+              "zh": "从业：{exp} 年软件工程经验",
+              "ru": "Опыт: {exp} лет в разработке ПО",
+              "en": "Experience: {exp} years of software engineering",
+              "be": "Вопыт: {exp} гадоў у распрацоўцы ПЗ"
+            }
           },
           {
             "icon": "ri-global-line",
@@ -260,10 +258,10 @@
           {
             "icon": "ri-speak-line",
             "text": {
-              "zh": "语言：俄语（母语）、白俄语、汉语（流利）、英语",
-              "ru": "Языки: русский (родной), белорусский, китайский (свободно), английский",
-              "en": "Languages: Russian (native), Belarusian, Chinese (fluent), English",
-              "be": "Мовы: руская (родная), беларуская, кітайская (вольна), англійская"
+              "zh": "语言：俄语（母语）、白俄罗斯语（母语）、汉语（流利）、英语（高级）",
+              "ru": "Языки: русский (носитель), белорусский (носитель), китайский (свободно), английский (продвинутый)",
+              "en": "Languages: Russian (Native), Belarusian (Native), Chinese (Fluent), English (Advanced)",
+              "be": "Мовы: руская (носьбіт), беларуская (носьбіт), кітайская (вольна), англійская (прасунуты)"
             }
           },
           {
@@ -276,39 +274,21 @@
             }
           },
           {
-            "icon": "ri-parent-line",
-            "text": {
-              "zh": "婚姻状况：已婚，有孩子",
-              "ru": "Семейное положение: женат, есть дети",
-              "en": "Marital status: married, with children",
-              "be": "Сямейны стан: жанаты, ёсць дзеці"
-            }
-          },
-          {
             "icon": "ri-star-line",
             "text": {
-              "zh": "角色：独立研发者（数据呈现与AI方向） / 软件工程师 / web前端",
-              "ru": "Роль: независимый специалист по исследованиям и разработкам (представление данных и ИИ) / программист / веб-фронтенд",
-              "en": "Role: Independent R&D Professional (Data Presentation & AI) / Software Engineer / Web Front-end",
-              "be": "Роля: незалежны спецыяліст па даследаваннях і распрацоўках (прадстаўленне дадзеных і ШІ) / праграміст / вэб-фронтэнд"
+              "zh": "角色：资深前端架构师 / 数据可视化技术专家 / 低代码平台研发 / 数据呈现研究",
+              "ru": "Роль: Старший фронтенд-архитектор, эксперт по визуализации данных и low-code",
+              "en": "Role: Senior Frontend Architect / Data Visualization Expert / Low-Code Platform R&D",
+              "be": "Роля: Старшы фронтэнд-архітэктар, эксперт па візуалізацыі дадзеных і low-code"
             }
           },
           {
             "icon": "ri-graduation-cap-line",
             "text": {
-              "zh": "教育： 白俄罗斯国立信息和无线电电子大学\n1997-2002\n软件工程师",
+              "zh": "教育：白俄罗斯国立信息和无线电电子大学\n1997-2002\n软件工程师",
               "ru": "Образование: Белорусский государственный университет информатики и радиоэлектроники\n1997-2002\nИнженер-программист",
               "en": "Education: Belarusian State University of Informatics and Radioelectronics\n1997-2002\nSoftware Engineer",
               "be": "Адукацыя: Беларускі дзяржаўны ўніверсітэт інфарматыкі і радыёэлектронікі\n1997-2002\nІнжынер-праграміст"
-            }
-          },
-          {
-            "icon": "ri-user-location-line",
-            "text": {
-              "zh": "家庭地址：西安莲湖区环城西路南段8号",
-              "ru": "Домашний адрес: Китай, Сиань, район Ляньху, ул. Хуаньчэн Силу, д. 8",
-              "en": "Home address: No. 8, South Huancheng West Rd, Lianhu Dist., Xi'an",
-              "be": "Хатні адрас: Кітай, Сіянь, раён Ляньху, вул. Хуаньчэн Силу, д. 8"
             }
           },
           {
@@ -318,15 +298,6 @@
               "ru": "WeChat: yuanshi78",
               "en": "WeChat: yuanshi78",
               "be": "WeChat: yuanshi78"
-            }
-          },
-          {
-            "icon": "ri-phone-line",
-            "text": {
-              "zh": "手机号：18681876326",
-              "ru": "Телефон: 18681876326",
-              "en": "Phone: 18681876326",
-              "be": "Тэлефон: 18681876326"
             }
           },
           {
@@ -352,9 +323,9 @@
             "icon": "ri-computer-line",
             "text": {
               "zh": "IT：人工智能（特别是人工神经网络）、数据可视化与多模态数据呈现、智能呈现工具（plugin-first 微内核 + AI 驱动配置）研发、web前端、算法、系统结构设计",
-              "ru": "IT: искусственный интеллект (особенно искусственные нейронные сети), визуализация данных и мультимодальное представление, разработка инструментов интеллектуального представления (plugin-first микроядро + ИИ-настройка), веб-фронтенд, алгоритмы, проектирование системной архитектуры",
-              "en": "IT: artificial intelligence (esp. artificial neural networks), data visualization & multimodal presentation, R&D of intelligent presentation tools (plugin-first microkernel + AI-driven config), web front-end, algorithms, system architecture design",
-              "be": "IT: штучны інтэлект (асабліва штучныя нейронныя сеткі), візуалізацыя дадзеных і мультымадальнае прадстаўленне, распрацоўка інструментаў інтэлектуальнага прадстаўлення (plugin-first мікраядро + ШІ-наладка), вэб-фронтэнд, алгарытмы, праектаванне сістэмнай архітэктуры"
+              "ru": "IT: искусственный интеллект (особенно нейронные сети), визуализация данных и мультимодальное представление, разработка инструментов интеллектуального представления (plugin-first микроядро + ИИ-настройка), фронтенд-разработка, алгоритмы, проектирование системной архитектуры",
+              "en": "IT: artificial intelligence (esp. neural networks), data visualization & multimodal presentation, R&D of intelligent presentation tools (plugin-first microkernel + AI-driven config), frontend development, algorithms, system architecture design",
+              "be": "IT: штучны інтэлект (асабліва нейронныя сеткі), візуалізацыя дадзеных і мультымадальнае прадстаўленне, распрацоўка інструментаў інтэлектуальнага прадстаўлення (plugin-first мікраядро + ШІ-наладка), фронтэнд-распрацоўка, алгарытмы, праектаванне сістэмнай архітэктуры"
             }
           },
           {
@@ -369,7 +340,7 @@
           {
             "icon": "ri-ancient-gate-line",
             "text": {
-              "zh": "中国🇨🇳: 文化（特别是道家/道教）、 历史、古汉语、现代汉语、茶叶",
+              "zh": "中国🇨🇳: 文化（特别是道家/道教）、历史、古汉语、现代汉语、茶叶",
               "ru": "Китай 🇨🇳: культура (особенно даосизм), история, классический китайский язык, современный китайский, чай",
               "en": "China 🇨🇳: culture (esp. Daoism/Taoism), history, classical Chinese, modern Chinese, tea",
               "be": "Кітай 🇨🇳: культура (асабліва даасізм), гісторыя, класічная кітайская мова, сучасная кітайская, чай"
@@ -381,7 +352,7 @@
               "zh": "音乐: 西方古典音乐（从巴洛克时代的到20/21世纪时代的）、中国古典音乐（古琴）、早期摇滚(The Beatles, The Who, Pink Floyd, Led Zeppelin, Deep Purple, Queen等)、早期流行音乐、爵士",
               "ru": "Музыка: западная классическая (от барокко до XX/XXI века), китайская классическая (гучинь), ранний рок (The Beatles, The Who, Pink Floyd, Led Zeppelin, Deep Purple, Queen и др.), ранняя поп-музыка, джаз",
               "en": "Music: Western classical (Baroque to 20th/21st century), Chinese classical (guqin), early rock (The Beatles, The Who, Pink Floyd, Led Zeppelin, Deep Purple, Queen, etc.), early pop, jazz",
-              "be": "Музыка: заходняя класічная (ад барока да XX/XXI стагоддзя), кітайская класічная (гуцынь), ранні рок (The Beatles, The Who, Pink Floyd, Led Zeppelin, Deep Purple, Queen і інш.), ранні поп-музыка, джаз"
+              "be": "Музыка: заходняя класічная (ад барока да XX/XXI стагоддзя), кітайская класічная (гуцынь), ранні рок (The Beatles, The Who, Pink Floyd, Led Zeppelin, Deep Purple, Queen і інш.), ранняя поп-музыка, джаз"
             }
           }
         ]
@@ -399,19 +370,19 @@
         {
           "icon": "ri-vuejs-line",
           "text": {
-            "zh": "前端：HTML5、CSS3/SCSS、JavaScript （ES5、 ES2015、ES2015以上）、TypeScript、Vue 2/3、React",
-            "ru": "Фронтенд: HTML5, CSS3/SCSS, JavaScript (ES5, ES2015 и выше), TypeScript, Vue 2/3, React",
-            "en": "Front-end: HTML5, CSS3/SCSS, JavaScript (ES5, ES2015+), TypeScript, Vue 2/3, React",
-            "be": "Фронтэнд: HTML5, CSS3/SCSS, JavaScript (ES5, ES2015 і вышэй), TypeScript, Vue 2/3, React"
+            "zh": "前端：HTML5、CSS3/SCSS、JavaScript (ES5, ES2015+)、TypeScript、Vue 2/3、React",
+            "ru": "Фронтенд: HTML5, CSS3/SCSS, JavaScript (ES5, ES2015+), TypeScript, Vue 2/3, React",
+            "en": "Frontend: HTML5, CSS3/SCSS, JavaScript (ES5, ES2015+), TypeScript, Vue 2/3, React",
+            "be": "Фронтэнд: HTML5, CSS3/SCSS, JavaScript (ES5, ES2015+), TypeScript, Vue 2/3, React"
           }
         },
         {
           "icon": "ri-code-s-slash-line",
           "text": {
-            "zh": "语言：JavaScript （ES5, ES2015, ES2015以上）、TypeScript、C/C++、Lisp Scheme、SQL、JCL",
-            "ru": "Языки: JavaScript (ES5, ES2015 и выше), TypeScript, C/C++, Lisp Scheme, SQL, JCL",
-            "en": "Languages: JavaScript (ES5, ES2015+), TypeScript, C/C++, Lisp Scheme, SQL, JCL",
-            "be": "Мовы: JavaScript (ES5, ES2015 і вышэй), TypeScript, C/C++, Lisp Scheme, SQL, JCL"
+            "zh": "语言：JavaScript (ES5, ES2015+)、TypeScript、C/C++、Scheme / Lisp、SQL、JCL",
+            "ru": "Языки: JavaScript (ES5, ES2015+), TypeScript, C/C++, Scheme / Lisp, SQL, JCL",
+            "en": "Languages: JavaScript (ES5, ES2015+), TypeScript, C/C++, Scheme / Lisp, SQL, JCL",
+            "be": "Мовы: JavaScript (ES5, ES2015+), TypeScript, C/C++, Scheme / Lisp, SQL, JCL"
           }
         },
         {
@@ -419,9 +390,9 @@
           "important": true,
           "text": {
             "zh": "AI辅助软件开发（vibe coding）：熟练使用AI工具进行软件系统开发、原型构建与代码生成；作为软件工程师，对LLM生成的方案与代码负责",
-            "ru": "ИИ-ассистированная разработка ПО (vibe coding): уверенное использование ИИ-инструментов для разработки ПО, прототипирования и генерации кода; как программист, отвечаю за решения и код, сгенерированные LLM",
+            "ru": "Разработка с помощью ИИ (vibe coding): уверенное использование ИИ-инструментов для разработки, прототипирования и генерации кода; как разработчик, отвечаю за решения и код, сгенерированные LLM",
             "en": "AI-assisted software development (vibe coding): proficient use of AI tools for system development, prototyping and code generation; as a software engineer, I take responsibility for LLM-generated designs and code",
-            "be": "ШІ-асістэнтская распрацоўка ПЗ (vibe coding): упэўненае выкарыстанне ШІ-інструментаў для распрацоўкі ПЗ, прататыпавання і генерацыі кода; як праграміст, адказваю за рашэнні і код, згенераваныя LLM"
+            "be": "Распрацоўка з дапамогай ШІ (vibe coding): упэўненае выкарыстанне ШІ-інструментаў для распрацоўкі, прататыпавання і генерацыі кода; як распрацоўшчык, адказваю за рашэнні і код, згенераваныя LLM"
           }
         },
         {
@@ -429,19 +400,19 @@
           "important": true,
           "text": {
             "zh": "研究方法论：系统化思维；数据智能呈现的发展与未来趋势研究",
-            "ru": "Методология исследований: системное мышление; исследование развития и будущих трендов интеллектуального представления данных",
-            "en": "Research methodology: systems thinking; studying the development and future trends of intelligent data presentation",
-            "be": "Метадалогія даследаванняў: сістэмнае мысленне; даследаванне развіцця і будучых трэндаў інтэлектуальнага прадстаўлення дадзеных"
+            "ru": "Подход: системное мышление; исследую, как будут выглядеть дашборды будущего",
+            "en": "Approach: systems thinking; researching what dashboards of the future will look like",
+            "be": "Падыход: сістэмнае мысленне; даследую, як будуць выглядаць дашборды будучыні"
           }
         },
         {
           "icon": "ri-code-box-line",
           "important": true,
           "text": {
-            "zh": "低代码框架：NocoBase, AMIS",
-            "ru": "Low-code фреймворки: NocoBase, AMIS",
-            "en": "Low-code frameworks: NocoBase, AMIS",
-            "be": "Low-code фрэймворкі: NocoBase, AMIS"
+            "zh": "低代码平台：NocoBase, AMIS",
+            "ru": "Low-code платформы: NocoBase, AMIS",
+            "en": "Low-code platforms: NocoBase, AMIS",
+            "be": "Low-code платформы: NocoBase, AMIS"
           }
         },
         {
@@ -466,7 +437,7 @@
         {
           "icon": "ri-tools-line",
           "text": {
-            "zh": "IDE：WebStorm、 VS Code、 CodeBuddy AI IDE、 QwenWork、WorkBuddy、Windsurf AI IDE、 Cursor AI IDE",
+            "zh": "IDE：WebStorm、VS Code、CodeBuddy AI IDE、QwenWork、WorkBuddy、Windsurf AI IDE、Cursor AI IDE",
             "ru": "IDE: WebStorm, VS Code, CodeBuddy AI IDE, QwenWork, WorkBuddy, Windsurf AI IDE, Cursor AI IDE",
             "en": "IDE: WebStorm, VS Code, CodeBuddy AI IDE, QwenWork, WorkBuddy, Windsurf AI IDE, Cursor AI IDE",
             "be": "IDE: WebStorm, VS Code, CodeBuddy AI IDE, QwenWork, WorkBuddy, Windsurf AI IDE, Cursor AI IDE"
@@ -502,19 +473,19 @@
         {
           "icon": "ri-global-line",
           "text": {
-            "zh": "Web协议：HTTP 1.0/2.0",
-            "ru": "Веб-протоколы: HTTP 1.0/2.0",
-            "en": "Web protocols: HTTP 1.0/2.0",
-            "be": "Вэб-пратаколы: HTTP 1.0/2.0"
+            "zh": "Web协议：HTTP/1.1, HTTP/2, HTTP/3",
+            "ru": "Веб-протоколы: HTTP/1.1, HTTP/2, HTTP/3",
+            "en": "Web protocols: HTTP/1.1, HTTP/2, HTTP/3",
+            "be": "Вэб-пратаколы: HTTP/1.1, HTTP/2, HTTP/3"
           }
         },
         {
           "icon": "ri-server-line",
           "text": {
-            "zh": "软件系统：IBM Tivoli Directory Integrator (TDI)",
-            "ru": "Программные системы: IBM Tivoli Directory Integrator (TDI)",
-            "en": "Software systems: IBM Tivoli Directory Integrator (TDI)",
-            "be": "Праграмныя сістэмы: IBM Tivoli Directory Integrator (TDI)"
+            "zh": "集成系统：IBM Tivoli Directory Integrator (TDI)",
+            "ru": "Интеграционные шины / ETL: IBM Tivoli Directory Integrator (TDI)",
+            "en": "Integration systems: IBM Tivoli Directory Integrator (TDI)",
+            "be": "Інтэграцыйныя шыны / ETL: IBM Tivoli Directory Integrator (TDI)"
           }
         }
       ]
@@ -529,117 +500,33 @@
         },
         "items": [
           {
-            "icon": "ri-speak-line",
-            "text": {
-              "zh": "俄语🇷🇺（母语）、白俄语🇧🇾、汉语🇨🇳（流利）、英语🇬🇧。可以用中文与人顺利交流",
-              "ru": "Русский 🇷🇺 (родной), белорусский 🇧🇾, китайский 🇨🇳 (свободно), английский 🇬🇧. Свободно общаюсь на китайском",
-              "en": "Russian 🇷🇺 (native), Belarusian 🇧🇾, Chinese 🇨🇳 (fluent), English 🇬🇧. Can communicate smoothly in Chinese",
-              "be": "Руская 🇷🇺 (родная), беларуская 🇧🇾, кітайская 🇨🇳 (вольна), англійская 🇬🇧. Вольна размаўляю па-кітайску"
-            }
-          },
-          {
-            "icon": "ri-code-s-slash-line",
-            "text": {
-              "zh": "拥有**{exp}年**的软件工程、软件创作和应用经验",
-              "ru": "**{exp} лет** опыта в программной инженерии, создании и применении ПО",
-              "en": "**{exp} years** of software engineering, creation and application experience",
-              "be": "**{exp} гадоў** вопыту ў праграмнай інжынерыі, стварэнні і прымяненні ПЗ"
-            }
-          },
-          {
-            "icon": "ri-globe-line",
+            "icon": "ri-node-tree",
             "important": true,
             "text": {
-              "zh": "**中国与俄语市场之间的技术桥梁**：{years}年在西安 + 中文流利 + 俄语母语",
-              "ru": "**Технический мост между Китаем и русскоязычным рынком**: {years} лет в Сиане + свободный китайский + родной русский",
-              "en": "**Technical bridge between China and the Russian-speaking market**: {years} years in Xi'an + fluent Chinese + native Russian",
-              "be": "**Тэхнічны мост паміж Кітаем і рускамоўным рынкам**: {years} гадоў у Сіяні + вольная кітайская + родная руская"
+              "zh": "**复杂系统判断**：IBM 大型机软件系统生产环境 + 工业大屏 + 低代码插件生态，能在高可靠要求与快速交付之间做架构权衡。",
+              "ru": "**Сложные системы**: опыт работы с программными комплексами для мейнфреймов IBM в продакшене, промышленными дашбордами и экосистемой low-code плагинов — умею находить архитектурный баланс между высочайшей надёжностью и скоростью поставки.",
+              "en": "**Complex systems**: experience with IBM mainframe software systems in production, industrial dashboards, and low-code plugin ecosystem — able to make architectural trade-offs between very high reliability and fast delivery.",
+              "be": "**Складаныя сістэмы**: вопыт працы з праграмнымі комплексамі для мейнфрэймаў IBM у прадукшне, прамысловымі дашбордамі і экасістэмай low-code плагінаў — умею знаходзіць архітэктурны баланс паміж найвышэйшай надзейнасцю і хуткасцю пастаўкі."
             }
           },
           {
             "icon": "ri-lightbulb-flash-line",
             "important": true,
             "text": {
-              "zh": "具备系统化思维，研究系统化思维导论，并将其应用于复杂软件架构与产品设计",
-              "ru": "Обладаю системным мышлением, изучаю введение в системное мышление и применяю его в сложной программной архитектуре и дизайне продуктов",
-              "en": "Possess systems thinking, study the introduction to systems thinking, and apply it to complex software architecture and product design",
-              "be": "Валодаю сістэмным мысленнем, вывучаю ўвядзенне ў сістэмнае мысленне і прымяняю яго ў складанай праграмнай архітэктуры і дызайне прадуктаў"
+              "zh": "**产品化思维**：把拓扑图创建从「手写 JSON 的瓶颈」**抽象**为可视化工具，让其他工程师可以自助使用。",
+              "ru": "**Продуктовое мышление**: превратил создание топологии из ручного JSON в визуальный инструмент, которым другие **разработчик**и пользуются без моей помощи.",
+              "en": "**Product thinking**: turned topology creation from a hand-written JSON bottleneck into a visual tool that other developers can use on their own.",
+              "be": "**Прадуктовае мысленне**: ператварыў стварэнне тапалогіі з ручнога JSON у візуальны інструмент, якім іншыя **распрацоўшчык**і карыстаюцца без маёй дапамогі."
             }
           },
           {
-            "icon": "ri-parentheses-fill",
+            "icon": "ri-translate-2",
             "important": true,
             "text": {
-              "zh": "研发(研究+开发)能力较强",
-              "ru": "Сильные способности к R&D (исследования + разработка)",
-              "en": "Strong R&D (research + development) capability",
-              "be": "Моцныя здольнасці да R&D (даследаванні + распрацоўка)"
-            }
-          },
-          {
-            "icon": "ri-apps-line",
-            "text": {
-              "zh": "复合软件研制和了解项目业务流程能力较强",
-              "ru": "Сильные навыки комплексной разработки ПО и понимания бизнес-процессов проекта",
-              "en": "Strong ability in composite software development and understanding project business processes",
-              "be": "Моцныя навыкі комплекснай распрацоўкі ПЗ і разумення бізнес-працэсаў праекта"
-            }
-          },
-          {
-            "icon": "ri-dashboard-2-line",
-            "important": true,
-            "text": {
-              "zh": "研发数据可视化与智能呈现系统能力较强；研究数据智能呈现的发展与未来趋势，并应用于产品架构设计",
-              "ru": "Сильные навыки разработки систем визуализации данных и интеллектуального представления; исследую развитие и будущие тренды интеллектуального представления данных и применяю их в архитектуре продукта",
-              "en": "Strong ability to build data visualization and intelligent presentation systems; research the development and future trends of intelligent data presentation and apply them to product architecture",
-              "be": "Моцныя навыкі распрацоўкі сістэм візуалізацыі дадзеных і інтэлектуальнага прадстаўлення; даследую развіццё і будучыя трэнды інтэлектуальнага прадстаўлення дадзеных і прымяняю іх у архітэктуры прадукта"
-            }
-          },
-          {
-            "icon": "ri-stackshare-line",
-            "important": true,
-            "text": {
-              "zh": "有研发插件化架构与低代码平台扩展的经验",
-              "ru": "Есть опыт разработки плагин-ориентированной архитектуры и расширения low-code платформ",
-              "en": "Experience developing plugin-based architecture and extending low-code platforms",
-              "be": "Ёсць вопыт распрацоўкі плагін-арыентаванай архітэктуры і пашырэння low-code платформ"
-            }
-          },
-          {
-            "icon": "ri-robot-line",
-            "important": true,
-            "text": {
-              "zh": "熟练使用AI辅助开发（vibe coding），能快速构建原型与验证产品思路；作为软件工程师，对LLM生成的方案与代码负责",
-              "ru": "Уверенно использую ИИ-ассистированную разработку (vibe coding), быстро создаю прототипы и проверяю продуктовые идеи; как программист, отвечаю за решения и код, сгенерированные LLM",
-              "en": "Proficient in AI-assisted development (vibe coding), quickly build prototypes and validate product ideas; as a software engineer, I take responsibility for LLM-generated designs and code",
-              "be": "Упэўнена выкарыстоўваю ШІ-асістэнтскую распрацоўку (vibe coding), хутка ствараю прататыпы і правяраю прадуктовыя ідэі; як праграміст, адказваю за рашэнні і код, згенераваныя LLM"
-            }
-          },
-          {
-            "icon": "ri-stack-line",
-            "text": {
-              "zh": "了解敏捷开发 Scrum 的基础",
-              "ru": "Знаком с основами гибкой разработки Scrum",
-              "en": "Familiar with the basics of Agile/Scrum",
-              "be": "Знаёмы з асновамі гнуткай распрацоўкі Scrum"
-            }
-          },
-          {
-            "icon": "ri-group-3-line",
-            "text": {
-              "zh": "有团队合作精神",
-              "ru": "Командный игрок",
-              "en": "Team spirit",
-              "be": "Камандны гулец"
-            }
-          },
-          {
-            "icon": "ri-task-line",
-            "text": {
-              "zh": "本人适应性强，责任心强，有优秀的中文口头表达能力",
-              "ru": "Адаптивен, ответственен, отлично говорю по-китайски устно",
-              "en": "Adaptable, responsible, with excellent spoken Chinese",
-              "be": "Адаптыўны, адказны, выдатна размаўляю па-кітайску вусна"
+              "zh": "**跨语言桥梁**：在西安 **{years} 年**，长期用中文参与客户项目交付；俄语母语，可承担中俄**技术**沟通、需求澄清与文档本地化。",
+              "ru": "**Языковой мост**: живу в Сиане **{years} лет**, постоянно работаю с китайскими клиентами; русский — уровень носителя, могу вести технические переговоры, уточнять требования и переводить документацию.",
+              "en": "**Cross-language bridge**: **{years} years** in Xi'an, long-term delivery of client projects in Chinese; native Russian, able to handle Chinese–Russian technical communication, requirement clarification, and documentation localization.",
+              "be": "**Моўны мост**: жыву ў Сіяні **{years} гадоў**, пастаянна працую з кітайскімі кліентамі; руская — узровень носьбіта, магу весці тэхнічныя перамовы, удакладняць патрабаванні і перакладаць дакументацыю."
             }
           }
         ]
@@ -655,113 +542,61 @@
           {
             "important": true,
             "text": {
-              "zh": "1. 我相信**数据**是**未来竞争**的**核心**。谁更好地理解和呈现数据，谁就**赢得先机**。我研发**智能多模态数据呈现工具**，正是为了帮助公司把数据转化为**决策优势**。",
-              "ru": "1. Я верю, что **данные** — это **ядро будущей конкуренции**. Кто лучше понимает и представляет данные, тот **получает преимущество**. Инструмент **интеллектуального мультимодального представления данных**, который я разрабатываю, помогает компаниям превращать данные в **преимущество в решениях**.",
-              "en": "1. I believe **data** is the **core of future competition**. Whoever better understands and presents data **gains the edge**. The **intelligent multimodal data-presentation tool** I build helps companies turn data into a **decision advantage**.",
-              "be": "1. Я веру, што **дадзеныя** — гэта **ядро будучай канкурэнцыі**. Хто лепей разумее і прадстаўляе дадзеныя, той **атрымлівае перавагу**. Інструмент **інтэлектуальнага мультымадальнага прадстаўлення дадзеных**, які я распрацоўваю, дапамагае кампаніям ператвараць дадзеныя ў **перавагу ў рашэннях**."
+              "zh": "1. 我相信**数据是未来竞争的核心**。谁更好地理解和呈现数据，谁就**赢得先机**。这也是我研究 Aethera 的起点。",
+              "ru": "1. Я верю, что **данные — ядро будущей конкуренции**. Кто лучше понимает и показывает данные, тот **получает преимущество**. Именно с этого началось моё исследование Aethera.",
+              "en": "1. I believe **data is the core of future competition**. Whoever understands and presents data better **gains the edge**. This is also the starting point of my Aethera research.",
+              "be": "1. Я веру, што **дадзеныя — ядро будучай канкурэнцыі**. Хто лепей разумее і паказвае дадзеныя, той **атрымлівае перавагу**. Менавіта з гэтага пачалося маё даследаванне Aethera."
             }
           },
           {
             "important": true,
             "text": {
-              "zh": "2. 以**思想**为主. **技术**是实现思想的工具",
-              "ru": "2. **Мысль** на первом месте. **Технология** — инструмент воплощения мысли",
-              "en": "2. **Thought** comes first. **Technology** is the tool to realize thought",
-              "be": "2. **Думка** на першым месцы. **Тэхналогія** — інструмент увасаблення думкі"
+              "zh": "2. **以思想为主**，**技术**是实现思想的工具。研究系统化思维，以整体视角看待软件架构、数据呈现与产品演进；用**抽象**、**模块化**和**减少重复**来控制系统复杂度。",
+              "ru": "2. **Мысль на первом месте**, **технология — инструмент её воплощения**. Изучаю системное мышление и смотрю на программную архитектуру, визуализацию данных и развитие продукта целостно; держу сложность под контролем с помощью **абстракции**, **модульности** и **устранения дублирования**.",
+              "en": "2. **Thought comes first**; **technology is the tool to realize it**. I study systems thinking and view software architecture, data presentation, and product evolution holistically; I control complexity through **abstraction**, **modularity**, and **removing duplication**.",
+              "be": "2. **Думка на першым месцы**, **тэхналогія — інструмент яе ўвасаблення**. Вывучаю сістэмнае мысленне і гляджу на праграмную архітэктуру, візуалізацыю дадзеных і развіццё прадукта цэласна; трымаю складанасць пад кантролем праз абстракцыю, **модульнасць** і **ліквідацыю дублявання**."
             }
           },
           {
             "text": {
-              "zh": "3. 充分利用**抽象**的力量",
-              "ru": "3. В полной мере используйте силу **абстракции**",
-              "en": "3. Fully leverage the power of **abstraction**",
-              "be": "3. У поўнай меры выкарыстоўвайце сілу **абстракцыі**"
-            }
-          },
-          {
-            "text": {
-              "zh": "4. 尽量利用**模块化架构**",
-              "ru": "4. По возможности используйте **модульную архитектуру**",
-              "en": "4. Use **modular architecture** whenever possible",
-              "be": "4. Па магчымасці выкарыстоўвайце **модульную архітэктуру**"
-            }
-          },
-          {
-            "text": {
-              "zh": "5. 尽量减少**重复代码**",
-              "ru": "5. Сводите к минимуму **дублирование кода**",
-              "en": "5. Minimize **code duplication**",
-              "be": "5. Зводзьце да мінімуму **дубляванне кода**"
-            }
-          },
-          {
-            "text": {
-              "zh": "6. 尽量利用提高工作效率的工具，包括AI、低代码/无代码工具；采用vibe coding，但由软件工程师对LLM生成的方案与代码负责",
-              "ru": "6. Используйте инструменты повышения продуктивности, включая ИИ, low-code/no-code; применяйте vibe coding, но программист отвечает за решения и код, сгенерированные LLM",
-              "en": "6. Use productivity tools including AI, low-code/no-code; adopt vibe coding, but the software engineer is responsible for LLM-generated designs and code",
-              "be": "6. Выкарыстоўвайце інструменты павышэння прадукцыйнасці, уключаючы ШІ, low-code/no-code; прымяняйце vibe coding, але праграміст адказвае за рашэнні і код, згенераваныя LLM"
+              "zh": "3. 尽量使用提高效率的工具，包括 **AI** 与**低代码/无代码**；采用 vibe coding，但由**软件工程师**对 LLM 生成的方案与代码负责。",
+              "ru": "3. По возможности использую инструменты повышения эффективности, включая **ИИ** и **low-code/no-code**; применяю vibe coding, но ответственность за решения и код, сгенерированные LLM, несёт **разработчик**.",
+              "en": "3. I use productivity tools wherever possible, including **AI** and **low-code/no-code**; I adopt vibe coding, but the **software engineer** is responsible for LLM-generated designs and code.",
+              "be": "3. Па магчымасці выкарыстоўваю інструменты павышэння эфектыўнасці, уключаючы **ШІ** і **low-code/no-code**; прымяняю vibe coding, але адказнасць за рашэнні і код, згенераваныя LLM, нясе **распрацоўшчык**."
             }
           },
           {
             "important": true,
             "text": {
-              "zh": "7. **团队合作**很重要",
-              "ru": "7. **Командная работа** важна",
-              "en": "7. **Teamwork** matters",
-              "be": "7. **Камандная праца** важная"
+              "zh": "4. **团队合作**很重要。我希望做有**架构判断**和**产品思维**的工程师，而不只是**执行需求的编码者**；喜欢挑战新思路、新想法，也愿意做**架构评审**、**代码规范**与年轻同事的辅导。",
+              "ru": "4. **Командная работа** важна. Хочу быть **разработчиком** с **архитектурным мышлением** и **продуктовым чутьём**, а не просто **исполнителем требований**; люблю новые идеи и подходы, готов проводить **архитектурные ревью**, задавать **стандарты кода** и наставлять молодых коллег.",
+              "en": "4. **Teamwork** matters. I want to be an engineer with **architectural judgment** and **product thinking**, not just a **requirement executor**; I enjoy new ideas and approaches, and I'm willing to do **architecture reviews**, **code standards**, and mentor younger colleagues.",
+              "be": "4. **Камандная праца** важная. Хачу быць **распрацоўшчыкам** з **архітэктурным мысленнем** і **прадуктовым чуццём**, а не проста **выканаўцам патрабаванняў**; люблю новыя ідэі і падыходы, гатовы праводзіць **архітэктурныя рэв'ю**, задаваць **стандарты кода** і настаўляць маладых калег."
             }
           },
           {
             "important": true,
             "text": {
-              "zh": "8. 我不是**coder monkey**, 而是**软件工程师**， 喜欢挑战新思路， 喜欢挑战新想法，喜欢**研发（研究 + 开发）**",
-              "ru": "8. Я не **coder monkey**, а **инженер-программист**, люблю бросать вызов новым идеям и мыслям, люблю **R&D (исследования + разработка)**",
-              "en": "8. I'm not a **coder monkey**, but a **software engineer**; I like challenging new ideas and thoughts, and I love **R&D (research + development)**",
-              "be": "8. Я не **coder monkey**, а **інжынер-праграміст**, люблю кідаць выклік новым ідэям і думкам, люблю **R&D (даследаванні + распрацоўка)**"
-            }
-          },
-          {
-            "important": true,
-            "text": {
-              "zh": "9. 研发前沿的智能多模态数据呈现工具，基于带微内核的插件优先架构，AI 作为呈现的智能基础；目标不是跟随数据呈现趋势，而是推动数据智能呈现的未来",
-              "ru": "9. Разрабатываю передовой инструмент интеллектуального мультимодального представления данных на плагин-ориентированной микроядерной архитектуре, где ИИ — интеллектуальная основа представления; цель — не следовать за трендами, а продвигать будущее интеллектуального представления данных",
-              "en": "9. Building a cutting-edge intelligent multimodal data-presentation tool on a plugin-first microkernel architecture with AI as the intelligent foundation of presentation; the goal is not to follow data-presentation trends, but to advance the future of intelligent data presentation",
-              "be": "9. Распрацоўваю перадавы інструмент інтэлектуальнага мультымадальнага прадстаўлення дадзеных на плагін-арыентаванай мікраядзернай архітэктуры, дзе ШІ — інтэлектуальная аснова прадстаўлення; мэта — не ісці ўслед за трэндамі, а прасоўваць будучыню інтэлектуальнага прадстаўлення дадзеных"
+              "zh": "5. 我的求职首要目标是**全职交付公司项目**。Aethera 是个人研究，V1 是**楔子**，不是负担：V1 先做一个比今天更快、更可靠、更私密的仪表盘，这正是公司项目需要的；V1 赢了，产品才有资格谈 V2/V3+。",
+              "ru": "5. Моя главная цель — **полноценная работа над проектами компании**. Aethera — личное исследование; V1 — это **клин**, а не обуза: сначала делаем дашборд быстрее, надёжнее и приватнее существующих, — именно это нужно проектам компании; когда V1 добьётся успеха, у продукта появится основание для развития.",
+              "en": "5. My first priority is **full-time delivery of company projects**. Aethera is personal research; V1 is the **wedge**, not a burden: V1 first delivers a dashboard faster, more reliable, and more private than today's—exactly what company projects need; once V1 wins, the product earns the right to discuss V2/V3+.",
+              "be": "5. Мая галоўная мэта — **поўная праца над праектамі кампаніі**. Aethera — асабістае даследаванне; V1 — гэта **клін**, а не цяжар: спачатку робім дашборд хутчэйшы, надзейнейшы і прыватнейшы за існуючыя, — менавіта гэта патрэбна праектам кампаніі; калі V1 дасягне поспеху, у прадукта з'явіцца падстава для развіцця."
             }
           },
           {
             "text": {
-              "zh": "10. 想做出**自己的产品**",
-              "ru": "10. Хочу создавать **свой продукт**",
-              "en": "10. Want to build **my own product**",
-              "be": "10. Хачу ствараць **свой прадукт**"
+              "zh": "6. 我想做出**自己的产品**，但顺序很清楚：先在公司交付中证明能力，再谈产品合作；不把个人研究变成求职条件。",
+              "ru": "6. Я хочу создать **свой продукт**, но порядок ясен: сначала доказать себя в проектах компании, потом говорить о сотрудничестве по продукту; личное исследование не становится условием трудоустройства.",
+              "en": "6. I want to build **my own product**, but the order is clear: first prove myself in company delivery, then discuss product cooperation; personal research is not a condition of employment.",
+              "be": "6. Я хачу стварыць **свой прадукт**, але парадак ясны: спачатку даказаць сябе ў праектах кампаніі, потым гаварыць пра супрацоўніцтва па прадукце; асабістае даследаванне не становіцца ўмовай працаўладкавання."
             }
           },
           {
-            "important": true,
             "text": {
-              "zh": "11. 我的梦想是对**人工神经网络**和**数据呈现技术**的发展有贡献",
-              "ru": "11. Моя мечта — внести вклад в развитие **искусственных нейронных сетей** и **технологий представления данных**",
-              "en": "11. My dream is to contribute to the development of **artificial neural networks** and **data-presentation technology**",
-              "be": "11. Мая марта — унесці ўклад у развіццё **штучных нейронных сетак** і **тэхналогій прадстаўлення дадзеных**"
-            }
-          },
-          {
-            "important": true,
-            "text": {
-              "zh": "12. 研究系统化思维，以整体视角看待软件架构、数据呈现与产品演进",
-              "ru": "12. Изучаю системное мышление, рассматриваю программную архитектуру, представление данных и эволюцию продукта с целостной точки зрения",
-              "en": "12. Study systems thinking, viewing software architecture, data presentation and product evolution from a holistic perspective",
-              "be": "12. Вывучаю сістэмнае мысленне, разглядаю праграмную архітэктуру, прадстаўленне дадзеных і эвалюцыю прадукта з цэласнага пункту гледжання"
-            }
-          },
-          {
-            "important": true,
-            "text": {
-              "zh": "13. 研究数据智能呈现的发展与未来趋势，并将其应用于智能多模态数据呈现工具的架构设计",
-              "ru": "13. Исследую развитие и будущие тренды интеллектуального представления данных и применяю их в архитектуре инструмента интеллектуального мультимодального представления",
-              "en": "13. Research the development and future trends of intelligent data presentation and apply them to the architecture of the intelligent multimodal data-presentation tool",
-              "be": "13. Даследую развіццё і будучыя трэнды інтэлектуальнага прадстаўлення дадзеных і прымяняю іх у архітэктуры інструмента інтэлектуальнага мультымадальнага прадстаўлення"
+              "zh": "7. 长期来看，我的梦想是对**人工神经网络**和**数据呈现技术**的发展有贡献；短期内，我先把每一个交付做好。",
+              "ru": "7. В долгосрочной перспективе мечтаю внести вклад в развитие **нейронных сетей** и **технологий визуализации данных**; в краткосрочной — хорошо выполнять каждую поставку.",
+              "en": "7. In the long run, my dream is to contribute to **neural networks** and **data-presentation technology**; in the short run, I focus on delivering every project well.",
+              "be": "7. У доўгатэрміновай перспектыве мару ўнесці ўклад у развіццё **нейронных сетак** і **тэхналогій візуалізацыі дадзеных**; у кароткатэрміновай — добра выконваць кожную пастаўку."
             }
           }
         ]
@@ -778,20 +613,20 @@
     "items": [
       {
         "subtitle": {
-          "zh": "2023/05 - 至今， 西安",
+          "zh": "2023/05 - 至今，西安",
           "ru": "2023/05 - наст. время, Сиань",
           "en": "2023/05 - present, Xi'an",
           "be": "2023/05 - цяп. час, Сіянь"
         },
         "title": {
           "zh": "西安艾迪韦科网络科技有限公司",
-          "ru": "Сиань Айдивейкэ Нетворк Текнолоджи",
+          "ru": "Xi'an Aidiweike Network Technology",
           "en": "Xi'an Aidiweike Network Technology Co., Ltd.",
-          "be": "Сіянь Айдзівэйкэ Нэтварк Тэкнолоджы"
+          "be": "Сіянь Aidiweike Network Technology"
         },
         "to": "/aidiweike/all",
         "images": [
-          "/aidiweike/tickets/3.png"
+          "aidiweike/tickets/3.png"
         ],
         "text": {
           "zh": "NocoBase插件、数据可视化与智能呈现工具研发、“智慧运维系统”、“票务管理系统”、“生产管理系统”",
@@ -802,16 +637,16 @@
       },
       {
         "subtitle": {
-          "zh": "2020/04 - 2023/05， 西安",
+          "zh": "2020/04 - 2023/05，西安",
           "ru": "2020/04 - 2023/05, Сиань",
           "en": "2020/04 - 2023/05, Xi'an",
           "be": "2020/04 - 2023/05, Сіянь"
         },
         "title": {
           "zh": "西安睿博智能科技有限公司",
-          "ru": "Сиань Ruibo Intelligent Technology Co., Ltd.",
+          "ru": "Xi'an Ruibo Intelligent Technology",
           "en": "Xi'an Ruibo Intelligent Technology Co., Ltd.",
-          "be": "Сіянь Ruibo Intelligent Technology Co., Ltd."
+          "be": "Сіянь Ruibo Intelligent Technology"
         },
         "to": "/rainbow/all",
         "images": [
@@ -819,44 +654,44 @@
         ],
         "text": {
           "zh": "“智慧区域”、“产运销一体化平台”、“电力配电设备监控系统”、“国新LNG平台”",
-          "ru": "«Умный район», «Платформа интеграции производства-перевозок-сбыта», «Система мониторинга электрораспределительного оборудования», «Платформа Sinochem LNG»",
-          "en": "'Smart Region', 'Production-Transport-Sales Integration Platform', 'Power Distribution Equipment Monitoring System', 'Sinochem LNG Platform'",
-          "be": "«Разумны раён», «Платформа інтэграцыі вытворчасці-перавозак-збыту», «Сістэма маніторынгу электраразмеркавальнага абсталявання», «Платформа Sinochem LNG»"
+          "ru": "«Умный район», «Платформа интеграции производства-перевозок-сбыта», «Система мониторинга электрораспределительного оборудования», «Платформа Guoxin LNG»",
+          "en": "'Smart Region', 'Production-Transport-Sales Integration Platform', 'Power Distribution Equipment Monitoring System', 'Guoxin LNG Platform'",
+          "be": "«Разумны раён», «Платформа інтэграцыі вытворчасці-перавозак-збыту», «Сістэма маніторынгу электраразмеркавальнага абсталявання», «Платформа Guoxin LNG»"
         }
       },
       {
         "subtitle": {
-          "zh": "2019/01—2020/04， 西安",
+          "zh": "2019/01—2020/04，西安",
           "ru": "2019/01—2020/04, Сиань",
           "en": "2019/01—2020/04, Xi'an",
           "be": "2019/01—2020/04, Сіянь"
         },
         "title": {
           "zh": "陕西金合信息科技股份有限公司",
-          "ru": "Shaanxi Jinhe Information Technology Co., Ltd.",
+          "ru": "Shaanxi Jinhe Information Technology",
           "en": "Shaanxi Jinhe Information Technology Co., Ltd.",
-          "be": "Shaanxi Jinhe Information Technology Co., Ltd."
+          "be": "Shaanxi Jinhe Information Technology"
         },
         "to": "/jinhe/all",
         "text": {
           "zh": "瑞德宝尔管理平台、王家岭管理平台、合金可视化平台、西安咸阳国际机场、中煤陕西应急指挥系统",
-          "ru": "Платформа управления Ruidebaoer, платформа управления Wangjialing, платформа визуализации сплавов, аэропорт Сяньян Сианя, система аварийного командования Shaanxi China Coal",
+          "ru": "Платформа управления Ruidebaoer, платформа управления Wangjialing, платформа визуализации сплавов, аэропорт Сиань-Сяньян, система аварийного управления Shaanxi China Coal",
           "en": "Ruidebaoer management platform, Wangjialing management platform, alloy visualization platform, Xi'an Xianyang Airport, Shaanxi China Coal emergency command system",
-          "be": "Платформа кіравання Ruidebaoer, платформа кіравання Wangjialing, платформа візуалізацыі сплаваў, аэрапорт Сяньян Сіяні, сістэма аварыйнага камандавання Shaanxi China Coal"
+          "be": "Платформа кіравання Ruidebaoer, платформа кіравання Wangjialing, платформа візуалізацыі сплаваў, аэрапорт Сіянь-Сяньян, сістэма аварыйнага кіравання Shaanxi China Coal"
         }
       },
       {
         "subtitle": {
-          "zh": "2016/09—2019/01， 西安",
+          "zh": "2016/09—2019/01，西安",
           "ru": "2016/09—2019/01, Сиань",
           "en": "2016/09—2019/01, Xi'an",
           "be": "2016/09—2019/01, Сіянь"
         },
         "title": {
           "zh": "陕西秦快互联科技有限公司",
-          "ru": "Shaanxi Qinkuai Internet Technology Co., Ltd.",
+          "ru": "Shaanxi Qinkuai Internet Technology",
           "en": "Shaanxi Qinkuai Internet Technology Co., Ltd.",
-          "be": "Shaanxi Qinkuai Internet Technology Co., Ltd."
+          "be": "Shaanxi Qinkuai Internet Technology"
         },
         "to": "/qinkuai/all",
         "text": {
@@ -871,31 +706,31 @@
       },
       {
         "subtitle": {
-          "zh": "2015/07—2016/09， 西安",
+          "zh": "2015/07—2016/09，西安",
           "ru": "2015/07—2016/09, Сиань",
           "en": "2015/07—2016/09, Xi'an",
           "be": "2015/07—2016/09, Сіянь"
         },
         "title": {
           "zh": "陕西数字信息技术有限公司",
-          "ru": "Shaanxi Digital Information Technology Co., Ltd.",
+          "ru": "Shaanxi Digital Information Technology",
           "en": "Shaanxi Digital Information Technology Co., Ltd.",
-          "be": "Shaanxi Digital Information Technology Co., Ltd."
+          "be": "Shaanxi Digital Information Technology"
         },
         "to": "/shuzixinxi/all",
         "images": [
           "shuzixinxi/actors/1.png"
         ],
         "text": {
-          "zh": "谷堆书城网、《奇咔奇咔》网站(推荐陕西数字信息技术有限公司研制的AR游戏项目的网站)、中国演员网站、《口述天下》网站、《陕西木有啥》网站等",
-          "ru": "Интернет-книжный магазин Gudui, сайт «Qika Qika» (сайт AR-игры компании), сайт «Китайские актёры», сайт «Ustnaya Istoriya», сайт «Shaanxi Mu Yousha» и др.",
+          "zh": "谷堆书城网、《奇咔奇咔》网站(推荐陕西数字信息技术有限公司研发的AR游戏项目的网站)、中国演员网站、《口述天下》网站、《陕西木有啥》网站等",
+          "ru": "Интернет-книжный магазин Gudui, сайт «Qika Qika» (AR-игра компании), сайт «Китайские актёры», сайт «Устная история», сайт «Shaanxi Mu Yousha» и другие",
           "en": "Gudui book mall website, 'Qika Qika' website (site of an AR game project), 'China Actors' website, 'Oral History' website, 'Shaanxi Mu Yousha' website, etc.",
-          "be": "Інтэрнэт-кніжны магазін Gudui, сайт «Qika Qika» (сайт AR-гульні кампаніі), сайт «Кітайскія акцёры», сайт «Вусная гісторыя», сайт «Shaanxi Mu Yousha» і інш."
+          "be": "Інтэрнэт-кніжная крама Gudui, сайт «Qika Qika» (AR-гульня кампаніі), сайт «Кітайскія акцёры», сайт «Вусная гісторыя», сайт «Shaanxi Mu Yousha» і іншыя"
         }
       },
       {
         "subtitle": {
-          "zh": "2007/12—2009/11， 武汉",
+          "zh": "2007/12—2009/11，武汉",
           "ru": "2007/12—2009/11, Ухань",
           "en": "2007/12—2009/11, Wuhan",
           "be": "2007/12—2009/11, Ухань"
@@ -925,7 +760,7 @@
           "be": "2002/08—2007/05 і 2010/04—2012/03, Беларусь"
         },
         "title": {
-          "zh": "IBA （International Business Alliance）",
+          "zh": "IBA (International Business Alliance)，白俄罗斯",
           "ru": "IBA (International Business Alliance)",
           "en": "IBA (International Business Alliance)",
           "be": "IBA (International Business Alliance)"
@@ -933,9 +768,9 @@
         "to": "/iba/all",
         "text": {
           "zh": "IBM美国微电子部Central Planning Engine系统、IBM法国ADM France BA、IBM法国MIE France, IBM法国URT Extractors ISD",
-          "ru": "Система Central Planning Engine IBM US Microelectronics, IBM France ADM France BA, IBM France MIE France, IBM France URT Extractors ISD",
+          "ru": "Central Planning Engine для IBM US Microelectronics, IBM France ADM BA, IBM France MIE, IBM France URT Extractors ISD",
           "en": "IBM US Microelectronics Central Planning Engine system, IBM France ADM France BA, IBM France MIE France, IBM France URT Extractors ISD",
-          "be": "Сістэма Central Planning Engine IBM US Microelectronics, IBM France ADM France BA, IBM France MIE France, IBM France URT Extractors ISD"
+          "be": "Central Planning Engine для IBM US Microelectronics, IBM France ADM BA, IBM France MIE, IBM France URT Extractors ISD"
         },
         "images": [
           "iba/cover.jpg"

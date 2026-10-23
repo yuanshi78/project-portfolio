@@ -351,14 +351,54 @@ onBeforeUnmount(() => {
       </div>
 
       <VCard
-        v-if="sec.paragraphs?.length || sec.list?.length || sec.links?.length || sec.image"
+        v-if="sec.paragraphs?.length || sec.list?.length || sec.links?.length || sec.table || sec.image"
         class="section-card"
         rounded="lg"
         elevation="1"
       >
         <VCardText
-          v-if="sec.paragraphs?.length || sec.list?.length || sec.links?.length"
+          v-if="sec.paragraphs?.length || sec.list?.length || sec.links?.length || sec.table"
         >
+          <!-- 👉 章节表格（JSON 中 sec.table 可选）：headers/rows 均为四语数组。
+               渲染在段落之前，以保持「先对比、后结论」的阅读顺序；单元格同样支持 **强调** -->
+          <div
+            v-if="sec.table"
+            class="detail-table-wrap mb-4"
+          >
+            <table class="detail-table">
+              <thead>
+                <tr>
+                  <th
+                    v-for="(h, hi) in $L(sec.table.headers)"
+                    :key="`th-${hi}`"
+                  >{{ h }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="(row, ri) in sec.table.rows"
+                  :key="`tr-${ri}`"
+                >
+                  <td
+                    v-for="(cell, ci) in $L(row)"
+                    :key="`td-${ri}-${ci}`"
+                  >
+                    <template
+                      v-for="(seg, si) in parseEmphasis(cell)"
+                      :key="si"
+                    >
+                      <strong
+                        v-if="seg.strong"
+                        class="detail-emphasis"
+                      >{{ seg.text }}</strong>
+                      <template v-else>{{ seg.text }}</template>
+                    </template>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <p
             v-for="(p, pi) in (sec.paragraphs || [])"
             :key="`p-${pi}`"
@@ -422,7 +462,7 @@ onBeforeUnmount(() => {
           </div>
         </VCardText>
 
-        <!-- 👉 章节配图（JSON 中 sec.image 可选）：与文字同卡，贴卡片底边，点击走灯箱放大。
+        <!-- 👉 章节配图（JSON 中 sec.image 可选）：与文字同卡，点击走灯箱放大。
              加载动画由全局 .v-img shimmer 负责（_image-loading.scss + main.js），加载完自动停止 -->
         <v-img
           v-if="sec.image"
@@ -434,6 +474,13 @@ onBeforeUnmount(() => {
           contain
           @click.stop="openZoom(sec.image)"
         />
+        <!-- 👉 配图说明（sec.imageNote 可选），如草稿图免责说明 -->
+        <div
+          v-if="sec.image && sec.imageNote"
+          class="section-figure-note"
+        >
+          {{ sec.imageNote }}
+        </div>
       </VCard>
     </section>
 
@@ -790,6 +837,37 @@ $image-backdrop: #312d4b;
   color: rgb(var(--v-theme-primary));
 }
 
+// 👉 章节表格（sec.table）：窄屏可横向滚动，表头用主色，字号跟随内容缩放
+.detail-table-wrap {
+  overflow-x: auto;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: calc(0.9375rem * var(--content-font-scale, 1));
+  line-height: 1.7;
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: start;
+    vertical-align: top;
+    border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+  }
+
+  th {
+    font-weight: 600;
+    color: rgb(var(--v-theme-primary));
+    background: rgba(var(--v-theme-primary), 0.06);
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-child(even) {
+    background: rgba(var(--v-theme-on-surface), 0.02);
+  }
+}
+
 // 👉 章节标题行：标题与「草案」标签在同一行、垂直居中
 .section-head {
   display: flex;
@@ -798,7 +876,7 @@ $image-backdrop: #312d4b;
   gap: 0.5rem;
 }
 
-// 👉 章节配图（sec.image）：与文字同卡、贴卡底，contain 完整展示，hover 轻微放大提示可点击
+// 👉 章节配图（sec.image）：与文字同卡，contain 完整展示，hover 轻微放大提示可点击
 // 加载动画由全局 .v-img shimmer 负责，加载完自动停止（见 _image-loading.scss / main.js）
 .section-card {
   overflow: hidden;
@@ -806,6 +884,9 @@ $image-backdrop: #312d4b;
 
 .section-figure {
   cursor: zoom-in;
+  // 👉 用外边距而非内边距：v-img 内部图层是绝对定位铺满 padding box，
+  //    padding-bottom 会被图片自身盖住，视觉上没有留白；margin 才产生真实间隙
+  margin-bottom: 16px;
 
   :deep(.v-img__img) {
     transition: transform 0.3s ease;
@@ -814,6 +895,14 @@ $image-backdrop: #312d4b;
   &:hover :deep(.v-img__img) {
     transform: scale(1.015);
   }
+}
+
+// 👉 配图说明文字（如「架构示意图，非最终实现」）：与配图同卡、随图留白，底部留出与卡片底边的间距
+.section-figure-note {
+  padding: 0 16px 12px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: rgb(var(--v-theme-on-surface), 0.55);
 }
 
 // 👉 章节列表项文字：与正文统一 15px（与自我介绍页 item-text 一致）

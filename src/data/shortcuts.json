@@ -12,12 +12,32 @@
     },
     {
       "combo": "Ctrl+Shift+D",
-      "to": "/project/jinhe/chemistry_plant_3d",
+      "to": "/demos/3d-tiles-demo/index.html",
       "label": {
-        "zh": "3D Tiles 演示详情页",
-        "ru": "Страница демо 3D Tiles",
-        "en": "3D Tiles Demo Page",
-        "be": "Старонка дэмы 3D Tiles"
+        "zh": "3D Tiles demo",
+        "ru": "Демо 3D Tiles",
+        "en": "3D Tiles demo",
+        "be": "Дэма 3D Tiles"
+      }
+    },
+    {
+      "combo": "Ctrl+Shift+T",
+      "to": "/demos/topo-tool/index.html",
+      "label": {
+        "zh": "拓扑图工具",
+        "ru": "Инструмент топологии",
+        "en": "Topology Tool",
+        "be": "Інструмент тапалогіі"
+      }
+    },
+    {
+      "combo": "Ctrl+Shift+S",
+      "to": "/demos/hospital-dashboard/index.html#/screen2",
+      "label": {
+        "zh": "智慧区域大屏",
+        "ru": "Дашборд «умная зона»",
+        "en": "Smart Area Dashboard",
+        "be": "Дашборд «разумная зона»"
       }
     }
   ],
@@ -34,13 +54,33 @@
     },
     {
       "label": {
-        "zh": "打开 3D Tiles 演示",
+        "zh": "打开 3D Tiles demo",
         "ru": "Открыть демо 3D Tiles",
-        "en": "Open 3D Tiles Demo",
+        "en": "Open 3D Tiles demo",
         "be": "Адкрыць дэму 3D Tiles"
       },
-      "to": "/project/jinhe/chemistry_plant_3d",
+      "to": "/demos/3d-tiles-demo/index.html",
       "icon": "ri-box-3-line"
+    },
+    {
+      "to": "/demos/topo-tool/index.html",
+      "icon": "ri-node-tree",
+      "label": {
+        "zh": "打开拓扑图工具",
+        "ru": "Открыть инструмент топологии",
+        "en": "Open Topology Tool",
+        "be": "Адкрыць інструмент тапалогіі"
+      }
+    },
+    {
+      "to": "/demos/hospital-dashboard/index.html#/screen2",
+      "icon": "ri-dashboard-3-line",
+      "label": {
+        "zh": "打开智慧区域大屏",
+        "ru": "Открыть дашборд «умная зона»",
+        "en": "Open Smart Area Dashboard",
+        "be": "Адкрыць дашборд «разумная зона»"
+      }
     }
   ]
 }

@@ -15,10 +15,10 @@
         },
         "paragraphs": [
           {
-            "zh": "项目服务于美国大陆航空（Continental Airlines，IATA 代码 **CO**）的常旅客计划 **OnePass**。2007 年 10 月，IT 巨头 **EDS** 与大陆航空签署了价值 **5.5 亿美元**、为期 7 年的全面 IT 外包续约合同；作为 EDS 开发工程师，参与的是这一 **5.5 亿美元**核心交付团队，负责维护大陆航空最核心的常旅客资产。",
-            "ru": "Проект обслуживал программу лояльности **OnePass** американской авиакомпании Continental Airlines (IATA-код **CO**). В октябре 2007 года IT-гигант **EDS** подписал с Continental Airlines договор о продлении полного IT-аутсорсинга стоимостью **550 млн долларов** сроком на 7 лет; как инженер-разработчик **EDS** я участвовал в этой ключевой команде поставки на **550 млн долларов**, отвечая за поддержку важнейшего актива лояльности Continental Airlines.",
-            "en": "The project served the frequent-flyer program **OnePass** of Continental Airlines (IATA code **CO**). In October 2007, IT giant **EDS** signed a 7-year, **$550 million** comprehensive IT outsourcing renewal contract with Continental Airlines; as an **EDS** development engineer, I was part of this **$550 million** core delivery team, responsible for maintaining Continental Airlines' most critical loyalty asset.",
-            "be": "Праект абслугоўваў праграму лаяльнасці **OnePass** амерыканскай авіякампаніі Continental Airlines (IATA-код **CO**). У кастрычніку 2007 года IT-гігант **EDS** падпісаў з Continental Airlines дагавор аб падаўжэнні поўнага IT-аўтсорсінгу вартасцю **550 млн долараў** тэрмінам на 7 гадоў; як інжынер-распрацоўшчык **EDS** я ўдзельнічаў у гэтай ключавой камандзе пастаўкі на **550 млн долараў**, адказваючы за падтрымку найважнейшага актыву лаяльнасці Continental Airlines."
+            "zh": "EDS 于 2008 年被 HP 收购，本项目在 EDS 核心数据中心生产环境交付。 项目服务于美国大陆航空（Continental Airlines，IATA 代码 **CO**）的常旅客计划 **OnePass**。2007 年 10 月，IT 巨头 **EDS** 与大陆航空签署了价值 **5.5 亿美元**、为期 7 年的全面 IT 外包续约合同；作为 EDS 开发工程师，参与的是这一 **5.5 亿美元**核心交付团队，负责维护大陆航空最核心的常旅客资产。",
+            "ru": "EDS была приобретена HP в 2008 году; проект был сдан в промышленной эксплуатации в ключевом центре обработки данных EDS. Проект обслуживал программу лояльности **OnePass** американской авиакомпании Continental Airlines (IATA-код **CO**). В октябре 2007 года IT-гигант **EDS** подписал с Continental Airlines договор о продлении полного IT-аутсорсинга стоимостью **550 млн долларов** сроком на 7 лет; как инженер-разработчик **EDS** я участвовал в этой ключевой команде поставки на **550 млн долларов**, отвечая за поддержку важнейшего актива лояльности Continental Airlines.",
+            "en": "EDS was acquired by HP in 2008; this project was delivered in the production environment of EDS's core data center. The project served the frequent-flyer program **OnePass** of Continental Airlines (IATA code **CO**). In October 2007, IT giant **EDS** signed a 7-year, **$550 million** comprehensive IT outsourcing renewal contract with Continental Airlines; as an **EDS** development engineer, I was part of this **$550 million** core delivery team, responsible for maintaining Continental Airlines' most critical loyalty asset.",
+            "be": "EDS была набытая HP у 2008 годзе; праект быў здадзены ў прамысловай эксплуатацыі ў ключавым цэнтры апрацоўкі дадзеных EDS. Праект абслугоўваў праграму лаяльнасці **OnePass** амерыканскай авіякампаніі Continental Airlines (IATA-код **CO**). У кастрычніку 2007 года IT-гігант **EDS** падпісаў з Continental Airlines дагавор аб падаўжэнні поўнага IT-аўтсорсінгу вартасцю **550 млн долараў** тэрмінам на 7 гадоў; як інжынер-распрацоўшчык **EDS** я ўдзельнічаў у гэтай ключавой камандзе пастаўкі на **550 млн долараў**, адказваючы за падтрымку найважнейшага актыву лаяльнасці Continental Airlines."
           },
           {
             "zh": "项目正处于美国航空业最重大的战略转型期：2008–2009 年大陆航空退出天合联盟（**SkyTeam**）、转投星空联盟（**Star Alliance**），并启动与美联航（**United Airlines**）的合并谈判（2010 年正式合并，OnePass 后整体并入 MileagePlus）。CO Runway 是基于 **IBM z/OS 大型机**的 OnePass 底层重构与数据清洗工程，为跨联盟积分互通、代码共享、状态匹配，以及后续与美联航系统合并提供核心技术支撑。",
@@ -43,7 +43,7 @@
             "be": "1. Рэарганізацыя ніжняга ўзроўню і ачыстка даных сістэмы лаяльнасці OnePass на мейнфрэйме IBM z/OS для падтрымкі падключэння да Star Alliance, а таксама абмену мілямі, сумеснага выкарыстання кодаў і супастаўлення статусаў з дзясяткамі авіякампаній-удзельніц, уключаючы United Airlines і Lufthansa."
           },
           {
-            "zh": "2. 为大陆航空与美联航的世纪合并做底层架构改造与数据对接准备，保障航空核心系统 **99.999%** 高可用。",
+            "zh": "2. 为大陆航空与美联航对外宣传的合并项目做底层架构改造与数据对接准备，保障航空核心系统 **99.999%** 高可用。",
             "ru": "2. Подготовка модернизации нижнего уровня архитектуры и стыковки данных для исторического слияния Continental Airlines и United Airlines, обеспечивая **99.999%** высокой доступности ключевой авиационной системы.",
             "en": "2. Prepare the bottom-layer architecture modernization and data integration for the historic merger of Continental Airlines and United Airlines, ensuring **99.999%** high availability of the airline's core system.",
             "be": "2. Падрыхтоўка мадэрнізацыі ніжняга ўзроўню архітэктуры і стыкоўкі даных для гістарычнага зліцця Continental Airlines і United Airlines, забяспечваючы **99.999%** высокай даступнасці ключавой авіяцыйнай сістэмы."
@@ -79,10 +79,10 @@
       },
       {
         "heading": {
-          "zh": "成就",
-          "ru": "Достижения",
-          "en": "Achievements",
-          "be": "Дасягненні"
+          "zh": "结果与贡献",
+          "ru": "Результаты и вклад",
+          "en": "Results & Contribution",
+          "be": "Вынікі і ўнёсак"
         },
         "list": [
           {
