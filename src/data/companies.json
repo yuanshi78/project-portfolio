@@ -60,7 +60,7 @@
           "en": "NocoBase Plugins",
           "be": "Плагіны NocoBase"
         },
-        "image": "rainbow/NocoBase/echarts-plugin.png",
+        "image": "rainbow/nocobase/echarts-plugin.png",
         "description": {
           "zh": "**NocoBase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
           "ru": "**NocoBase** — исключительно расширяемая no-code платформа. Особенность: все функции реализованы в виде плагинов. Разработчики могут создавать собственные плагины",

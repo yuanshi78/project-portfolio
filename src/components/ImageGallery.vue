@@ -4,7 +4,7 @@
 // - 多于 1 张时提供缩略图切换。
 // - 点击封面 / 缩略图 / 灯箱内的图，可放大预览（灯箱，含上一张/下一张、关闭）。
 // 图片路径只存相对路径（如 "rainbow/project1.png"），变体由 resolveImage 解析。
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import { resolveImage } from '@/utils/image'
@@ -32,6 +32,13 @@ const zoomVariant = computed(() => (smAndDown.value ? 'zoom-mobile' : 'zoom-pc')
 
 const router = useRouter()
 const active = ref(0)
+
+// 👉 变体图加载失败兜底（如路径大小写不符 / 变体未生成）：回退默认占位图，避免黑底
+const coverFailed = ref(false)
+watch(
+  () => [props.images, active.value],
+  () => { coverFailed.value = false },
+)
 
 // 👉 灯箱
 const zoomOpen = ref(false)
@@ -64,10 +71,11 @@ const onCoverClick = () => {
       @click.prevent.stop="onCoverClick"
     >
       <VImg
-        :src="resolveImage(images[active], coverVariant)"
+        :src="coverFailed ? DEFAULT_COVER : resolveImage(images[active], coverVariant)"
         aspect-ratio="16/9"
         eager
         class="ig-cover-img"
+        @error="coverFailed = true"
       >
         <template #placeholder>
           <div class="ig-cover-ph" />
