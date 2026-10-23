@@ -12,7 +12,7 @@
       "direction": 35,
       "vehicles": 3,
       "windRange": 60,
-      "safeDistance": 80,
+      "safeDistance": 180,
       "minVehicleDistance": 100,
       "effectRange": 120
     },
@@ -27,7 +27,7 @@
       "direction": 35,
       "vehicles": 3,
       "windRange": 60,
-      "safeDistance": 80,
+      "safeDistance": 180,
       "minVehicleDistance": 100,
       "effectRange": 120
     },
@@ -44,12 +44,64 @@
       "steps": 8
     },
     {
+      "id": "camera-001",
+      "type": "camera",
+      "name": "摄像头 #1",
+      "e": 35.35625,
+      "n": 18.19375,
+      "h": 100.07,
+      "status": "正常",
+      "online": true
+    },
+    {
+      "id": "camera-002",
+      "type": "camera",
+      "name": "摄像头 #2",
+      "e": -64.54,
+      "n": -25.695,
+      "h": 106.48,
+      "status": "正常",
+      "online": true
+    },
+    {
+      "id": "camera-003",
+      "type": "camera",
+      "name": "摄像头 #3",
+      "e": 103.35625,
+      "n": 15.505,
+      "h": 107.03,
+      "status": "正常",
+      "online": true
+    },
+    {
       "id": "radar-001",
       "type": "radar",
       "name": "雷达监测",
-      "e": 12.46874,
-      "n": 21.70395,
-      "h": -0.57,
+      "e": 103.71125,
+      "n": 14.5875,
+      "h": 86.25,
+      "status": "正常",
+      "radius": 32,
+      "height": 12
+    },
+    {
+      "id": "radar-002",
+      "type": "radar",
+      "name": "雷达监测 #2",
+      "e": 45.88375,
+      "n": -49.75,
+      "h": 38.82,
+      "status": "正常",
+      "radius": 32,
+      "height": 12
+    },
+    {
+      "id": "radar-003",
+      "type": "radar",
+      "name": "雷达监测 #3",
+      "e": -3.25,
+      "n": -48.08875,
+      "h": 87.95,
       "status": "正常",
       "radius": 32,
       "height": 12

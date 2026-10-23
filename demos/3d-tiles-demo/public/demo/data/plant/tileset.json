@@ -1,0 +1,10 @@
+{
+  "asset": { "version": "1.0", "gltfUpAxis": "Y" },
+  "geometricError": 1000,
+  "root": {
+    "boundingVolume": { "sphere": [0, 0, 12.05, 170] },
+    "geometricError": 1000,
+    "refine": "REPLACE",
+    "content": { "url": "0.b3dm" }
+  }
+}

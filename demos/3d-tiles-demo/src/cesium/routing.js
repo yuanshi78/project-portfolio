@@ -29,6 +29,20 @@ export function segIntersect(p1, p2, p3, p4) {
   return { t, u, point: [p1[0] + d1x * t, p1[1] + d1y * t] }
 }
 
+// 线段 p-q 是否进入以 c 为圆心、r 为半径的圆内（用于让消防车绕开火灾危险区）
+function segNearCircle(p, q, c, r) {
+  const dx = q[0] - p[0]
+  const dy = q[1] - p[1]
+  const fx = p[0] - c[0]
+  const fy = p[1] - c[1]
+  const len2 = dx * dx + dy * dy
+  let t = len2 > 1e-12 ? -((fx * dx + fy * dy) / len2) : 0
+  t = Math.max(0, Math.min(1, t))
+  const cx = p[0] + dx * t
+  const cy = p[1] + dy * t
+  return Math.hypot(cx - c[0], cy - c[1]) < r
+}
+
 const keyOf = (p) => p[0].toFixed(3) + ',' + p[1].toFixed(3)
 
 // 去重（去掉相邻重复点），避免动画出现 0 长度段
@@ -43,12 +57,16 @@ function dedupe(pts) {
 
 /**
  * 求 from 沿路网行驶到 to 的折线路径。
+ * @param avoid 可选 { center:[e,n], radius:r }：建图时剔除穿过该圆的路段（火灾危险区），
+ *              让消防车行驶途中也不进入危险范围；绕开导致不连通时退化为不绕开。
  * @returns [[e,n], ...]（含 from 与 to），不连通时退化为 [from, to] 直线
  */
-export function routeAlongRoads(segments, from, to) {
+export function routeAlongRoads(segments, from, to, avoid = null) {
   if (!segments || !segments.length) return [from, to]
 
-  // 1) from / to 在路网上的最近点（以及落在哪条路段上）
+  // 1) from / to 在路网上的「最近且直连不穿危险圈」的投影点。
+  //    只把 from/to 接到最近的、安全的路网接入点（短引道），避免 Dijkstra 用路网节点「抄近道」越野直驶。
+  const safeConnect = (p, q) => !(avoid && segNearCircle(p, q, avoid.center, avoid.radius))
   let bestF = null
   let bestT = null
   segments.forEach(([a, b], i) => {
@@ -56,10 +74,11 @@ export function routeAlongRoads(segments, from, to) {
     const t = nearestPointOnSegment(to, a, b)
     const df = Math.hypot(f.point[0] - from[0], f.point[1] - from[1])
     const dt = Math.hypot(t.point[0] - to[0], t.point[1] - to[1])
-    if (!bestF || df < bestF.d) bestF = { ...f, i, d: df }
-    if (!bestT || dt < bestT.d) bestT = { ...t, i, d: dt }
+    if (safeConnect(from, f.point) && (!bestF || df < bestF.d)) bestF = { ...f, i, d: df }
+    if (safeConnect(to, t.point) && (!bestT || dt < bestT.d)) bestT = { ...t, i, d: dt }
   })
-  if (!bestF || !bestT) return [from, to]
+  // 无安全直连（极端情形）→ 退化为不绕开（仍走最短路，但不保证不进圈）
+  if (!bestF || !bestT) return routeAlongRoads(segments, from, to)
 
   // 2) 收集每条路段上的切分点：端点 + 与其它路段的交点 + 起终点投影
   const cutsBySeg = segments.map(([a, b]) => [{ t: 0, p: a }, { t: 1, p: b }])
@@ -69,13 +88,12 @@ export function routeAlongRoads(segments, from, to) {
     for (let j = i + 1; j < segments.length; j++) {
       const hit = segIntersect(segments[i][0], segments[i][1], segments[j][0], segments[j][1])
       if (!hit) continue
-      // 交点在两条路段上各记一次：十字路口因此真正连通（否则只能靠共用端点连通）
       cutsBySeg[i].push({ t: hit.t, p: hit.point })
       cutsBySeg[j].push({ t: hit.u, p: hit.point })
     }
   }
 
-  // 3) 建图：每条路段按 t 排序后，相邻切分点连边
+  // 3) 建图：路网相邻切分点连边（绕开危险区）
   const adj = new Map()
   const coords = new Map()
   const addNode = (p) => {
@@ -87,6 +105,7 @@ export function routeAlongRoads(segments, from, to) {
     return k
   }
   const addEdge = (p, q) => {
+    if (avoid && segNearCircle(p, q, avoid.center, avoid.radius)) return
     const kp = addNode(p)
     const kq = addNode(q)
     const w = Math.hypot(p[0] - q[0], p[1] - q[1])
@@ -123,7 +142,11 @@ export function routeAlongRoads(segments, from, to) {
       }
     }
   }
-  if (!dist.has(endKey)) return [from, to] // 不连通 → 直线
+  // 绕开危险区导致不连通 → 退化为不绕开的路线（绝不直线穿火）
+  if (!dist.has(endKey)) {
+    console.warn('[ROUTE] avoid graph disconnected, falling back to non-avoid route')
+    return routeAlongRoads(segments, from, to)
+  }
 
   // 5) 回溯路径，并拼上「站点→上路点」与「下路点→目标」两段
   const path = []

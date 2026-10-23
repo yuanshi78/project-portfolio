@@ -392,6 +392,26 @@ export const app = {
       const deg = (Math.atan2(b[0] - a[0], b[1] - a[1]) * 180) / Math.PI
       return (deg % 360 + 360) % 360
     }
+    // 给折线按行驶方向法向加「车道」偏移，使多车走同一路段时各占一条道、互不穿模（起终点不动）
+    const laneOffsetPolyline = (pts, lane) => {
+      const n = pts.length
+      if (!lane || n < 3) return pts
+      const out = pts.map((p) => p.slice())
+      for (let i = 1; i < n - 1; i++) {
+        const a = pts[i - 1]
+        const b = pts[i + 1]
+        let dx = b[0] - a[0]
+        let dy = b[1] - a[1]
+        const len = Math.hypot(dx, dy) || 1
+        dx /= len
+        dy /= len
+        const nx = -dy
+        const ny = dx
+        out[i] = [pts[i][0] + nx * lane, pts[i][1] + ny * lane]
+      }
+      return out
+    }
+
     const buildRoute = (pts) => {
       if (!pts || pts.length < 2) return null
       const route = []
@@ -412,7 +432,14 @@ export const app = {
       const d = this.localToDeg(p.e, p.n, 0)
       // 出发点：消防站（多站时轮流分配）；不动画 / 无站点配置则直接停在布点位
       const station = animate && stations.length ? stations[k % stations.length] : null
-      const pts = station ? routeAlongRoads(roads, station, [p.e, p.n]) : null
+      // 路线规划绕开火灾危险区（红色呼吸光柱半径 = 22*FEATURE_SPREAD），行驶途中也不进入
+      const hazardR = feature.safeDistance ?? 180 // 路由绕开半径对齐停车安全距离，车不在红圈内行驶
+      let pts = station ? routeAlongRoads(roads, station, [p.e, p.n], { center, radius: hazardR }) : null
+      // 每辆车的路线加独立车道偏移（中间点左右错开），避免多车在同路段上叠在一起/互相穿模
+      if (pts && pts.length > 2) {
+        const lane = (k - (spots.length - 1) / 2) * 3.5
+        pts = laneOffsetPolyline(pts, lane)
+      }
       const route = buildRoute(pts)
       const start = route ? route[0].position : Cesium.Cartesian3.fromDegrees(d.lon, d.lat, d.height)
       // glTF 异步加载：先占位，加载完成后回填（若期间已被撤车则丢弃），与 wind/smoke 同一套机制
@@ -434,7 +461,7 @@ export const app = {
         height: d.height,
         direction: route ? route[0].heading : p.direction,
         range: feature.effectRange || 0,
-        scale: feature.vehicleScale ?? 1.5,
+        scale: feature.vehicleScale ?? 1.8,
         headingOffset: feature.headingOffset ?? 90, // 整车绕上轴 +90°（顺时针=往东转 90°）
         tiltX: feature.tiltX ?? 0, // 绕 X 的俯仰校正：默认 0（转了车会侧翻，别开）
         tiltZ: feature.tiltZ ?? -90, // 模型自身车头朝 +X（不是 +Y），绕上轴 Z 转 -90° 让车头对准行进方向
@@ -564,8 +591,8 @@ export const app = {
         polyline: {
           positions: Cesium.Cartesian3.fromDegreesArray([p0.lon, p0.lat, p1.lon, p1.lat]),
           clampToGround: true,
-          width: 3,
-          material: Cesium.Color.fromCssColorString('#e02d2d').withAlpha(0.85),
+          width: 4,
+          material: Cesium.Color.fromCssColorString('#cbd5e1').withAlpha(0.9),
         },
       })
     }
@@ -699,8 +726,8 @@ export const app = {
       if (ent) ent.show = vis
       const ps = fireParticles.get(feature.id)
       if (ps) { ps.fire.show = vis; ps.smoke.show = vis }
-      const hz = hazardZones.get(feature.id)
-      if (hz) hz.show = vis
+      const hzList = hazardZones.get(feature.id)
+      if (hzList) hzList.forEach((h) => (h.show = vis))
       const fx = ordosFx.get(feature.id)
       if (fx) {
         if (fx.setVisible) fx.setVisible(vis)
@@ -739,32 +766,52 @@ export const app = {
     ps.smoke.show = vis
     // 危险区：贴地的脉动红色光圈（明确是“危险区”标记，而非火）。
     // 之前用 20m 高红柱会立在火焰位置、把粒子火包住，看起来像“火是圆柱体”。
-    let hz = hazardZones.get(feature.id)
-    if (!hz) {
+    let hzList = hazardZones.get(feature.id)
+    if (!hzList) {
       const base = this.localToDeg(this.spread(feature.e), this.spread(feature.n), 0)
+      const R = feature.safeDistance ?? 180 // 危险圈半径 = 消防车停车安全距离，红圈边界即车辆止步线
       // 颜色只解析一次：回调里不再 fromCssColorString（字符串解析很贵），只按脉冲算 alpha
       const fillRGB = Cesium.Color.fromCssColorString('#ff3b3b')
-      const lineRGB = Cesium.Color.fromCssColorString('#ff6b6b')
+      const lineRGB = Cesium.Color.fromCssColorString('#ff4d4d')
       const pulse = () => 0.5 + 0.5 * Math.sin(performance.now() / 350)
-      hz = viewer.entities.add({
+      const pingPeriod = 1600
+      const pingPhase = () => (performance.now() % pingPeriod) / pingPeriod
+      // 1) 主体：贴地脉动红色光圈（明确是“危险区”而非火），加粗加亮描边、填充更实
+      const zone = viewer.entities.add({
         position: Cesium.Cartesian3.fromDegrees(base.lon, base.lat, 0),
         ellipse: {
-          semiMajorAxis: 22 * FEATURE_SPREAD,
-          semiMinorAxis: 22 * FEATURE_SPREAD,
+          semiMajorAxis: R,
+          semiMinorAxis: R,
           height: 0.6,
           material: new Cesium.ColorMaterialProperty(new Cesium.CallbackProperty(() => {
-            return new Cesium.Color(fillRGB.red, fillRGB.green, fillRGB.blue, 0.12 + 0.12 * pulse())
+            return new Cesium.Color(fillRGB.red, fillRGB.green, fillRGB.blue, 0.18 + 0.16 * pulse())
           }, false)),
           outline: true,
           outlineColor: new Cesium.CallbackProperty(() => {
-            return new Cesium.Color(lineRGB.red, lineRGB.green, lineRGB.blue, 0.35 + 0.4 * pulse())
+            return new Cesium.Color(lineRGB.red, lineRGB.green, lineRGB.blue, 0.6 + 0.35 * pulse())
           }, false),
-          outlineWidth: 2,
+          outlineWidth: 4,
         },
       })
-      hazardZones.set(feature.id, hz)
+      // 2) 扩散告警圈：从内向外扩张并淡出，循环播放，强调“危险范围”边界
+      const ping = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(base.lon, base.lat, 0),
+        ellipse: {
+          semiMajorAxis: new Cesium.CallbackProperty(() => R * (0.25 + 0.95 * pingPhase()), false),
+          semiMinorAxis: new Cesium.CallbackProperty(() => R * (0.25 + 0.95 * pingPhase()), false),
+          height: 0.7,
+          fill: false,
+          outline: true,
+          outlineColor: new Cesium.CallbackProperty(() => {
+            return new Cesium.Color(lineRGB.red, lineRGB.green, lineRGB.blue, (1 - pingPhase()) * 0.9)
+          }, false),
+          outlineWidth: 3,
+        },
+      })
+      hzList = [zone, ping]
+      hazardZones.set(feature.id, hzList)
     }
-    hz.show = vis
+    hzList.forEach((h) => (h.show = vis))
   },
 
   removeFire(id) {
@@ -777,9 +824,9 @@ export const app = {
   },
 
   removeHazard(id) {
-    const hz = hazardZones.get(id)
-    if (hz) {
-      viewer.entities.remove(hz)
+    const hzList = hazardZones.get(id)
+    if (hzList) {
+      hzList.forEach((h) => viewer.entities.remove(h))
       hazardZones.delete(id)
     }
   },
