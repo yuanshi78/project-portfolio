@@ -162,8 +162,7 @@ export const app = {
     viewer.scene.globe.depthTestAgainstTerrain = true
     // 允许相机自由穿行：关掉碰撞检测，避免贴近/进入 3D Tiles 模型时相机被推出、感觉“卡住/动不了”
     viewer.scene.screenSpaceCameraController.enableCollisionDetection = false
-    // 关闭默认“左键拖拽绕视线落点公转”，改为原地自由视角（见 bindEvents 的 LEFT_DRAG），避免“绕固定点转、不能自由改朝向”
-    viewer.scene.screenSpaceCameraController.enableRotate = false
+    // 保留 Cesium 默认左键拖拽（绕光标点公转 = 拖动场景）；不要设 enableRotate=false。
     // 关键①：ParticleSystem 用「帧间时钟差 dt」计算发射量（numToEmit = dt * emissionRate）。
     // 默认 Viewer 的 clock.shouldAnimate 为 false（动画/时间轴控件被关掉时更明显），
     // 时钟不走 → dt 恒为 0 → 一个粒子都不发射，火焰/烟雾完全看不见。
@@ -408,7 +407,7 @@ export const app = {
     const vis = groupVisibleFor('alarm')
     const speed = feature.vehicleSpeed ?? 300
     // 多车协同对象：本报警的 count 辆车共享，用于「三辆车都到了才放行」
-    const coord = { total: spots.length, arrived: 0, releaseAt: 0, released: false }
+    const coord = { total: spots.length, arrived: 0, releaseAt: 0, released: false, returned: 0 }
     return spots.map((p, k) => {
       const d = this.localToDeg(p.e, p.n, 0)
       // 出发点：消防站（多站时轮流分配）；不动画 / 无站点配置则直接停在布点位
@@ -454,8 +453,11 @@ export const app = {
           extinguishedAlarms.add(feature.id)
           this.syncFire(feature)
         },
-        // 某辆车已回到消防站：顺序火警演练里用于「本报警处置完 → 切下一个」
-        onReturn: () => this.onTruckReturned(feature.id),
+        // 三辆车都回到消防站：本报警处置完（火已熄、车已回）→ 切下一个火警
+        onReturn: () => {
+          coord.returned++
+          if (coord.returned >= coord.total) this.onAlarmResolved(feature.id)
+        },
       }).then((h) => {
         if (holder.removed) {
           h.remove()
@@ -535,8 +537,8 @@ export const app = {
     this.syncFeatures()
   },
 
-  // 有车回到消防站：本报警处置完（火已熄、车已回），切下一个火警
-  onTruckReturned(id) {
+  // 三辆车都已回到消防站：本报警处置完（火已熄、车已回），撤警并切下一个火警
+  onAlarmResolved(id) {
     if (!scenario.running || id !== scenario.currentId || scenario.advanced) return
     scenario.advanced = true
     setTimeout(() => {
@@ -930,18 +932,6 @@ export const app = {
         closeInfo()
       }
     }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
-
-    // 自由视角：左键拖拽原地转动相机朝向（改变观察方向，不绕某个固定点公转）。
-    // 默认左键拖拽是“绕视线落点公转”，会让人感觉相机被锁在固定点上；这里改成 FPS 式自由看。
-    // 右键拖拽仍是平移（pan）、滚轮仍是缩放，画路线时单击放置点（LEFT_CLICK）不受影响。
-    handler.setInputAction((movement) => {
-      const c = viewer.camera
-      const dx = movement.endPosition.x - movement.startPosition.x
-      const dy = movement.endPosition.y - movement.startPosition.y
-      if (dx === 0 && dy === 0) return
-      c.look(Cesium.Cartesian3.UNIT_Z, -dx * 0.0035) // 偏航：绕世界向上轴
-      c.look(c.right, dy * 0.0035) // 俯仰：绕相机右轴
-    }, Cesium.ScreenSpaceEventType.LEFT_DRAG)
 
     // 信息窗跟随实体
     viewer.scene.postRender.addEventListener(() => {
