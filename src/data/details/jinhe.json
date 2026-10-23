@@ -21,9 +21,9 @@
         "paragraphs": [
           {
             "zh": "项目的目标是为陕西瑞德宝尔投资有限公司提供安全、数字化生产、数字化运营、数字化资产管理平台。",
-            "ru": "Цель проекта — предоставить компании «Shaanxi Ruidebaoer Investment Co., Ltd.» платформу для безопасного, цифрового производства, цифровой эксплуатации и цифрового управления активами.",
-            "en": "The project's goal was to provide Shaanxi Ruidebaoer Investment Co., Ltd. with a platform for safe, digital production, digital operations, and digital asset management.",
-            "be": "Мэта праекта — прадаставіць кампаніі «Shaanxi Ruidebaoer Investment Co., Ltd.» платформу для бяспечнай, лічбавай вытворчасці, лічбавай эксплуатацыі і лічбавага кіравання актывамі."
+            "ru": "Цель проекта — предоставить компании «Shaanxi Ruidebaoer Investment Co., Ltd.» платформу для обеспечения безопасности, а также цифровизации производственных и операционных процессов и управления активами.",
+            "en": "The project's goal was to provide Shaanxi Ruidebaoer Investment Co., Ltd. with a platform for safety assurance, as well as the digitalization of production, operational processes, and asset management.",
+            "be": "Мэта праекта — прадаставіць кампаніі «Shaanxi Ruidebaoer Investment Co., Ltd.» платформу для забеспячэння бяспекі, а таксама лічбавізацыі вытворчых і аперацыйных працэсаў і кіравання актывамі."
           }
         ]
       },
@@ -45,15 +45,15 @@
         "list": [
           {
             "zh": "1. 基础安全、人员安全、环境安全、设备安全、生产安全管理",
-            "ru": "1. Управление безопасностью: базовая безопасность, безопасность персонала, экологическая безопасность, безопасность оборудования, безопасность производства",
-            "en": "1. Safety management: basic safety, personnel safety, environmental safety, equipment safety, and production safety",
-            "be": "1. Кіраванне бяспекай: базавая бяспека, бяспека персаналу, экалагічная бяспека, бяспека абсталявання, бяспека вытворчасці"
+            "ru": "1. Управление безопасностью: общая промышленная безопасность, безопасность персонала, экологическая безопасность, безопасность оборудования, безопасность производства",
+            "en": "1. Safety management: general industrial safety, personnel safety, environmental safety, equipment safety, and production safety",
+            "be": "1. Кіраванне бяспекай: агульная прамысловая бяспека, бяспека персаналу, экалагічная бяспека, бяспека абсталявання, бяспека вытворчасці"
           },
           {
             "zh": "2. 运营管理",
-            "ru": "2. Управление эксплуатацией",
+            "ru": "2. Управление операционными процессами",
             "en": "2. Operations management",
-            "be": "2. Кіраванне эксплуатацыяй"
+            "be": "2. Кіраванне аперацыйнымі працэсамі"
           },
           {
             "zh": "3. 资产管理",
@@ -73,9 +73,9 @@
         "list": [
           {
             "zh": "1. 通过数字化管理，提高矿山安全管理、运营管理与资产管理效率",
-            "ru": "1. Повысить эффективность управления безопасностью рудника, эксплуатацией и активами за счёт цифровизации",
-            "en": "1. Improve the efficiency of mine safety management, operations management, and asset management through digital management",
-            "be": "1. Павысіць эфектыўнасць кіравання бяспекай рудні, эксплуатацыяй і актывамі за кошт лічбавізацыі"
+            "ru": "1. Повысить эффективность управления безопасностью рудника, операционными процессами и активами за счёт цифровизации",
+            "en": "1. Improve the efficiency of mine safety management, operations management, and asset management through digitalization",
+            "be": "1. Павысіць эфектыўнасць кіравання бяспекай рудні, аперацыйнымі працэсамі і актывамі за кошт лічбавізацыі"
           }
         ]
       },
@@ -102,7 +102,7 @@
             "zh": "前端开发",
             "ru": "Фронтенд-разработка",
             "en": "Front-end development",
-            "be": "Франтэнд-распрацоўка"
+            "be": "Фронтэнд-распрацоўка"
           }
         ]
       },
@@ -116,9 +116,9 @@
         "list": [
           {
             "zh": "1. 负责前端开发，实现安全、运营、资产管理模块的数字化。",
-            "ru": "1. Отвечал за фронтенд-разработку, реализовав цифровизацию модулей безопасности, эксплуатации и управления активами.",
-            "en": "1. Responsible for front-end development, implementing the digitalization of the safety, operations, and asset-management modules.",
-            "be": "1. Адказваў за франтэнд-распрацоўку, рэалізаваўшы лічбавізацыю модуляў бяспекі, эксплуатацыі і кіравання актывамі."
+            "ru": "1. Отвечал за фронтенд-разработку, реализовав цифровые модули безопасности, управления производством и активами.",
+            "en": "1. Responsible for front-end development, implementing digital modules for safety, production management, and asset management.",
+            "be": "1. Адказваў за фронтэнд-распрацоўку, рэалізаваўшы лічбавыя модулі бяспекі, кіравання вытворчасцю і актывамі."
           }
         ]
       }
@@ -146,9 +146,9 @@
         "paragraphs": [
           {
             "zh": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统。",
-            "ru": "Проект — это система раннего предупреждения и мониторинга, разработанная для химического завода China Coal в Ордосе.",
-            "en": "The project is an early-warning and monitoring system developed for a chemical plant of China Coal in Ordos.",
-            "be": "Праект — гэта сістэма ранняга папярэджання і маніторынгу, распрацаваная для хімічнага завода China Coal ва Урдосе."
+            "ru": "Проект представляет собой систему раннего обнаружения и мониторинга, разработанную для химического завода China Coal в Ордосе.",
+            "en": "The project is an early detection and monitoring system developed for a chemical plant of China Coal in Ordos.",
+            "be": "Праект уяўляе сабой сістэму ранняга выяўлення і маніторынгу, распрацаваную для хімічнага завода China Coal у Ордасе."
           }
         ]
       },
@@ -176,9 +176,9 @@
           },
           {
             "zh": "2. 展示事故情况：火灾、爆炸、泄露。展示伴随条件，比如风向和风速",
-            "ru": "2. Отображение аварийных ситуаций: пожар, взрыв, утечка; показ сопутствующих условий, таких как направление и скорость ветра",
-            "en": "2. Display accident scenarios: fire, explosion, leak; show accompanying conditions such as wind direction and wind speed",
-            "be": "2. Адлюстраванне аварыйных сітуацый: пажар, выбух, ўцечка; паказ супутных умоваў, такіх як напрамак і хуткасць ветру"
+            "ru": "2. Отображение аварийных ситуаций: пожар, взрыв, утечка; отображение сопутствующих условий, таких как направление и скорость ветра",
+            "en": "2. Display accident scenarios: fire, explosion, leak; display accompanying conditions such as wind direction and wind speed",
+            "be": "2. Адлюстраванне аварыйных сітуацый: пажар, выбух, уцечка; візуалізацыя супутных умоваў, такіх як напрамак і хуткасць ветру"
           },
           {
             "zh": "3. 展示员工位置",
@@ -233,7 +233,7 @@
             "zh": "前端开发",
             "ru": "Фронтенд-разработка",
             "en": "Front-end development",
-            "be": "Франтэнд-распрацоўка"
+            "be": "Фронтэнд-распрацоўка"
           }
         ]
       },
@@ -247,9 +247,9 @@
         "list": [
           {
             "zh": "1. 用 CesiumJS 创建了显示化工工厂区域的 3D 模型大屏平台。",
-            "ru": "1. Создал на CesiumJS платформу с большим экраном, отображающую 3D-модель территории химического завода.",
-            "en": "1. Created a large-screen platform using CesiumJS that displays a 3D model of the chemical plant area.",
-            "be": "1. Стварыў на CesiumJS платформу з вялікім экранам, якая адлюстроўвае 3D-мадэль тэрыторыі хімічнага завода."
+            "ru": "1. Разработал на CesiumJS платформу для большого экрана, отображающую 3D-модель территории химического завода.",
+            "en": "1. Developed a large-screen platform using CesiumJS that displays a 3D model of the chemical plant area.",
+            "be": "1. Распрацаваў на CesiumJS платформу для вялікага экрана, якая адлюстроўвае 3D-мадэль тэрыторыі хімічнага завода."
           }
         ]
       }

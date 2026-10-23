@@ -88,4 +88,39 @@ html.intro-scroll-lock body {
 html.intro-scroll-lock ::-webkit-scrollbar {
   display: none;
 }
+
+// 👉 全局滚动条：保留滚动条本身（可拖动定位 + 无障碍），但做成细窄主题色，
+//    避免 Windows 默认粗灰条在深色主题下突兀。
+//    scrollbar-gutter 预留滚动条槽位，消除内容高度变化时滚动条出现/消失导致的横向抖动。
+//    主题色复用侧栏 perfect-scrollbar 的同一个变量，浅色/深色自动跟随。
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--v-theme-perfect-scrollbar-thumb)) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--v-theme-perfect-scrollbar-thumb));
+  border: 3px solid transparent; // 配合 background-clip 做出细条效果
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--v-theme-primary));
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 </style>

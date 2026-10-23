@@ -21,7 +21,22 @@ const tabs = data.tabs
 const router = useRouter()
 const navTo = to => { if (to) router.push(to) }
 
-const { smAndDown } = useDisplay()
+const { smAndDown, lgAndUp } = useDisplay()
+
+// 👉 首页标签：把长句按「/」（zh/en）或「,」（ru/be）拆成多个独立 chip（PC 与移动端一致），
+// 每个 chip 都带图标：首段沿用该条配置的 icon，其余按序号取技能类图标，取不到则回退到该 icon
+const splitIcons = ['ri-code-s-slash-line', 'ri-bar-chart-line', 'ri-layout-4-line', 'ri-pie-chart-2-line']
+const splitChips = m => {
+  const parts = String(m?.text ?? '')
+    .split(/\s*\/\s*|\s*,\s*/)
+    .map(s => s.trim())
+    .filter(Boolean)
+  if (!parts.length) return []
+  return parts.map((p, j) => ({ icon: j === 0 ? m.icon : (splitIcons[j] ?? m.icon), text: p }))
+}
+// 第一行 = 职能/技能标签（meta 第一条）；第二行 = 城市与国家（其余条目），强制另起一行
+const metaChips = computed(() => splitChips((meta ?? [])[0]))
+const metaChipsSecondary = computed(() => (meta ?? []).slice(1).flatMap(splitChips))
 
 // 👉 快速入口：与侧栏 QuickLinks 同源配置，跳转站点其他板块
 // 并关联全局快捷键（shortcuts.json 的 shortcuts，按 `to` 匹配），用于展示键位提示
@@ -202,7 +217,22 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 
           <div class="d-flex flex-wrap justify-center mt-3">
             <VChip
-              v-for="(m, i) in meta"
+              v-for="(m, i) in metaChips"
+              :key="i"
+              size="small"
+              class="hero-chip ma-1"
+              :prepend-icon="m.icon"
+            >
+              {{ m.text }}
+            </VChip>
+          </div>
+
+          <div
+            v-if="metaChipsSecondary.length"
+            class="d-flex flex-wrap justify-center mt-1"
+          >
+            <VChip
+              v-for="(m, i) in metaChipsSecondary"
               :key="i"
               size="small"
               class="hero-chip ma-1"
@@ -241,7 +271,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
             </VBtn>
 
             <VMenu
-              v-if="quickLinks.length"
+              v-if="quickLinks.length && !lgAndUp"
               location="bottom"
             >
               <template #activator="{ props }">
@@ -697,14 +727,16 @@ body .hero-chip.v-chip {
     padding: 32px 16px 28px;
   }
 
-  // 移动端定位语最多 3 行，控制 Hero 高度
-  .hero-tagline {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  // 窄屏：chip 放不下时内部换行，而不是横向溢出（配合 metaChips 拆分）
+  body .hero-chip.v-chip {
+    white-space: normal;
+    height: auto;
+    min-height: 1.75rem;
+    max-width: 100%;
+    padding-block: 0.25rem;
   }
+
+  // 移动端定位语不再限行数，完整展示自我介绍
 }
 
 // 👉 ② 数字背书条
