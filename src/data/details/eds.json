@@ -3,6 +3,21 @@
     "category": "eds",
     "slug": "runway",
     "title": "CO Runway, OnePass",
+    "name": "CO Runway, OnePass",
+    "image": "eds/cover.jpg",
+    "description": {
+      "zh": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
+      "ru": "Программная система программы поощрения часто летающих пассажиров (Frequent Flyer) авиакомпании Continental Airlines (CO), США.",
+      "en": "Frequent Flyer rewards software system for Continental Airlines (CO), USA.",
+      "be": "Праграмная сістэма праграмы заахвочвання часта лятаючых пасажыраў (Frequent Flyer) авіякампаніі Continental Airlines (CO), ЗША."
+    },
+    "tags": [
+      "IBM zSeries",
+      "IBM z/OS",
+      "JCL",
+      "PL/I",
+      "IMS"
+    ],
     "date": "2007/12 - 2009/11",
     "images": [],
     "sections": [

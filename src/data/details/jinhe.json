@@ -8,6 +8,22 @@
       "en": "Ruidebaoer Smart Mine",
       "be": "Разумны руднік Ruidebaoer"
     },
+    "name": {
+      "zh": "瑞德宝尔智慧矿山",
+      "ru": "Умная шахта Ruidebaoer",
+      "en": "Ruidebaoer Smart Mine",
+      "be": "Разумная шахта Ruidebaoer"
+    },
+    "description": {
+      "zh": "陕西瑞德宝尔投资有限公司安全，生产，运营管理系统",
+      "ru": "Система безопасности, производства и эксплуатации компании Shaanxi Ruidebaoer Investment Co., Ltd.",
+      "en": "Safety, production and operations management system for Shaanxi Ruidebaoer Investment Co., Ltd.",
+      "be": "Сістэма бяспекі, вытворчасці і эксплуатацыі кампаніі Shaanxi Ruidebaoer Investment Co., Ltd."
+    },
+    "tags": [
+      "Vue 2",
+      "JavaScript"
+    ],
     "date": "2019/07 - 2019/11",
     "images": [],
     "sections": [
@@ -133,6 +149,23 @@
       "en": "China Coal Shaanxi Emergency Command System",
       "be": "Сістэма экстраннага кіравання China Coal Shaanxi"
     },
+    "name": {
+      "zh": "中煤陕西应急指挥系统",
+      "ru": "Система аварийного командования Shaanxi China Coal",
+      "en": "Shaanxi China Coal Emergency Command System",
+      "be": "Сістэма аварыйнага камандавання Shaanxi China Coal"
+    },
+    "description": {
+      "zh": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统",
+      "ru": "Система предупреждения и мониторинга для химического завода China Coal в Ордосе.",
+      "en": "System developed for a China Coal chemical plant in Ordos: early-warning and monitoring.",
+      "be": "Сістэма папярэджання і маніторынгу для хімічнага завода China Coal в Ордасе."
+    },
+    "tags": [
+      "Vue 2",
+      "JavaScript",
+      "CesiumJS"
+    ],
     "date": "2019/01 - 2019/06",
     "images": [],
     "sections": [
@@ -169,10 +202,10 @@
         ],
         "list": [
           {
-            "zh": "1. 展示工厂区域 3D 模型",
-            "ru": "1. Отображение 3D-модели территории завода",
-            "en": "1. Display a 3D model of the plant area",
-            "be": "1. Адлюстраванне 3D-мадэлі тэрыторыі завода"
+            "zh": "1. 基于 **3D Tiles** 展示工厂区域三维模型",
+            "ru": "1. Отображение трёхмерной модели территории завода на базе **3D Tiles**",
+            "en": "1. Display a 3D model of the plant area based on **3D Tiles**",
+            "be": "1. Адлюстраванне трохмернай мадэлі тэрыторыі завода на аснове **3D Tiles**"
           },
           {
             "zh": "2. 展示事故情况：火灾、爆炸、泄露。展示伴随条件，比如风向和风速",
@@ -218,7 +251,7 @@
           "be": "Тэхналогіі"
         },
         "paragraphs": [
-          "Vue 2, JavaScript, CesiumJS"
+          "Vue 2, JavaScript, CesiumJS, 3D Tiles"
         ]
       },
       {
@@ -246,10 +279,10 @@
         },
         "list": [
           {
-            "zh": "1. 用 CesiumJS 创建了显示化工工厂区域的 3D 模型大屏平台。",
-            "ru": "1. Разработал на CesiumJS платформу для большого экрана, отображающую 3D-модель территории химического завода.",
-            "en": "1. Developed a large-screen platform using CesiumJS that displays a 3D model of the chemical plant area.",
-            "be": "1. Распрацаваў на CesiumJS платформу для вялікага экрана, якая адлюстроўвае 3D-мадэль тэрыторыі хімічнага завода."
+            "zh": "1. 用 CesiumJS 创建了显示化工工厂区域三维模型的大屏平台，厂区模型以 **3D Tiles** 瓦片流式加载渲染。",
+            "ru": "1. Разработал на CesiumJS платформу для большого экрана, отображающую трёхмерную модель территории химического завода; модель загружается и отображается как тайлы **3D Tiles**.",
+            "en": "1. Developed the large-screen platform using CesiumJS, displaying the chemical plant area in 3D; the plant model is streamed and rendered as **3D Tiles** tiles.",
+            "be": "1. Распрацаваў на CesiumJS платформу для вялікага экрана, якая адлюстроўвае трохмерную мадэль тэрыторыі хімічнага завода; мадэль загружаецца і адлюстроўваецца як тайлы **3D Tiles**."
           }
         ]
       }

@@ -4,7 +4,7 @@
 // 支持位置：
 //   - personal.json      的 profile.left[].items / skills.items / rightBottom[].items（个人信息条目）
 //   - personal.json      的 experience.items（工作经历条目）
-//   - companies.json     的 projects（项目卡片，含侧边导航与「项目综合」列表）
+//   - 详情 JSON（src/data/details/*.json） 的条目（项目卡片，含侧边导航与「项目综合」列表；由 companies.js 派生）
 //   - 详情 JSON（src/data/details/*.json） 的 sections（详情页章节）
 //
 // 用法示例：

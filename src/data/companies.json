@@ -7,101 +7,7 @@
       "en": "Xi'an Aidiweike Network Technology Co., Ltd.",
       "be": "Сіянь Айдзівэйкэ Нэтварк Тэкнолоджы"
     },
-    "icon": "ri-building-2-line",
-    "projects": [
-      {
-        "slug": "nocobase-plugins",
-        "name": {
-          "zh": "NocoBase 插件",
-          "ru": "Плагины NocoBase",
-          "en": "NocoBase Plugins",
-          "be": "Плагіны NocoBase"
-        },
-        "image": "rainbow/nocobase/echarts-plugin.png",
-        "description": {
-          "zh": "**NocoBase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
-          "ru": "**NocoBase** — no-code платформа с максимально гибким расширением. Её особенность: вся функциональность построена на плагинах, и разработчики могут создавать свои.",
-          "en": "**NocoBase** is a highly extensible no-code development platform. Its feature: all functionality is implemented as plugins. Developers can create their own plugins",
-          "be": "**NocoBase** — no-code платформа з максімальна гнуткім пашырэннем. Яе асаблівасць: уся функцыянальнасць пабудавана на плагінах, і распрацоўшчыкі могуць ствараць свае."
-        },
-        "tags": [
-          "React",
-          "TypeScript",
-          "Ant Design"
-        ]
-      },
-      {
-        "slug": "smart_operation",
-        "name": {
-          "zh": "POXMS可视化智慧运维管理云平台",
-          "ru": "Облачная платформа интеллектуального визуального управления эксплуатацией POXMS",
-          "en": "POXMS Visual Smart O&M Management Cloud Platform",
-          "be": "Воблачная платформа разумнага візуальнага кіравання эксплуатацыяй POXMS"
-        },
-        "image": "rainbow/project4.png",
-        "description": {
-          "zh": "区域电，水，气系统运维管理平台",
-          "ru": "Платформа управления эксплуатацией региональных систем электро-, водо- и газоснабжения",
-          "en": "Operations management platform for regional electricity, water and gas systems",
-          "be": "Платформа кіравання эксплуатацыяй рэгіянальных сістэм электра-, вада- і газазабеспячэння"
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "DataEase",
-          "ECharts",
-          "diboot",
-          "Ant Design Vue"
-        ]
-      },
-      {
-        "slug": "cinema_hall",
-        "name": {
-          "zh": "票务管理系统",
-          "ru": "Система управления билетами",
-          "en": "Ticketing Management System",
-          "be": "Сістэма кіравання білетамі"
-        },
-        "image": "aidiweike/tickets/1.png",
-        "description": {
-          "zh": "该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等",
-          "ru": "Система управления билетной информацией театра, заказами, ценами и правилами ценообразования.",
-          "en": "System for managing theater ticketing info, orders, fares, fare rules and their details",
-          "be": "Сістэма кіравання білетнай інфармацыяй тэатра, заказамі, цэнамі і правіламі ценаўтварэння."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "diboot",
-          "Ant Design Vue",
-          "SVG"
-        ]
-      },
-      {
-        "slug": "pharmacy",
-        "name": {
-          "zh": "兆益生物生产管理系统",
-          "ru": "Система управления производством Zhaoyi Bio",
-          "en": "Zhaoyi Bio Production Management System",
-          "be": "Сістэма кіравання вытворчасцю Zhaoyi Bio"
-        },
-        "image": "rainbow/pharmacy/1.png",
-        "description": {
-          "zh": "管理生产兽药的系统",
-          "ru": "Система управления производством ветеринарных препаратов",
-          "en": "System for managing veterinary drug production",
-          "be": "Сістэма кіравання вытворчасцю ветэрынарных прэпаратаў"
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "diboot",
-          "Ant Design Vue",
-          "Colaiven",
-          "ECharts"
-        ]
-      }
-    ]
+    "icon": "ri-building-2-line"
   },
   {
     "category": "rainbow",
@@ -111,135 +17,7 @@
       "en": "Xi'an Ruibo Technology Co., Ltd.",
       "be": "Сіянь Жуйбо Тэкнолоджы"
     },
-    "icon": "ri-rainbow-line",
-    "projects": [
-      {
-        "slug": "smart_area",
-        "name": {
-          "zh": "智慧区域",
-          "ru": "Умный район",
-          "en": "Smart Region",
-          "be": "Разумны раён"
-        },
-        "image": "rainbow/smart-area/1.png",
-        "description": {
-          "zh": "大屏系统包括三个大屏: 设备运维大屏, 综合态势大屏和智慧安防大屏. 每个大屏展示相关的数据. 大屏中间展示区域地图或监控设备拓扑图 . 地图上展示热力图, 摄像头.可以播放来自摄像头的视频. 拓扑图上展示监控设备结构,设备网络速率和状态. 拓扑图工具用于创建监控设备拓扑图",
-          "ru": "Комплекс из трёх больших экранов: эксплуатация оборудования, общая обстановка и умная безопасность. В центре каждого — карта района или топология наблюдения: на карте — тепловые карты и видео с камер, на топологии — структура устройств, скорость сети и состояние. Топологии устройств создаются встроенным инструментом.",
-          "en": "The big-screen system includes three screens: equipment O&M, comprehensive situation, and smart security. Each shows related data. The center shows a district map or surveillance topology. The map shows heatmaps and cameras with live video. The topology shows device structure, network speed and status. The topology tool creates monitoring device topologies.",
-          "be": "Комплекс з трох вялікіх экранаў: эксплуатацыя абсталявання, агульная абстаноўка і разумная бяспека. У цэнтры кожнага — карта раёна або топалогія назірання: на карце — цеплавыя карты і відэа з камер, на топалогіі — структура прылад, хуткасць сеткі і стан. Топалогіі прылад ствараюцца ўбудаваным інструментам."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "ECharts"
-        ]
-      },
-      {
-        "slug": "topo_tool",
-        "name": {
-          "zh": "拓扑图工具",
-          "ru": "Инструмент топологии",
-          "en": "Topology Tool",
-          "be": "Інструмент топалогіі"
-        },
-        "image": "rainbow/topo-tool/1.png",
-        "description": {
-          "zh": "创建监控设备拓扑图的应用",
-          "ru": "Приложение для создания топологий устройств мониторинга",
-          "en": "App for creating monitoring device topologies",
-          "be": "Прыкладанне для стварэння топалогій прылад маніторынгу"
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "TWaver JS"
-        ]
-      },
-      {
-        "slug": "production_sales_platform",
-        "name": {
-          "zh": "产运销一体化平台",
-          "ru": "Платформа интеграции производства-перевозок-сбыта",
-          "en": "Production-Transport-Sales Integration Platform",
-          "be": "Платформа інтэграцыі вытворчасці-перавозак-збыту"
-        },
-        "description": {
-          "zh": "山西国新产运销一体化大数据平台，打通 LNG 生产—运输—销售全链条，实现产运销动态平衡与智能定价。",
-          "ru": "Крупная платформа данных Guoxin для интеграции производства, перевозок и сбыта СПГ: связывает весь цикл и обеспечивает динамический баланс и умное ценообразование.",
-          "en": "Shanxi Guoxin production-transport-sales big-data platform, connecting the LNG production–transport–sales chain for dynamic balance and smart pricing.",
-          "be": "Буйная платформа дадзеных Guoxin для інтэграцыі вытворчасці, перавозак і збыту СПГ: звязвае ўвесь цыкл і забяспечвае дынамічны баланс і разумнае ценаўтварэнне."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "ECharts"
-        ],
-        "image": "rainbow/guoxin-lng/1.png"
-      },
-      {
-        "slug": "power_distribution_monitor",
-        "name": {
-          "zh": "电力配电设备监控系统",
-          "ru": "Система мониторинга электрораспределительного оборудования",
-          "en": "Power Distribution Equipment Monitoring System",
-          "be": "Сістэма маніторынгу электраразмеркавальнага абсталявання"
-        },
-        "image": "rainbow/power-distribution/1.jpg",
-        "description": {
-          "zh": "国网临汾供电公司设备综合管控中心，融汇视频监控、消防、安防、环境监测等多系统数据，实现监测指挥大屏可视化。",
-          "ru": "Центр комплексного управления оборудованием Линьфэньского филиала State Grid: объединение данных видеонаблюдения, пожарной безопасности, охраны и мониторинга среды для вывода на командный экран.",
-          "en": "Linfen Power Supply equipment control center: integrates video, fire, security and environmental monitoring data for command-screen visualization.",
-          "be": "Цэнтр комплекснага кіравання абсталяваннем Ліньфэньскага філіяла State Grid: аб’яднанне даных відэаназірання, пажарнай бяспекі, аховы і маніторынгу асяроддзя для вываду на камандны экран."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "ECharts"
-        ]
-      },
-      {
-        "slug": "guoxin_lng",
-        "name": {
-          "zh": "国新LNG平台",
-          "ru": "Платформа Guoxin LNG",
-          "en": "Guoxin LNG Platform",
-          "be": "Платформа Guoxin LNG"
-        },
-        "image": "rainbow/guoxin-lng/1.png",
-        "description": {
-          "zh": "LNG 天然气供应链云平台，含产运销、危化品调度、集中管控、终端销售、智能定价等 8 个子系统，已在华新燃气集团上线。",
-          "ru": "Облачная платформа цепочки поставок СПГ: 8 подсистем (производство—перевозки—сбыт, диспетчеризация опасных грузов, централизованное управление, розничные продажи, умное ценообразование); запущена в China Huaxin Gas Group.",
-          "en": "LNG natural-gas supply-chain cloud platform with 8 subsystems (production-transport-sales, hazardous-chemical dispatch, centralized control, terminal sales, smart pricing), live at China Huaxin Gas Group.",
-          "be": "Воблачная платформа ланцуга паставак СПГ: 8 падсістэм (вытворчасць—перавозкі—збыт, дыспетчарызацыя небяспечных грузаў, цэнтралізаванае кіраванне, рознічныя продажы, разумнае ценаўтварэнне); запушчана ў China Huaxin Gas Group."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "ECharts"
-        ]
-      },
-      {
-        "slug": "xingfu_lindai",
-        "name": {
-          "zh": "幸福林带智慧管控平台",
-          "ru": "Платформа умного управления Xingfu Lindai",
-          "en": "Xingfu Lindai Smart Management Platform",
-          "be": "Платформа разумнага кіравання Xingfu Lindai"
-        },
-        "image": "rainbow/xingfu-lindai/1.png",
-        "description": {
-          "zh": "西安幸福林带「世纪工程」的智慧管控平台，投资 8300 万元，统一管控 5.8 公里区域内十几个子系统、上万部硬件设备。",
-          "ru": "Платформа умного управления «проектом века» Сианя Xingfu Lindai: инвестиции 83 млн юаней, единое управление десятками подсистем и десятками тысяч устройств на участке 5,8 км.",
-          "en": "Smart management platform for Xi'an's Xingfu Lindai 'century project': 83M RMB investment, unified control of a dozen subsystems and tens of thousands of devices across 5.8 km.",
-          "be": "Платформа разумнага кіравання «праектам стагоддзя» Сіяня Xingfu Lindai: інвестыцыі 83 млн юаняў, адзінае кіраванне дзясяткамі падсістэм і дзясяткамі тысяч прылад на ўчастку 5,8 км."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "ECharts"
-        ]
-      }
-    ]
+    "icon": "ri-rainbow-line"
   },
   {
     "category": "jinhe",
@@ -249,48 +27,7 @@
       "en": "Shaanxi Jinhe Information Technology Co., Ltd.",
       "be": "Шэньсі Цзіньхэ Інфармацыйныя тэхналогіі"
     },
-    "icon": "ri-building-line",
-    "projects": [
-      {
-        "slug": "chemistry_plant",
-        "name": {
-          "zh": "中煤陕西应急指挥系统",
-          "ru": "Система аварийного командования Shaanxi China Coal",
-          "en": "Shaanxi China Coal Emergency Command System",
-          "be": "Сістэма аварыйнага камандавання Shaanxi China Coal"
-        },
-        "description": {
-          "zh": "项目是为中煤鄂尔多斯一家化工厂开发的一款预警监控系统",
-          "ru": "Система предупреждения и мониторинга для химического завода China Coal в Ордосе.",
-          "en": "System developed for a China Coal chemical plant in Ordos: early-warning and monitoring.",
-          "be": "Сістэма папярэджання і маніторынгу для хімічнага завода China Coal в Ордасе."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript",
-          "CesiumJS"
-        ]
-      },
-      {
-        "slug": "ruidebaoer",
-        "name": {
-          "zh": "瑞德宝尔智慧矿山",
-          "ru": "Умная шахта Ruidebaoer",
-          "en": "Ruidebaoer Smart Mine",
-          "be": "Разумная шахта Ruidebaoer"
-        },
-        "description": {
-          "zh": "陕西瑞德宝尔投资有限公司安全，生产，运营管理系统",
-          "ru": "Система безопасности, производства и эксплуатации компании Shaanxi Ruidebaoer Investment Co., Ltd.",
-          "en": "Safety, production and operations management system for Shaanxi Ruidebaoer Investment Co., Ltd.",
-          "be": "Сістэма бяспекі, вытворчасці і эксплуатацыі кампаніі Shaanxi Ruidebaoer Investment Co., Ltd."
-        },
-        "tags": [
-          "Vue 2",
-          "JavaScript"
-        ]
-      }
-    ]
+    "icon": "ri-building-line"
   },
   {
     "category": "qinkuai",
@@ -300,30 +37,7 @@
       "en": "Shaanxi Qinkuai Internet Technology Co., Ltd.",
       "be": "Шэньсі Цінькуай Інтэрнэт-тэхналогіі"
     },
-    "icon": "ri-building-line",
-    "projects": [
-      {
-        "slug": "qintianxia",
-        "name": {
-          "zh": "秦天下",
-          "ru": "Qin Tianxia",
-          "en": "Qin Tianxia",
-          "be": "Qin Tianxia"
-        },
-        "image": "qinkuai/qinkuai1.png",
-        "description": {
-          "zh": "企业差旅管理后台，覆盖申请审批、机票与酒店订单及费用统计。",
-          "ru": "Бэк-офис управления командировками предприятия: заявки и согласования, заказ авиабилетов и гостиниц, статистика расходов.",
-          "en": "Corporate travel management back-office covering approvals, flight/hotel orders and expense statistics.",
-          "be": "Бэк-офіс кіравання камандзіроўкамі прадпрыемства: заяўкі і ўзгадненні, заказ авіябілетаў і гатэляў, статыстыка выдаткаў."
-        },
-        "tags": [
-          "JavaScript",
-          "HTML",
-          "CSS"
-        ]
-      }
-    ]
+    "icon": "ri-building-line"
   },
   {
     "category": "shuzixinxi",
@@ -333,74 +47,7 @@
       "en": "Shaanxi Digital Information Technology Co., Ltd.",
       "be": "Шэньсі Лічбавыя інфармацыйныя тэхналогіі"
     },
-    "icon": "ri-computer-line",
-    "projects": [
-      {
-        "slug": "book_reader",
-        "name": {
-          "zh": "谷堆书城",
-          "ru": "Книжный город Gudui",
-          "en": "Gudui Book Mall",
-          "be": "Кніжны горад Gudui"
-        },
-        "image": "shuzixinxi/reader/1.png",
-        "description": {
-          "zh": "提供在线阅读电子书的服务的平台",
-          "ru": "Платформа для онлайн-чтения электронных книг",
-          "en": "Platform providing online e-book reading service",
-          "be": "Платформа для анлайн-чытання электронных кніг"
-        },
-        "tags": [
-          "HTML",
-          "CSS",
-          "JavaScript"
-        ]
-      },
-      {
-        "slug": "dinosaur",
-        "name": {
-          "zh": "魔幻恐龙",
-          "ru": "Волшебный динозавр",
-          "en": "Magic Dinosaur",
-          "be": "Чароўны дыназаўр"
-        },
-        "image": "shuzixinxi/game/1.png",
-        "description": {
-          "zh": "小游戏",
-          "ru": "Мини-игра",
-          "en": "Mini-game",
-          "be": "Міні-гульня"
-        },
-        "tags": [
-          "HTML5",
-          "CSS",
-          "JavaScript",
-          "LayaAir"
-        ]
-      },
-      {
-        "slug": "china_actor",
-        "name": {
-          "zh": "中国演员网",
-          "ru": "Китайские актёры",
-          "en": "China Actors",
-          "be": "Кітайскія акцёры"
-        },
-        "image": "shuzixinxi/actors/1.png",
-        "description": {
-          "zh": "国内规模最大的影视商务网站（www.chinaactor.com），提供影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品等服务。",
-          "ru": "Крупнейший в Китае сайт киноиндустрии (www.chinaactor.com): подбор персонала, кинобизнес, база актёров, новости, агентства, оригинальные работы.",
-          "en": "China's largest film-business website (www.chinaactor.com): casting, film business, actor database, news, agencies, original works.",
-          "be": "Найбуйнейшы ў Кітаі сайт кінаіндустрыі (www.chinaactor.com): падбор персаналу, кінабізнес, база акцёраў, навіны, агенцтвы, арыгінальныя працы."
-        },
-        "tags": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "jQuery"
-        ]
-      }
-    ]
+    "icon": "ri-computer-line"
   },
   {
     "category": "eds",
@@ -410,27 +57,7 @@
       "en": "EDS Wuhan",
       "be": "EDS Ухань"
     },
-    "icon": "ri-plane-line",
-    "projects": [
-      {
-        "slug": "runway",
-        "image": "eds/cover.jpg",
-        "name": "CO Runway, OnePass",
-        "description": {
-          "zh": "美国航空Continental Airlines（CO）的Frequent Flyer (飞行常客奖励计划)软件系统",
-          "ru": "Программная система программы поощрения часто летающих пассажиров (Frequent Flyer) авиакомпании Continental Airlines (CO), США.",
-          "en": "Frequent Flyer rewards software system for Continental Airlines (CO), USA.",
-          "be": "Праграмная сістэма праграмы заахвочвання часта лятаючых пасажыраў (Frequent Flyer) авіякампаніі Continental Airlines (CO), ЗША."
-        },
-        "tags": [
-          "IBM zSeries",
-          "IBM z/OS",
-          "JCL",
-          "PL/I",
-          "IMS"
-        ]
-      }
-    ]
+    "icon": "ri-plane-line"
   },
   {
     "category": "iba",
@@ -440,81 +67,7 @@
       "en": "IBA (International Business Alliance), Belarus",
       "be": "IBA (International Business Alliance), Беларусь"
     },
-    "icon": "ri-global-line",
-    "projects": [
-      {
-        "slug": "planning_engine",
-        "image": "iba/cover.jpg",
-        "name": {
-          "zh": "Central Planning Engine系统",
-          "ru": "Система Central Planning Engine",
-          "en": "Central Planning Engine System",
-          "be": "Сістэма Central Planning Engine"
-        },
-        "description": {
-          "zh": "IBM美国微电子部Central Planning Engine系统",
-          "ru": "Система Central Planning Engine для подразделения микроэлектроники IBM (США).",
-          "en": "IBM US Microelectronics Central Planning Engine system",
-          "be": "Сістэма Central Planning Engine для падраздзялення мікраэлектронікі IBM (ЗША)."
-        },
-        "tags": [
-          "IBM zSeries",
-          "IBM z/OS",
-          "JCL",
-          "C/C++",
-          "DB2",
-          "SQL"
-        ]
-      },
-      {
-        "slug": "adm",
-        "image": "iba/cover.jpg",
-        "name": {
-          "zh": "IBM 法国 ADM France BA",
-          "ru": "IBM Франция ADM France BA",
-          "en": "IBM France ADM France BA",
-          "be": "IBM Францыя ADM France BA"
-        },
-        "description": {
-          "zh": "IBM 法国 ADM France BA",
-          "ru": "ADM BA, IBM France (Франция).",
-          "en": "IBM France ADM France BA",
-          "be": "ADM BA, IBM France (Францыя)."
-        }
-      },
-      {
-        "slug": "mie",
-        "image": "iba/cover.jpg",
-        "name": {
-          "zh": "IBM 法国 MIE France",
-          "ru": "IBM Франция MIE France",
-          "en": "IBM France MIE France",
-          "be": "IBM Францыя MIE France"
-        },
-        "description": {
-          "zh": "IBM 法国 MIE France",
-          "ru": "MIE, IBM France (Франция).",
-          "en": "IBM France MIE France",
-          "be": "MIE, IBM France (Францыя)."
-        }
-      },
-      {
-        "slug": "urt",
-        "image": "iba/cover.jpg",
-        "name": {
-          "zh": "IBM 法国 URT Extractors ISD",
-          "ru": "IBM Франция URT Extractors ISD",
-          "en": "IBM France URT Extractors ISD",
-          "be": "IBM Францыя URT Extractors ISD"
-        },
-        "description": {
-          "zh": "IBM 法国 URT Extractors ISD",
-          "ru": "URT Extractors ISD, IBM France (Франция).",
-          "en": "IBM France URT Extractors ISD",
-          "be": "URT Extractors ISD, IBM France (Францыя)."
-        }
-      }
-    ]
+    "icon": "ri-global-line"
   },
   {
     "category": "self",
@@ -524,61 +77,6 @@
       "en": "Personal Research & Self-developed Exploration",
       "be": "Асабістыя даследаванні і ўласныя распрацоўкі"
     },
-    "icon": "ri-flask-line",
-    "projects": [
-      {
-        "slug": "aethera",
-        "name": {
-          "zh": "智能多模态数据呈现工具Aethera",
-          "ru": "Интеллектуальный инструмент мультимодального представления данных Aethera",
-          "en": "Intelligent Multimodal Data-Presentation Tool Aethera",
-          "be": "Інтэлектуальны інструмент мультымадальнага прадстаўлення дадзеных Aethera"
-        },
-        "description": {
-          "zh": "**Aethera**（个人研究 · V1 在研 · 未商业化）：弥合数据系统所知与人类感知差距的数据呈现架构。V1 是可靠仪表盘；plugin-first + 微内核 + JSON Schema + AI agent，已为多模态预留。V1 是楔子，不是负担。与求职不绑定；如公司有相关方向，可在入职后按公司制度探讨合作。",
-          "ru": "**Aethera** (личное исследование · V1 в разработке · без коммерциализации): архитектура визуализации данных, сокращающая разрыв между машинным знанием и человеческим восприятием. V1 — надёжный дашборд; plugin-first + микроядро + JSON Schema + AI-агент, уже готовые к мультимодальности. V1 — это клин, а не обуза. С трудоустройством не связано; если у компании есть подходящее направление, сотрудничество можно обсудить после выхода на работу по правилам компании.",
-          "en": "**Aethera** (personal research · V1 in R&D · not commercialized): a data-presentation architecture closing the gap between machine knowledge and human perception. V1 is a reliable dashboard; plugin-first + microkernel + JSON Schema + AI agent, already prepared for multimodality. V1 is the wedge, not a burden. Not tied to employment; if the company has a relevant direction, cooperation can be discussed after onboarding under company policy.",
-          "be": "**Aethera** (асабістае даследаванне · V1 у распрацоўцы · без камерцыялізацыі): архітэктура візуалізацыі дадзеных, якая скарачае разрыў паміж машынным веданнем і чалавечым успрыманнем. V1 — надзейны дашборд; plugin-first + мікраядро + JSON Schema + AI-агент, ужо гатовыя да мультымадальнасці. V1 — гэта клін, а не цяжар. З працаўладкаваннем не звязана; калі ў кампаніі ёсць адпаведны напрамак, супрацоўніцтва можна абмеркаваць пасля выхаду на працу па правілах кампаніі."
-        },
-        "tags": [
-          "Vue 3",
-          {
-            "zh": "多模态数据呈现",
-            "ru": "Мультимодальное представление данных",
-            "en": "Multimodal Data Presentation",
-            "be": "Мультымадальнае прадстаўленне дадзеных"
-          },
-          "AI",
-          {
-            "zh": "插件化架构",
-            "ru": "Плагин-ориентированная архитектура",
-            "en": "Plugin-based Architecture",
-            "be": "Плагін-арыентаваная архітэктура"
-          }
-        ]
-      },
-      {
-        "slug": "chemistry_plant_3d",
-        "name": {
-          "zh": "化工园区 GIS 大屏演示（3D Tiles）",
-          "ru": "Демо GIS-дашборда химического парка (3D Tiles)",
-          "en": "Chemical Park GIS Dashboard Demo (3D Tiles)",
-          "be": "Дэма GIS-дашборда хімічнага парка (3D Tiles)"
-        },
-        "description": {
-          "zh": "**个人演示，非金合交付项目。****演示用**离线 GIS 大屏，形态高度相似于**中煤鄂尔多斯化工厂**应急指挥项目：基于 **CesiumJS 1.119 + Vue 3 + Vite** 的 3D Tiles 三维厂区，图层树显隐、底图（卫星影像 / 离线）切换、要素信息窗、距离/面积测量、罗盘定向，以及「火警 → 消防车沿路网出动 → 熄火撤警 → 回队」的自动循环演练。全部资源本地化，不依赖内网服务或外部 CDN。",
-          "ru": "**Личная демонстрация, а не проект, выполненный для Jinhe. ** **Демонстрационный** автономный ГИС-экран, по виду близкий к проекту аварийного управления химическим заводом **China Coal в Ордосе**: трёхмерный завод на 3D Tiles на базе **CesiumJS 1.119 + Vue 3 + Vite**, управление видимостью слоёв, переключение подложки (спутник / офлайн), окно информации об объекте, измерение расстояний и площадей, компас и циклическое учение «тревога → выезд машин по дорожной сети → тушение и снятие тревоги → возвращение». Все ресурсы локальные — без внутренних сервисов и внешних CDN.",
-          "en": "**Personal demo, not a Jinhe delivery project.**An **offline demo** GIS dashboard closely resembling the **China Coal Ordos chemical-plant** emergency-command project: a 3D Tiles plant built with **CesiumJS 1.119 + Vue 3 + Vite**, layer-tree visibility, basemap switch (satellite / offline), feature info window, distance/area measurement, compass, plus an auto-looping drill (alarm → trucks dispatched along the road network → extinguish & clear → return to station). All assets are local — no intranet services or external CDN.",
-          "be": "**Асабістая дэманстрацыя, а не праект, выкананы для Jinhe. ** **Дэманстрацыйны** аўтаномны ГІС-экран, паводле выгляду блізкі да праекта аварыйнага кіравання хімічным заводам **China Coal в Ордасе**: трохмерны завод на 3D Tiles на базе **CesiumJS 1.119 + Vue 3 + Vite**, кіраванне бачнасцю слаёў, пераключэнне падложкі (спадарожнік / афлайн), акно інфармацыі пра аб’ект, вымярэнне адлегласцей і плошчаў, компас і цыклічнае вучэнне «трывога → выезд машын па дарожнай сетцы → тушэнне і зняцце трывогі → вяртанне». Усе рэсурсы лакальныя — без унутраных сэрвісаў і знешніх CDN."
-        },
-        "tags": [
-          "Vue 3",
-          "Vite",
-          "CesiumJS",
-          "3D Tiles",
-          "离线"
-        ]
-      }
-    ]
+    "icon": "ri-flask-line"
   }
 ]

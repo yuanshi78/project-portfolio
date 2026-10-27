@@ -77,7 +77,7 @@ const toggle = key => {
 
 // 👉 主标签 = 板块锚点导航（点击平滑滚动到对应板块，而非切换显隐）
 const activeKey = ref(0)
-const sectionAnchors = { 2: 'section-products', 1: 'section-projects', 3: 'section-about', 0: 'section-profile' }
+const sectionAnchors = { 4: 'section-core', 2: 'section-products', 1: 'section-projects', 3: 'section-about', 0: 'section-profile' }
 // 点击标签时，若目标板块在移动端是折叠的，先展开
 const collapsibleByTab = { 3: 'about', 0: 'profile' }
 
@@ -186,8 +186,8 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
 <template>
   <!--
     首页 = 求职落地页，按说服链排布：
-    ① Hero（身份 + 定位 + CTA）→ ② 数字背书条 → ③ 精选产品 → ④ 项目
-    → ⑤ 关于我 / 致雇主（PC 双栏）→ ⑥ 个人信息（CV 细节）
+    ① Hero（身份 + 定位 + CTA）→ ② 数字背书条 → ②.5 核心项目 → ③ 精选产品
+    → ④ 项目 → ⑤ 关于我 / 致雇主（PC 双栏）→ ⑥ 个人信息（CV 细节）
     移动端：长文默认折叠；主题（配色 / 暗色模式 / 主色 / 卡片样式 / 字号缩放）保持完全不变。
   -->
   <div class="home-layout">
@@ -363,7 +363,7 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
       </VCol>
     </VRow>
 
-    <!-- 👉 四个板块按钮：移动端/中屏底部悬浮胶囊，PC（≥1280）右侧垂直居中悬浮 -->
+    <!-- 👉 板块按钮：移动端/中屏底部悬浮胶囊，PC（≥1280）右侧垂直居中悬浮 -->
     <div class="main-tabs">
       <VBtn
         v-for="t in tabs"
@@ -380,15 +380,16 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
       </VBtn>
     </div>
 
-    <!-- 👉 ③ 项目 -->
+    <!-- 👉 ②.5 核心项目（精选代表作，单列突出；其余工作经历见下方「项目」） -->
     <section
-      id="section-projects"
+      v-if="data.coreProjects"
+      id="section-core"
       class="anchor-section"
     >
-      <Projects :data="data.experience" />
+      <Projects :data="data.coreProjects" />
     </section>
 
-    <!-- 👉 ④ 精选产品（第一个产品独占大卡，其余按普通卡片网格） -->
+    <!-- 👉 ③ 精选产品（第一个产品独占大卡，其余按普通卡片网格） -->
     <section
       id="section-products"
       class="anchor-section"
@@ -504,6 +505,14 @@ const forEmployersSegments = computed(() => parseEmphasis(data.forEmployers ?? '
           </VCol>
         </VRow>
       </template>
+    </section>
+
+    <!-- 👉 ④ 项目（其余工作经历 / 次要项目） -->
+    <section
+      id="section-projects"
+      class="anchor-section"
+    >
+      <Projects :data="data.experience" />
     </section>
 
     <!-- 👉 ⑤ 关于我 + 致雇主（PC ≥1280 双栏并排；移动端可折叠） -->
@@ -764,7 +773,7 @@ body .hero-chip.v-chip {
   color: #FFC857;
 }
 
-// 👉 四个板块按钮：移动端/中屏底部悬浮胶囊；PC（≥1280）右侧垂直居中悬浮
+// 👉 板块按钮：移动端/中屏底部悬浮胶囊；PC（≥1280）右侧垂直居中悬浮
 .main-tabs {
   position: fixed;
   left: 50%;

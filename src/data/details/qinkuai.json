@@ -1,5 +1,6 @@
 [
   {
+    "category": "qinkuai",
     "slug": "qintianxia",
     "title": {
       "zh": "秦天下",
@@ -7,6 +8,24 @@
       "en": "Qin Tianxia",
       "be": "Qin Tianxia"
     },
+    "name": {
+      "zh": "秦天下",
+      "ru": "Qin Tianxia",
+      "en": "Qin Tianxia",
+      "be": "Qin Tianxia"
+    },
+    "image": "qinkuai/qinkuai1.png",
+    "description": {
+      "zh": "企业差旅管理后台，覆盖申请审批、机票与酒店订单及费用统计。",
+      "ru": "Бэк-офис управления командировками предприятия: заявки и согласования, заказ авиабилетов и гостиниц, статистика расходов.",
+      "en": "Corporate travel management back-office covering approvals, flight/hotel orders and expense statistics.",
+      "be": "Бэк-офіс кіравання камандзіроўкамі прадпрыемства: заяўкі і ўзгадненні, заказ авіябілетаў і гатэляў, статыстыка выдаткаў."
+    },
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "date": "2016/09—2019/01",
     "images": [
       "qinkuai/qinkuai1.png",
@@ -81,7 +100,6 @@
           }
         ]
       }
-    ],
-    "category": "qinkuai"
+    ]
   }
 ]

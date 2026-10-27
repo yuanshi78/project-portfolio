@@ -8,6 +8,24 @@
       "en": "Gudui Bookstore",
       "be": "Кніжная крама Gudui"
     },
+    "name": {
+      "zh": "谷堆书城",
+      "ru": "Книжный город Gudui",
+      "en": "Gudui Book Mall",
+      "be": "Кніжны горад Gudui"
+    },
+    "image": "shuzixinxi/reader/1.png",
+    "description": {
+      "zh": "提供在线阅读电子书的服务的平台",
+      "ru": "Платформа для онлайн-чтения электронных книг",
+      "en": "Platform providing online e-book reading service",
+      "be": "Платформа для анлайн-чытання электронных кніг"
+    },
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "date": "2016/06 - 2016/08",
     "images": [
       "shuzixinxi/reader/1.png",
@@ -125,6 +143,25 @@
       "en": "Magic Dinosaur",
       "be": "Чароўны дзіназаўр"
     },
+    "name": {
+      "zh": "魔幻恐龙",
+      "ru": "Волшебный динозавр",
+      "en": "Magic Dinosaur",
+      "be": "Чароўны дыназаўр"
+    },
+    "image": "shuzixinxi/game/1.png",
+    "description": {
+      "zh": "小游戏",
+      "ru": "Мини-игра",
+      "en": "Mini-game",
+      "be": "Міні-гульня"
+    },
+    "tags": [
+      "HTML5",
+      "CSS",
+      "JavaScript",
+      "LayaAir"
+    ],
     "date": "2016/05 - 2016/05",
     "images": [
       "shuzixinxi/game/1.png",
@@ -240,6 +277,25 @@
       "en": "China Actor Portal",
       "be": "Партал China Actor"
     },
+    "name": {
+      "zh": "中国演员网",
+      "ru": "Китайские актёры",
+      "en": "China Actors",
+      "be": "Кітайскія акцёры"
+    },
+    "image": "shuzixinxi/actors/1.png",
+    "description": {
+      "zh": "国内规模最大的影视商务网站（www.chinaactor.com），提供影视招聘、影视商务、演员库、影视快讯、影视机构、原创作品等服务。",
+      "ru": "Крупнейший в Китае сайт киноиндустрии (www.chinaactor.com): подбор персонала, кинобизнес, база актёров, новости, агентства, оригинальные работы.",
+      "en": "China's largest film-business website (www.chinaactor.com): casting, film business, actor database, news, agencies, original works.",
+      "be": "Найбуйнейшы ў Кітаі сайт кінаіндустрыі (www.chinaactor.com): падбор персаналу, кінабізнес, база акцёраў, навіны, агенцтвы, арыгінальныя працы."
+    },
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery"
+    ],
     "date": "2016/01 - 2016/04",
     "images": [
       "shuzixinxi/actors/1.png"

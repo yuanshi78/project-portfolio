@@ -1,11 +1,12 @@
-// 企业-项目目录：菜单与“项目综合”列表都由它驱动。
-// 纯内容在 src/data/companies.json，图片变体放在 public/images/variants/ 下。
-// JSON 中 image 字段填写相对路径（如 "rainbow/project2.png"）。
-// 编辑展示内容只需改 companies.json：
-//   - 新增企业：在数组里加一项（含 category / company / projects）
-//   - 新增项目：在对应企业的 projects 里加一条（slug / name / image / description / tags）
-// 详情正文仍在 src/data/details/ 下按单位拆分的 json（按 slug 关联），不要在这里配置。
+// 企业注册表 + 项目目录：菜单与“项目综合”列表都由它驱动。
+// 内容按「单位」聚合到单个文件，结构更清楚：
+//   - src/data/companies.json        只放公司元信息（category / company / icon），即「单位注册表」
+//   - src/data/details/<单位>.json   放该单位全部项目；每个条目同时含
+//        概览字段（name / image / description / tags）与详情字段（title / date / images / sections）
+//     一个单位 = 一个文件；新增单位只需在 companies.json 加一行 + 在 details/ 加一个文件。
+// 本文件把两者合并：company.projects 由 detailsRaw 按 category 派生，整棵树本地化一次。
 import companiesData from '@/data/companies.json';
+import { detailsRaw } from '@/data/details'
 import { visibleItems } from '@/utils/visibility';
 import { localize } from '@/i18n';
 
@@ -13,14 +14,15 @@ import { localize } from '@/i18n';
 // 过滤后侧边导航与「项目综合」列表都不会再出现该项目（完全不渲染，不留空白）。
 const companiesMapped = companiesData.map(c => ({
   ...c,
-  projects: visibleItems(c.projects).map(p => ({
+  projects: visibleItems(
+    detailsRaw.filter(d => d.category === c.category),
+  ).map(p => ({
     ...p,
     to: `/project/${c.category}/${p.slug}`,
-    image: p.image,
   })),
 }))
 
-// 包成「按当前语言自动解析 { zh, ru, en }」的代理
+// 整棵树包成「按当前语言自动解析 { zh, ru, en, be }」的代理（仅本地化一次）
 export const companies = localize(companiesMapped)
 
 export const getProjects = category => companies.find(c => c.category === category)?.projects ?? []

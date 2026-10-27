@@ -8,6 +8,19 @@
       "en": "IBM France URT Extractors ISD",
       "be": "IBM France URT Extractors ISD"
     },
+    "name": {
+      "zh": "IBM 法国 URT Extractors ISD",
+      "ru": "IBM Франция URT Extractors ISD",
+      "en": "IBM France URT Extractors ISD",
+      "be": "IBM Францыя URT Extractors ISD"
+    },
+    "image": "iba/cover.jpg",
+    "description": {
+      "zh": "IBM 法国 URT Extractors ISD",
+      "ru": "URT Extractors ISD, IBM France (Франция).",
+      "en": "IBM France URT Extractors ISD",
+      "be": "URT Extractors ISD, IBM France (Францыя)."
+    },
     "date": "2011/06 - 2012/03",
     "images": [],
     "sections": [
@@ -120,6 +133,19 @@
       "ru": "IBM France MIE France",
       "en": "IBM France MIE France",
       "be": "IBM France MIE France"
+    },
+    "name": {
+      "zh": "IBM 法国 MIE France",
+      "ru": "IBM Франция MIE France",
+      "en": "IBM France MIE France",
+      "be": "IBM Францыя MIE France"
+    },
+    "image": "iba/cover.jpg",
+    "description": {
+      "zh": "IBM 法国 MIE France",
+      "ru": "MIE, IBM France (Франция).",
+      "en": "IBM France MIE France",
+      "be": "MIE, IBM France (Францыя)."
     },
     "date": "2010/04 - 2011/05",
     "images": [],
@@ -234,6 +260,19 @@
       "en": "IBM France ADM France BA",
       "be": "IBM France ADM France BA"
     },
+    "name": {
+      "zh": "IBM 法国 ADM France BA",
+      "ru": "IBM Франция ADM France BA",
+      "en": "IBM France ADM France BA",
+      "be": "IBM Францыя ADM France BA"
+    },
+    "image": "iba/cover.jpg",
+    "description": {
+      "zh": "IBM 法国 ADM France BA",
+      "ru": "ADM BA, IBM France (Франция).",
+      "en": "IBM France ADM France BA",
+      "be": "ADM BA, IBM France (Францыя)."
+    },
     "date": "2004/02 - 2007/05",
     "images": [],
     "sections": [
@@ -341,6 +380,27 @@
       "en": "IBM US Microelectronics Central Planning Engine System",
       "be": "IBM US Microelectronics Central Planning Engine System"
     },
+    "name": {
+      "zh": "Central Planning Engine系统",
+      "ru": "Система Central Planning Engine",
+      "en": "Central Planning Engine System",
+      "be": "Сістэма Central Planning Engine"
+    },
+    "image": "iba/cover.jpg",
+    "description": {
+      "zh": "IBM美国微电子部Central Planning Engine系统",
+      "ru": "Система Central Planning Engine для подразделения микроэлектроники IBM (США).",
+      "en": "IBM US Microelectronics Central Planning Engine system",
+      "be": "Сістэма Central Planning Engine для падраздзялення мікраэлектронікі IBM (ЗША)."
+    },
+    "tags": [
+      "IBM zSeries",
+      "IBM z/OS",
+      "JCL",
+      "C/C++",
+      "DB2",
+      "SQL"
+    ],
     "date": "2002/12 - 2003/11",
     "images": [],
     "sections": [

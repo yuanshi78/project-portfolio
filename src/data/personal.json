@@ -79,7 +79,7 @@
     "logo": "/images/logo.svg"
   },
   "cv": {
-    "url": "/cv/Aliaksandr Kuzmiankou - 研发负责人+ 软件工程师+web前端.docx",
+    "url": "/cv/Aliaksandr Kuzmiankou - 资深前端架构师  + 数据可视化技术专家 + 低代码平台研发 + 数据呈现研究 + web前端.docx",
     "label": {
       "zh": "下载简历",
       "ru": "Скачать резюме",
@@ -142,14 +142,14 @@
   ],
   "tabs": [
     {
-      "key": 1,
+      "key": 4,
       "label": {
-        "zh": "项目",
-        "ru": "Проекты",
-        "en": "Projects",
-        "be": "Праекты"
+        "zh": "核心项目",
+        "ru": "Ключевые проекты",
+        "en": "Core Projects",
+        "be": "Ключавыя праекты"
       },
-      "icon": "ri-folders-fill"
+      "icon": "ri-star-fill"
     },
     {
       "key": 2,
@@ -160,6 +160,16 @@
         "be": "Прадукты"
       },
       "icon": "ri-lightbulb-fill"
+    },
+    {
+      "key": 1,
+      "label": {
+        "zh": "项目",
+        "ru": "Проекты",
+        "en": "Projects",
+        "be": "Праекты"
+      },
+      "icon": "ri-folders-fill"
     },
     {
       "key": 3,
@@ -215,6 +225,134 @@
           "aethera/cover.jpg"
         ],
         "to": "/project/self/aethera"
+      }
+    ]
+  },
+  "coreProjects": {
+    "title": {
+      "zh": "核心项目",
+      "ru": "Ключевые проекты",
+      "en": "Core Projects",
+      "be": "Ключавыя праекты"
+    },
+    "items": [
+      {
+        "title": {
+          "zh": "中煤陕西应急指挥系统",
+          "ru": "Система экстренного управления China Coal Shaanxi",
+          "en": "China Coal Shaanxi Emergency Command System",
+          "be": "Сістэма экстраннага кіравання China Coal Shaanxi"
+        },
+        "subtitle": {
+          "zh": "2019/01 - 2019/06",
+          "ru": "2019/01 — 2019/06",
+          "en": "2019/01 - 2019/06",
+          "be": "2019/01 — 2019/06"
+        },
+        "images": [],
+        "text": {
+          "zh": "中煤鄂尔多斯化工厂应急指挥大屏：基于 3D Tiles 的三维厂区态势感知，含火警、爆炸、泄漏与风向风速。",
+          "ru": "Экран аварийного командования химзавода China Coal в Ордосе: трёхмерная ситуационная осведомлённость на базе 3D Tiles, пожар, взрыв, утечка, направление и скорость ветра.",
+          "en": "Emergency-command screen for the China Coal chemical plant in Ordos: 3D Tiles-based plant situational awareness with fire, explosion, leak, wind direction and speed.",
+          "be": "Экран аварыйнага камандавання хімзавода China Coal у Ордасе: трохмерная сітуацыйная асведамлёнасць на базе 3D Tiles, пажар, выбух, уцечка, напрамак і хуткасць ветру."
+        },
+        "to": "/project/jinhe/chemistry_plant"
+      },
+      {
+        "title": {
+          "zh": "化工园区 GIS 大屏演示（3D Tiles）",
+          "ru": "Демо GIS-дашборда химпарка (3D Tiles)",
+          "en": "Chemical Park GIS Dashboard Demo (3D Tiles)",
+          "be": "Дэма GIS-дашборда хімпарка (3D Tiles)"
+        },
+        "subtitle": {
+          "zh": "2026",
+          "ru": "2026",
+          "en": "2026",
+          "be": "2026"
+        },
+        "images": [
+          "self/chemistry-plant/1.png"
+        ],
+        "text": {
+          "zh": "与中煤应急指挥项目高度相似的演示大屏：CesiumJS + 3D Tiles 渲染三维厂区，含图层、测量、罗盘与消防演练。",
+          "ru": "Демо-экран, близкий к проекту аварийного командования: CesiumJS + 3D Tiles рендерят трёхмерный завод, есть слои, измерения, компас и учения.",
+          "en": "A demo dashboard close to the emergency-command project: CesiumJS + 3D Tiles render the 3D plant, with layers, measurement, compass and fire drills.",
+          "be": "Дэма-экран, блізкі да праекта аварыйнага камандавання: CesiumJS + 3D Tiles рэндэраць трохмерны завод, з слаямі, вымярэннямі, компасам і вучэннямі."
+        },
+        "to": "/project/self/chemistry_plant_3d"
+      },
+      {
+        "title": {
+          "zh": "智慧区域可视化大屏",
+          "ru": "Дашборд «Умный район»",
+          "en": "Smart Region Visualization Dashboard",
+          "be": "Дашборд «Разумны раён»"
+        },
+        "subtitle": {
+          "zh": "2020/08 - 2023/04",
+          "ru": "2020/08 — 2023/04",
+          "en": "2020/08 - 2023/04",
+          "be": "2020/08 — 2023/04"
+        },
+        "images": [
+          "rainbow/smart-area/1.png"
+        ],
+        "text": {
+          "zh": "区域级数据可视化大屏：整合生产、运输、销售与设备监控，面向园区运营指挥。",
+          "ru": "Региональный дашборд визуализации: объединяет производство, перевозки, сбыт и мониторинг оборудования для управления парком.",
+          "en": "Regional visualization dashboard: integrates production, transport, sales and equipment monitoring for park operations.",
+          "be": "Рэгіянальны дашборд візуалізацыі: аб'ядноўвае вытворчасць, перавозкі, збыт і маніторынг абсталявання для кіравання паркам."
+        },
+        "to": "/project/rainbow/smart_area"
+      },
+      {
+        "title": {
+          "zh": "拓扑图工具",
+          "ru": "Инструмент топологии",
+          "en": "Topology Tool",
+          "be": "Інструмент тапалогіі"
+        },
+        "subtitle": {
+          "zh": "2020/12 - 2023/04",
+          "ru": "2020/12 — 2023/04",
+          "en": "2020/12 - 2023/04",
+          "be": "2020/12 — 2023/04"
+        },
+        "images": [
+          "rainbow/topo-tool/1.png"
+        ],
+        "text": {
+          "zh": "把「手写 JSON 配置拓扑」抽象为可视化工具，让其他工程师自助生成拓扑图，产品化思维落地。",
+          "ru": "Визуальный инструмент вместо ручного JSON: другие инженеры сами строят топологию — пример продуктового подхода.",
+          "en": "A visual tool replacing hand-written JSON: other engineers build topologies themselves — a product-thinking outcome.",
+          "be": "Візуальны інструмент замест ручнога JSON: іншыя інжынеры самі будуюць тапалогію — прыклад прадуктовага падыходу."
+        },
+        "to": "/project/rainbow/topo_tool"
+      },
+      {
+        "title": {
+          "zh": "NocoBase 低代码平台插件研发",
+          "ru": "Разработка плагинов NocoBase",
+          "en": "NocoBase Low-Code Plugin R&D",
+          "be": "Распрацоўка плагінаў NocoBase"
+        },
+        "subtitle": {
+          "zh": "2024/11 - 2025/09",
+          "ru": "2024/11 — 2025/09",
+          "en": "2024/11 - 2025/09",
+          "be": "2024/11 — 2025/09"
+        },
+        "images": [
+          "rainbow/nocobase/amis-plugin.png"
+        ],
+        "text": {
+          "zh": "为 NocoBase 低代码平台研发 AMIS / ECharts / Tree 插件，扩展表单图表联动与可视化配置能力。",
+          "ru": "Плагины AMIS / ECharts / Tree для low-code платформы NocoBase: связывание форм и диаграмм, визуальная настройка.",
+          "en": "AMIS / ECharts / Tree plugins for the NocoBase low-code platform: form-chart linkage and visual configuration.",
+          "be": "Плагіны AMIS / ECharts / Tree для low-code платформы NocoBase: сувязь формаў і дыяграм, візуальная налада."
+        },
+        "to": "/project/aidiweike/nocobase-plugins"
       }
     ]
   },

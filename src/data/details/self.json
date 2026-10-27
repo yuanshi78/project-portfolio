@@ -8,13 +8,44 @@
       "en": "Aethera — Intelligent Multimodal Data-Presentation Tool (Personal Research · V1 in R&D · Not a commercial product)",
       "be": "Aethera — інтэлектуальны інструмент мультымадальнага прадстаўлення дадзеных (асабістае даследаванне · V1 у распрацоўцы · не з'яўляецца камерцыйным прадуктам)"
     },
+    "name": {
+      "zh": "智能多模态数据呈现工具Aethera",
+      "ru": "Интеллектуальный инструмент мультимодального представления данных Aethera",
+      "en": "Intelligent Multimodal Data-Presentation Tool Aethera",
+      "be": "Інтэлектуальны інструмент мультымадальнага прадстаўлення дадзеных Aethera"
+    },
+    "image": "aethera/cover.jpg",
+    "description": {
+      "zh": "**Aethera**（个人研究 · V1 在研）：plugin-first 微内核 + JSON Schema 数据呈现架构，弥合机器与人类感知的差距。",
+      "ru": "**Aethera** (личное исследование · V1 в разработке · не коммерциализировано): архитектура визуализации данных на plugin-first микроядре и JSON Schema, сокращающая разрыв между машиной и человеком.",
+      "en": "**Aethera** (personal research · V1 in R&D · not commercialized): a data-presentation architecture on a plugin-first microkernel and JSON Schema, closing the gap between machine and human perception.",
+      "be": "**Aethera** (асабістае даследаванне · V1 у распрацоўцы · не камерцыялізавана): архітэктура візуалізацыі дадзеных на plugin-first мікраядры і JSON Schema, якая скарачае разрыў паміж машынай і чалавекам."
+    },
+    "tags": [
+      "Vue 3",
+      {
+        "zh": "多模态数据呈现",
+        "ru": "Мультимодальное представление данных",
+        "en": "Multimodal Data Presentation",
+        "be": "Мультымадальнае прадстаўленне дадзеных"
+      },
+      "AI",
+      {
+        "zh": "插件化架构",
+        "ru": "Плагин-ориентированная архитектура",
+        "en": "Plugin-based Architecture",
+        "be": "Плагін-арыентаваная архітэктура"
+      }
+    ],
     "date": {
       "zh": "2026/01 - 至今",
       "ru": "2026/01 — наст. время",
       "en": "2026/01 - Present",
       "be": "2026/01 — цяперашні час"
     },
-    "images": [],
+    "images": [
+      "aethera/cover.jpg"
+    ],
     "sections": [
       {
         "heading": {
@@ -49,19 +80,19 @@
         ],
         "list": [
           {
-            "zh": "**“学习我的配置语言”**：人类必须记住菜单、图表类型和布局规则。",
+            "zh": "**「学习我的配置语言」**：人类必须记住菜单、图表类型和布局规则。",
             "ru": "**«Вывучи мой язык конфигурации»**: человек должен запомнить меню, типы графиков и правила компоновки.",
             "en": "**\"Learn my configuration language\"**: Human must memorize menus, chart types, and layout rules.",
             "be": "**«Вывучы маю мову канфігурацыі»**: чалавек павінен запомніць меню, тыпы графікаў і правілы кампаноўкі."
           },
           {
-            "zh": "**“知道你的数据在哪”**：人类必须记住是哪个仪表盘、哪个标签、哪个过滤器。",
+            "zh": "**「知道你的数据在哪」**：人类必须记住是哪个仪表盘、哪个标签、哪个过滤器。",
             "ru": "**«Знай, где находятся твои данные»**: человек должен помнить, какой дашборд, какая вкладка, какой фильтр.",
             "en": "**\"Know where your data lives\"**: Human must remember which dashboard, which tab, which filter.",
             "be": "**«Ведай, дзе знаходзяцца твае даныя»**: чалавек павінен памятаць, які дашборд, якая ўкладка, які фільтр."
           },
           {
-            "zh": "**“把我翻译成意义”**：人类看着柱状图，脑内推断故事。",
+            "zh": "**「把我翻译成意义」**：人类看着柱状图，脑内推断故事。",
             "ru": "**«Переведи меня в смысл»**: человек смотрит на гистограмму и в голове выводит историю.",
             "en": "**\"Translate my charts into meaning\"**: Human looks at a bar chart and infers the story.",
             "be": "**«Перакладзі мяне ў сэнс»**: чалавек глядзіць на гістаграму і ў галаве выводзіць гісторыю."
@@ -83,7 +114,7 @@
         },
         "paragraphs": [
           {
-            "zh": "V1 是一个**仪表盘产品**，不多不少。但“仪表盘”比 2D 图表更广泛。V1 包含且仅包含：\n\n- **2D 图表**（柱状、折线、饼图、散点、热力图）\n- **表格、KPI 卡片、过滤器**\n- **3D GIS 渲染**（地球、地形、3D Tiles、地理空间叠加）\n- **3D 场景渲染**（模型、点云、体积场景）\n- **AI 仪表盘创建器**（自然语言转仪表盘，经符号引擎验证）\n\n**边界极其清晰**：V1 是纯视觉的、基于屏幕的。没有音频输出，没有触觉输出，没有物理世界锚定，没有自主智能体，没有认知适应。",
+            "zh": "V1 是一个**仪表盘产品**，不多不少。但「仪表盘」比 2D 图表更广泛。V1 包含且仅包含：\n\n- **2D 图表**（柱状、折线、饼图、散点、热力图）\n- **表格、KPI 卡片、过滤器**\n- **3D GIS 渲染**（地球、地形、3D Tiles、地理空间叠加）\n- **3D 场景渲染**（模型、点云、体积场景）\n- **AI 仪表盘创建器**（自然语言转仪表盘，经符号引擎验证）\n\n**边界极其清晰**：V1 是纯视觉的、基于屏幕的。没有音频输出，没有触觉输出，没有物理世界锚定，没有自主智能体，没有认知适应。",
             "ru": "V1 — это **продукт-дашборд**, не больше и не меньше. Но «дашборд» шире, чем 2D-графики. V1 включает и только включает:\n\n- **2D-графики** (столбчатые, линейные, круговые, точечные, тепловые карты)\n- **Таблицы, KPI-карточки, фильтры**\n- **3D GIS-рендеринг** (глобус, рельеф, 3D Tiles, геопространственные слои)\n- **3D-сцены** (модели, облака точек, объёмные сцены)\n- **AI-создатель дашбордов** (естественный язык в дашборд, проверенный символьным верификатором)\n\n**Границы чёткие**: V1 — чисто визуальный, экранный. Нет аудио, нет тактильных ощущений, нет привязки к физическому миру, нет автономных агентов, нет когнитивной адаптации.",
             "en": "V1 is a **dashboard product**. Nothing more. Nothing less. But \"dashboard\" is broader than 2D charts. V1 includes and only includes:\n\n- **2D charts** (bar, line, pie, scatter, heatmap)\n- **Tables, KPI cards, filters**\n- **3D GIS rendering** (globe, terrain, 3D tiles, geo-spatial overlays)\n- **3D scene rendering** (models, point clouds, volumetric scenes)\n- **AI dashboard creator** (natural language to dashboard, validated by a symbolic engine)\n\n**Boundaries are clear**: V1 is visual only, screen-based. No audio output, no haptic output, no physical-world anchoring, no autonomous agents, no cognitive adaptation.",
             "be": "V1 — гэта **прадукт-дашборд**. Не больш і не менш. Але «дашборд» шырэйшы за 2D-графікі. V1 уключае і толькі ўключае:\n\n- **2D-графікі** (слупковыя, лінейныя, кругавыя, кропкавыя, цеплавыя карты)\n- **Табліцы, KPI-карткі, фільтры**\n- **3D GIS-рэндэрынг** (глобус, рэльеф, 3D Tiles, геапрасторавыя слаі)\n- **3D-сцэны** (мадэлі, воблакі кропак, аб'ёмныя сцэны)\n- **AI-стваральнік дашбордаў** (натуральная мова ў дашборд, правераны сімвальным верыфікатарам)\n\n**Межы ясныя**: V1 — чыста візуальны, экранны. Няма аўдыё, няма тактыльных адчуванняў, няма прывязкі да фізічнага свету, няма аўтаномных агентаў, няма кагнітыўнай адаптацыі."
@@ -139,7 +170,7 @@
         },
         "paragraphs": [
           {
-            "zh": "V1 不是短期凑合的产品，它的架构已经内置了**十项结构性机制**，这是“V1 已支持多模态”的绝对定义。它们不是可选项，而是 V1 的验收标准：",
+            "zh": "V1 不是短期凑合的产品，它的架构已经内置了**十项结构性机制**，这是「V1 已支持多模态」的绝对定义。它们不是可选项，而是 V1 的验收标准：",
             "ru": "V1 — не временный продукт. В его архитектуру уже встроены **десять структурных механизмов** — абсолютное определение «V1 уже поддерживает мультимодальность». Это не опции, а критерии приёмки V1:",
             "en": "V1 is not a stopgap. Its architecture already embeds **ten structural mechanisms**—the absolute definition of \"V1 architecture already supports multi-modal\". They are not optional; they are V1 acceptance criteria:",
             "be": "V1 — не часовы прадукт. У яго архітэктуру ўжо ўбудаваны **дзесяць структурных механізмаў** — абсалютнае вызначэнне «V1 ужо падтрымлівае мультымадальнасць». Гэта не опцыі, а крытэрыі прыёмкі V1:"
@@ -205,7 +236,7 @@
         },
         "paragraphs": [
           {
-            "zh": "2026 年的竞争格局分为三层：**呈现工具层**（Tableau、Power BI、Grafana、DataV、山海鲸等）、**行动平台层**（Palantir、FineBI NEXT）和 **Aethera 所在的“自适应基础设施层”**。\n\n**Aethera V1 不能在任何一个竞品的主场获胜：** 它不能去拼 Tableau 的图表深度，不能拼 Power BI 的微软生态，不能拼山海鲸的 3D 影视级特效，不能拼 FineBI 的 AI 自主分析深度。",
+            "zh": "2026 年的竞争格局分为三层：**呈现工具层**（Tableau、Power BI、Grafana、DataV、山海鲸等）、**行动平台层**（Palantir、FineBI NEXT）和 **Aethera 所在的「自适应基础设施层」**。\n\n**Aethera V1 不能在任何一个竞品的主场获胜：** 它不能去拼 Tableau 的图表深度，不能拼 Power BI 的微软生态，不能拼山海鲸的 3D 影视级特效，不能拼 FineBI 的 AI 自主分析深度。",
             "ru": "Ландшафт 2026 делится на три слоя: **инструменты представления** (Tableau, Power BI, Grafana, DataV, ShanHaiJing), **платформы действий** (Palantir, FineBI NEXT) и **«адаптивная инфраструктура»**, где находится Aethera.\n\n**Aethera V1 не может победить на чужом поле:** ни в глубине графиков Tableau, ни в экосистеме Power BI, ни в 3D-спецэффектах ShanHaiJing, ни в глубине ИИ-анализа FineBI.",
             "en": "The 2026 landscape has three layers: **Presentation Tools** (Tableau, Power BI, Grafana, DataV, ShanHaiJing), **Action Platforms** (Palantir, FineBI NEXT), and **Adaptive Infrastructure** (Aethera).\n\n**Aethera V1 cannot win on any incumbent's home turf:** not Tableau's chart depth, not Power BI's ecosystem, not ShanHaiJing's 3D cinematic fidelity, not FineBI's AI analysis depth.",
             "be": "Ландшафт 2026 дзеліцца на тры слаі: **інструменты прадстаўлення** (Tableau, Power BI, Grafana, DataV, ShanHaiJing), **платформы дзеянняў** (Palantir, FineBI NEXT) і **«адаптыўная інфраструктура»**, дзе знаходзіцца Aethera.\n\n**Aethera V1 не можа перамагчы на чужым полі:** ні ў глыбіні графікаў Tableau, ні ў экасістэме Power BI, ні ў 3D-спецэфектах ShanHaiJing, ні ў глыбіні ІІ-аналізу FineBI."
@@ -264,7 +295,7 @@
             "be": "**Дасягненне 1**: Пасля незадавальняльнага першага прататыпа захаваў архітэктурную аснову (plugin-first, мікраядро) і перапрацаваў прадукт, праявіўшы інжынерную рэфлексію."
           },
           {
-            "zh": "**成就 2**：定义了 V1 的三大硬性测试与十项结构性机制，将“多模态未来”转化为可验收的 V1 架构标准。",
+            "zh": "**成就 2**：定义了 V1 的三大硬性测试与十项结构性机制，将「多模态未来」转化为可验收的 V1 架构标准。",
             "ru": "**Достижение 2**: Определил три жёстких теста V1 и десять структурных механизмов, превратив «мультимодальное будущее» в проверяемые архитектурные стандарты V1.",
             "en": "**Achievement 2**: Defined V1's three hard tests and ten structural mechanisms, turning the \"multi-modal future\" into verifiable V1 architecture standards.",
             "be": "**Дасягненне 2**: Вызначыў тры жорсткія тэсты V1 і дзесяць структурных механізмаў, ператварыўшы «мультымадальную будучыню» ў правяральныя архітэктурныя стандарты V1."
@@ -292,7 +323,7 @@
             "be": "Aethera — незалежнае даследаванне ў асабісты час, **не камерцыялізавана** і не з'яўляецца ўмовай працаўладкавання. Яно даказвае мае кампетэнцыі ў **плагіннай архітэктуры, ШІ-аістэнцкай распрацоўцы і сістэмным мысленні**."
           },
           {
-            "zh": "**为什么 V1 对雇主极具价值？** V1 的定义包含了 2D 图表、**3D GIS、3D 场景**和 AI 创建器。这正是我过去在“中煤应急指挥系统”、“智慧区域”、“电力配电监控”中积累的实战经验。如果公司需要落地此类工业/能源大屏，我的 V1 架构和技术储备可以直接转化为公司的生产力。",
+            "zh": "**为什么 V1 对雇主极具价值？** V1 的定义包含了 2D 图表、**3D GIS、3D 场景**和 AI 创建器。这正是我过去在「中煤应急指挥系统」、「智慧区域」、「电力配电监控」中积累的实战经验。如果公司需要落地此类工业/能源大屏，我的 V1 架构和技术储备可以直接转化为公司的生产力。",
             "ru": "**Почему V1 ценен для работодателя?** V1 включает 2D-графики, **3D GIS, 3D-сцены** и AI-создатель. Это именно тот опыт, который я накопил в проектах «Система аварийного командования China Coal», «Умный район», «Мониторинг электроснабжения». Если компании нужно внедрить промышленные/энергетические экраны, моя архитектура V1 и технический запас могут напрямую стать производительной силой компании.",
             "en": "**Why is V1 highly valuable to employers?** V1 includes 2D charts, **3D GIS, 3D scenes**, and an AI creator. This is exactly the practical experience I gained in 'China Coal Emergency Command System', 'Smart Zone', and 'Power Distribution Monitoring'. If a company needs to deploy such industrial/energy screens, my V1 architecture and technical reserves can directly translate into company productivity.",
             "be": "**Чаму V1 каштоўны для працадаўцы?** V1 уключае 2D-графікі, **3D GIS, 3D-сцэны** і AI-стваральнік. Гэта менавіта той вопыт, які я назапасіў у праектах «Сістэма аварыйнага камандавання China Coal», «Разумная зона», «Маніторынг электразабеспячэння». Калі кампаніі трэба ўкараніць прамысловыя/энергетычныя экраны, мая архітэктура V1 і тэхнічны запас могуць напрамую стаць прадукцыйнай сілай кампаніі."
@@ -306,5 +337,85 @@
         ]
       }
     ]
+  },
+  {
+    "category": "self",
+    "slug": "chemistry_plant_3d",
+    "title": {
+      "zh": "化工园区 GIS 大屏演示（3D Tiles）",
+      "ru": "Демо GIS-дашборда химического парка (3D Tiles)",
+      "en": "Chemical Park GIS Dashboard Demo (3D Tiles)",
+      "be": "Дэма GIS-дашборда хімічнага парка (3D Tiles)"
+    },
+    "name": {
+      "zh": "化工园区 GIS 大屏演示（3D Tiles）",
+      "ru": "Демо GIS-дашборда химического парка (3D Tiles)",
+      "en": "Chemical Park GIS Dashboard Demo (3D Tiles)",
+      "be": "Дэма GIS-дашборда хімічнага парка (3D Tiles)"
+    },
+    "image": "self/chemistry-plant/1.png",
+    "description": {
+      "zh": "**个人演示（非金合交付）**：基于 **CesiumJS + Vue 3** 的离线 3D Tiles 园区大屏，含图层、底图、测量与消防演练。",
+      "ru": "**Личная демонстрация (не проект Jinhe):** автономный ГИС-экран 3D Tiles на **CesiumJS + Vue 3** для химпарка: слои, подложка, измерения и цикл учений; ресурсы локальны.",
+      "en": "**Personal demo (not a Jinhe delivery):** an offline 3D Tiles chemical-park GIS dashboard on **CesiumJS + Vue 3** — layer visibility, basemap switching, measurement, fire-drill loop; all assets local.",
+      "be": "**Асабістая дэманстрацыя (не праект Jinhe):** аўтаномны ГІС-экран 3D Tiles на **CesiumJS + Vue 3** для хімпарка: слаі, падложка, вымярэнні і цыкл вучэнняў; рэсурсы лакальныя."
+    },
+    "tags": [
+      "Vue 3",
+      "Vite",
+      "CesiumJS",
+      "3D Tiles",
+      "离线"
+    ],
+    "date": "2026",
+    "images": [
+      "self/chemistry-plant/1.png"
+    ],
+    "sections": [
+      {
+        "heading": {
+          "zh": "简介",
+          "ru": "Описание",
+          "en": "Overview",
+          "be": "Апісанне"
+        },
+        "paragraphs": [
+          {
+            "zh": "这是一个**演示用** GIS 大屏，形态与**中煤鄂尔多斯化工厂**应急指挥项目高度相似——用于展示同类化工园区的三维态势感知能力。其中 3D 厂区模型由腾讯混元（Hunyuan）生成。技术栈：**CesiumJS 1.119** 负责三维地球与 **3D Tiles** 渲染，**Vue 3 + Vite** 负责界面与状态管理，厂区瓦片由 `3d-tiles-tools` 与自研 GLB→Tiles 转换脚本生成。演示聚焦三维厂区态势：图层树显隐、底图（卫星影像 / 离线）切换、要素信息窗、距离与面积测量、罗盘定向，以及火警与消防车的自动循环演练。**所有资源本地化，不依赖任何内网服务或外部 CDN**。",
+            "ru": "Это **демонстрационный** GIS-экран, по виду близкий к проекту аварийного командования химического завода **China Coal в Ордосе** — он показывает возможности трёхмерной ситуационной осведомлённости на химическом парке. 3D-модель завода сгенерирована Hunyuan (Tencent). Стек технологий: **CesiumJS 1.119** — трёхмерный глобус и рендеринг **3D Tiles**, **Vue 3 + Vite** — интерфейс и управление состоянием; тайлы завода сгенерированы с помощью `3d-tiles-tools` и собственного скрипта GLB→Tiles. Демонстрация сосредоточена на трёхмерной ситуации на заводе: видимость слоёв, переключение подложки (спутник / офлайн), окно информации об объекте, измерение расстояний и площадей, ориентация по компасу и автоматически цикличное учение с пожарной тревогой и выездом машин. **Все ресурсы локальны** — без внутренних сервисов и внешних CDN.",
+            "en": "This is a **demo** GIS dashboard closely resembling the **China Coal Ordos** chemical-plant emergency-command project — showcasing 3D situational-awareness for similar chemical parks. Its 3D plant model was generated by Tencent Hunyuan. Tech stack: **CesiumJS 1.119** for the 3D globe and **3D Tiles** rendering, **Vue 3 + Vite** for the UI and state management; the plant tileset is generated with `3d-tiles-tools` and a custom GLB→Tiles converter. It focuses on 3D plant situational awareness: layer-tree visibility, basemap switch (satellite / offline), feature info window, distance & area measurement, compass orientation, and an auto-looping fire-alarm and fire-truck drill. **All assets are local** — no intranet services or external CDN.",
+            "be": "Гэта **дэманстрацыйны** GIS-экран, паводле выгляду блізкі да праекта аварыйнага камандавання хімічнага завода **China Coal у Ордасе** — ён паказвае магчымасці трохмернай сітуацыйнай асведамлёнасці на хімічным парку. 3D-мадэль завода згенеравана Hunyuan (Tencent). Стэк тэхналогій: **CesiumJS 1.119** — трохмерны глобус і рэндэрынг **3D Tiles**, **Vue 3 + Vite** — інтэрфейс і кіраванне станам; тайлы завода згенераваны з дапамогай `3d-tiles-tools` і ўласнага скрыпта GLB→Tiles. Дэманстрацыя засяроджана на трохмернай сітуацыі на заводзе: бачнасць слаёў, пераключэнне падложкі (спадарожнік / афлайн), акно інфармацыі пра аб'ект, вымярэнне адлегласцей і плошчаў, арыентацыя па компасе і аўтаматычна цыклічнае вучэнне з пажарнай трывогай і выездам машын. **Усе рэсурсы лакальныя** — без унутраных сэрвісаў і знешніх CDN."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "zh": "在线演示",
+          "ru": "Онлайн-демо",
+          "en": "Live Demo",
+          "be": "Анлайн-дэма"
+        },
+        "paragraphs": [
+          {
+            "zh": "点击下方按钮在新窗口打开完整演示（含 3D 厂区模型与上述全部交互）：",
+            "ru": "Нажмите кнопку ниже, чтобы открыть полную демонстрацию в новом окне (3D-модель завода и все описанные взаимодействия):",
+            "en": "Click the button below to open the full demo in a new window (3D plant model and all interactions above):",
+            "be": "Націсніце кнопку ніжэй, каб адкрыць поўную дэманстрацыю ў новым акне (3D-мадэль завода і ўсе апісаныя ўзаемадзеянні):"
+          }
+        ],
+        "links": [
+          {
+            "text": {
+              "zh": "打开 3D Tiles 演示（新窗口）",
+              "ru": "Открыть демо 3D Tiles",
+              "en": "Open 3D Tiles Demo",
+              "be": "Адкрыць дэма 3D Tiles"
+            },
+            "href": "/demos/3d-tiles-demo/index.html"
+          }
+        ]
+      }
+    ]
   }
 ]
+

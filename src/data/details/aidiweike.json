@@ -8,6 +8,24 @@
       "en": "NocoBase Plugins",
       "be": "Плагіны NocoBase"
     },
+    "name": {
+      "zh": "NocoBase 插件",
+      "ru": "Плагины NocoBase",
+      "en": "NocoBase Plugins",
+      "be": "Плагіны NocoBase"
+    },
+    "image": "rainbow/nocobase/echarts-plugin.png",
+    "description": {
+      "zh": "**NocoBase**是极易扩展的无代码开发平台。特点是所有功能都以插件的形式实现。开发者可以创建自己的插件",
+      "ru": "**NocoBase** — no-code платформа с максимально гибким расширением. Её особенность: вся функциональность построена на плагинах, и разработчики могут создавать свои.",
+      "en": "**NocoBase** is a highly extensible no-code development platform. Its feature: all functionality is implemented as plugins. Developers can create their own plugins",
+      "be": "**NocoBase** — no-code платформа з максімальна гнуткім пашырэннем. Яе асаблівасць: уся функцыянальнасць пабудавана на плагінах, і распрацоўшчыкі могуць ствараць свае."
+    },
+    "tags": [
+      "React",
+      "TypeScript",
+      "Ant Design"
+    ],
     "date": "2024/11 - 2025/09",
     "images": [
       "rainbow/nocobase/amis-plugin.png",
@@ -121,6 +139,27 @@
       "en": "POXMS Visual Smart O&M Management Cloud Platform",
       "be": "Сістэма візуальнага абслугоўвання рэгіянальных сетак электра-, вода- і газазабеспячэння POXMS"
     },
+    "name": {
+      "zh": "POXMS可视化智慧运维管理云平台",
+      "ru": "Облачная платформа интеллектуального визуального управления эксплуатацией POXMS",
+      "en": "POXMS Visual Smart O&M Management Cloud Platform",
+      "be": "Воблачная платформа разумнага візуальнага кіравання эксплуатацыяй POXMS"
+    },
+    "image": "rainbow/project4.png",
+    "description": {
+      "zh": "区域电，水，气系统运维管理平台",
+      "ru": "Платформа управления эксплуатацией региональных систем электро-, водо- и газоснабжения",
+      "en": "Operations management platform for regional electricity, water and gas systems",
+      "be": "Платформа кіравання эксплуатацыяй рэгіянальных сістэм электра-, вада- і газазабеспячэння"
+    },
+    "tags": [
+      "Vue 2",
+      "JavaScript",
+      "DataEase",
+      "ECharts",
+      "diboot",
+      "Ant Design Vue"
+    ],
     "date": "2024/03 - 2024/07",
     "images": [
       "rainbow/smart-oper/6.png",
@@ -259,6 +298,26 @@
       "en": "Ticketing Management System",
       "be": "Сістэма кіравання білетамі"
     },
+    "name": {
+      "zh": "票务管理系统",
+      "ru": "Система управления билетами",
+      "en": "Ticketing Management System",
+      "be": "Сістэма кіравання білетамі"
+    },
+    "image": "aidiweike/tickets/1.png",
+    "description": {
+      "zh": "该系统用于管理剧场票务信息, 订单信息, 票价信息, 票价规则信息, 票价规则明细信息等",
+      "ru": "Система управления билетной информацией театра, заказами, ценами и правилами ценообразования.",
+      "en": "System for managing theater ticketing info, orders, fares, fare rules and their details",
+      "be": "Сістэма кіравання білетнай інфармацыяй тэатра, заказамі, цэнамі і правіламі ценаўтварэння."
+    },
+    "tags": [
+      "Vue 2",
+      "JavaScript",
+      "diboot",
+      "Ant Design Vue",
+      "SVG"
+    ],
     "date": "2024/03 - 2024/06",
     "images": [
       "aidiweike/tickets/1.png",
@@ -370,6 +429,27 @@
       "en": "Zhaoyi Bio Production Management System",
       "be": "Сістэма кіравання вытворчасцю Zhaoyi Bio"
     },
+    "name": {
+      "zh": "兆益生物生产管理系统",
+      "ru": "Система управления производством Zhaoyi Bio",
+      "en": "Zhaoyi Bio Production Management System",
+      "be": "Сістэма кіравання вытворчасцю Zhaoyi Bio"
+    },
+    "image": "rainbow/pharmacy/1.png",
+    "description": {
+      "zh": "管理生产兽药的系统",
+      "ru": "Система управления производством ветеринарных препаратов",
+      "en": "System for managing veterinary drug production",
+      "be": "Сістэма кіравання вытворчасцю ветэрынарных прэпаратаў"
+    },
+    "tags": [
+      "Vue 2",
+      "JavaScript",
+      "diboot",
+      "Ant Design Vue",
+      "Colaiven",
+      "ECharts"
+    ],
     "date": "2023/01 - 2024/03",
     "images": [
       "rainbow/pharmacy/1.png",

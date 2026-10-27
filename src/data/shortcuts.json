@@ -21,7 +21,7 @@
       }
     },
     {
-      "combo": "Ctrl+Shift+T",
+      "combo": "Ctrl+Shift+G",
       "to": "/demos/topo-tool/index.html",
       "label": {
         "zh": "拓扑图工具",
